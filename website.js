@@ -20,7 +20,7 @@
     anchor.parentNode.insertBefore(container, anchor.nextSibling);
     window.__SS_CONTAINER = container;
 
-    var BASE = 'https://cdn.jsdelivr.net/gh/solbachsteven/website@v2/sections/';
+    var BASE = 'https://cdn.jsdelivr.net/gh/solbachsteven/website@v3/sections/';
     var sections = [
         'fx',
         'hero',
