@@ -58,7 +58,7 @@
     background: transparent;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
 }
@@ -66,7 +66,7 @@
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 60px 60px;
+    padding: 40px 60px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -251,7 +251,7 @@
     .hero-container {
         grid-template-columns: 1fr 1fr;
         gap: 0 40px;
-        padding: 60px 40px 50px;
+        padding: 30px 40px 30px;
     }
     .hero-label { font-size: 16px; }
     .hero-headline { font-size: 56px; line-height: 52px; }
@@ -267,7 +267,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 30px;
-        padding: 50px 12px 40px;
+        padding: 24px 12px 24px;
         text-align: center;
     }
     .hero-text { align-items: center; order: 1; grid-column: 1; }
