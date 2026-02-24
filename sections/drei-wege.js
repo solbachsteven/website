@@ -535,101 +535,101 @@
     document.head.appendChild(style);
 })();
 
-// ======== DATA ========
-var PRICING_DATA = {
-    // Section Header
-    label: "W\u00c4HLE DEINEN WEG",
-    titleBold: "Angebote,",
-    titleLight: "die dich weiterbringen",
-    subtitle: "Drei Wege \u2014 welcher passt zu dir?",
-
-    // =============================================
-    // ANGEBOTE
-    // =============================================
-    plans: [
-        {
-            id: "starter",
-            title: "Erkenne deine Lebensaufgabe",
-            subtitle: "Kostenlos starten",
-            price: "Kostenlos",
-            priceNote: "Kein Abo - Kein Risiko",
-            textLabel: "STARTER",
-            badge: "Kostenlos",
-            badgeStyle: "white",
-            highlighted: false,
-            features: [
-                { text: "Vollst\u00e4ndig kostenlos", included: true },
-                { text: "5 einfache Schritte", included: true },
-                { text: "Eigenst\u00e4ndiger Mini-Kurs", included: true },
-                { text: "Sofortiger Zugang", included: true },
-                { text: "KI-Assistent", included: false },
-                { text: "1:1 Begleitung", included: false }
-            ],
-            cta: {
-                text: "Kostenlos starten",
-                url: "https://solbachsteven.systeme.io/lebensaufgabe",
-                style: "ghost"
-            },
-            mobileOrder: 3
-        },
-        {
-            id: "kurs",
-            title: "Der vollst\u00e4ndige Win\u00b3 Kurs",
-            subtitle: "F\u00fcr Selber-Macher",
-            price: "297 \u20ac",
-            priceNote: "Einmalzahlung - Kein Abo",
-            logo: "light",
-            logoName: "Academy",
-            logoAlign: "dw-logo-left",
-            badge: "BELIEBTESTE WAHL",
-            highlighted: true,
-            features: [
-                { text: "Komplettes Transformations-System in 3 Phasen", included: true },
-                { text: "KI-Assistent 24/7", included: true },
-                { text: "Schritt-f\u00fcr-Schritt Textanleitungen", included: true },
-                { text: "Praktische \u00dcbungen", included: true },
-                { text: "Eigenes Tempo, flexibler Zugang", included: true },
-                { text: "1:1 Sessions", included: false }
-            ],
-            cta: {
-                text: "Jetzt starten - 297 \u20ac",
-                url: "https://solbachsteven.systeme.io/academy",
-                style: "primary"
-            },
-            mobileOrder: 1
-        },
-        {
-            id: "mentoring",
-            title: "12 Wochen intensive<br>1:1 Begleitung",
-            subtitle: "F\u00fcr Entschlossene",
-            price: "3.000 \u20ac",
-            priceNote: "Ratenzahlung m\u00f6glich",
-            logo: "dark",
-            logoName: "Mentoring",
-            logoAlign: "dw-logo-left",
-            badge: "NUR 8 PL\u00c4TZE",
-            badgeStyle: "gold-text",
-            highlighted: false,
-            features: [
-                { text: "Kompletter Win\u00b3 Kurs inklusive", included: true },
-                { text: "12\u00d7 1:1 Sessions (90 Min.)", included: true },
-                { text: "WhatsApp-Support", included: true },
-                { text: "Individuelle Roadmap", included: true },
-                { text: "Pers\u00f6nliche Betreuung", included: true },
-                { text: "Beschleunigte Transformation", included: true }
-            ],
-            cta: {
-                text: "Jetzt bewerben",
-                url: "https://solbachsteven.systeme.io/mentoring",
-                style: "subtle"
-            },
-            mobileOrder: 2
-        }
-    ]
-};
-
 // ======== RENDERER ========
 (function() {
+    // ======== DATA ========
+    var PRICING_DATA = {
+        // Section Header
+        label: "W\u00c4HLE DEINEN WEG",
+        titleBold: "Angebote,",
+        titleLight: "die dich weiterbringen",
+        subtitle: "Drei Wege \u2014 welcher passt zu dir?",
+
+        // =============================================
+        // ANGEBOTE
+        // =============================================
+        plans: [
+            {
+                id: "starter",
+                title: "Erkenne deine Lebensaufgabe",
+                subtitle: "Kostenlos starten",
+                price: "Kostenlos",
+                priceNote: "Kein Abo - Kein Risiko",
+                textLabel: "STARTER",
+                badge: "Kostenlos",
+                badgeStyle: "white",
+                highlighted: false,
+                features: [
+                    { text: "Vollst\u00e4ndig kostenlos", included: true },
+                    { text: "5 einfache Schritte", included: true },
+                    { text: "Eigenst\u00e4ndiger Mini-Kurs", included: true },
+                    { text: "Sofortiger Zugang", included: true },
+                    { text: "KI-Assistent", included: false },
+                    { text: "1:1 Begleitung", included: false }
+                ],
+                cta: {
+                    text: "Kostenlos starten",
+                    url: "https://solbachsteven.systeme.io/lebensaufgabe",
+                    style: "ghost"
+                },
+                mobileOrder: 3
+            },
+            {
+                id: "kurs",
+                title: "Der vollst\u00e4ndige Win\u00b3 Kurs",
+                subtitle: "F\u00fcr Selber-Macher",
+                price: "297 \u20ac",
+                priceNote: "Einmalzahlung - Kein Abo",
+                logo: "light",
+                logoName: "Academy",
+                logoAlign: "dw-logo-left",
+                badge: "BELIEBTESTE WAHL",
+                highlighted: true,
+                features: [
+                    { text: "Komplettes Transformations-System in 3 Phasen", included: true },
+                    { text: "KI-Assistent 24/7", included: true },
+                    { text: "Schritt-f\u00fcr-Schritt Textanleitungen", included: true },
+                    { text: "Praktische \u00dcbungen", included: true },
+                    { text: "Eigenes Tempo, flexibler Zugang", included: true },
+                    { text: "1:1 Sessions", included: false }
+                ],
+                cta: {
+                    text: "Jetzt starten - 297 \u20ac",
+                    url: "https://solbachsteven.systeme.io/academy",
+                    style: "primary"
+                },
+                mobileOrder: 1
+            },
+            {
+                id: "mentoring",
+                title: "12 Wochen intensive<br>1:1 Begleitung",
+                subtitle: "F\u00fcr Entschlossene",
+                price: "3.000 \u20ac",
+                priceNote: "Ratenzahlung m\u00f6glich",
+                logo: "dark",
+                logoName: "Mentoring",
+                logoAlign: "dw-logo-left",
+                badge: "NUR 8 PL\u00c4TZE",
+                badgeStyle: "gold-text",
+                highlighted: false,
+                features: [
+                    { text: "Kompletter Win\u00b3 Kurs inklusive", included: true },
+                    { text: "12\u00d7 1:1 Sessions (90 Min.)", included: true },
+                    { text: "WhatsApp-Support", included: true },
+                    { text: "Individuelle Roadmap", included: true },
+                    { text: "Pers\u00f6nliche Betreuung", included: true },
+                    { text: "Beschleunigte Transformation", included: true }
+                ],
+                cta: {
+                    text: "Jetzt bewerben",
+                    url: "https://solbachsteven.systeme.io/mentoring",
+                    style: "subtle"
+                },
+                mobileOrder: 2
+            }
+        ]
+    };
+
     function w3brand(str) {
         return str.replace(/Win\u00b3/g, '<span class="w3-logo">Win<span class="w3-logo-sup">\u00b3</span></span>');
     }

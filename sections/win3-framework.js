@@ -459,15 +459,15 @@
     document.head.appendChild(style);
 })();
 
-/* ======== DATA OBJECTS ======== */
-var WIN3_SECTION_DATA = {
-    label: "DIE PHILOSOPHIE",
-    headline: "Das Win\u00b3 Framework",
-    subheadline: "Dein Weg zur Ganzheit"
-};
-
 /* ======== RENDERER ======== */
 (function() {
+    /* ======== DATA OBJECTS ======== */
+    var WIN3_SECTION_DATA = {
+        label: "DIE PHILOSOPHIE",
+        headline: "Das Win\u00b3 Framework",
+        subheadline: "Dein Weg zur Ganzheit"
+    };
+
     var d = WIN3_SECTION_DATA;
 
     function w3brand(str) {

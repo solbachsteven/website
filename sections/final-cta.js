@@ -3,38 +3,6 @@
    Converted from Systeme.io Custom HTML
    ============================================ */
 
-// ======== DATA ========
-var CTA_DATA = {
-    headline: "Wenn du bereit bist...",
-
-    options: [
-        {
-            id: "kurs",
-            framing: "Erstmal selbst starten",
-            title: "Der vollst\u00e4ndige Win\u00b3 Weg",
-            price: "297 \u20ac",
-            priceNote: "Einmalzahlung \u00b7 Kein Abo",
-            cta: {
-                text: "Jetzt starten - 297 \u20ac",
-                url: "https://solbachsteven.systeme.io/academy",
-                style: "primary"
-            }
-        },
-        {
-            id: "mentoring",
-            framing: "Du wei\u00dft, was du willst",
-            title: "12 Wochen intensive 1:1 Begleitung",
-            price: "3.000 \u20ac",
-            priceNote: "Ratenzahlung m\u00f6glich",
-            cta: {
-                text: "Jetzt bewerben",
-                url: "https://solbachsteven.systeme.io/mentoring",
-                style: "ghost"
-            }
-        }
-    ]
-};
-
 // ======== FONTS ========
 (function() {
     var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
@@ -463,6 +431,38 @@ var CTA_DATA = {
 
 // ======== RENDERER ========
 (function() {
+    // ======== DATA ========
+    var CTA_DATA = {
+        headline: "Wenn du bereit bist...",
+
+        options: [
+            {
+                id: "kurs",
+                framing: "Erstmal selbst starten",
+                title: "Der vollst\u00e4ndige Win\u00b3 Weg",
+                price: "297 \u20ac",
+                priceNote: "Einmalzahlung \u00b7 Kein Abo",
+                cta: {
+                    text: "Jetzt starten - 297 \u20ac",
+                    url: "https://solbachsteven.systeme.io/academy",
+                    style: "primary"
+                }
+            },
+            {
+                id: "mentoring",
+                framing: "Du wei\u00dft, was du willst",
+                title: "12 Wochen intensive 1:1 Begleitung",
+                price: "3.000 \u20ac",
+                priceNote: "Ratenzahlung m\u00f6glich",
+                cta: {
+                    text: "Jetzt bewerben",
+                    url: "https://solbachsteven.systeme.io/mentoring",
+                    style: "ghost"
+                }
+            }
+        ]
+    };
+
     function w3brand(str) {
         return str.replace(/Win\u00b3/g, '<span class="w3-logo">Win<span class="w3-logo-sup">\u00b3</span></span>');
     }

@@ -6,6 +6,13 @@
  * <script src="https://cdn.jsdelivr.net/gh/solbachsteven/website@main/website.js"></script>
  */
 (function() {
+    // Guard: verhindere doppelte Ausfuehrung
+    if (window.__SS_LOADED) {
+        console.warn('[SS-Website] Loader bereits ausgefuehrt - ueberspringe.');
+        return;
+    }
+    window.__SS_LOADED = true;
+
     // Container fuer alle Sections - wird an der Stelle des Loader-Scripts eingefuegt
     var container = document.createElement('div');
     container.id = 'ss-website';
@@ -31,11 +38,15 @@
             console.log('[SS-Website] Alle ' + sections.length + ' Sections geladen.');
             return;
         }
+        console.log('[SS-Website] Lade ' + (i+1) + '/' + sections.length + ': ' + sections[i]);
         var s = document.createElement('script');
         s.src = BASE + sections[i] + '.js';
-        s.onload = function() { loadNext(i + 1); };
+        s.onload = function() {
+            console.log('[SS-Website] OK: ' + sections[i]);
+            loadNext(i + 1);
+        };
         s.onerror = function() {
-            console.warn('[SS-Website] Fehler beim Laden: ' + sections[i]);
+            console.error('[SS-Website] FEHLER: ' + sections[i]);
             loadNext(i + 1);
         };
         document.head.appendChild(s);

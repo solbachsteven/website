@@ -3,47 +3,6 @@
    Converted from Systeme.io Custom HTML
    ============================================ */
 
-// ======== DATA ========
-var FORWEN_DATA = {
-    // Section Header
-    label: "F\u00dcR WEN?",
-    title: "Meine Angebote sind das Richtige f\u00fcr dich, wenn...",
-
-    // =============================================
-    // FUER DICH (Beige Box, gruene Haken)
-    // =============================================
-    forYou: {
-        heading: "F\u00fcr dich, wenn...",
-        items: [
-            "Du bereit bist, dich ehrlich mit dir selbst auseinanderzusetzen",
-            "Du nicht mehr funktionieren, sondern authentisch leben willst",
-            "Du mit deiner Lebenszeit einen echten Unterschied machen willst",
-            "Du deine Gaben & Talente in den Dienst anderer stellen m\u00f6chtest",
-            "Dir wichtig ist, dass dein Leben Sinn & Bedeutung hat",
-            "Du langfristig denkst und bereit bist, in dich selbst zu investieren",
-            "Du bereit bist f\u00fcr echte Ver\u00e4nderung",
-            "Du dein Leben zu deinem machen willst"
-        ]
-    },
-
-    // =============================================
-    // NICHT FUER DICH (Graue Box, rote Kreuze)
-    // =============================================
-    notForYou: {
-        heading: "Nicht f\u00fcr dich, wenn...",
-        items: [
-            "Du eine schnelle L\u00f6sung ohne eigenes Investment suchst",
-            "Du nicht bereit bist, dich selbst zu hinterfragen",
-            "Du Tipps und Tricks willst - keine Transformation",
-            "Du Ergebnisse ohne Commitment erwartest",
-            "Du glaubst, jemand anderes kann das f\u00fcr dich tun",
-            "Du nicht bereit bist, Geld, Zeit und Energie zu investieren",
-            "Innere Arbeit f\u00fcr dich Esoterik oder Zeitverschwendung ist",
-            "Du auf den perfekten Moment wartest statt jetzt anzufangen"
-        ]
-    }
-};
-
 // ======== FONTS ========
 (function() {
     var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
@@ -312,6 +271,47 @@ var FORWEN_DATA = {
 
 // ======== RENDERER ========
 (function() {
+    // ======== DATA ========
+    var FORWEN_DATA = {
+        // Section Header
+        label: "F\u00dcR WEN?",
+        title: "Meine Angebote sind das Richtige f\u00fcr dich, wenn...",
+
+        // =============================================
+        // FUER DICH (Beige Box, gruene Haken)
+        // =============================================
+        forYou: {
+            heading: "F\u00fcr dich, wenn...",
+            items: [
+                "Du bereit bist, dich ehrlich mit dir selbst auseinanderzusetzen",
+                "Du nicht mehr funktionieren, sondern authentisch leben willst",
+                "Du mit deiner Lebenszeit einen echten Unterschied machen willst",
+                "Du deine Gaben & Talente in den Dienst anderer stellen m\u00f6chtest",
+                "Dir wichtig ist, dass dein Leben Sinn & Bedeutung hat",
+                "Du langfristig denkst und bereit bist, in dich selbst zu investieren",
+                "Du bereit bist f\u00fcr echte Ver\u00e4nderung",
+                "Du dein Leben zu deinem machen willst"
+            ]
+        },
+
+        // =============================================
+        // NICHT FUER DICH (Graue Box, rote Kreuze)
+        // =============================================
+        notForYou: {
+            heading: "Nicht f\u00fcr dich, wenn...",
+            items: [
+                "Du eine schnelle L\u00f6sung ohne eigenes Investment suchst",
+                "Du nicht bereit bist, dich selbst zu hinterfragen",
+                "Du Tipps und Tricks willst - keine Transformation",
+                "Du Ergebnisse ohne Commitment erwartest",
+                "Du glaubst, jemand anderes kann das f\u00fcr dich tun",
+                "Du nicht bereit bist, Geld, Zeit und Energie zu investieren",
+                "Innere Arbeit f\u00fcr dich Esoterik oder Zeitverschwendung ist",
+                "Du auf den perfekten Moment wartest statt jetzt anzufangen"
+            ]
+        }
+    };
+
     // ======== SYSTEME.IO-KOMPATIBEL: HTML via JS generieren ========
     var section = document.createElement('section');
     section.className = 'fw-section';

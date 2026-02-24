@@ -433,96 +433,94 @@
     document.head.appendChild(style);
 })();
 
-// ======== DATA ========
-var TESTIMONIAL_DATA = {
-    // Section Header
-    label: "TESTIMONIALS",
-    titleLine1: "Was meine",
-    titleLine2: "Coachees",
-    titleLine3: "sagen",
-
-    // =============================================
-    // TESTIMONIALS LISTE
-    // =============================================
-    items: [
-        {
-            // Position 1 (3. gelesen) - mobileOrder: 3
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/69739098a7332_Anna.png",
-            name: "Anna Herpel",
-            role: "Coach, \u00c4rztin",
-            quote: "Neben Herzensw\u00e4rme und bedingungsloser Annahme zeichnet ihn seine treffsichere Analyse, seine spirituelle Anbindung ans H\u00f6here, welche er in Alltagstipps einflie\u00dfen l\u00e4sst, und die F\u00e4higkeit, sich in menschliche H\u00f6hen und Tiefen zu bewegen aus. Absolut empfehlenswert!",
-            highlighted: false,
-            mobileOrder: 3
-        },
-        {
-            // Position 2 (6. gelesen) - HIGHLIGHTED - mobileOrder: 6
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390a0449e4_Julia.png",
-            name: "Julia Adam",
-            role: "Massagetherapeutin & Content Creator",
-            quote: "Steven hat ein gro\u00dfes Talent darin, mir liebevoll meine inneren Themen aufzuzeigen und mich zu begleiten, meine eigene St\u00e4rke zu finden. Seine intelligenten Fragen bringen mich zum tieferen Nachdenken: Was ist mein Weg? Wie kann ich ihn gehen? Was darf ich daf\u00fcr lernen?",
-            highlighted: true,
-            mobileOrder: 6
-        },
-        {
-            // Position 3 (1. gelesen) - HIGHLIGHTED - mobileOrder: 1
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/6973908ac3e4b_Maya.png",
-            name: "Maya Devi",
-            role: "Coachin & Singkreisleiterin",
-            quote: "Steven ist einer der inspirierendsten Menschen, die ich kennengelernt habe. Ich habe gelernt, Verantwortung zu \u00fcbernehmen f\u00fcr mein Wirken und Schatten integriert, die mich bisher davon abgehalten haben, meine Gaben in die Welt zu bringen. Er ist liebevoll, aufrichtig, sieht dich und dein Potenzial und hilft dir, es zu entfalten.",
-            highlighted: true,
-            mobileOrder: 1
-        },
-        {
-            // Position 4 (4. gelesen) - mobileOrder: 4
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390906210e_Simon.png",
-            name: "Simon Kocksch",
-            role: "Physiotherapeut",
-            quote: "In einer Lebensphase voller Chaos hat Steven mir geholfen, die L\u00fccken zwischen meinen Gedanken zu schlie\u00dfen. Durch ihn ist mir klar geworden, dass es m\u00f6glich ist, die Distanz zwischen Gef\u00fchl und Reaktion zu vergr\u00f6\u00dfern. Dadurch treffe ich Entscheidungen, die mich meinen Zielen n\u00e4her bringen.",
-            highlighted: false,
-            mobileOrder: 4
-        },
-        {
-            // Position 5 (7. gelesen) - mobileOrder: 7
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390a4df5d7_Natasha.png",
-            name: "Natascha",
-            role: "Musikp\u00e4dagogin",
-            quote: "Ich mag an dir deine ruhige, freundliche und klare Art. Du bist f\u00fcr mich ein Vorbild in Sachen Selbstliebe, jemand, der schon so manche H\u00fcrde genommen hat auf dem Weg der Innenarbeit. Ich erlebe dich als einen Menschen, dem es am Herzen liegt, anderen auf ihrem Weg zu helfen.",
-            highlighted: false,
-            mobileOrder: 7
-        },
-        {
-            // Position 6 (2. gelesen) - mobileOrder: 2
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390aa98acb_Sabrina.png",
-            name: "Dr. Sabrina Schmitz",
-            role: "Coachin, Heilbegleiterin",
-            quote: "An Steven ist wunderbar, dass er so klar und mit der Absicht von Liebe spiegelt, was in mir los ist. Er ist ein geduldiger, zuversichtlicher und sehr angebundener Lehrer f\u00fcr das Leben, Beziehungen und spirituelle Dimensionen. Gro\u00dfe Kennenlernempfehlung mit Lebensbereicherungspotential.",
-            highlighted: false,
-            mobileOrder: 2
-        },
-        {
-            // Position 7 (5. gelesen) - HIGHLIGHTED - mobileOrder: 5
-            image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/6973909cab82e_Henry.png",
-            name: "Henry",
-            role: "Coach, Ex-Banker",
-            quote: "Ich sch\u00e4tze Stevens F\u00e4higkeit, aktiv und mit offenem Herzen zuzuh\u00f6ren. Er hat mir geholfen, meine eigene psychologische Struktur besser zu begreifen und zu erkennen, wo meine Entwicklungspunkte liegen. Steven ist eine Inspiration, weil er innere Arbeit mit einer gelassenen Haltung verbindet.",
-            highlighted: true,
-            mobileOrder: 5
-        },
-        {
-            // Position 8 (8. gelesen) - Placeholder - mobileOrder: 8
-            image: "https://placehold.co/150x150/2D2726/BC8034?text=?",
-            name: "Michael B.",
-            role: "Gr\u00fcnder & CEO",
-            quote: "Die Kombination aus spiritueller Tiefe und praktischer Umsetzung ist einzigartig. Genau das, was ich gesucht habe.",
-            highlighted: false,
-            mobileOrder: 8
-        }
-    ]
-};
-
 // ======== RENDERER ========
 (function() {
-    var data = TESTIMONIAL_DATA;
+    // ======== DATA ========
+    var data = {
+        // Section Header
+        label: "TESTIMONIALS",
+        titleLine1: "Was meine",
+        titleLine2: "Coachees",
+        titleLine3: "sagen",
+
+        // =============================================
+        // TESTIMONIALS LISTE
+        // =============================================
+        items: [
+            {
+                // Position 1 (3. gelesen) - mobileOrder: 3
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/69739098a7332_Anna.png",
+                name: "Anna Herpel",
+                role: "Coach, \u00c4rztin",
+                quote: "Neben Herzensw\u00e4rme und bedingungsloser Annahme zeichnet ihn seine treffsichere Analyse, seine spirituelle Anbindung ans H\u00f6here, welche er in Alltagstipps einflie\u00dfen l\u00e4sst, und die F\u00e4higkeit, sich in menschliche H\u00f6hen und Tiefen zu bewegen aus. Absolut empfehlenswert!",
+                highlighted: false,
+                mobileOrder: 3
+            },
+            {
+                // Position 2 (6. gelesen) - HIGHLIGHTED - mobileOrder: 6
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390a0449e4_Julia.png",
+                name: "Julia Adam",
+                role: "Massagetherapeutin & Content Creator",
+                quote: "Steven hat ein gro\u00dfes Talent darin, mir liebevoll meine inneren Themen aufzuzeigen und mich zu begleiten, meine eigene St\u00e4rke zu finden. Seine intelligenten Fragen bringen mich zum tieferen Nachdenken: Was ist mein Weg? Wie kann ich ihn gehen? Was darf ich daf\u00fcr lernen?",
+                highlighted: true,
+                mobileOrder: 6
+            },
+            {
+                // Position 3 (1. gelesen) - HIGHLIGHTED - mobileOrder: 1
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/6973908ac3e4b_Maya.png",
+                name: "Maya Devi",
+                role: "Coachin & Singkreisleiterin",
+                quote: "Steven ist einer der inspirierendsten Menschen, die ich kennengelernt habe. Ich habe gelernt, Verantwortung zu \u00fcbernehmen f\u00fcr mein Wirken und Schatten integriert, die mich bisher davon abgehalten haben, meine Gaben in die Welt zu bringen. Er ist liebevoll, aufrichtig, sieht dich und dein Potenzial und hilft dir, es zu entfalten.",
+                highlighted: true,
+                mobileOrder: 1
+            },
+            {
+                // Position 4 (4. gelesen) - mobileOrder: 4
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390906210e_Simon.png",
+                name: "Simon Kocksch",
+                role: "Physiotherapeut",
+                quote: "In einer Lebensphase voller Chaos hat Steven mir geholfen, die L\u00fccken zwischen meinen Gedanken zu schlie\u00dfen. Durch ihn ist mir klar geworden, dass es m\u00f6glich ist, die Distanz zwischen Gef\u00fchl und Reaktion zu vergr\u00f6\u00dfern. Dadurch treffe ich Entscheidungen, die mich meinen Zielen n\u00e4her bringen.",
+                highlighted: false,
+                mobileOrder: 4
+            },
+            {
+                // Position 5 (7. gelesen) - mobileOrder: 7
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390a4df5d7_Natasha.png",
+                name: "Natascha",
+                role: "Musikp\u00e4dagogin",
+                quote: "Ich mag an dir deine ruhige, freundliche und klare Art. Du bist f\u00fcr mich ein Vorbild in Sachen Selbstliebe, jemand, der schon so manche H\u00fcrde genommen hat auf dem Weg der Innenarbeit. Ich erlebe dich als einen Menschen, dem es am Herzen liegt, anderen auf ihrem Weg zu helfen.",
+                highlighted: false,
+                mobileOrder: 7
+            },
+            {
+                // Position 6 (2. gelesen) - mobileOrder: 2
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/697390aa98acb_Sabrina.png",
+                name: "Dr. Sabrina Schmitz",
+                role: "Coachin, Heilbegleiterin",
+                quote: "An Steven ist wunderbar, dass er so klar und mit der Absicht von Liebe spiegelt, was in mir los ist. Er ist ein geduldiger, zuversichtlicher und sehr angebundener Lehrer f\u00fcr das Leben, Beziehungen und spirituelle Dimensionen. Gro\u00dfe Kennenlernempfehlung mit Lebensbereicherungspotential.",
+                highlighted: false,
+                mobileOrder: 2
+            },
+            {
+                // Position 7 (5. gelesen) - HIGHLIGHTED - mobileOrder: 5
+                image: "https://d1yei2z3i6k35z.cloudfront.net/thumb_150/6973909cab82e_Henry.png",
+                name: "Henry",
+                role: "Coach, Ex-Banker",
+                quote: "Ich sch\u00e4tze Stevens F\u00e4higkeit, aktiv und mit offenem Herzen zuzuh\u00f6ren. Er hat mir geholfen, meine eigene psychologische Struktur besser zu begreifen und zu erkennen, wo meine Entwicklungspunkte liegen. Steven ist eine Inspiration, weil er innere Arbeit mit einer gelassenen Haltung verbindet.",
+                highlighted: true,
+                mobileOrder: 5
+            },
+            {
+                // Position 8 (8. gelesen) - Placeholder - mobileOrder: 8
+                image: "https://placehold.co/150x150/2D2726/BC8034?text=?",
+                name: "Michael B.",
+                role: "Gr\u00fcnder & CEO",
+                quote: "Die Kombination aus spiritueller Tiefe und praktischer Umsetzung ist einzigartig. Genau das, was ich gesucht habe.",
+                highlighted: false,
+                mobileOrder: 8
+            }
+        ]
+    };
 
     // Build section HTML structure
     var sectionEl = document.createElement('section');

@@ -5,26 +5,6 @@
  */
 
 // =============================================
-// DATA - Texte und Links hier aendern
-// =============================================
-var HERO_DATA = {
-    label: "FÜR MENSCHEN DIE GANZ LEBEN WOLLEN",
-    headline: "BECOME THE CREATOR -",
-    subheadline: "Lebe authentisch, erfüllt und frei.",
-    benefits: [
-        "Erkenne dein wahres Selbst",
-        "Befreie dich von alten Mustern & Blockaden",
-        "Verwirkliche deine Traum-Realität"
-    ],
-    mission: "Ich begleite ambitionierte Seelen darin, ihre wahre Essenz zu erkennen und von Innen nach Außen ein Leben zu gestalten, das ihnen auf allen Ebenen entspricht.",
-    cta: {
-        primary: { text: "Für Coaching bewerben", url: "https://solbachsteven.systeme.io/mentoring" },
-        secondary: { text: "Das Win³ Framework kennenlernen", subtitle: "Dein Weg zur Ganzheit", url: "#win3Section" }
-    },
-    image: "https://d1yei2z3i6k35z.cloudfront.net/15985342/6978eb69d9665_Removebackgroundproject-22.png"
-};
-
-// =============================================
 // CSS INJECTION
 // =============================================
 (function() {
@@ -320,7 +300,25 @@ var HERO_DATA = {
 // RENDERER
 // =============================================
 (function() {
-    var d = HERO_DATA;
+    console.log('[SS-Hero] Renderer gestartet');
+
+    // DATA - Texte und Links hier aendern
+    var d = {
+        label: "FÜR MENSCHEN DIE GANZ LEBEN WOLLEN",
+        headline: "BECOME THE CREATOR -",
+        subheadline: "Lebe authentisch, erfüllt und frei.",
+        benefits: [
+            "Erkenne dein wahres Selbst",
+            "Befreie dich von alten Mustern & Blockaden",
+            "Verwirkliche deine Traum-Realität"
+        ],
+        mission: "Ich begleite ambitionierte Seelen darin, ihre wahre Essenz zu erkennen und von Innen nach Außen ein Leben zu gestalten, das ihnen auf allen Ebenen entspricht.",
+        cta: {
+            primary: { text: "Für Coaching bewerben", url: "https://solbachsteven.systeme.io/mentoring" },
+            secondary: { text: "Das Win³ Framework kennenlernen", subtitle: "Dein Weg zur Ganzheit", url: "#win3Section" }
+        },
+        image: "https://d1yei2z3i6k35z.cloudfront.net/15985342/6978eb69d9665_Removebackgroundproject-22.png"
+    };
 
     function w3brand(str) {
         return str.replace(/Win\u00b3/g, '<span class="w3-logo">Win<span class="w3-logo-sup">\u00b3</span></span>');
@@ -366,6 +364,7 @@ var HERO_DATA = {
     var wrapper = document.createElement('div');
     wrapper.innerHTML = html;
     target.appendChild(wrapper.firstElementChild);
+    console.log('[SS-Hero] DOM eingefuegt in:', target.id || 'body');
 
     // Scroll reveal
     setTimeout(function() {
