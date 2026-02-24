@@ -1,0 +1,44 @@
+/*
+ * Steven Solbach Website - Central Loader
+ * Laedt alle Sections sequentiell in der richtigen Reihenfolge.
+ *
+ * Systeme.io Einzeiler:
+ * <script src="https://cdn.jsdelivr.net/gh/solbachsteven/website@main/website.js"></script>
+ */
+(function() {
+    // Container fuer alle Sections - wird an der Stelle des Loader-Scripts eingefuegt
+    var container = document.createElement('div');
+    container.id = 'ss-website';
+    var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
+    anchor.parentNode.insertBefore(container, anchor.nextSibling);
+    window.__SS_CONTAINER = container;
+
+    var BASE = 'https://cdn.jsdelivr.net/gh/solbachsteven/website@main/sections/';
+    var sections = [
+        'fx',
+        'hero',
+        'scroll-indicator',
+        'win3-framework',
+        'storytelling',
+        'drei-wege',
+        'testimonials',
+        'fuer-wen',
+        'final-cta'
+    ];
+
+    function loadNext(i) {
+        if (i >= sections.length) {
+            console.log('[SS-Website] Alle ' + sections.length + ' Sections geladen.');
+            return;
+        }
+        var s = document.createElement('script');
+        s.src = BASE + sections[i] + '.js';
+        s.onload = function() { loadNext(i + 1); };
+        s.onerror = function() {
+            console.warn('[SS-Website] Fehler beim Laden: ' + sections[i]);
+            loadNext(i + 1);
+        };
+        document.head.appendChild(s);
+    }
+    loadNext(0);
+})();

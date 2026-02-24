@@ -361,11 +361,11 @@ var HERO_DATA = {
             '</div>' +
         '</div>';
 
-    // Insert into DOM
-    var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
-    var container = document.createElement('div');
-    container.innerHTML = html;
-    anchor.parentNode.insertBefore(container.firstElementChild, anchor.nextSibling);
+    // Insert into DOM (Container-aware: works standalone and via website.js loader)
+    var target = window.__SS_CONTAINER || document.body;
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
+    target.appendChild(wrapper.firstElementChild);
 
     // Scroll reveal
     setTimeout(function() {
