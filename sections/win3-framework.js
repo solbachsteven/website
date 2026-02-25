@@ -452,7 +452,7 @@
         font-size: 22px;
     }
     .win3-step-description {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 `;

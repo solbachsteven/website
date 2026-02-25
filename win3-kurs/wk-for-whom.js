@@ -66,9 +66,10 @@
     background: linear-gradient(90deg, #D4A04A, #BC8034);
 }
 
-/* Negative Column */
+/* Negative Column - kein opacity, stattdessen subtiler Kontrast */
 .wk-for-whom-col.negative {
-    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.04);
 }
 .wk-for-whom-col.negative::before {
     content: '';
@@ -77,7 +78,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 /* Column Title */
@@ -90,7 +91,7 @@
     gap: 10px;
 }
 .wk-for-whom-col.positive .wk-for-whom-title { color: #D4A04A; }
-.wk-for-whom-col.negative .wk-for-whom-title { color: rgba(244, 240, 236, 0.5); }
+.wk-for-whom-col.negative .wk-for-whom-title { color: rgba(244, 240, 236, 0.7); }
 
 /* Title Icon */
 .wk-for-whom-title-icon {
@@ -121,7 +122,7 @@
     line-height: 1.6;
 }
 .wk-for-whom-col.positive .wk-for-whom-item { color: rgba(244, 240, 236, 0.8); }
-.wk-for-whom-col.negative .wk-for-whom-item { color: rgba(244, 240, 236, 0.45); }
+.wk-for-whom-col.negative .wk-for-whom-item { color: rgba(244, 240, 236, 0.65); }
 
 /* Check / X Icon */
 .wk-for-whom-icon {
@@ -152,7 +153,7 @@
 
     // === SVG ICONS ===
     var checkSVG = '<svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(212,160,74,0.12)"/><path d="M6 10l3 3 5-6" stroke="#D4A04A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    var xSVG = '<svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(255,255,255,0.04)"/><path d="M7 7l6 6M13 7l-6 6" stroke="rgba(244,240,236,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var xSVG = '<svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(255,255,255,0.06)"/><path d="M7 7l6 6M13 7l-6 6" stroke="rgba(244,240,236,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     var heartSVG = '<svg viewBox="0 0 16 16" fill="none" stroke="#D4A04A" stroke-width="1.5"><path d="M8 14s-5.5-3.5-5.5-7A3.5 3.5 0 0 1 8 4a3.5 3.5 0 0 1 5.5 3c0 3.5-5.5 7-5.5 7z" fill="rgba(212,160,74,0.2)"/></svg>';
     var minusSVG = '<svg viewBox="0 0 16 16" fill="none" stroke="rgba(244,240,236,0.3)" stroke-width="1.5"><line x1="4" y1="8" x2="12" y2="8"/></svg>';
 
