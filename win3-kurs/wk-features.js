@@ -101,11 +101,12 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         gap: 12px;
-        padding: 0 16px 20px;
+        padding: 8px 16px 20px;
         margin: 0 -16px;
     }
     .wk-features-grid::-webkit-scrollbar { display: none; }
@@ -113,6 +114,10 @@
         flex: 0 0 280px;
         scroll-snap-align: center;
         padding: 28px 24px;
+    }
+    .wk-feature-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
 
