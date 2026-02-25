@@ -248,20 +248,26 @@
     }
 
     .fw-box {
-        padding: 28px 20px;
+        padding: 20px 16px;
     }
 
     .fw-box-yes {
-        padding: 28px 20px;
+        padding: 20px 16px;
     }
 
     .fw-box-heading {
-        font-size: 22px;
-        margin-bottom: 20px;
-        padding-bottom: 14px;
+        font-size: 20px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
     }
 
     .fw-item {
+        font-size: 14px;
+        padding: 7px 6px;
+        margin: 0 -6px;
+    }
+
+    .fw-label {
         font-size: 14px;
     }
 }

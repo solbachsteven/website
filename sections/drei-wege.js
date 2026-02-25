@@ -499,24 +499,81 @@
     .dw-card[data-plan="starter"] { order: 3; }
 
     .dw-card {
-        padding: 28px 20px;
+        padding: 22px 16px;
     }
 
     .dw-card.dw-highlighted {
-        padding: 32px 24px;
+        padding: 24px 18px;
     }
 
     .dw-price {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .dw-card-title {
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 14px;
     }
 
     .dw-card-image {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .dw-card-logo svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dw-card-label .dw-label-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dw-card-logo {
+        padding: 0 0 14px;
+    }
+
+    .dw-card-label {
+        width: 120px;
+        padding: 0 0 14px;
+    }
+
+    .dw-card-label .dw-label-text {
+        font-size: 22px;
+    }
+
+    .dw-features {
+        margin: 0 0 20px 0;
+    }
+
+    .dw-feature {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .dw-label {
+        font-size: 14px;
+    }
+
+    .dw-price-note {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .dw-divider {
+        margin-bottom: 18px;
+    }
+
+    .dw-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+        margin-bottom: 14px;
+    }
+
+    .dw-card-subtitle {
+        font-size: 12px;
+        margin-bottom: 6px;
     }
 
     .dw-bridge {

@@ -278,19 +278,19 @@
     .hero-headline { font-size: 64px; line-height: 58px; }
     .hero-subheadline { font-size: 22px; line-height: 26px; margin-bottom: 24px; }
     .hero-benefits { align-items: flex-start; display: inline-flex; text-align: left; }
-    .hero-benefits li { font-size: 13px; line-height: 24px; }
+    .hero-benefits li { font-size: 16px; line-height: 1.65; }
     .hero-benefits li .hero-check { font-size: 14px; width: 18px; }
-    .hero-mission { font-size: 15px; line-height: 24px; max-width: 100%; margin-bottom: 0; padding: 0 12px; }
+    .hero-mission { font-size: 16px; line-height: 1.65; max-width: 100%; margin-bottom: 0; padding: 0 12px; }
     .hero-cta-primary { font-size: 15px; padding: 14px 28px; }
     .hero-cta-secondary { font-size: 14px; padding: 12px 28px; }
-    .hero-cta-secondary .cta-sub { font-size: 13px; }
-    .hero-image img { max-width: 320px; }
+    .hero-cta-secondary .cta-sub { font-size: 14px; }
+    .hero-image img { max-width: 380px; }
 }
 
 @media (max-width: 480px) {
     .hero-headline { font-size: 52px; line-height: 48px; }
     .hero-subheadline { font-size: 19px; }
-    .hero-image img { max-width: 260px; }
+    .hero-image img { max-width: 300px; }
 }
 `;
     document.head.appendChild(style);

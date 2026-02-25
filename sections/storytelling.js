@@ -583,12 +583,16 @@
     }
 
     .story-item.center.story-synthese .story-title {
-        font-size: 22px;
+        font-size: 26px;
         margin-bottom: 18px;
     }
 
     .story-tri-svg {
         max-width: 300px;
+    }
+
+    .story-tri-svg text {
+        font-size: 28 !important;
     }
 
     .story-item.center.story-synthese .story-subtext {

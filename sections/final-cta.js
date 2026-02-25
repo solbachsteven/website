@@ -367,7 +367,7 @@
     }
 
     .fcta-label {
-        font-size: 11px;
+        font-size: 14px;
         letter-spacing: 0.8px;
         margin-bottom: 12px;
     }
@@ -378,7 +378,7 @@
     }
 
     .fcta-subtitle {
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 16px;
     }
 
@@ -397,7 +397,7 @@
     }
 
     .fcta-framing {
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 6px;
     }
 
@@ -411,7 +411,7 @@
     }
 
     .fcta-price-note {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 18px;
     }
 
