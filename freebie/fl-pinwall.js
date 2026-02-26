@@ -259,6 +259,16 @@
     opacity: 0.25;
 }
 
+/* Founder Card */
+.fl-pinwall-card-founder {
+    border: 1px solid rgba(188,128,52,0.35);
+    box-shadow: 0 0 20px rgba(188,128,52,0.08);
+}
+.fl-pinwall-card-founder .fl-pinwall-card-badge.founder-badge {
+    color: #BC8034;
+    opacity: 0.5;
+}
+
 /* Counter */
 .fl-pinwall-counter {
     text-align: center;
@@ -357,8 +367,10 @@
 
     function buildCardHTML(e) {
         var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
-        var badgeHTML = e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '';
-        return '<div class="fl-pinwall-card">' +
+        var isFounder = e.is_example === 2;
+        var badgeHTML = isFounder ? '<span class="fl-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '');
+        var founderClass = isFounder ? ' fl-pinwall-card-founder' : '';
+        return '<div class="fl-pinwall-card' + founderClass + '">' +
             badgeHTML +
             '<div class="fl-pinwall-card-name" style="color:' + nameColor + '">' +
                 escapeHtml(e.first_name) +

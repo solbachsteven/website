@@ -142,6 +142,9 @@
 @keyframes lesson-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }\n\
 @keyframes lesson-highlight-pulse { 0% { box-shadow: 0 0 0 0 rgba(188,128,52,0.4); } 50% { box-shadow: 0 0 24px 4px rgba(188,128,52,0.3); } 100% { box-shadow: 0 0 0 0 rgba(188,128,52,0); } }\n\
 .lesson-pinwall-card.highlight { animation: lesson-highlight-pulse 1.5s ease 2; }\n\
+/* --- Founder Card --- */\n\
+.lesson-pinwall-card-founder { border: 1px solid rgba(188,128,52,0.35); box-shadow: 0 0 20px rgba(188,128,52,0.08); }\n\
+.lesson-pinwall-card-founder .lesson-pinwall-card-badge.founder-badge { color: var(--lesson-gold); opacity: 0.5; }\n\
 \n\
 /* --- L4 Responsive --- */\n\
 @media (max-width: 900px) {\n\
@@ -517,9 +520,11 @@
         }
 
         function buildCardHTML(e) {
-            var badgeHTML = e.is_example ? '<span class="lesson-pinwall-card-badge">Beispiel</span>' : '';
+            var isFounder = e.is_example === 2;
+            var badgeHTML = isFounder ? '<span class="lesson-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="lesson-pinwall-card-badge">Beispiel</span>' : '');
             var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
-            return '<div class="lesson-pinwall-card">' +
+            var founderClass = isFounder ? ' lesson-pinwall-card-founder' : '';
+            return '<div class="lesson-pinwall-card' + founderClass + '">' +
                 badgeHTML +
                 '<div class="lesson-pinwall-card-name" style="color:' + nameColor + '">' +
                     escapeHtml(e.first_name) +
