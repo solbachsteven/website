@@ -246,6 +246,19 @@
     margin: 0 0 14px 0;
 }
 
+/* Badge */
+.fl-pinwall-card-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    opacity: 0.25;
+}
+
 /* Counter */
 .fl-pinwall-counter {
     text-align: center;
@@ -344,7 +357,9 @@
 
     function buildCardHTML(e) {
         var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
+        var badgeHTML = e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '';
         return '<div class="fl-pinwall-card">' +
+            badgeHTML +
             '<div class="fl-pinwall-card-name" style="color:' + nameColor + '">' +
                 escapeHtml(e.first_name) +
                 '<span class="fl-pinwall-card-toggle"></span>' +
