@@ -34,6 +34,7 @@
 .lesson-section {\n\
     font-family: var(--lesson-font);\n\
     color: var(--lesson-white);\n\
+    background: var(--lesson-bg);\n\
     padding: 60px 0;\n\
     width: 100%;\n\
 }\n\
