@@ -199,6 +199,46 @@
     letter-spacing: 0.2px;
 }
 
+/* ======== PINWAND TICKER ======== */
+.fl-hero-ticker {
+    margin-top: 28px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fl-hero-ticker.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fl-hero-ticker-count {
+    font-size: 13px;
+    font-weight: 400;
+    color: #BC8034;
+    margin-bottom: 6px;
+}
+.fl-hero-ticker-names {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(44, 39, 38, 0.45);
+    height: 26px;
+    overflow: hidden;
+    position: relative;
+}
+.fl-hero-ticker-name {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fl-hero-ticker-name.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ======== DESKTOP BROWSER FRAME ======== */
 .fl-hero-mockups {
     position: relative;
@@ -551,6 +591,9 @@
     .fl-hero-headline { font-size: 28px; }
     .fl-hero-subtext { font-size: 15px; max-width: 100%; }
     .fl-hero-form { max-width: 100%; }
+    .fl-hero-ticker { margin-top: 20px; }
+    .fl-hero-ticker-count { font-size: 12px; }
+    .fl-hero-ticker-names { font-size: 16px; height: 24px; }
     .fl-hero-mockups { min-height: 280px; }
     .fl-mockup-desktop { max-width: 360px; }
     .fl-mockup-mobile { width: 110px; right: -8px; bottom: -16px; }
@@ -648,6 +691,7 @@
                         '<button class="fl-hero-form-cta" type="button">' + data.cta + '</button>' +
                         '<div class="fl-hero-form-trust">' + data.trust + '</div>' +
                     '</div>' +
+                    '<div class="fl-hero-ticker" id="fl-hero-ticker"></div>' +
                 '</div>' +
                 '<div class="fl-hero-mockups fl-fade">' +
                     '<div class="fl-mockup-desktop">' +
@@ -696,6 +740,53 @@
     while (temp.firstChild) {
         pageWrapper.appendChild(temp.firstChild);
     }
+
+    // === PINWAND TICKER ===
+    (function() {
+        var ticker = document.getElementById('fl-hero-ticker');
+        if (!ticker) return;
+
+        fetch('https://win3-community.solbachsteven.workers.dev/pinwall/entries')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            var entries = data.entries || [];
+            if (entries.length < 3) return; // Zu wenige fuer Ticker
+
+            // Nur nicht-Beispiel-Namen (echte User) oder alle wenn zu wenige
+            var names = entries.map(function(e) { return e.first_name; });
+            var count = entries.length;
+
+            ticker.innerHTML =
+                '<div class="fl-hero-ticker-count">' + count + ' Menschen haben ihre Lebensaufgabe formuliert</div>' +
+                '<div class="fl-hero-ticker-names" id="fl-hero-ticker-names"></div>';
+
+            // Namen-Elemente erstellen
+            var namesEl = document.getElementById('fl-hero-ticker-names');
+            names.forEach(function(name) {
+                var span = document.createElement('span');
+                span.className = 'fl-hero-ticker-name';
+                span.textContent = name;
+                namesEl.appendChild(span);
+            });
+
+            // Animation starten
+            var nameEls = namesEl.querySelectorAll('.fl-hero-ticker-name');
+            var currentIdx = 0;
+            nameEls[0].classList.add('active');
+
+            setInterval(function() {
+                nameEls[currentIdx].classList.remove('active');
+                currentIdx = (currentIdx + 1) % nameEls.length;
+                nameEls[currentIdx].classList.add('active');
+            }, 2500);
+
+            // Ticker sichtbar machen
+            setTimeout(function() { ticker.classList.add('visible'); }, 600);
+        })
+        .catch(function() {
+            // Stille Fehlerbehandlung - Ticker bleibt unsichtbar
+        });
+    })();
 
     // === SCROLL REVEAL ===
     if (!window.__FL_REVEAL_INIT) {
