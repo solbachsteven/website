@@ -120,7 +120,7 @@
 }\n\
 .lesson-pinwall-card-name { font-family: var(--lesson-font-hand); font-size: 24px; font-weight: 500; color: var(--lesson-gold); margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; line-height: 1.2; }\n\
 .lesson-pinwall-card-toggle { width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(188,128,52,0.3); background: transparent; flex-shrink: 0; margin-left: 10px; position: relative; transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease; }\n\
-.lesson-pinwall-card-toggle::before, .lesson-pinwall-card-toggle::after { content: \\'\\'; position: absolute; top: 50%; left: 50%; background: var(--lesson-gold); border-radius: 1px; transition: transform 0.3s ease, opacity 0.3s ease; }\n\
+.lesson-pinwall-card-toggle::before, .lesson-pinwall-card-toggle::after { content: \"\"; position: absolute; top: 50%; left: 50%; background: var(--lesson-gold); border-radius: 1px; transition: transform 0.3s ease, opacity 0.3s ease; }\n\
 .lesson-pinwall-card-toggle::before { width: 10px; height: 1.5px; transform: translate(-50%, -50%); }\n\
 .lesson-pinwall-card-toggle::after { width: 1.5px; height: 10px; transform: translate(-50%, -50%); }\n\
 @media (hover: hover) { .lesson-pinwall-card:hover .lesson-pinwall-card-toggle { border-color: rgba(188,128,52,0.6); } }\n\
