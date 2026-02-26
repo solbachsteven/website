@@ -263,6 +263,7 @@
 .fl-pinwall-card-founder {
     border: 1px solid rgba(188,128,52,0.35);
     box-shadow: 0 0 20px rgba(188,128,52,0.08);
+    padding-bottom: 38px;
 }
 .fl-pinwall-card-founder .fl-pinwall-card-badge.founder-badge {
     color: #BC8034;
