@@ -267,6 +267,8 @@
 .fl-pinwall-card-founder .fl-pinwall-card-badge.founder-badge {
     color: #BC8034;
     opacity: 0.5;
+    font-size: 18px;
+    letter-spacing: 0;
 }
 
 /* Counter */

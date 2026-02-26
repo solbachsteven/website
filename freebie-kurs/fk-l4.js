@@ -144,7 +144,7 @@
 .lesson-pinwall-card.highlight { animation: lesson-highlight-pulse 1.5s ease 2; }\n\
 /* --- Founder Card --- */\n\
 .lesson-pinwall-card-founder { border: 1px solid rgba(188,128,52,0.35); box-shadow: 0 0 20px rgba(188,128,52,0.08); }\n\
-.lesson-pinwall-card-founder .lesson-pinwall-card-badge.founder-badge { color: var(--lesson-gold); opacity: 0.5; }\n\
+.lesson-pinwall-card-founder .lesson-pinwall-card-badge.founder-badge { color: var(--lesson-gold); opacity: 0.5; font-size: 18px; letter-spacing: 0; }\n\
 \n\
 /* --- L4 Responsive --- */\n\
 @media (max-width: 900px) {\n\
