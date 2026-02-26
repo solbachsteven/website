@@ -199,22 +199,24 @@
     letter-spacing: 0.2px;
 }
 
-/* ======== RIGHT: PINWAND-VORSCHAU + TICKER ======== */
+/* ======== RIGHT: PINWAND-VORSCHAU ======== */
 .fl-hero-proof {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
-/* Pinwand-Fenster mit Fade */
+/* Dunkles Pinwand-Fenster */
 .fl-hero-pinwall {
     position: relative;
     width: 100%;
-    max-width: 480px;
-    max-height: 400px;
+    max-width: 440px;
+    max-height: 320px;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 16px;
+    background: #1A1A1A;
+    box-shadow: 0 20px 50px rgba(44, 39, 38, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 .fl-hero-pinwall::after {
     content: '';
@@ -222,61 +224,54 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(244, 240, 236, 0), #F4F0EC);
+    height: 90px;
+    background: linear-gradient(to bottom, transparent, #1A1A1A);
     pointer-events: none;
     z-index: 2;
+    border-radius: 0 0 16px 16px;
 }
 
 /* Masonry Grid */
 .fl-hero-pinwall-grid {
     columns: 2;
-    column-gap: 12px;
-    padding: 4px;
+    column-gap: 10px;
+    padding: 10px;
 }
 
-/* Einzelne Karte */
+/* Einzelne Karte (dunkles Theme) */
 .fl-hero-pinwall-card {
     break-inside: avoid;
-    margin-bottom: 12px;
-    background: #FFFFFF;
-    border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 2px 12px rgba(44, 39, 38, 0.06), 0 1px 2px rgba(44, 39, 38, 0.03);
-    border-left: 3px solid #BC8034;
+    margin-bottom: 10px;
+    background: rgba(244, 240, 236, 0.04);
+    border-radius: 10px;
+    padding: 11px 13px;
     opacity: 0;
-    transform: translateY(10px);
+    transform: scale(0.95);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .fl-hero-pinwall-card.visible {
     opacity: 1;
-    transform: translateY(0);
-}
-@media (hover: hover) {
-    .fl-hero-pinwall-card:hover {
-        box-shadow: 0 4px 20px rgba(44, 39, 38, 0.1), 0 2px 4px rgba(44, 39, 38, 0.05);
-    }
+    transform: scale(1);
 }
 .fl-hero-pinwall-card-name {
     font-family: 'Caveat', cursive;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     line-height: 1.2;
 }
 .fl-hero-pinwall-card-label {
-    font-size: 9px;
-    font-weight: 500;
-    color: rgba(44, 39, 38, 0.3);
+    font-size: 7.5px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    opacity: 0.5;
     margin-bottom: 3px;
 }
 .fl-hero-pinwall-card-text {
-    font-size: 12.5px;
+    font-size: 11px;
     font-weight: 300;
-    color: #2C2726;
-    opacity: 0.6;
+    color: rgba(244, 240, 236, 0.55);
     line-height: 1.5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -364,8 +359,7 @@
     .fl-hero-inner { gap: 40px; }
     .fl-hero-headline { font-size: 34px; }
     .fl-hero-subtext { font-size: 16px; }
-    .fl-hero-pinwall { max-width: 420px; max-height: 360px; }
-    .fl-hero-pinwall-card { padding: 12px 14px; }
+    .fl-hero-pinwall { max-width: 380px; max-height: 290px; }
 }
 
 /* ======== HERO RESPONSIVE - MOBILE ======== */
@@ -375,17 +369,17 @@
         padding: 50px 16px 40px;
         border-radius: 0 0 48px 0;
     }
-    .fl-hero-inner { grid-template-columns: 1fr; gap: 36px; }
+    .fl-hero-inner { grid-template-columns: 1fr; gap: 32px; }
     .fl-hero-text { text-align: center; align-items: center; }
     .fl-hero-label { font-size: 11px; letter-spacing: 2px; }
     .fl-hero-headline { font-size: 28px; }
     .fl-hero-subtext { font-size: 15px; max-width: 100%; }
     .fl-hero-form { max-width: 100%; }
-    .fl-hero-pinwall { max-width: 100%; max-height: 300px; border-radius: 16px; }
-    .fl-hero-pinwall-grid { column-gap: 10px; }
-    .fl-hero-pinwall-card { padding: 12px 14px; margin-bottom: 10px; }
-    .fl-hero-pinwall-card-name { font-size: 16px; }
-    .fl-hero-pinwall-card-text { font-size: 12px; }
+    .fl-hero-pinwall { max-width: 100%; max-height: 260px; border-radius: 14px; }
+    .fl-hero-pinwall-grid { column-gap: 8px; padding: 8px; }
+    .fl-hero-pinwall-card { padding: 9px 11px; margin-bottom: 8px; }
+    .fl-hero-pinwall-card-name { font-size: 14px; }
+    .fl-hero-pinwall-card-text { font-size: 10px; }
     .fl-hero-ticker-count { font-size: 12px; }
     .fl-hero-ticker-names { font-size: 16px; height: 24px; }
 }
@@ -400,6 +394,28 @@
         cta: "Jetzt kostenlos starten",
         trust: "Kein Abo \u00b7 Kein Spam \u00b7 Sofort starten"
     };
+
+    // === KURATIERTE PINWAND-EINTR\u00c4GE ===
+    var HERO_ENTRIES = [
+        { name: 'Lisa', color: '#E84040', label: 'MEINE MISSION', text: 'Menschen zeigen, dass Neuanf\u00e4nge in jedem Alter m\u00f6glich sind - und sich lohnen.' },
+        { name: 'Thomas', color: '#4CAF50', label: 'MEIN WARUM', text: '15 Jahre im falschen Job. Dieses Gef\u00fchl soll keiner so lange aushalten m\u00fcssen.' },
+        { name: 'Nils', color: '#9B59B6', label: 'MEINE MISSION', text: 'Klarheit bringen, wenn alles sich anf\u00fchlt wie funktionieren statt leben.' },
+        { name: 'Marco', color: '#42A5C7', label: 'MEINE VISION', text: 'Eine Welt, in der V\u00e4ter ohne schlechtes Gewissen sagen: Ich brauche auch Zeit f\u00fcr mich.' },
+        { name: 'Sarah', color: '#E8782A', label: 'MEIN WARUM', text: 'Das Gef\u00fchl, dass ich mehr zu geben habe als das, was auf meiner Visitenkarte steht.' },
+        { name: 'David', color: '#5B6ABF', label: 'MEINE MISSION', text: 'Jugendlichen zeigen, dass ihre Unsicherheit kein Fehler ist, sondern ein Anfang.' },
+        { name: 'Julia', color: '#D4A04A', label: 'MEINE VISION', text: 'Frauen m\u00fcssen sich nicht zwischen Karriere und Familie entscheiden.' },
+        { name: 'Kai', color: '#E84040', label: 'MEIN WARUM', text: 'Meine Tochter fragte: Papa, bist du gl\u00fccklich? Ich konnte nicht antworten.' },
+        { name: 'Nina', color: '#4CAF50', label: 'MEINE MISSION', text: 'R\u00e4ume schaffen, in denen Ehrlichkeit kein Risiko ist.' },
+        { name: 'Felix', color: '#9B59B6', label: 'MEINE VISION', text: 'Niemand sch\u00e4mt sich f\u00fcr seine Tr\u00e4ume. Auch nicht die leisen.' },
+        { name: 'Elif', color: '#E8782A', label: 'MEIN WARUM', text: 'Die Sehnsucht nach einem Leben, das sich wirklich meins anf\u00fchlt.' },
+        { name: 'Carla', color: '#42A5C7', label: 'MEINE MISSION', text: 'Frauen helfen, die alles haben und trotzdem sp\u00fcren: Da fehlt was.' },
+        { name: 'Jan', color: '#5B6ABF', label: 'MEIN WARUM', text: 'Die wichtigsten Gespr\u00e4che finden nie statt. Ich will den Anfang machen.' },
+        { name: 'Melina', color: '#D4A04A', label: 'MEINE VISION', text: 'Verletzlichkeit gilt als Mut, nicht als Schw\u00e4che.' },
+        { name: 'Andreas', color: '#E84040', label: 'MEIN WARUM', text: 'Mit 45 verstanden: Erfolg ist, wenn dein Kalender zu deinen Werten passt.' }
+    ];
+
+    // Line-Clamp Variation fuer natuerliche Hoehen
+    var CLAMPS = [3, 2, 3, 2, 3, 2];
 
     // === RENDER ===
     var heroHTML =
@@ -441,19 +457,75 @@
         pageWrapper.appendChild(temp.firstChild);
     }
 
-    // === PINWAND SOCIAL PROOF (Karten + Ticker) ===
+    // === PINWAND-KARTEN MIT SWAP-ANIMATION ===
     (function() {
         var gridEl = document.getElementById('fl-hero-pinwall-grid');
-        var ticker = document.getElementById('fl-hero-ticker');
-        if (!gridEl && !ticker) return;
+        if (!gridEl) return;
 
-        var CHAKRA = ['#E84040','#E8782A','#D4A04A','#4CAF50','#42A5C7','#5B6ABF','#9B59B6'];
-        var STATEMENTS = [
-            { field: 'satz_mission', label: 'Meine Mission' },
-            { field: 'satz_warum', label: 'Mein Warum' },
-            { field: 'satz_vision', label: 'Meine Vision' }
-        ];
-        var CLAMPS = [3, 2, 3, 2, 3, 2];
+        var displayed = HERO_ENTRIES.slice(0, 6);
+        var pool = HERO_ENTRIES.slice(6);
+        var cardEls = [];
+
+        function buildCardHTML(entry, clamp) {
+            return '<div class="fl-hero-pinwall-card-name" style="color:' + entry.color + ';">' + entry.name + '</div>' +
+                '<div class="fl-hero-pinwall-card-label" style="color:' + entry.color + ';">' + entry.label + '</div>' +
+                '<div class="fl-hero-pinwall-card-text" style="-webkit-line-clamp:' + clamp + ';">' + entry.text + '</div>';
+        }
+
+        // Karten initial rendern
+        displayed.forEach(function(entry, i) {
+            var card = document.createElement('div');
+            card.className = 'fl-hero-pinwall-card';
+            card.innerHTML = buildCardHTML(entry, CLAMPS[i % CLAMPS.length]);
+            gridEl.appendChild(card);
+            cardEls.push(card);
+        });
+
+        // Gestaffeltes Einblenden
+        setTimeout(function() {
+            cardEls.forEach(function(c, i) {
+                setTimeout(function() { c.classList.add('visible'); }, i * 80);
+            });
+        }, 300);
+
+        // Swap-Animation: alle 3.5s eine Karte austauschen
+        var lastSwapped = -1;
+        setTimeout(function() {
+            setInterval(function() {
+                if (pool.length === 0) return;
+
+                // Zufaellige Karte waehlen (nicht dieselbe wie zuletzt)
+                var idx;
+                do {
+                    idx = Math.floor(Math.random() * cardEls.length);
+                } while (idx === lastSwapped && cardEls.length > 1);
+                lastSwapped = idx;
+
+                var card = cardEls[idx];
+
+                // Fade Out
+                card.classList.remove('visible');
+
+                setTimeout(function() {
+                    // Entry tauschen
+                    var newEntry = pool.shift();
+                    pool.push(displayed[idx]);
+                    displayed[idx] = newEntry;
+
+                    // DOM aktualisieren
+                    card.innerHTML = buildCardHTML(newEntry, CLAMPS[idx % CLAMPS.length]);
+
+                    // Fade In
+                    card.classList.add('visible');
+                }, 450);
+            }, 3500);
+        }, 2500);
+    })();
+
+    // === TICKER (echte API-Daten) ===
+    (function() {
+        var ticker = document.getElementById('fl-hero-ticker');
+        if (!ticker) return;
 
         fetch('https://win3-community.solbachsteven.workers.dev/pinwall/entries')
         .then(function(res) { return res.json(); })
@@ -461,69 +533,34 @@
             var entries = result.entries || [];
             if (entries.length < 3) return;
 
-            // --- Pinwand-Karten (rechte Seite) ---
-            if (gridEl) {
-                var cardEntries = entries.filter(function(e) { return e.is_example != 2; }).slice(0, 6);
-                if (cardEntries.length < 4) cardEntries = entries.slice(0, 6);
+            var names = entries.map(function(e) { return e.first_name; });
+            var count = entries.length;
 
-                cardEntries.forEach(function(e, i) {
-                    var ci = e.first_name.length % CHAKRA.length;
-                    var color = CHAKRA[ci];
-                    var stmt = STATEMENTS[i % 3];
-                    var text = e[stmt.field] || e.satz_mission || e.satz_vision || e.satz_warum || '';
-                    var clamp = CLAMPS[i % CLAMPS.length];
+            ticker.innerHTML =
+                '<div class="fl-hero-ticker-count">' + count + ' Menschen haben ihre Lebensaufgabe formuliert</div>' +
+                '<div class="fl-hero-ticker-names" id="fl-hero-ticker-names"></div>';
 
-                    var card = document.createElement('div');
-                    card.className = 'fl-hero-pinwall-card';
-                    card.style.borderLeftColor = color;
-                    card.style.transitionDelay = (i * 0.08) + 's';
-                    card.innerHTML =
-                        '<div class="fl-hero-pinwall-card-name" style="color:' + color + ';">' + e.first_name + '</div>' +
-                        '<div class="fl-hero-pinwall-card-label">' + stmt.label + '</div>' +
-                        '<div class="fl-hero-pinwall-card-text" style="-webkit-line-clamp:' + clamp + ';">' + text + '</div>';
-                    gridEl.appendChild(card);
-                });
+            var namesEl = document.getElementById('fl-hero-ticker-names');
+            names.forEach(function(name) {
+                var span = document.createElement('span');
+                span.className = 'fl-hero-ticker-name';
+                span.textContent = name;
+                namesEl.appendChild(span);
+            });
 
-                // Gestaffeltes Einblenden
-                setTimeout(function() {
-                    var cards = gridEl.querySelectorAll('.fl-hero-pinwall-card');
-                    cards.forEach(function(c) { c.classList.add('visible'); });
-                }, 300);
-            }
+            var nameEls = namesEl.querySelectorAll('.fl-hero-ticker-name');
+            var currentIdx = 0;
+            nameEls[0].classList.add('active');
 
-            // --- Ticker unter der Pinwand ---
-            if (ticker) {
-                var names = entries.map(function(e) { return e.first_name; });
-                var count = entries.length;
+            setInterval(function() {
+                nameEls[currentIdx].classList.remove('active');
+                currentIdx = (currentIdx + 1) % nameEls.length;
+                nameEls[currentIdx].classList.add('active');
+            }, 2500);
 
-                ticker.innerHTML =
-                    '<div class="fl-hero-ticker-count">' + count + ' Menschen haben ihre Lebensaufgabe formuliert</div>' +
-                    '<div class="fl-hero-ticker-names" id="fl-hero-ticker-names"></div>';
-
-                var namesEl = document.getElementById('fl-hero-ticker-names');
-                names.forEach(function(name) {
-                    var span = document.createElement('span');
-                    span.className = 'fl-hero-ticker-name';
-                    span.textContent = name;
-                    namesEl.appendChild(span);
-                });
-
-                var nameEls = namesEl.querySelectorAll('.fl-hero-ticker-name');
-                var currentIdx = 0;
-                nameEls[0].classList.add('active');
-
-                setInterval(function() {
-                    nameEls[currentIdx].classList.remove('active');
-                    currentIdx = (currentIdx + 1) % nameEls.length;
-                    nameEls[currentIdx].classList.add('active');
-                }, 2500);
-
-                setTimeout(function() { ticker.classList.add('visible'); }, 800);
-            }
+            setTimeout(function() { ticker.classList.add('visible'); }, 800);
         })
-        .catch(function() {
-            // Stille Fehlerbehandlung - bleibt unsichtbar
-        });
+        .catch(function() {});
     })();
 
     // === SCROLL REVEAL ===
