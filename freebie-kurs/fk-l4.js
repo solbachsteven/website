@@ -133,7 +133,7 @@
 .lesson-pinwall-card-satz { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--lesson-white); opacity: 0.85; margin-bottom: 12px; }\n\
 .lesson-pinwall-card-satz:last-child { margin-bottom: 0; }\n\
 .lesson-pinwall-card-hidden { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease; margin-top: 0; }\n\
-.lesson-pinwall-card.open .lesson-pinwall-card-hidden { max-height: 600px; opacity: 1; margin-top: 12px; }\n\
+.lesson-pinwall-card.open .lesson-pinwall-card-hidden { max-height: 1500px; opacity: 1; margin-top: 12px; }\n\
 .lesson-pinwall-card-divider { height: 1px; background: linear-gradient(90deg, rgba(188,128,52,0.3) 0%, rgba(188,128,52,0.05) 100%); margin: 0 0 14px 0; }\n\
 .lesson-pinwall-counter { text-align: center; font-size: 13px; font-weight: 300; color: var(--lesson-white); opacity: 0.4; margin-top: 20px; margin-bottom: 4px; letter-spacing: 0.5px; }\n\
 .lesson-pinwall-card-badge { position: absolute; bottom: 10px; right: 14px; font-size: 9px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--lesson-white); opacity: 0.25; }\n\
@@ -521,7 +521,7 @@
 
         function buildCardHTML(e) {
             var isFounder = e.is_example == 2;
-            var badgeHTML = isFounder ? '<span class="lesson-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="lesson-pinwall-card-badge">Beispiel</span>' : '');
+            var badgeHTML = isFounder ? '<span class="lesson-pinwall-card-badge founder-badge">\u2764</span>' : (e.is_example ? '<span class="lesson-pinwall-card-badge">Beispiel</span>' : '');
             var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
             var founderClass = isFounder ? ' lesson-pinwall-card-founder' : '';
             return '<div class="lesson-pinwall-card' + founderClass + '">' +

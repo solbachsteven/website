@@ -235,7 +235,7 @@
     margin-top: 0;
 }
 .fl-pinwall-card.open .fl-pinwall-card-hidden {
-    max-height: 600px;
+    max-height: 1500px;
     opacity: 1;
     margin-top: 12px;
 }
@@ -368,7 +368,7 @@
     function buildCardHTML(e) {
         var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
         var isFounder = e.is_example == 2;
-        var badgeHTML = isFounder ? '<span class="fl-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '');
+        var badgeHTML = isFounder ? '<span class="fl-pinwall-card-badge founder-badge">\u2764</span>' : (e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '');
         var founderClass = isFounder ? ' fl-pinwall-card-founder' : '';
         return '<div class="fl-pinwall-card' + founderClass + '">' +
             badgeHTML +
