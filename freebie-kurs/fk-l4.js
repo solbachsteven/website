@@ -245,10 +245,10 @@
                         formHTML +=
                             '<div class="lesson-form-field"' + colorAttr + '>' +
                                 '<label class="lesson-form-label">' + field.label + '</label>' +
-                                '<textarea class="lesson-form-textarea" data-idx="' + i + '" placeholder="' + field.placeholder + '" maxlength="500"></textarea>' +
+                                '<textarea class="lesson-form-textarea" data-idx="' + i + '" placeholder="' + field.placeholder + '" maxlength="300"></textarea>' +
                                 '<div class="lesson-form-field-footer">' +
                                     '<span class="lesson-form-hint" data-idx="' + i + '">Mindestens ein ganzer Satz</span>' +
-                                    '<span class="lesson-form-charcount" data-idx="' + i + '">0 / 500</span>' +
+                                    '<span class="lesson-form-charcount" data-idx="' + i + '">0 / 300</span>' +
                                 '</div>' +
                             '</div>';
                     });
@@ -298,9 +298,9 @@
                         function updateCounter() {
                             var len = ta.value.length;
                             if (counter) {
-                                counter.textContent = len + ' / 500';
+                                counter.textContent = len + ' / 300';
                                 counter.classList.toggle('active', len > 0);
-                                counter.classList.toggle('warn', len > 450);
+                                counter.classList.toggle('warn', len > 270);
                             }
                             if (hint) {
                                 hint.classList.toggle('show', len > 0 && len < 20);
@@ -520,7 +520,7 @@
         }
 
         function buildCardHTML(e) {
-            var isFounder = e.is_example === 2;
+            var isFounder = e.is_example == 2;
             var badgeHTML = isFounder ? '<span class="lesson-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="lesson-pinwall-card-badge">Beispiel</span>' : '');
             var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
             var founderClass = isFounder ? ' lesson-pinwall-card-founder' : '';
@@ -560,6 +560,12 @@
                 targetEl.innerHTML = '<div class="lesson-pinwall-empty"><div class="lesson-pinwall-empty-text">Sei der Erste, der seine S\u00e4tze auf die Pinwand setzt!</div></div>';
                 return;
             }
+            // Founder (is_example == 2) immer nach vorne sortieren
+            entries.sort(function(a, b) {
+                var aFounder = a.is_example == 2 ? 1 : 0;
+                var bFounder = b.is_example == 2 ? 1 : 0;
+                return bFounder - aFounder;
+            });
             pinwallAllEntries = entries;
             pinwallShown = 0;
             pinwallOpenCards = [];

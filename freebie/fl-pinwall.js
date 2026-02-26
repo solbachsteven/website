@@ -367,7 +367,7 @@
 
     function buildCardHTML(e) {
         var nameColor = COLOR_MAP[e.name_color] || COLOR_MAP.gold;
-        var isFounder = e.is_example === 2;
+        var isFounder = e.is_example == 2;
         var badgeHTML = isFounder ? '<span class="fl-pinwall-card-badge founder-badge">Kursleiter</span>' : (e.is_example ? '<span class="fl-pinwall-card-badge">Beispiel</span>' : '');
         var founderClass = isFounder ? ' fl-pinwall-card-founder' : '';
         return '<div class="fl-pinwall-card' + founderClass + '">' +
@@ -436,6 +436,12 @@
             containerEl.innerHTML = '<div style="text-align:center;padding:40px 0;opacity:0.4;font-size:15px;">Noch keine Eintr\u00e4ge auf der Pinwand.</div>';
             return;
         }
+        // Founder (is_example == 2) immer nach vorne sortieren
+        entries.sort(function(a, b) {
+            var aFounder = a.is_example == 2 ? 1 : 0;
+            var bFounder = b.is_example == 2 ? 1 : 0;
+            return bFounder - aFounder;
+        });
         allEntries = entries;
         shown = 0;
         openCards = [];
