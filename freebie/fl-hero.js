@@ -239,295 +239,53 @@
     transform: translateY(0);
 }
 
-/* ======== DESKTOP BROWSER FRAME ======== */
-.fl-hero-mockups {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 480px;
-}
-.fl-mockup-desktop {
-    width: 100%;
-    max-width: 520px;
-    background: #1E1E1E;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(44, 39, 38, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-.fl-mockup-titlebar {
-    height: 36px;
-    background: #2D2D2D;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    gap: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.fl-mockup-dots {
-    display: flex;
-    gap: 6px;
-    margin-right: 10px;
-}
-.fl-mockup-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-.fl-mockup-dot--close { background: #FF5F56; }
-.fl-mockup-dot--min { background: #FFBD2E; }
-.fl-mockup-dot--max { background: #27C93F; }
-.fl-mockup-tab {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: #1E1E1E;
-    border-radius: 6px 6px 0 0;
-    padding: 5px 14px;
-    font-size: 9px;
-    color: rgba(255, 255, 255, 0.7);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 400;
-    position: relative;
-    top: 1px;
-}
-.fl-mockup-tab-icon {
-    width: 10px;
-    height: 10px;
-    background: #D4A04A;
-    border-radius: 2px;
-    flex-shrink: 0;
-}
-.fl-mockup-urlbar {
-    height: 30px;
-    background: #1E1E1E;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    gap: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.fl-mockup-nav-btns {
-    display: flex;
-    gap: 6px;
-}
-.fl-mockup-nav-btn {
-    width: 8px;
-    height: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.fl-mockup-nav-btn svg {
-    width: 8px;
-    height: 8px;
-}
-.fl-mockup-url {
-    flex: 1;
-    background: #2D2D2D;
-    border-radius: 5px;
-    padding: 3px 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.fl-mockup-url-lock svg {
-    width: 8px;
-    height: 8px;
-}
-.fl-mockup-url-text {
-    font-size: 9px;
-    color: rgba(255, 255, 255, 0.5);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 400;
-}
-.fl-mockup-desktop-screen {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    background: #1A1A1A;
-    overflow: hidden;
-    position: relative;
-}
-
-/* ======== MOBILE PHONE FRAME ======== */
-.fl-mockup-mobile {
-    position: absolute;
-    bottom: -24px;
-    right: -24px;
-    width: 150px;
-    background: #1A1A1A;
-    border-radius: 28px;
-    padding: 10px 8px;
-    box-shadow: 0 20px 50px rgba(44, 39, 38, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-}
-.fl-mockup-island {
-    width: 40px;
-    height: 10px;
-    background: #000000;
-    border-radius: 10px;
-    margin: 2px auto 6px;
-}
-.fl-mockup-mobile-screen {
-    width: 100%;
-    aspect-ratio: 9 / 18;
-    background: #1A1A1A;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
-}
-.fl-mockup-home-indicator {
-    width: 44px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 2px;
-    margin: 6px auto 2px;
-}
-
-/* ======== KURSVORSCHAU INHALTE ======== */
-.fl-preview {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-}
-.fl-preview-sidebar {
-    width: 28%;
-    background: #141414;
-    padding: 12px 8px;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+/* ======== HERO SOCIAL PROOF CARDS ======== */
+.fl-hero-cards {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 14px;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 10px 0;
+    align-self: center;
 }
-.fl-preview-sidebar-title {
-    font-size: 5.5px;
-    font-weight: 600;
-    color: #D4A04A;
-    padding: 4px 6px 8px;
-    letter-spacing: 0.3px;
+.fl-hero-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 16px rgba(44, 39, 38, 0.07), 0 1px 3px rgba(44, 39, 38, 0.04);
+    border-left: 3px solid #BC8034;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.fl-preview-sidebar-item {
-    font-size: 5px;
-    color: rgba(244, 240, 236, 0.4);
-    padding: 5px 6px;
-    border-radius: 4px;
-    line-height: 1.4;
+.fl-hero-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (hover: hover) {
+    .fl-hero-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(44, 39, 38, 0.1), 0 2px 6px rgba(44, 39, 38, 0.05);
+    }
+}
+.fl-hero-card-name {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+.fl-hero-card-text {
+    font-size: 13.5px;
     font-weight: 300;
-}
-.fl-preview-sidebar-item--active {
-    background: rgba(212, 160, 74, 0.1);
-    color: #D4A04A;
-    font-weight: 500;
-}
-.fl-preview-content {
-    flex: 1;
-    padding: 16px 20px;
+    color: #2C2726;
+    opacity: 0.65;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.fl-preview-step-label {
-    font-size: 5px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #D4A04A;
-    background: rgba(212, 160, 74, 0.1);
-    padding: 2px 7px;
-    border-radius: 8px;
-    display: inline-block;
-    align-self: flex-start;
-}
-.fl-preview-title {
-    font-size: 10px;
-    font-weight: 600;
-    color: #FFFFFF;
-    line-height: 1.3;
-}
-.fl-preview-text {
-    font-size: 5.5px;
-    font-weight: 300;
-    color: rgba(244, 240, 236, 0.6);
-    line-height: 1.7;
-}
-.fl-preview-emphasis {
-    background: rgba(212, 160, 74, 0.06);
-    border-left: 2px solid #D4A04A;
-    padding: 6px 8px;
-    border-radius: 0 6px 6px 0;
-}
-.fl-preview-emphasis-text {
-    font-size: 5.5px;
-    font-weight: 400;
-    color: #D4A04A;
-    line-height: 1.6;
-    font-style: italic;
-}
-.fl-preview-progress {
-    margin-top: auto;
-    display: flex;
-    gap: 3px;
-}
-.fl-preview-progress-dot {
-    flex: 1;
-    height: 2px;
-    border-radius: 1px;
-    background: rgba(255, 255, 255, 0.08);
-}
-.fl-preview-progress-dot--done { background: #D4A04A; }
-.fl-preview-progress-dot--current { background: linear-gradient(90deg, #D4A04A, rgba(212, 160, 74, 0.3)); }
-
-/* Mobile-Kursvorschau */
-.fl-preview-m {
-    width: 100%;
-    height: 100%;
-    padding: 8px 7px;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background: #1A1A1A;
-}
-.fl-preview-m-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.fl-preview-m-back { font-size: 6px; color: #D4A04A; }
-.fl-preview-m-step {
-    font-size: 4.5px;
-    font-weight: 500;
-    color: rgba(244, 240, 236, 0.5);
-    letter-spacing: 0.5px;
-}
-.fl-preview-m-title {
-    font-size: 7px;
-    font-weight: 600;
-    color: #FFFFFF;
-    line-height: 1.3;
-    margin-top: 2px;
-}
-.fl-preview-m-text {
-    font-size: 4px;
-    font-weight: 300;
-    color: rgba(244, 240, 236, 0.55);
-    line-height: 1.7;
-}
-.fl-preview-m-card {
-    background: rgba(212, 160, 74, 0.06);
-    border-left: 1.5px solid #D4A04A;
-    padding: 4px 5px;
-    border-radius: 0 4px 4px 0;
-    margin-top: 2px;
-}
-.fl-preview-m-card-text {
-    font-size: 4px;
-    font-weight: 400;
-    color: #D4A04A;
-    line-height: 1.5;
-    font-style: italic;
 }
 
 /* ======== SYSTEME.IO FORM OVERRIDES ======== */
@@ -572,10 +330,8 @@
     .fl-hero-inner { gap: 40px; }
     .fl-hero-headline { font-size: 34px; }
     .fl-hero-subtext { font-size: 16px; }
-    .fl-mockup-desktop { max-width: 440px; }
-    .fl-mockup-mobile { width: 120px; right: -12px; }
-    .fl-preview-content { padding: 12px 14px; }
-    .fl-preview-title { font-size: 9px; }
+    .fl-hero-cards { max-width: 380px; }
+    .fl-hero-card { padding: 16px 18px; }
 }
 
 /* ======== HERO RESPONSIVE - MOBILE ======== */
@@ -594,11 +350,11 @@
     .fl-hero-ticker { margin-top: 20px; }
     .fl-hero-ticker-count { font-size: 12px; }
     .fl-hero-ticker-names { font-size: 16px; height: 24px; }
-    .fl-hero-mockups { min-height: 280px; }
-    .fl-mockup-desktop { max-width: 360px; }
-    .fl-mockup-mobile { width: 110px; right: -8px; bottom: -16px; }
-    .fl-preview-sidebar { display: none; }
-    .fl-preview-content { padding: 10px 12px; }
+    .fl-hero-cards { max-width: 100%; gap: 10px; }
+    .fl-hero-card { padding: 14px 16px; }
+    .fl-hero-card-name { font-size: 18px; }
+    .fl-hero-card-text { font-size: 13px; }
+    .fl-hero-card:last-child { display: none; }
 }
 `;
     document.head.appendChild(style);
@@ -611,71 +367,6 @@
         cta: "Jetzt kostenlos starten",
         trust: "Kein Abo \u00b7 Kein Spam \u00b7 Sofort starten"
     };
-
-    // === SVG ICONS ===
-    var arrowLeftSVG = '<svg viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    var arrowRightSVG = '<svg viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    var lockSVG = '<svg viewBox="0 0 10 10" fill="none"><rect x="2" y="5" width="6" height="4" rx="1" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/><path d="M3.5 5V3.5a1.5 1.5 0 0 1 3 0V5" stroke="rgba(255,255,255,0.35)" stroke-width="0.8" fill="none"/></svg>';
-
-    // === MOCKUP HTML ===
-    var desktopPreviewHTML =
-        '<div class="fl-preview">' +
-            '<div class="fl-preview-sidebar">' +
-                '<div class="fl-preview-sidebar-title">Erkenne deine Lebensaufgabe</div>' +
-                '<div class="fl-preview-sidebar-item" style="color:rgba(244,240,236,0.2);font-size:4px;padding:2px 6px;text-transform:uppercase;letter-spacing:0.5px;">Einleitung</div>' +
-                '<div class="fl-preview-sidebar-item" style="padding-left:12px;display:flex;align-items:center;gap:3px;"><span style="color:#27C93F;font-size:4px;">&#10003;</span> Willkommen</div>' +
-                '<div class="fl-preview-sidebar-item" style="color:rgba(244,240,236,0.2);font-size:4px;padding:2px 6px;text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;">Schritt 1</div>' +
-                '<div class="fl-preview-sidebar-item fl-preview-sidebar-item--active" style="padding-left:12px;">Dein tieferes Warum</div>' +
-                '<div class="fl-preview-sidebar-item" style="color:rgba(244,240,236,0.2);font-size:4px;padding:2px 6px;text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;">Schritt 2</div>' +
-                '<div class="fl-preview-sidebar-item" style="padding-left:12px;">Deine Vision</div>' +
-                '<div class="fl-preview-sidebar-item" style="color:rgba(244,240,236,0.2);font-size:4px;padding:2px 6px;text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;">Schritt 3</div>' +
-                '<div class="fl-preview-sidebar-item" style="padding-left:12px;">Dein Mission Statement</div>' +
-                '<div class="fl-preview-sidebar-item" style="color:rgba(244,240,236,0.2);font-size:4px;padding:2px 6px;text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;">Abschluss</div>' +
-                '<div class="fl-preview-sidebar-item" style="padding-left:12px;">Deine 3 S\u00e4tze</div>' +
-            '</div>' +
-            '<div class="fl-preview-content">' +
-                '<div class="fl-preview-step-label">SCHRITT 01</div>' +
-                '<div class="fl-preview-title">Dein tieferes Warum</div>' +
-                '<div class="fl-preview-text">' +
-                    'Was treibt dich wirklich an? Nicht das, was du auf LinkedIn schreibst. Nicht das, was andere von dir erwarten. Sondern das, was bleibt, wenn alles Laute verstummt.' +
-                '</div>' +
-                '<div class="fl-preview-emphasis">' +
-                    '<div class="fl-preview-emphasis-text">' +
-                        'Dein Warum ist nicht etwas, das du erfindest. Es ist etwas, das du freilegst.' +
-                    '</div>' +
-                '</div>' +
-                '<div class="fl-preview-text">' +
-                    'In diesem Schritt gehen wir gemeinsam unter die Oberfl\u00e4che. Du lernst, hinter deine Rollen zu schauen.' +
-                '</div>' +
-                '<div class="fl-preview-progress">' +
-                    '<div class="fl-preview-progress-dot fl-preview-progress-dot--done"></div>' +
-                    '<div class="fl-preview-progress-dot fl-preview-progress-dot--current"></div>' +
-                    '<div class="fl-preview-progress-dot"></div>' +
-                    '<div class="fl-preview-progress-dot"></div>' +
-                    '<div class="fl-preview-progress-dot"></div>' +
-                '</div>' +
-            '</div>' +
-        '</div>';
-
-    var mobilePreviewHTML =
-        '<div class="fl-preview-m">' +
-            '<div class="fl-preview-m-header">' +
-                '<div class="fl-preview-m-back">\u2190</div>' +
-                '<div class="fl-preview-m-step">SCHRITT 1 / 3</div>' +
-            '</div>' +
-            '<div class="fl-preview-m-title">Dein tieferes Warum</div>' +
-            '<div class="fl-preview-m-text">' +
-                'Was treibt dich wirklich an? Nicht das, was du auf LinkedIn schreibst. Sondern das, was bleibt, wenn alles Laute verstummt.' +
-            '</div>' +
-            '<div class="fl-preview-m-card">' +
-                '<div class="fl-preview-m-card-text">' +
-                    'Dein Warum ist nicht etwas, das du erfindest. Es ist etwas, das du freilegst.' +
-                '</div>' +
-            '</div>' +
-            '<div class="fl-preview-m-text">' +
-                'In diesem Schritt gehen wir gemeinsam unter die Oberfl\u00e4che.' +
-            '</div>' +
-        '</div>';
 
     // === RENDER ===
     var heroHTML =
@@ -693,37 +384,7 @@
                     '</div>' +
                     '<div class="fl-hero-ticker" id="fl-hero-ticker"></div>' +
                 '</div>' +
-                '<div class="fl-hero-mockups fl-fade">' +
-                    '<div class="fl-mockup-desktop">' +
-                        '<div class="fl-mockup-titlebar">' +
-                            '<div class="fl-mockup-dots">' +
-                                '<span class="fl-mockup-dot fl-mockup-dot--close"></span>' +
-                                '<span class="fl-mockup-dot fl-mockup-dot--min"></span>' +
-                                '<span class="fl-mockup-dot fl-mockup-dot--max"></span>' +
-                            '</div>' +
-                            '<div class="fl-mockup-tab">' +
-                                '<span class="fl-mockup-tab-icon"></span>' +
-                                'Erkenne deine Lebensaufgabe' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="fl-mockup-urlbar">' +
-                            '<div class="fl-mockup-nav-btns">' +
-                                '<span class="fl-mockup-nav-btn">' + arrowLeftSVG + '</span>' +
-                                '<span class="fl-mockup-nav-btn">' + arrowRightSVG + '</span>' +
-                            '</div>' +
-                            '<div class="fl-mockup-url">' +
-                                '<span class="fl-mockup-url-lock">' + lockSVG + '</span>' +
-                                '<span class="fl-mockup-url-text">solbachsteven.systeme.io/kurs</span>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="fl-mockup-desktop-screen">' + desktopPreviewHTML + '</div>' +
-                    '</div>' +
-                    '<div class="fl-mockup-mobile">' +
-                        '<div class="fl-mockup-island"></div>' +
-                        '<div class="fl-mockup-mobile-screen">' + mobilePreviewHTML + '</div>' +
-                        '<div class="fl-mockup-home-indicator"></div>' +
-                    '</div>' +
-                '</div>' +
+                '<div class="fl-hero-cards" id="fl-hero-cards"></div>' +
             '</div>' +
         '</section>';
 
@@ -741,50 +402,78 @@
         pageWrapper.appendChild(temp.firstChild);
     }
 
-    // === PINWAND TICKER ===
+    // === PINWAND SOCIAL PROOF (Ticker + Cards) ===
     (function() {
         var ticker = document.getElementById('fl-hero-ticker');
-        if (!ticker) return;
+        var cardsEl = document.getElementById('fl-hero-cards');
+        if (!ticker && !cardsEl) return;
+
+        var CHAKRA = ['#E84040','#E8782A','#D4A04A','#4CAF50','#42A5C7','#5B6ABF','#9B59B6'];
 
         fetch('https://win3-community.solbachsteven.workers.dev/pinwall/entries')
         .then(function(res) { return res.json(); })
         .then(function(data) {
             var entries = data.entries || [];
-            if (entries.length < 3) return; // Zu wenige fuer Ticker
+            if (entries.length < 3) return;
 
-            // Nur nicht-Beispiel-Namen (echte User) oder alle wenn zu wenige
-            var names = entries.map(function(e) { return e.first_name; });
-            var count = entries.length;
+            // --- Ticker (linke Seite) ---
+            if (ticker) {
+                var names = entries.map(function(e) { return e.first_name; });
+                var count = entries.length;
 
-            ticker.innerHTML =
-                '<div class="fl-hero-ticker-count">' + count + ' Menschen haben ihre Lebensaufgabe formuliert</div>' +
-                '<div class="fl-hero-ticker-names" id="fl-hero-ticker-names"></div>';
+                ticker.innerHTML =
+                    '<div class="fl-hero-ticker-count">' + count + ' Menschen haben ihre Lebensaufgabe formuliert</div>' +
+                    '<div class="fl-hero-ticker-names" id="fl-hero-ticker-names"></div>';
 
-            // Namen-Elemente erstellen
-            var namesEl = document.getElementById('fl-hero-ticker-names');
-            names.forEach(function(name) {
-                var span = document.createElement('span');
-                span.className = 'fl-hero-ticker-name';
-                span.textContent = name;
-                namesEl.appendChild(span);
-            });
+                var namesEl = document.getElementById('fl-hero-ticker-names');
+                names.forEach(function(name) {
+                    var span = document.createElement('span');
+                    span.className = 'fl-hero-ticker-name';
+                    span.textContent = name;
+                    namesEl.appendChild(span);
+                });
 
-            // Animation starten
-            var nameEls = namesEl.querySelectorAll('.fl-hero-ticker-name');
-            var currentIdx = 0;
-            nameEls[0].classList.add('active');
+                var nameEls = namesEl.querySelectorAll('.fl-hero-ticker-name');
+                var currentIdx = 0;
+                nameEls[0].classList.add('active');
 
-            setInterval(function() {
-                nameEls[currentIdx].classList.remove('active');
-                currentIdx = (currentIdx + 1) % nameEls.length;
-                nameEls[currentIdx].classList.add('active');
-            }, 2500);
+                setInterval(function() {
+                    nameEls[currentIdx].classList.remove('active');
+                    currentIdx = (currentIdx + 1) % nameEls.length;
+                    nameEls[currentIdx].classList.add('active');
+                }, 2500);
 
-            // Ticker sichtbar machen
-            setTimeout(function() { ticker.classList.add('visible'); }, 600);
+                setTimeout(function() { ticker.classList.add('visible'); }, 600);
+            }
+
+            // --- Mini-Karten (rechte Seite) ---
+            if (cardsEl) {
+                var cardEntries = entries.filter(function(e) { return e.is_example != 2; }).slice(0, 3);
+                if (cardEntries.length < 2) cardEntries = entries.slice(0, 3);
+
+                cardEntries.forEach(function(e, i) {
+                    var ci = e.first_name.length % CHAKRA.length;
+                    var color = CHAKRA[ci];
+                    var text = e.satz_mission || e.satz_vision || e.satz_warum || '';
+
+                    var card = document.createElement('div');
+                    card.className = 'fl-hero-card';
+                    card.style.borderLeftColor = color;
+                    card.style.transitionDelay = (i * 0.15) + 's';
+                    card.innerHTML =
+                        '<div class="fl-hero-card-name" style="color:' + color + ';">' + e.first_name + '</div>' +
+                        '<div class="fl-hero-card-text">' + text + '</div>';
+                    cardsEl.appendChild(card);
+                });
+
+                setTimeout(function() {
+                    var cards = cardsEl.querySelectorAll('.fl-hero-card');
+                    cards.forEach(function(c) { c.classList.add('visible'); });
+                }, 400);
+            }
         })
         .catch(function() {
-            // Stille Fehlerbehandlung - Ticker bleibt unsichtbar
+            // Stille Fehlerbehandlung - Ticker und Karten bleiben unsichtbar
         });
     })();
 
