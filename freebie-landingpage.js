@@ -9,6 +9,7 @@
  * <script src="https://solbachsteven.github.io/website/freebie/fl-hero.js"></script>
  * <script src="https://solbachsteven.github.io/website/freebie/fl-steps.js"></script>
  * <script src="https://solbachsteven.github.io/website/freebie/fl-result.js"></script>
+ * <script src="https://solbachsteven.github.io/website/freebie/fl-pinwall.js"></script>
  * <script src="https://solbachsteven.github.io/website/freebie/fl-final-cta.js"></script>
  * <script src="https://solbachsteven.github.io/website/freebie/fl-fx.js"></script>
  */
@@ -30,6 +31,7 @@
         'fl-hero',
         'fl-steps',
         'fl-result',
+        'fl-pinwall',
         'fl-final-cta',
         'fl-fx'
     ];
