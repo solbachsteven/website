@@ -1,5 +1,5 @@
 // Win³ Mentoring Landingpage - Steven als Mentor Section (Standalone)
-// 2-Spalten Layout: Bild-Platzhalter links, Text + Trait Cards rechts
+// 2-Spalten Layout: Steven-Foto links, Text + Trait Cards rechts
 // Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-steven.js"></script>
 (function() {
     if (window.__WM_STEVEN_LOADED) return;
@@ -62,12 +62,11 @@
     inset: 0;
     background: linear-gradient(180deg, transparent 60%, rgba(45, 39, 38, 0.8) 100%);
 }
-.wm-steven-image-placeholder {
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(244, 240, 236, 0.2);
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.wm-steven-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
     z-index: 1;
 }
 .wm-steven-quote {
@@ -224,7 +223,7 @@
                 '<div class="wm-steven-grid">' +
                     '<div class="wm-steven-image-col wm-fade">' +
                         '<div class="wm-steven-image">' +
-                            '<span class="wm-steven-image-placeholder">Foto</span>' +
+                            '<img src="https://d1yei2z3i6k35z.cloudfront.net/15985342/6978eb69d9665_Removebackgroundproject-22.png" alt="Steven Solbach">' +
                         '</div>' +
                         '<div class="wm-steven-quote">\u201e' + data.quote + '\u201c</div>' +
                     '</div>' +
