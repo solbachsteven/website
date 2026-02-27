@@ -25,7 +25,7 @@
             },
             {
                 type: "text",
-                content: "Niemand hat sie dir gegeben. Kein Test, kein Algorithmus, kein Guru. Du hast in dich hineingeh\u00f6rcht, Spuren gelesen, die dein ganzes Leben lang da waren - und daraus etwas Greifbares gemacht. Die meisten Menschen tun das nie. Du hast es getan."
+                content: "Niemand hat sie dir gegeben. Kein Algorithmus, kein Guru. Du hast in dich hineingeh\u00f6rcht, Spuren gelesen, die dein ganzes Leben lang da waren - und daraus etwas Greifbares gemacht. Die meisten Menschen tun das nie."
             },
             { type: "divider" },
             {
@@ -43,7 +43,7 @@
             },
             {
                 type: "text",
-                content: "Ver\u00e4nderung ist kein Zeichen daf\u00fcr, dass du etwas falsch gemacht hast. Es ist ein Zeichen daf\u00fcr, dass du w\u00e4chst."
+                content: "Wenn sie sich ver\u00e4ndern, ist das kein Zeichen daf\u00fcr, dass du etwas falsch gemacht hast. Es ist ein Zeichen daf\u00fcr, dass du w\u00e4chst."
             },
             {
                 type: "text",
@@ -57,7 +57,11 @@
             },
             {
                 type: "text",
-                content: "Trag deine drei S\u00e4tze hier ein - so, wie sie gerade sind. Sie m\u00fcssen nicht perfekt sein. Sie m\u00fcssen wahr sein."
+                content: "Trag deine drei S\u00e4tze hier ein und setze sie auf unsere Pinwand - zusammen mit allen anderen, die diesen Kurs gemacht haben. Nat\u00fcrlich anonym: Du kannst einfach deinen Vornamen angeben oder einen Namen, der dir passt."
+            },
+            {
+                type: "text",
+                content: "Deine S\u00e4tze m\u00fcssen nicht perfekt sein. Sie m\u00fcssen wahr sein."
             },
             {
                 type: "form",
@@ -87,11 +91,11 @@
             },
             {
                 type: "text",
-                content: "Kein Ranking, kein Wettbewerb. Einfach Menschen, die sich getraut haben, hinzuschauen. Vielleicht erkennst du dich in jemandem wieder. Vielleicht inspiriert dich eine Vision, an die du selbst noch nicht gedacht hast. Vielleicht merkst du einfach: Ich bin nicht allein damit."
+                content: "Kein Ranking, kein Wettbewerb. Einfach Menschen, die nach innen geschaut haben. Und ausformuliert haben, was sie gefunden haben."
             },
             {
                 type: "text",
-                content: "Diese Pinwand findest du auch in der Community. Dort wirst du anderen begegnen, die denselben Weg gegangen sind."
+                content: "Das Wichtigste ist: Du bist nicht allein. Es gibt viele andere Weltverbesserer. Genau wie dich."
             },
             { type: "divider" },
             {
@@ -116,12 +120,25 @@
                 content: "Das sind die Themen, die im n\u00e4chsten Schritt warten - wenn du bereit bist."
             },
             {
-                type: "callout",
-                content: "<strong>Der Win\u00b3 Kurs</strong> geht den ganzen Weg: Von Selbsterkenntnis in die Selbstbefreiung zur Selbstverwirklichung. Mit KI-Begleitung, die sich an deine Antworten erinnert und mit dir weiterarbeitet."
-            },
-            {
-                type: "callout",
-                content: "<strong>Das 12 Wochen Mentoring</strong> ist pers\u00f6nliche Begleitung - 12 Wochen, 1:1 mit mir. Maximal 8 Menschen gleichzeitig, weil ich mich auf jeden einzelnen ganz einlassen m\u00f6chte. Wenn dich das anspricht, bewirb dich."
+                type: "pricetable",
+                items: [
+                    {
+                        title: "Der Win\u00b3 Kurs",
+                        price: "297 \u20ac",
+                        description: "Der ganze Weg: Von Selbsterkenntnis in die Selbstbefreiung zur Selbstverwirklichung. Mit KI-Begleitung, die sich an deine Antworten erinnert und mit dir weiterarbeitet.",
+                        cta: "Zum Kurs",
+                        url: "#",
+                        color: "warm"
+                    },
+                    {
+                        title: "12 Wochen Mentoring",
+                        price: "3.000 \u20ac",
+                        description: "Pers\u00f6nliche Begleitung - 12 Wochen, 1:1 mit mir. Maximal 8 Menschen gleichzeitig, weil ich mich auf jeden einzelnen ganz einlassen m\u00f6chte.",
+                        cta: "Jetzt bewerben",
+                        url: "#",
+                        color: "lilac"
+                    }
+                ]
             },
             {
                 type: "text",
@@ -132,8 +149,8 @@
                 content: "Aber eines m\u00f6chte ich dir noch mitgeben. Eine letzte Frage - vielleicht die wichtigste von allen:"
             },
             {
-                type: "reflection",
-                prompt: "Wie m\u00f6chtest du leben, um am Ende deiner Tage ohne Reue - und im Gegenteil: voller Dankbarkeit - auf dein Leben zur\u00fcckschauen zu k\u00f6nnen?"
+                type: "emphasis",
+                content: "Wie m\u00f6chtest du leben, um am Ende deiner Tage ohne Reue - und im Gegenteil: voller Dankbarkeit - auf dein Leben zur\u00fcckschauen zu k\u00f6nnen?"
             },
             {
                 type: "text",
@@ -235,9 +252,28 @@
 /* --- h3 --- */\n\
 .lesson-h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 40px 0 20px 0; color: var(--lesson-white); }\n\
 \n\
+/* --- Emphasis --- */\n\
+.lesson-emphasis { font-family: var(--lesson-font-hand); font-size: 28px; font-weight: 400; line-height: 1.6; letter-spacing: -1px; margin: 30px 0; padding: 20px 0; color: var(--lesson-gold); }\n\
+\n\
 /* --- Callout --- */\n\
 .lesson-callout { background: var(--lesson-bg-box); border-left: 3px solid var(--lesson-gold); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 20px 0; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--lesson-white); opacity: 0.9; }\n\
 .lesson-callout strong { font-weight: 600; color: var(--lesson-gold); }\n\
+\n\
+/* --- Pricetable --- */\n\
+.lesson-pricetable { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }\n\
+.lesson-pricetable-card { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 32px 28px; text-align: center; border: 1px solid rgba(188,128,52,0.2); display: flex; flex-direction: column; }\n\
+.lesson-pricetable-card[data-color="warm"] { border-color: rgba(188,128,52,0.3); }\n\
+.lesson-pricetable-card[data-color="lilac"] { border-color: rgba(139,109,175,0.3); }\n\
+.lesson-pricetable-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--lesson-white); }\n\
+.lesson-pricetable-card[data-color="warm"] .lesson-pricetable-title { color: #D4A04A; }\n\
+.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-title { color: #B89FD4; }\n\
+.lesson-pricetable-price { font-family: var(--lesson-font-hand); font-size: 36px; font-weight: 600; color: var(--lesson-gold); margin-bottom: 16px; }\n\
+.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-price { color: #B89FD4; }\n\
+.lesson-pricetable-desc { font-size: 15px; font-weight: 300; line-height: 1.7; opacity: 0.85; margin-bottom: 24px; flex: 1; }\n\
+.lesson-pricetable-cta { display: inline-block; padding: 12px 28px; border-radius: 10px; font-family: var(--lesson-font); font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; cursor: pointer; }\n\
+.lesson-pricetable-card[data-color="warm"] .lesson-pricetable-cta { background: var(--lesson-gold); color: var(--lesson-dark); }\n\
+.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-cta { background: #8B6DAF; color: var(--lesson-white); }\n\
+@media (hover: hover) { .lesson-pricetable-cta:hover { opacity: 0.85; } }\n\
 \n\
 /* --- Reflection --- */\n\
 .lesson-reflection { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 40px 36px; margin: 30px 0; text-align: center; border: 1px solid rgba(188,128,52,0.2); }\n\
@@ -258,6 +294,10 @@
 }\n\
 @media (max-width: 650px) {\n\
     .lesson-form, .lesson-callout { padding: 24px 20px; }\n\
+    .lesson-emphasis { font-size: 24px; }\n\
+    .lesson-pricetable { grid-template-columns: 1fr; gap: 16px; }\n\
+    .lesson-pricetable-card { padding: 24px 20px; }\n\
+    .lesson-pricetable-price { font-size: 30px; }\n\
     .lesson-h3 { font-size: 19px; margin-top: 30px; }\n\
     .lesson-reflection { padding: 28px 20px; }\n\
     .lesson-reflection-prompt { font-size: 22px; }\n\
@@ -326,6 +366,26 @@
                     el = document.createElement('div');
                     el.className = 'lesson-block lesson-callout';
                     el.innerHTML = s.content;
+                    break;
+                case 'emphasis':
+                    el = document.createElement('div');
+                    el.className = 'lesson-block lesson-emphasis';
+                    el.innerHTML = s.content;
+                    break;
+                case 'pricetable':
+                    el = document.createElement('div');
+                    el.className = 'lesson-block lesson-pricetable';
+                    var ptHTML = '';
+                    s.items.forEach(function(item) {
+                        var colorAttr = item.color ? ' data-color="' + item.color + '"' : '';
+                        ptHTML += '<div class="lesson-pricetable-card"' + colorAttr + '>' +
+                            '<div class="lesson-pricetable-title">' + item.title + '</div>' +
+                            '<div class="lesson-pricetable-price">' + item.price + '</div>' +
+                            '<div class="lesson-pricetable-desc">' + item.description + '</div>' +
+                            '<a href="' + item.url + '" class="lesson-pricetable-cta">' + item.cta + '</a>' +
+                        '</div>';
+                    });
+                    el.innerHTML = ptHTML;
                     break;
                 case 'form':
                     el = document.createElement('div');

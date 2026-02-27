@@ -15,7 +15,7 @@
     sections: [
         {
             type: "text",
-            content: "Du wei\u00dft jetzt zwei Dinge \u00fcber dich, die die meisten Menschen nie in Worte fassen:"
+            content: "Du wei\u00dft jetzt zwei Dinge \u00fcber dich, die die meisten Menschen nie in klare Worte fassen:"
         },
         {
             type: "text",
@@ -63,7 +63,7 @@
         },
         {
             type: "quote",
-            content: "Ich erm\u00f6gliche Menschen ihre Tr\u00e4ume zu leben, indem ich ihnen zeige, wie sie zu sich selbst finden und aus ihren tiefsten W\u00fcnschen gelebte Realit\u00e4t machen."
+            content: "Ich erm\u00f6gliche Menschen, ihre Tr\u00e4ume zu leben, indem ich ihnen zeige, wie sie zu sich selbst finden und aus ihren tiefsten W\u00fcnschen gelebte Realit\u00e4t machen."
         },
         {
             type: "text",
@@ -87,7 +87,7 @@
         },
         {
             type: "text",
-            content: "Nicht der gr\u00f6\u00dfte. Nicht der mutigste. Der naheliegendste. Was liegt auf der Hand, wenn du wei\u00dft, was dich antreibt und welche Welt du erschaffen willst? Was w\u00e4re das Erste, was du tun w\u00fcrdest \u2014 oder vielleicht schon l\u00e4ngst tust, ohne es so zu nennen?"
+            content: "Nicht der gr\u00f6\u00dftm\u00f6gliche. Nicht der mutigste. Der naheliegendste. Was liegt auf der Hand, wenn du wei\u00dft, was dich antreibt und welche Welt du erschaffen willst? Was w\u00e4re das Erste, was du tun w\u00fcrdest \u2014 oder vielleicht schon l\u00e4ngst tust, ohne es so zu nennen?"
         },
         {
             type: "heading",
@@ -129,11 +129,11 @@
         },
         {
             type: "emphasis",
-            content: "\"Mein Beitrag zu dieser Welt ist ___.\""
+            content: "\"Mein Beitrag zu dieser Welt ist <span style='display:inline-block;width:180px;border-bottom:2px solid currentColor;vertical-align:middle;margin:0 4px'></span>.\""
         },
         {
             type: "text",
-            content: "Nicht nachdenken. Schreiben. Der erste Impuls hat oft mehr Wahrheit in sich als der zehnte Versuch."
+            content: "Nicht nachdenken, einfach schreiben. Der erste Impuls hat oft mehr Wahrheit in sich als der zehnte Versuch."
         },
         {
             type: "text",
@@ -180,14 +180,14 @@
         },
         {
             type: "text",
-            content: "Drei S\u00e4tze. Dein Warum, deine Vision, dein Mission Statement. Lies sie zusammen, von oben nach unten. Das ist deine Lebensaufgabe \u2014 nicht als abstraktes Konzept, sondern als etwas, das du gerade selbst in Worte gefasst hast."
+            content: "Drei S\u00e4tze. Dein Warum, deine Vision, dein Mission Statement. Lies sie zusammen, von oben nach unten. Das ist deine Lebensaufgabe. Die du gerade selbst in Worte gefasst hast."
         },
         {
             type: "celebration"
         },
         {
             type: "text",
-            content: "Im letzten Schritt halten wir sie fest \u2014 und machen sie sichtbar."
+            content: "Im letzten Schritt halten wir sie fest. Und es wartet eine \u00dcberraschung auf dich."
         }
     ]
 };

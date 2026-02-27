@@ -15,11 +15,11 @@
     sections: [
         {
             type: "text",
-            content: "Du wei\u00dft jetzt, was dich antreibt. Aber wohin zeigt es?"
+            content: "Du wei\u00dft jetzt, was dich antreibt. Das beschreibt deine innere Seite. Jetzt gehen wir nach au\u00dfen."
         },
         {
             type: "text",
-            content: "Jeder Antrieb tr\u00e4gt ein Bild in sich \u2014 ein Bild von einer besseren Welt. Nicht perfekt. Nicht utopisch. Aber anders als jetzt. Etwas in dir wei\u00df, wie es sein k\u00f6nnte. Und dieses Bild wollen wir jetzt finden."
+            content: "Das Wort Motivation tr\u00e4gt das Wort Motiv in sich. Was ist das innere Bild, das dich antreibt? Das Bild einer besseren Welt. Nicht perfekt. Nicht utopisch. Aber anders als jetzt. Und dieses Bild wollen wir jetzt finden."
         },
         { type: "divider" },
 
@@ -34,7 +34,7 @@
         },
         {
             type: "text",
-            content: "Jetzt schauen wir nach au\u00dfen: Wie sieht die bessere Welt aus, auf die dein Warum zeigt?"
+            content: "Jetzt schauen wir nach au\u00dfen: Wie sieht die bessere Welt aus, in der du leben m\u00f6chtest?"
         },
         {
             type: "text",
@@ -42,7 +42,7 @@
         },
         {
             type: "text",
-            content: "Dein Warum tr\u00e4gt deine Vision bereits in sich. Du musst sie nicht neu erfinden \u2014 nur hinh\u00f6ren."
+            content: "Dein Warum tr\u00e4gt deine Vision bereits in sich. Du musst sie nicht neu erfinden \u2014 nur hinschauen."
         },
         { type: "divider" },
 
@@ -67,7 +67,7 @@
         {
             type: "heading",
             level: 3,
-            content: "2. Welche Welt m\u00fcsste existieren, damit dein Warum voll zur Entfaltung kommt?"
+            content: "2. Was m\u00fcsste in der Welt anders sein, damit dein Warum zur vollsten Entfaltung kommt?"
         },
         {
             type: "text",
@@ -108,7 +108,7 @@
         },
         {
             type: "emphasis",
-            content: "\"Ich m\u00f6chte in einer Welt leben, in der ___.\""
+            content: "\"Ich m\u00f6chte in einer Welt leben, in der <span style='display:inline-block;width:180px;border-bottom:2px solid currentColor;vertical-align:middle;margin:0 4px'></span>.\""
         },
         {
             type: "text",
@@ -127,7 +127,7 @@
         },
         {
             type: "copyblock",
-            content: "Ich arbeite an meiner pers\u00f6nlichen Vision. Mein Warum \u2014 das, was mich antreibt \u2014 ist: \"[DEIN WARUM-SATZ]\".\n\nJetzt m\u00f6chte ich herausfinden, welche Welt ich mir w\u00fcnsche. Stelle mir nacheinander 3 Fragen und warte jeweils meine Antwort ab:\n1) Wenn du dein Warum jeden Tag voll lebst \u2014 was ver\u00e4ndert sich um dich herum? Beschreib einen konkreten Tag.\n2) Welche Welt m\u00fcsste existieren, damit dein Warum voll zur Entfaltung kommt? Was m\u00fcsste anders sein?\n3) Was fehlt in der Welt, solange du dein Warum nicht lebst?\nNach meinen Antworten: Hilf mir, meine Vision zu formulieren. Mach einen Vorschlag f\u00fcr den Satz \"Ich m\u00f6chte in einer Welt leben, in der ___.\" Ehrlich und konkret."
+            content: "Ich arbeite an meiner pers\u00f6nlichen Vision. Mein Warum \u2014 das, was mich antreibt \u2014 ist: \"[DEIN WARUM-SATZ]\".\n\nJetzt m\u00f6chte ich herausfinden, welche Welt ich mir w\u00fcnsche. Stelle mir nacheinander 3 Fragen und warte jeweils meine Antwort ab:\n1) Wenn du dein Warum jeden Tag voll lebst \u2014 was ver\u00e4ndert sich um dich herum? Beschreib einen konkreten Tag.\n2) Was m\u00fcsste in der Welt anders sein, damit dein Warum zur vollsten Entfaltung kommt?\n3) Was fehlt in der Welt, solange du dein Warum nicht lebst?\nNach meinen Antworten: Hilf mir, meine Vision zu formulieren. Mach einen Vorschlag f\u00fcr den Satz \"Ich m\u00f6chte in einer Welt leben, in der ___.\" Ehrlich und konkret."
         },
         { type: "divider" },
 

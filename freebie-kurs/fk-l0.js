@@ -30,7 +30,7 @@
         {
             type: "heading",
             level: 2,
-            content: "Wer bin ich?"
+            content: "Wer bist du wirklich?"
         },
         {
             type: "text",
@@ -38,11 +38,15 @@
         },
         {
             type: "text",
-            content: "Nicht \"Was machst du beruflich?\" Nicht \"Woher kommst du?\" Sondern: Wer bist du, wenn du einfach du selbst bist? Kein Jobtitel, keine Rolle, keine Erwartungen?"
+            content: "Nicht \"Was machst du beruflich?\" Nicht \"Woher kommst du?\" Sondern: Wer bist du, wenn du einfach du selbst bist? Ohne Jobtitel, ohne Rollen und ohne Erwartungen?"
         },
         {
             type: "text",
-            content: "Die meisten von uns haben darauf keine Antwort. Nicht weil die Antwort nicht existiert. Sondern weil wir nicht daran glauben, dass wir sie tatsächlich finden können. Oder weil die Antwort Angst macht — zu Unrecht, wie du in diesem Kurs feststellen wirst."
+            content: "Die meisten von uns haben darauf keine Antwort. Nicht weil die Antwort nicht existiert. Sondern weil wir nicht daran glauben, dass wir sie tatsächlich finden können."
+        },
+        {
+            type: "text",
+            content: "Warum haben wir Angst vor der Antwort? Vielleicht, weil sie etwas verändern könnte. Aber genau das ist der Punkt — und zu Unrecht, wie du in diesem Kurs feststellen wirst."
         },
         { type: "divider" },
 
@@ -58,11 +62,6 @@
         {
             type: "text",
             content: "Schon als Kinder lernen wir zu fragen: Was wird von mir erwartet? Was muss ich tun, um dazuzugehören? Was muss ich tun, um sicher zu sein? Welchen Notendurchschnitt brauche ich? Welchen Abschluss? Welchen Job?"
-        },
-        {
-            type: "emphasis",
-            content: "Wer und wie musst du sein, damit du für uns wert hast?",
-
         },
         {
             type: "text",
@@ -86,11 +85,11 @@
         {
             type: "heading",
             level: 2,
-            content: "Die richtige Frage"
+            content: "Die richtigen Fragen"
         },
         {
             type: "text",
-            content: "Die Frage, die diesen Kurs trägt, ist eine andere:"
+            content: "Die Fragen, die diesen Kurs tragen, sind andere:"
         },
         {
             type: "emphasis",
@@ -99,7 +98,7 @@
         },
         {
             type: "text",
-            content: "Das klingt groß. Aber bleib einen Moment dabei."
+            content: "Das sind große Fragen. Aber bleib dran - es lohnt sich wirklich!"
         },
         {
             type: "text",
@@ -133,11 +132,11 @@
         },
         {
             type: "text",
-            content: "Ich kenne das Gefühl, das ich gerade beschrieben habe. Nicht aus Büchern. Aus meinem eigenen Leben. Ich habe funktioniert, ich war gut darin — und trotzdem war da diese innere Leere und Unruhe."
+            content: "Ich kenne diese Unruhe. Nicht aus Büchern. Aus meinem eigenen Leben. Ich habe funktioniert, ich war gut darin — und trotzdem war da diese innere Leere."
         },
         {
             type: "text",
-            content: "Was mich herausgebracht hat, war nicht ein Motivationsseminar und kein 5-Schritte-Programm. Es war eine ehrliche Auseinandersetzung mit mir selbst. Mit der Frage, was wirklich in mir ist — und wie das mit der Welt zusammenhängt."
+            content: "Was mich herausgebracht hat, war nicht ein Retreat und kein 5-Schritte-Programm. Es war eine ehrliche Auseinandersetzung mit mir selbst. Mit der Frage, was meine Essenz ist — und wie das mit der Welt zusammenhängt."
         },
         {
             type: "text",
@@ -176,7 +175,7 @@
         },
         {
             type: "text",
-            content: "Am Ende hast du drei Sätze, die zusammen deine Lebensaufgabe beschreiben. Nicht ausgedacht, sondern aus dir heraus erkannt."
+            content: "Am Ende hast du drei Sätze, die zusammen deine Lebensaufgabe beschreiben. Nicht erdacht, sondern von innen heraus erkannt."
         },
         { type: "divider" },
 
@@ -191,11 +190,11 @@
         },
         {
             type: "text",
-            content: "<strong>Ehrlichkeit vor Schönheit.</strong> Deine Antworten müssen nicht perfekt klingen. Sie müssen wahr sein. Lieber ein ungeschliffener Satz, der sich richtig anfühlt, als eine polierte Formulierung, die gut klingt, aber nicht deine ist."
+            content: "<strong>Ehrlichkeit vor Schönheit.</strong> Deine Antworten müssen nicht perfekt sein. Sie müssen wahr sein. Lieber ein ungeschliffener Satz, der sich richtig anfühlt, als eine polierte Formulierung, die gut klingt, aber nicht deine ist."
         },
         {
             type: "text",
-            content: "<strong>Erlaube dir, nicht sofort zu wissen.</strong> Die Fragen in diesem Kurs haben keine eindeutige Antwort. Wenn du beim ersten Versuch nichts findest — gut. Lass die Frage arbeiten. Manchmal kommt die Antwort Stunden später, unter der Dusche oder auf dem Weg zur Arbeit."
+            content: "<strong>Erlaube dir, nicht sofort zu wissen.</strong> Die Fragen in diesem Kurs haben keine eindeutige Antwort. Wenn du beim ersten Versuch nichts findest — gut. Lass die Frage in dir arbeiten. Manchmal kommt die Antwort Stunden später, unter der Dusche oder auf dem Weg zur Arbeit."
         },
         {
             type: "text",

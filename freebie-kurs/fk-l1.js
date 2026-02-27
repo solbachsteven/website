@@ -15,15 +15,15 @@
     sections: [
         {
             type: "text",
-            content: "Irgendwo in dir gibt es etwas, das schon da war, bevor du einen Namen daf\u00fcr hattest."
+            content: "In dir gibt es etwas, das dein ganzes Leben gepr\u00e4gt hat - bevor du wusstest, wie man es nennt."
         },
         {
             type: "text",
-            content: "Ein Thema, das dich immer wieder begeistert. Gespr\u00e4che, bei denen du hellwach wirst. Ein Gef\u00fchl von \"Ja, genau das\" \u2014 auch wenn du nicht erkl\u00e4ren kannst, warum."
+            content: "Es gibt Themen, die dich immer wieder begeistern. Gespr\u00e4che, bei denen du hellwach wirst. Ein Gef\u00fchl von \"Ja, genau das\" \u2014 auch wenn du nicht erkl\u00e4ren kannst, warum."
         },
         {
             type: "text",
-            content: "In diesem Schritt gehen wir auf die Suche danach. Nicht nach einem Beruf, nicht nach einer Rolle. Sondern nach dem, was dich von innen heraus antreibt \u2014 unabh\u00e4ngig davon, ob jemand daf\u00fcr bezahlt oder applaudiert."
+            content: "Nicht nach einem Beruf, nicht nach einer Rolle. Sondern nach dem, was dich von innen heraus antreibt und f\u00fchrt \u2014 unabh\u00e4ngig davon, ob jemand daf\u00fcr bezahlt oder applaudiert."
         },
         { type: "divider" },
 
@@ -75,7 +75,7 @@
         },
         {
             type: "text",
-            content: "Nicht was du tun solltest. Was du tats\u00e4chlich tust, wenn kein Druck da ist, keine Erwartung, keine Belohnung. Wenn ein freier Nachmittag vor dir liegt und du niemandem Rechenschaft schuldig bist \u2014 wohin zieht es dich? Das ist kein Zufall. Das ist ein Hinweis."
+            content: "Nicht was du tun solltest. Was du tats\u00e4chlich tust, wenn kein Druck da ist, keine Erwartung, keine Belohnung. Wenn ein freier Nachmittag vor dir liegt und du niemandem Rechenschaft schuldig bist \u2014 wohin zieht es dich?"
         },
         {
             type: "heading",
@@ -142,7 +142,7 @@
         },
         {
             type: "emphasis",
-            content: "\"Was mich antreibt ist ___.\""
+            content: "\"Was mich antreibt ist <span style='display:inline-block;width:180px;border-bottom:2px solid currentColor;vertical-align:middle;margin:0 4px'></span>.\""
         },
         {
             type: "text",
@@ -179,11 +179,11 @@
         },
         {
             type: "text",
-            content: "Vielleicht f\u00fchlt er sich schon klar an. Vielleicht arbeitet er noch in dir. Beides ist gut und richtig."
+            content: "Vielleicht f\u00fchlt sich dein Warum schon klar an. Vielleicht arbeitet es noch in dir. Beides ist gut und richtig."
         },
         {
             type: "text",
-            content: "Schreib ihn auf und nimm ihn mit in den n\u00e4chsten Schritt. Dort schauen wir, was dein Warum mit der Welt da drau\u00dfen zu tun hat."
+            content: "Schreib es auf und nimm es mit in den n\u00e4chsten Schritt. Dort schauen wir, was dein Warum mit der Welt da drau\u00dfen zu tun hat."
         }
     ]
 };
