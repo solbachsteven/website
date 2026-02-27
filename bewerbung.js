@@ -1,10 +1,14 @@
 // Win³ Mentoring - Bewerbungsformular (Standalone)
-// Multi-Step Form mit Client-Side Scoring
+// Multi-Step Form mit Client-Side Scoring + Backend (D1 + Resend Email)
 // Qualifiziert → Kalender-Link / Nicht qualifiziert → Win³ Kurs
 // Loaded via: <script src="https://solbachsteven.github.io/website/bewerbung.js"></script>
 (function() {
     if (window.__BW_LOADED) return;
     window.__BW_LOADED = true;
+
+    // === CONFIG ===
+    var API_URL = 'https://win3-community.solbachsteven.workers.dev';
+    var TURNSTILE_SITE_KEY = '0x4AAAAAACirN6RQ4esyh2z2';
 
     // === FONTS ===
     if (!document.querySelector('link[href*="Poppins"]')) {
@@ -12,6 +16,14 @@
         fontLink.rel = 'stylesheet';
         fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap';
         document.head.appendChild(fontLink);
+    }
+
+    // === TURNSTILE SCRIPT ===
+    if (!document.querySelector('script[src*="turnstile"]')) {
+        var ts = document.createElement('script');
+        ts.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+        ts.async = true;
+        document.head.appendChild(ts);
     }
 
     // === CSS ===
@@ -101,7 +113,7 @@
 }
 .bw-subline {
     font-family: 'Caveat', cursive;
-    font-size: 20px;
+    font-size: 26px;
     color: #BC8034;
     margin-bottom: 28px;
 }
@@ -329,12 +341,46 @@ textarea.bw-input {
     color: rgba(44, 39, 38, 0.4);
 }
 
+/* ======== ERROR ======== */
+.bw-error {
+    background: #FEE;
+    border: 1px solid #E88;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #922;
+    line-height: 1.4;
+}
+
+/* ======== LOADING ======== */
+.bw-btn-next.bw-loading {
+    pointer-events: none;
+    opacity: 0.6;
+    position: relative;
+}
+.bw-btn-next.bw-loading::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #FFF;
+    border-radius: 50%;
+    animation: bwSpin 0.6s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+@keyframes bwSpin {
+    to { transform: rotate(360deg); }
+}
+
 /* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
     .bw-page { padding: 30px 12px; }
     .bw-card { padding: 36px 22px; border-radius: 22px; }
     .bw-headline { font-size: 22px; }
-    .bw-subline { font-size: 18px; }
+    .bw-subline { font-size: 22px; }
     .bw-option { font-size: 14px; padding: 12px 14px; }
     .bw-checkbox { font-size: 14px; }
     .bw-btn { font-size: 14px; padding: 13px 24px; }
@@ -470,6 +516,10 @@ textarea.bw-input {
     // === STATE ===
     var currentStep = 0;
     var answers = {};
+    var submitting = false;
+    var submitError = '';
+    var turnstileWidgetId = null;
+    var turnstileToken = '';
 
     // === RENDER HELPERS ===
     function renderProgress() {
@@ -546,7 +596,7 @@ textarea.bw-input {
             html += '<textarea class="bw-input" data-name="' + s.textarea.name + '" placeholder="' + s.textarea.placeholder + '">' + val + '</textarea>';
         }
 
-        // Checkboxes (step 6)
+        // Checkboxes (step 7)
         if (s.checkboxes) {
             html += '<div class="bw-checkboxes">';
             s.checkboxes.forEach(function(txt, i) {
@@ -558,6 +608,13 @@ textarea.bw-input {
                 '</label>';
             });
             html += '</div>';
+            // Turnstile Widget (invisible, im letzten Step)
+            html += '<div id="bw-turnstile" style="margin-bottom: 8px;"></div>';
+        }
+
+        // Error message
+        if (submitError) {
+            html += '<div class="bw-error">' + submitError + '</div>';
         }
 
         // Buttons
@@ -566,7 +623,7 @@ textarea.bw-input {
             html += '<button class="bw-btn bw-btn-back" data-action="back">Zur\u00fcck</button>';
         }
         var btnText = stepIdx === TOTAL_STEPS - 1 ? 'Absenden' : 'Weiter';
-        html += '<button class="bw-btn bw-btn-next" data-action="next">' + btnText + '</button>';
+        html += '<button class="bw-btn bw-btn-next' + (submitting ? ' bw-loading' : '') + '" data-action="next">' + (submitting ? 'Wird gesendet...' : btnText) + '</button>';
         html += '</div>';
 
         html += '</div>';
@@ -663,12 +720,103 @@ textarea.bw-input {
             updateNextButton();
         }
         bindEvents();
+        // Turnstile im letzten Step initialisieren
+        if (currentStep === TOTAL_STEPS - 1) {
+            initTurnstile();
+        }
     }
 
     function updateNextButton() {
         var btn = card.querySelector('.bw-btn-next');
         if (btn) {
-            btn.disabled = !validateStep(currentStep);
+            btn.disabled = submitting || !validateStep(currentStep);
+        }
+    }
+
+    // === TURNSTILE ===
+    var turnstileRetries = 0;
+    function initTurnstile() {
+        var container = document.getElementById('bw-turnstile');
+        if (typeof turnstile !== 'undefined' && container) {
+            if (turnstileWidgetId !== null) {
+                try { turnstile.remove(turnstileWidgetId); } catch(e) {}
+            }
+            turnstileWidgetId = turnstile.render('#bw-turnstile', {
+                sitekey: TURNSTILE_SITE_KEY,
+                size: 'invisible',
+                callback: function(token) { turnstileToken = token; }
+            });
+            turnstileRetries = 0;
+        } else if (turnstileRetries < 20) {
+            turnstileRetries++;
+            setTimeout(initTurnstile, 250);
+        }
+    }
+
+    // === SUBMIT ===
+    async function submitBewerbung() {
+        if (submitting) return;
+        submitting = true;
+        submitError = '';
+        render();
+
+        // Turnstile Token holen
+        var token = turnstileToken || (typeof turnstile !== 'undefined' && turnstileWidgetId !== null ? turnstile.getResponse(turnstileWidgetId) : '');
+
+        var qualified = isQualified();
+        var payload = {
+            name: answers.name || '',
+            email: answers.email || '',
+            consent: answers.consent ? true : false,
+            situation: answers.situation !== undefined ? String(answers.situation) : '',
+            situation_other: answers.situation_other || '',
+            challenge: answers.challenge || '',
+            goal: answers.goal !== undefined ? String(answers.goal) : '',
+            goal_other: answers.goal_other || '',
+            investment: answers.investment !== undefined ? String(answers.investment) : '',
+            investment_other: answers.investment_other || '',
+            timing: answers.timing !== undefined ? String(answers.timing) : '',
+            timing_other: answers.timing_other || '',
+            commit_honest: answers.commit_0 ? true : false,
+            commit_feedback: answers.commit_1 ? true : false,
+            commit_responsibility: answers.commit_2 ? true : false,
+            qualified: qualified,
+            turnstileToken: token
+        };
+
+        try {
+            var resp = await fetch(API_URL + '/bewerbung/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            var data = await resp.json();
+
+            if (!resp.ok) {
+                submitting = false;
+                submitError = data.error || 'Etwas ist schiefgelaufen. Bitte versuche es erneut.';
+                // Turnstile resetten
+                if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
+                    turnstile.reset(turnstileWidgetId);
+                    turnstileToken = '';
+                }
+                render();
+                return;
+            }
+
+            // Erfolg - Ergebnis zeigen
+            submitting = false;
+            currentStep = TOTAL_STEPS; // Triggert renderResult
+            render();
+
+        } catch (err) {
+            submitting = false;
+            submitError = 'Verbindungsfehler. Bitte pruefe deine Internetverbindung und versuche es erneut.';
+            if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
+                turnstile.reset(turnstileWidgetId);
+                turnstileToken = '';
+            }
+            render();
         }
     }
 
@@ -724,6 +872,13 @@ textarea.bw-input {
             nextBtn.addEventListener('click', function() {
                 collectAnswers();
                 if (!validateStep(currentStep)) return;
+
+                // Letzter Step = Absenden an Backend
+                if (currentStep === TOTAL_STEPS - 1) {
+                    submitBewerbung();
+                    return;
+                }
+
                 currentStep++;
                 render();
                 card.scrollIntoView({ behavior: 'smooth', block: 'start' });
