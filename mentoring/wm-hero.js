@@ -565,7 +565,7 @@
         subtext: "1:1 Mentoring mit Steven Solbach",
         description: "Nicht noch ein Kurs. Sondern jemand, der mit dir geht. 12 Wochen pers\u00f6nliche Begleitung auf deinem Weg zu einem Leben, das sich nicht mehr nach Kompromiss anf\u00fchlt.",
         cta: "Jetzt bewerben",
-        ctaUrl: "#bewerbung",
+        ctaUrl: "https://solbachsteven.systeme.io/bewerbung",
         trust: "Bewerbungsbasiert \u00b7 Begrenzte Pl\u00e4tze \u00b7 3.000 \u20ac"
     };
 

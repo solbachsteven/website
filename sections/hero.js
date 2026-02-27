@@ -314,7 +314,7 @@
         ],
         mission: "Ich begleite ambitionierte Seelen darin, ihre wahre Essenz zu erkennen und von Innen nach Außen ein Leben zu gestalten, das ihnen auf allen Ebenen entspricht.",
         cta: {
-            primary: { text: "Für Coaching bewerben", url: "https://solbachsteven.systeme.io/mentoring" },
+            primary: { text: "Für Coaching bewerben", url: "https://solbachsteven.systeme.io/bewerbung" },
             secondary: { text: "Das Win³ Framework kennenlernen", subtitle: "Dein Weg zur Ganzheit", url: "#win3Section" }
         },
         image: "https://d1yei2z3i6k35z.cloudfront.net/15985342/6978eb69d9665_Removebackgroundproject-22.png"

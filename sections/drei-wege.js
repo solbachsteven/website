@@ -687,7 +687,7 @@
                 ],
                 cta: {
                     text: "Jetzt bewerben",
-                    url: "https://solbachsteven.systeme.io/mentoring",
+                    url: "https://solbachsteven.systeme.io/bewerbung",
                     style: "subtle"
                 },
                 mobileOrder: 2

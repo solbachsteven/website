@@ -123,7 +123,7 @@
         headline: "Bereit, den n\u00e4chsten Schritt zu gehen?",
         subline: "Nicht irgendwann. Nicht alleine. Sondern jetzt - mit jemandem, der mit dir geht.",
         cta: "Jetzt bewerben",
-        ctaUrl: "#bewerbung",
+        ctaUrl: "https://solbachsteven.systeme.io/bewerbung",
         trust: "Kostenfreies Kennenlerngespr\u00e4ch \u00b7 Kein Risiko \u00b7 Ehrliche Beratung"
     };
 
