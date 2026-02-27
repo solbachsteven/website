@@ -21,7 +21,33 @@
         sections: [
             {
                 type: "text",
-                content: "Du hast drei S\u00e4tze formuliert. Zusammen beschreiben sie etwas, das die meisten Menschen nie in Worte fassen."
+                content: "Du h\u00e4ltst drei S\u00e4tze in der Hand, die zusammen deine Lebensaufgabe beschreiben."
+            },
+            {
+                type: "text",
+                content: "Niemand hat sie dir gegeben. Kein Test, kein Algorithmus, kein Guru. Du hast in dich hineingeh\u00f6rcht, Spuren gelesen, die dein ganzes Leben lang da waren - und daraus etwas Greifbares gemacht. Die meisten Menschen tun das nie. Du hast es getan."
+            },
+            { type: "divider" },
+            {
+                type: "heading",
+                level: 3,
+                content: "Diese S\u00e4tze sind lebendig"
+            },
+            {
+                type: "text",
+                content: "Dein Warum, deine Vision und dein Mission Statement sind keine fertigen Produkte. Sie sind lebendig. Sie d\u00fcrfen sich ver\u00e4ndern - und sie werden es wahrscheinlich auch."
+            },
+            {
+                type: "text",
+                content: "Vielleicht findest du in einer Woche ein Wort, das besser passt. Vielleicht sch\u00e4rft sich dein Mission Statement in dem Moment, in dem du anf\u00e4ngst, es zu leben. Vielleicht wird deine Vision gr\u00f6\u00dfer, je klarer du wirst."
+            },
+            {
+                type: "text",
+                content: "Ver\u00e4nderung ist kein Zeichen daf\u00fcr, dass du etwas falsch gemacht hast. Es ist ein Zeichen daf\u00fcr, dass du w\u00e4chst."
+            },
+            {
+                type: "text",
+                content: "Aber der Kern - das, worauf diese S\u00e4tze zeigen - der bleibt. Das kannst du sicher wissen, weil er nicht von au\u00dfen kam. Er kam von dir."
             },
             { type: "divider" },
             {
@@ -42,6 +68,10 @@
                 ],
                 submitText: "Auf die Pinwand setzen"
             },
+            {
+                type: "text",
+                content: "Und wenn du sie liest und denkst: Stimmt das wirklich? Bin ich das? - dann ist das kein schlechtes Zeichen. Dann arbeitest du noch daran. Die Unsicherheit geh\u00f6rt dazu. Sie zeigt, dass du ehrlich mit dir bist."
+            },
             { type: "divider" },
             {
                 type: "heading",
@@ -57,7 +87,67 @@
             },
             {
                 type: "text",
-                content: "Kein Ranking, kein Wettbewerb. Einfach Menschen, die sich getraut haben, hinzuschauen. Vielleicht erkennst du dich in jemandem wieder. Vielleicht inspiriert dich eine Vision, an die du selbst noch nicht gedacht hast."
+                content: "Kein Ranking, kein Wettbewerb. Einfach Menschen, die sich getraut haben, hinzuschauen. Vielleicht erkennst du dich in jemandem wieder. Vielleicht inspiriert dich eine Vision, an die du selbst noch nicht gedacht hast. Vielleicht merkst du einfach: Ich bin nicht allein damit."
+            },
+            {
+                type: "text",
+                content: "Diese Pinwand findest du auch in der Community. Dort wirst du anderen begegnen, die denselben Weg gegangen sind."
+            },
+            { type: "divider" },
+            {
+                type: "heading",
+                level: 2,
+                content: "Und jetzt?"
+            },
+            {
+                type: "text",
+                content: "Du hast Klarheit dar\u00fcber, was dich antreibt, welche bessere Welt du siehst und wie du beitragen willst."
+            },
+            {
+                type: "text",
+                content: "Das ist ein Anfang."
+            },
+            {
+                type: "text",
+                content: "Aber zwischen der Erkenntnis und dem gelebten Leben liegen Hindernisse. Alte Muster und Blockaden, die dich bremsen. Gewohnheiten, die nicht mehr passen. Vielleicht die Angst, mit dem, wie du wirklich bist, sichtbar zu werden. Vielleicht die Frage, wie du davon leben kannst."
+            },
+            {
+                type: "text",
+                content: "Das sind die Themen, die im n\u00e4chsten Schritt warten - wenn du bereit bist."
+            },
+            {
+                type: "callout",
+                content: "<strong>Der Win\u00b3 Kurs</strong> geht den ganzen Weg: Von Selbsterkenntnis in die Selbstbefreiung zur Selbstverwirklichung. Mit KI-Begleitung, die sich an deine Antworten erinnert und mit dir weiterarbeitet."
+            },
+            {
+                type: "callout",
+                content: "<strong>Das 12 Wochen Mentoring</strong> ist pers\u00f6nliche Begleitung - 12 Wochen, 1:1 mit mir. Maximal 8 Menschen gleichzeitig, weil ich mich auf jeden einzelnen ganz einlassen m\u00f6chte. Wenn dich das anspricht, bewirb dich."
+            },
+            {
+                type: "text",
+                content: "Was du w\u00e4hlst und wann du es w\u00e4hlst - das liegt bei dir."
+            },
+            {
+                type: "text",
+                content: "Aber eines m\u00f6chte ich dir noch mitgeben. Eine letzte Frage - vielleicht die wichtigste von allen:"
+            },
+            {
+                type: "reflection",
+                prompt: "Wie m\u00f6chtest du leben, um am Ende deiner Tage ohne Reue - und im Gegenteil: voller Dankbarkeit - auf dein Leben zur\u00fcckschauen zu k\u00f6nnen?"
+            },
+            {
+                type: "text",
+                content: "Diese Frage zeigt dir sofort, was wirklich wichtig ist. Und was nur wichtig erscheint."
+            },
+            {
+                type: "text",
+                content: "Deine drei S\u00e4tze sind ein Anfang. Lebe sie."
+            },
+            { type: "divider" },
+            {
+                type: "signoff",
+                text: "Danke, dass du dir diese Zeit genommen hast. F\u00fcr dich, f\u00fcr deine Fragen, f\u00fcr das, was in dir liegt.<br><br>Ich w\u00fcnsche mir, dass du deine einzigartigen Gaben und Talente raus in die Welt bringst. Damit diese Welt ein St\u00fcck mehr zu der Welt wird, die unsere Herzen sich w\u00fcnschen.<br><br>Schutz und Segen f\u00fcr deinen Weg. M\u00f6gen sich unsere Wege kreuzen - zur richtigen Zeit, am richtigen Ort.",
+                name: "Steven"
             }
         ]
     };
@@ -142,6 +232,22 @@
 @keyframes lesson-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }\n\
 @keyframes lesson-highlight-pulse { 0% { box-shadow: 0 0 0 0 rgba(188,128,52,0.4); } 50% { box-shadow: 0 0 24px 4px rgba(188,128,52,0.3); } 100% { box-shadow: 0 0 0 0 rgba(188,128,52,0); } }\n\
 .lesson-pinwall-card.highlight { animation: lesson-highlight-pulse 1.5s ease 2; }\n\
+/* --- h3 --- */\n\
+.lesson-h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 40px 0 20px 0; color: var(--lesson-white); }\n\
+\n\
+/* --- Callout --- */\n\
+.lesson-callout { background: var(--lesson-bg-box); border-left: 3px solid var(--lesson-gold); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 20px 0; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--lesson-white); opacity: 0.9; }\n\
+.lesson-callout strong { font-weight: 600; color: var(--lesson-gold); }\n\
+\n\
+/* --- Reflection --- */\n\
+.lesson-reflection { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 40px 36px; margin: 30px 0; text-align: center; border: 1px solid rgba(188,128,52,0.2); }\n\
+.lesson-reflection-prompt { font-family: var(--lesson-font-hand); font-size: 26px; font-weight: 500; color: var(--lesson-gold); line-height: 1.5; }\n\
+\n\
+/* --- Signoff --- */\n\
+.lesson-signoff { text-align: center; padding: 40px 20px; margin-top: 20px; }\n\
+.lesson-signoff-text { font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--lesson-white); opacity: 0.85; margin-bottom: 28px; }\n\
+.lesson-signoff-name { font-family: var(--lesson-font-hand); font-size: 36px; color: var(--lesson-gold); }\n\
+\n\
 /* --- Founder Card --- */\n\
 .lesson-pinwall-card-founder { border: 1px solid rgba(188,128,52,0.35); box-shadow: 0 0 20px rgba(188,128,52,0.08); padding-bottom: 38px; }\n\
 .lesson-pinwall-card-founder .lesson-pinwall-card-badge.founder-badge { color: var(--lesson-gold); opacity: 0.5; font-size: 18px; letter-spacing: 0; }\n\
@@ -151,7 +257,11 @@
     .lesson-pinwall-grid { column-count: 2; column-gap: 14px; }\n\
 }\n\
 @media (max-width: 650px) {\n\
-    .lesson-form { padding: 24px 20px; }\n\
+    .lesson-form, .lesson-callout { padding: 24px 20px; }\n\
+    .lesson-h3 { font-size: 19px; margin-top: 30px; }\n\
+    .lesson-reflection { padding: 28px 20px; }\n\
+    .lesson-reflection-prompt { font-size: 22px; }\n\
+    .lesson-signoff-name { font-size: 30px; }\n\
     .lesson-pinwall-grid { column-count: 2; column-gap: 10px; }\n\
     .lesson-pinwall-card { padding: 16px 16px 14px; margin-bottom: 10px; border-radius: 12px; }\n\
     .lesson-pinwall-card-name { font-size: 20px; margin-bottom: 8px; }\n\
@@ -470,6 +580,17 @@
                             }
                         });
                     });
+                    break;
+                case 'reflection':
+                    el = document.createElement('div');
+                    el.className = 'lesson-block lesson-reflection';
+                    el.innerHTML = '<div class="lesson-reflection-prompt">' + s.prompt + '</div>';
+                    break;
+                case 'signoff':
+                    el = document.createElement('div');
+                    el.className = 'lesson-block lesson-signoff';
+                    el.innerHTML = '<div class="lesson-signoff-text">' + s.text + '</div>' +
+                        '<div class="lesson-signoff-name">' + s.name + '</div>';
                     break;
                 case 'pinwall':
                     el = document.createElement('div');
