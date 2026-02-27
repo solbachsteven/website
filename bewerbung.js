@@ -743,8 +743,9 @@ textarea.bw-input {
             }
             turnstileWidgetId = turnstile.render('#bw-turnstile', {
                 sitekey: TURNSTILE_SITE_KEY,
-                size: 'invisible',
-                callback: function(token) { turnstileToken = token; }
+                size: 'normal',
+                callback: function(token) { turnstileToken = token; },
+                'error-callback': function() { turnstileToken = ''; }
             });
             turnstileRetries = 0;
         } else if (turnstileRetries < 20) {
