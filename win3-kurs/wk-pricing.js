@@ -145,6 +145,13 @@
     margin-top: 8px;
 }
 
+/* Coming Soon */
+.wk-pricing .wk-cta-soon {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
 /* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
     .wk-pricing { padding: 60px 16px; }
@@ -174,9 +181,9 @@
             "3 Monate Community-Zugang inklusive",
             "Regelm\u00e4\u00dfige Updates und neue Inhalte"
         ],
-        cta: "Jetzt starten - 297 \u20ac",
-        ctaUrl: "https://solbachsteven.systeme.io/academy",
-        trust: "Sofort Zugang \u00b7 Eigenes Tempo \u00b7 Kein Risiko"
+        cta: "Bald verf\u00fcgbar",
+        ctaUrl: "#",
+        trust: "Der Kurs wird bald er\u00f6ffnet"
     };
 
     // === RENDER ===
@@ -200,7 +207,7 @@
                     '<div class="wk-pricing-divider"></div>' +
                     '<ul class="wk-pricing-features">' + featuresHTML + '</ul>' +
                     '<div class="wk-pricing-cta">' +
-                        '<a href="' + data.ctaUrl + '" class="wk-cta-primary" target="_blank">' + data.cta + '</a>' +
+                        '<span class="wk-cta-primary wk-cta-soon">' + data.cta + '</span>' +
                         '<div class="wk-trust">' + data.trust + '</div>' +
                     '</div>' +
                 '</div>' +

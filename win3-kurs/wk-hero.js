@@ -181,6 +181,11 @@
 .wk-hero .wk-trust {
     color: rgba(44, 39, 38, 0.45);
 }
+.wk-hero .wk-cta-soon {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
 
 /* ======== DESKTOP BROWSER FRAME ======== */
 .wk-hero-mockups {
@@ -507,9 +512,9 @@
         headline: "Finde heraus, wer du wirklich bist. Und lebe danach.",
         subtext: "Selbsterkenntnis. Selbstbefreiung. Selbstverwirklichung.",
         description: "Ein Kurs, der dich nicht motiviert - sondern dir zeigt, was dich wirklich antreibt. In drei Phasen zu einem Leben, das sich nicht mehr nach Kompromiss anf\u00fchlt.",
-        cta: "Jetzt starten - 297 \u20ac",
-        ctaUrl: "https://solbachsteven.systeme.io/academy",
-        trust: "Einmalzahlung \u00b7 Kein Abo \u00b7 Sofort Zugang"
+        cta: "Bald verf\u00fcgbar",
+        ctaUrl: "#",
+        trust: "Der Kurs wird bald er\u00f6ffnet"
     };
 
     // === SVG ICONS ===
@@ -588,7 +593,7 @@
                     '<div class="wk-hero-subtext wk-fade">' + data.subtext + '</div>' +
                     '<div class="wk-hero-description wk-fade">' + data.description + '</div>' +
                     '<div class="wk-fade">' +
-                        '<a href="' + data.ctaUrl + '" class="wk-cta-primary">' + data.cta + '</a>' +
+                        '<span class="wk-cta-primary wk-cta-soon">' + data.cta + '</span>' +
                     '</div>' +
                     '<div class="wk-trust wk-fade">' + data.trust + '</div>' +
                 '</div>' +

@@ -414,6 +414,14 @@
     border-color: rgba(45, 39, 38, 0.6);
 }
 
+.dw-cta.dw-cta-soon {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(244, 240, 236, 0.3);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    cursor: default;
+    pointer-events: none;
+}
+
 /* ======== BRIDGE TEXT ======== */
 .dw-bridge {
     padding: 60px 40px;
@@ -651,9 +659,9 @@
                     { text: "1:1 Sessions", included: false }
                 ],
                 cta: {
-                    text: "Jetzt starten - 297 \u20ac",
-                    url: "https://solbachsteven.systeme.io/academy",
-                    style: "primary"
+                    text: "Bald verf\u00fcgbar",
+                    url: "#",
+                    style: "soon"
                 },
                 mobileOrder: 1
             },
@@ -776,6 +784,7 @@
         });
 
         var ctaClass = plan.cta.style === 'primary' ? 'dw-cta-primary'
+            : plan.cta.style === 'soon' ? 'dw-cta-soon'
             : plan.cta.style === 'subtle' ? 'dw-cta-subtle'
             : 'dw-cta-ghost';
 

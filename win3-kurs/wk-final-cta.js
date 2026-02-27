@@ -87,6 +87,13 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Coming Soon */
+.wk-final-cta .wk-cta-soon {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
 /* ======== RESPONSIVE ======== */
 @media (max-width: 1024px) {
     .wk-final-cta { padding: 80px 30px; }
@@ -105,9 +112,9 @@
     var data = {
         headline: "Bereit f\u00fcr den n\u00e4chsten Schritt?",
         subline: "Du musst nicht alles wissen. Du musst nur anfangen, ehrlich hinzuschauen.",
-        cta: "Jetzt starten - 297 \u20ac",
-        ctaUrl: "https://solbachsteven.systeme.io/academy",
-        trust: "Einmalzahlung \u00b7 Kein Abo \u00b7 Sofort Zugang"
+        cta: "Bald verf\u00fcgbar",
+        ctaUrl: "#",
+        trust: "Der Kurs wird bald er\u00f6ffnet"
     };
 
     // === RENDER ===
@@ -117,7 +124,7 @@
                 '<h2 class="wk-section-headline wk-fade">' + data.headline + '</h2>' +
                 '<div class="wk-final-cta-subline wk-fade">' + data.subline + '</div>' +
                 '<div class="wk-fade">' +
-                    '<a href="' + data.ctaUrl + '" class="wk-cta-primary" target="_blank">' + data.cta + '</a>' +
+                    '<span class="wk-cta-primary wk-cta-soon">' + data.cta + '</span>' +
                     '<div class="wk-trust">' + data.trust + '</div>' +
                 '</div>' +
             '</div>' +
