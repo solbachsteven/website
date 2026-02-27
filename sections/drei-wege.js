@@ -415,9 +415,9 @@
 }
 
 .dw-cta.dw-cta-soon {
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(244, 240, 236, 0.3);
-    border: 1px dashed rgba(255, 255, 255, 0.12);
+    background: rgba(44, 39, 38, 0.06);
+    color: rgba(44, 39, 38, 0.35);
+    border: 1px dashed rgba(44, 39, 38, 0.15);
     cursor: default;
     pointer-events: none;
 }
