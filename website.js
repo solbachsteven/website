@@ -30,7 +30,8 @@
         'drei-wege',
         'testimonials',
         'fuer-wen',
-        'final-cta'
+        'final-cta',
+        'exit-popup'
     ];
 
     function loadNext(i) {
