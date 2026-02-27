@@ -123,20 +123,42 @@
                 type: "pricetable",
                 items: [
                     {
-                        title: "Der Win\u00b3 Kurs",
+                        id: "kurs",
+                        title: "Der vollst\u00e4ndige Win\u00b3 Kurs",
+                        subtitle: "F\u00fcr Selber-Macher",
                         price: "297 \u20ac",
-                        description: "Der ganze Weg: Von Selbsterkenntnis in die Selbstbefreiung zur Selbstverwirklichung. Mit KI-Begleitung, die sich an deine Antworten erinnert und mit dir weiterarbeitet.",
-                        cta: "Zum Kurs",
-                        url: "#",
-                        color: "warm"
+                        priceNote: "Einmalzahlung - Kein Abo",
+                        badge: "BELIEBTESTE WAHL",
+                        badgeStyle: "gold",
+                        highlighted: true,
+                        features: [
+                            { text: "Komplettes Transformations-System in 3 Phasen", included: true },
+                            { text: "KI-Assistent 24/7", included: true },
+                            { text: "Schritt-f\u00fcr-Schritt Textanleitungen", included: true },
+                            { text: "Praktische \u00dcbungen", included: true },
+                            { text: "Eigenes Tempo, flexibler Zugang", included: true },
+                            { text: "1:1 Sessions", included: false }
+                        ],
+                        cta: { text: "Bald verf\u00fcgbar", url: "#", style: "soon" }
                     },
                     {
-                        title: "12 Wochen Mentoring",
+                        id: "mentoring",
+                        title: "12 Wochen intensive 1:1 Begleitung",
+                        subtitle: "F\u00fcr Entschlossene",
                         price: "3.000 \u20ac",
-                        description: "Pers\u00f6nliche Begleitung - 12 Wochen, 1:1 mit mir. Maximal 8 Menschen gleichzeitig, weil ich mich auf jeden einzelnen ganz einlassen m\u00f6chte.",
-                        cta: "Jetzt bewerben",
-                        url: "#",
-                        color: "lilac"
+                        priceNote: "Ratenzahlung m\u00f6glich",
+                        badge: "NUR 8 PL\u00c4TZE",
+                        badgeStyle: "gold-text",
+                        highlighted: false,
+                        features: [
+                            { text: "Kompletter Win\u00b3 Kurs inklusive", included: true },
+                            { text: "12\u00d7 1:1 Sessions (90 Min.)", included: true },
+                            { text: "WhatsApp-Support", included: true },
+                            { text: "Individuelle Roadmap", included: true },
+                            { text: "Pers\u00f6nliche Betreuung", included: true },
+                            { text: "Beschleunigte Transformation", included: true }
+                        ],
+                        cta: { text: "Jetzt bewerben", url: "https://solbachsteven.systeme.io/bewerbung", style: "subtle" }
                     }
                 ]
             },
@@ -259,21 +281,40 @@
 .lesson-callout { background: var(--lesson-bg-box); border-left: 3px solid var(--lesson-gold); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 20px 0; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--lesson-white); opacity: 0.9; }\n\
 .lesson-callout strong { font-weight: 600; color: var(--lesson-gold); }\n\
 \n\
-/* --- Pricetable --- */\n\
-.lesson-pricetable { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }\n\
-.lesson-pricetable-card { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 32px 28px; text-align: center; border: 1px solid rgba(188,128,52,0.2); display: flex; flex-direction: column; }\n\
-.lesson-pricetable-card[data-color="warm"] { border-color: rgba(188,128,52,0.3); }\n\
-.lesson-pricetable-card[data-color="lilac"] { border-color: rgba(139,109,175,0.3); }\n\
-.lesson-pricetable-title { font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--lesson-white); }\n\
-.lesson-pricetable-card[data-color="warm"] .lesson-pricetable-title { color: #D4A04A; }\n\
-.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-title { color: #B89FD4; }\n\
-.lesson-pricetable-price { font-family: var(--lesson-font-hand); font-size: 36px; font-weight: 600; color: var(--lesson-gold); margin-bottom: 16px; }\n\
-.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-price { color: #B89FD4; }\n\
-.lesson-pricetable-desc { font-size: 15px; font-weight: 300; line-height: 1.7; opacity: 0.85; margin-bottom: 24px; flex: 1; }\n\
-.lesson-pricetable-cta { display: inline-block; padding: 12px 28px; border-radius: 10px; font-family: var(--lesson-font); font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; cursor: pointer; }\n\
-.lesson-pricetable-card[data-color="warm"] .lesson-pricetable-cta { background: var(--lesson-gold); color: var(--lesson-dark); }\n\
-.lesson-pricetable-card[data-color="lilac"] .lesson-pricetable-cta { background: #8B6DAF; color: var(--lesson-white); }\n\
-@media (hover: hover) { .lesson-pricetable-cta:hover { opacity: 0.85; } }\n\
+/* --- Pricetable (matching drei-wege design) --- */\n\
+.lesson-pricetable { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; align-items: stretch; }\n\
+.lesson-pt-card { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 35px 30px; display: flex; flex-direction: column; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; }\n\
+.lesson-pt-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }\n\
+.lesson-pt-card.lesson-pt-highlighted { background: #F4F0EC; color: #2C2726; padding: 40px 35px; border-top: 3px solid var(--lesson-gold); }\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-subtitle,\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-price-note,\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-feature-text { color: #2C2726; }\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-feature-text.excluded { color: #2C2726; opacity: 0.35; }\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-divider { background: rgba(45,39,38,0.12); }\n\
+.lesson-pt-badge { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 30px; margin-bottom: 20px; align-self: flex-start; animation: lesson-pt-pulse 2s ease-in-out infinite; }\n\
+.lesson-pt-badge-gold { background: var(--lesson-gold); color: #2C2726; }\n\
+.lesson-pt-badge-gold-text { background: transparent; color: var(--lesson-gold); border: 1.5px solid var(--lesson-gold); }\n\
+@keyframes lesson-pt-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }\n\
+.lesson-pt-subtitle { font-size: 13px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; color: var(--lesson-gold); margin-bottom: 8px; }\n\
+.lesson-pt-title { font-size: 22px; font-weight: 600; line-height: 1.3; margin-bottom: 20px; }\n\
+.lesson-pt-price { font-size: 38px; font-weight: 700; margin-bottom: 4px; line-height: 1.2; }\n\
+.lesson-pt-price-note { font-size: 13px; font-weight: 300; opacity: 0.6; margin-bottom: 25px; color: var(--lesson-white); }\n\
+.lesson-pt-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 25px; }\n\
+.lesson-pt-features { list-style: none; padding: 0; margin: 0 0 30px 0; flex-grow: 1; }\n\
+.lesson-pt-feature { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 14px; font-weight: 400; line-height: 1.5; }\n\
+.lesson-pt-feature-icon { flex-shrink: 0; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 14px; }\n\
+.lesson-pt-feature-icon.included { color: var(--lesson-gold); }\n\
+.lesson-pt-feature-icon.excluded { color: var(--lesson-white); opacity: 0.5; }\n\
+.lesson-pt-card.lesson-pt-highlighted .lesson-pt-feature-icon.excluded { color: #2C2726; opacity: 0.5; }\n\
+.lesson-pt-feature-text { color: var(--lesson-white); }\n\
+.lesson-pt-feature-text.excluded { opacity: 0.5; text-decoration: line-through; }\n\
+.lesson-pt-cta { display: block; width: 100%; text-align: center; padding: 16px 24px; border-radius: var(--lesson-radius); font-family: var(--lesson-font); font-size: 16px; font-weight: 500; text-decoration: none; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-top: auto; }\n\
+.lesson-pt-cta:hover { transform: translateY(-2px); }\n\
+.lesson-pt-cta-primary { background: #D96935; color: var(--lesson-white); border: none; }\n\
+.lesson-pt-cta-primary:hover { box-shadow: 0 10px 30px rgba(217,105,53,0.3); }\n\
+.lesson-pt-cta-subtle { background: #3C3736; color: var(--lesson-white); border: none; }\n\
+.lesson-pt-cta-subtle:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.3); }\n\
+.lesson-pt-cta-soon { background: rgba(44,39,38,0.06); color: rgba(44,39,38,0.35); border: 1px dashed rgba(44,39,38,0.15); cursor: default; pointer-events: none; }\n\
 \n\
 /* --- Reflection --- */\n\
 .lesson-reflection { background: var(--lesson-bg-box); border-radius: var(--lesson-radius); padding: 40px 36px; margin: 30px 0; text-align: center; border: 1px solid rgba(188,128,52,0.2); }\n\
@@ -296,8 +337,16 @@
     .lesson-form, .lesson-callout { padding: 24px 20px; }\n\
     .lesson-emphasis { font-size: 24px; }\n\
     .lesson-pricetable { grid-template-columns: 1fr; gap: 16px; }\n\
-    .lesson-pricetable-card { padding: 24px 20px; }\n\
-    .lesson-pricetable-price { font-size: 30px; }\n\
+    .lesson-pt-card { padding: 22px 16px; }\n\
+    .lesson-pt-card.lesson-pt-highlighted { padding: 24px 18px; }\n\
+    .lesson-pt-price { font-size: 28px; }\n\
+    .lesson-pt-title { font-size: 18px; margin-bottom: 14px; }\n\
+    .lesson-pt-features { margin: 0 0 20px 0; }\n\
+    .lesson-pt-feature { font-size: 14px; padding: 5px 0; }\n\
+    .lesson-pt-price-note { font-size: 13px; margin-bottom: 18px; }\n\
+    .lesson-pt-divider { margin-bottom: 18px; }\n\
+    .lesson-pt-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 14px; }\n\
+    .lesson-pt-subtitle { font-size: 12px; margin-bottom: 6px; }\n\
     .lesson-h3 { font-size: 19px; margin-top: 30px; }\n\
     .lesson-reflection { padding: 28px 20px; }\n\
     .lesson-reflection-prompt { font-size: 22px; }\n\
@@ -375,14 +424,33 @@
                 case 'pricetable':
                     el = document.createElement('div');
                     el.className = 'lesson-block lesson-pricetable';
+                    var ptCheckSVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                    var ptDashSVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
                     var ptHTML = '';
                     s.items.forEach(function(item) {
-                        var colorAttr = item.color ? ' data-color="' + item.color + '"' : '';
-                        ptHTML += '<div class="lesson-pricetable-card"' + colorAttr + '>' +
-                            '<div class="lesson-pricetable-title">' + item.title + '</div>' +
-                            '<div class="lesson-pricetable-price">' + item.price + '</div>' +
-                            '<div class="lesson-pricetable-desc">' + item.description + '</div>' +
-                            '<a href="' + item.url + '" class="lesson-pricetable-cta">' + item.cta + '</a>' +
+                        var cardClass = 'lesson-pt-card' + (item.highlighted ? ' lesson-pt-highlighted' : '');
+                        var badgeClass = item.badgeStyle === 'gold' ? 'lesson-pt-badge-gold' : 'lesson-pt-badge-gold-text';
+                        var badgeHTML = item.badge ? '<span class="lesson-pt-badge ' + badgeClass + '">' + item.badge + '</span>' : '';
+                        var featuresHTML = '';
+                        if (item.features) {
+                            item.features.forEach(function(f) {
+                                var iconCls = f.included ? 'included' : 'excluded';
+                                var textCls = f.included ? '' : ' excluded';
+                                var icon = f.included ? ptCheckSVG : ptDashSVG;
+                                featuresHTML += '<li class="lesson-pt-feature"><span class="lesson-pt-feature-icon ' + iconCls + '">' + icon + '</span><span class="lesson-pt-feature-text' + textCls + '">' + f.text + '</span></li>';
+                            });
+                        }
+                        var ctaClass = item.cta.style === 'primary' ? 'lesson-pt-cta-primary' : item.cta.style === 'soon' ? 'lesson-pt-cta-soon' : 'lesson-pt-cta-subtle';
+                        var priceNoteHTML = item.priceNote ? '<div class="lesson-pt-price-note">' + item.priceNote + '</div>' : '';
+                        ptHTML += '<div class="' + cardClass + '">' +
+                            badgeHTML +
+                            '<div class="lesson-pt-subtitle">' + item.subtitle + '</div>' +
+                            '<h3 class="lesson-pt-title">' + item.title + '</h3>' +
+                            '<div class="lesson-pt-price">' + item.price + '</div>' +
+                            priceNoteHTML +
+                            '<div class="lesson-pt-divider"></div>' +
+                            '<ul class="lesson-pt-features">' + featuresHTML + '</ul>' +
+                            '<a href="' + item.cta.url + '" class="lesson-pt-cta ' + ctaClass + '">' + item.cta.text + '</a>' +
                         '</div>';
                     });
                     el.innerHTML = ptHTML;
