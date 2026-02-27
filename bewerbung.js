@@ -345,22 +345,23 @@ textarea.bw-input {
     document.head.appendChild(style);
 
     // === DATA ===
-    var TOTAL_STEPS = 6;
+    var TOTAL_STEPS = 7;
 
     var steps = [
         {
             id: 'contact',
-            label: 'SCHRITT 1 VON 6',
+            label: 'SCHRITT 1 VON 7',
             headline: 'Sch\u00f6n, dass du hier bist.',
             subline: 'Lass uns herausfinden, ob wir zusammenpassen.',
             fields: [
                 { type: 'text', name: 'name', placeholder: 'Dein Vorname', required: true },
                 { type: 'email', name: 'email', placeholder: 'Deine E-Mail-Adresse', required: true }
-            ]
+            ],
+            consent: 'Ich willige ein, dass Steven mich im Rahmen dieser Bewerbung kontaktieren darf.'
         },
         {
             id: 'situation',
-            label: 'SCHRITT 2 VON 6',
+            label: 'SCHRITT 2 VON 7',
             headline: 'Wo stehst du gerade?',
             subline: 'Sei ehrlich \u2013 es gibt keine falschen Antworten.',
             question: {
@@ -372,17 +373,22 @@ textarea.bw-input {
                     'Ich suche erstmal Orientierung'
                 ],
                 hasOther: true
-            },
-            followUp: {
-                type: 'textarea',
+            }
+        },
+        {
+            id: 'challenge',
+            label: 'SCHRITT 3 VON 7',
+            headline: 'Was ist gerade deine gr\u00f6\u00dfte Herausforderung?',
+            subline: 'Nimm dir einen Moment.',
+            textarea: {
                 name: 'challenge',
-                placeholder: 'Was ist gerade deine gr\u00f6\u00dfte Herausforderung?',
-                required: false
+                placeholder: 'Schreib frei von der Seele...',
+                required: true
             }
         },
         {
             id: 'goal',
-            label: 'SCHRITT 3 VON 6',
+            label: 'SCHRITT 4 VON 7',
             headline: 'Was erhoffst du dir vom Mentoring?',
             subline: 'Was w\u00fcrde den gr\u00f6\u00dften Unterschied machen?',
             question: {
@@ -398,7 +404,7 @@ textarea.bw-input {
         },
         {
             id: 'investment',
-            label: 'SCHRITT 4 VON 6',
+            label: 'SCHRITT 5 VON 7',
             headline: 'Bist du bereit, Zeit, Geld und Energie in deine Transformation zu investieren?',
             subline: 'Ehrlichkeit hilft uns beiden.',
             question: {
@@ -414,7 +420,7 @@ textarea.bw-input {
         },
         {
             id: 'timing',
-            label: 'SCHRITT 5 VON 6',
+            label: 'SCHRITT 6 VON 7',
             headline: 'Wann willst du starten, dein Leben zu transformieren?',
             subline: 'Es gibt keinen perfekten Moment \u2013 nur deinen.',
             question: {
@@ -430,7 +436,7 @@ textarea.bw-input {
         },
         {
             id: 'commitment',
-            label: 'SCHRITT 6 VON 6',
+            label: 'SCHRITT 7 VON 7',
             headline: 'Dein Commitment',
             subline: 'Das Mentoring funktioniert nur, wenn du bereit bist.',
             hint: 'Bitte best\u00e4tige alle drei Punkte, um fortzufahren.',
@@ -491,9 +497,11 @@ textarea.bw-input {
                 '<span class="bw-radio-dot"></span>' +
                 '<span>Andere</span>' +
             '</label>';
-            html += '<input type="text" class="bw-input bw-other-input" data-name="' + q.name + '_other" placeholder="Deine Antwort...">';
         }
         html += '</div>';
+        if (q.hasOther) {
+            html += '<input type="text" class="bw-input bw-other-input" data-name="' + q.name + '_other" placeholder="Deine Antwort...">';
+        }
         return html;
     }
 
@@ -517,15 +525,25 @@ textarea.bw-input {
             });
         }
 
+        // Consent checkbox (step 1)
+        if (s.consent) {
+            var consentChecked = answers['consent'] ? ' bw-checked' : '';
+            html += '<label class="bw-checkbox' + consentChecked + '" style="margin-top: 4px; margin-bottom: 0;">' +
+                '<input type="checkbox" data-name="consent"' + (answers['consent'] ? ' checked' : '') + '>' +
+                '<span class="bw-check-box"></span>' +
+                '<span style="font-size: 13px; color: rgba(44,39,38,0.55);">' + s.consent + '</span>' +
+            '</label>';
+        }
+
         // Radio group
         if (s.question) {
             html += renderRadioGroup(s.question);
         }
 
-        // Follow-up textarea
-        if (s.followUp) {
-            var val = answers[s.followUp.name] || '';
-            html += '<textarea class="bw-input" data-name="' + s.followUp.name + '" placeholder="' + s.followUp.placeholder + '">' + val + '</textarea>';
+        // Standalone textarea (challenge step)
+        if (s.textarea) {
+            var val = answers[s.textarea.name] || '';
+            html += '<textarea class="bw-input" data-name="' + s.textarea.name + '" placeholder="' + s.textarea.placeholder + '">' + val + '</textarea>';
         }
 
         // Checkboxes (step 6)
@@ -582,7 +600,11 @@ textarea.bw-input {
             }
         }
 
+        if (s.consent && !answers['consent']) return false;
+
         if (s.question && !answers[s.question.name] && answers[s.question.name] !== 0) return false;
+
+        if (s.textarea && s.textarea.required && !answers[s.textarea.name]) return false;
 
         if (s.checkboxes) {
             for (var j = 0; j < s.checkboxes.length; j++) {
@@ -599,7 +621,7 @@ textarea.bw-input {
         if (answers.investment === 3) return false;
 
         // Gate 2: All commitment checkboxes must be checked
-        for (var i = 0; i < steps[5].checkboxes.length; i++) {
+        for (var i = 0; i < steps[6].checkboxes.length; i++) {
             if (!answers['commit_' + i]) return false;
         }
 
