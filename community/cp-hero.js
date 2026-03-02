@@ -22,7 +22,7 @@
     margin-left: calc(-50vw + 50%);
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    background: #1A1A1A;
+    background: transparent;
     overflow-x: hidden;
     position: relative;
     z-index: 5;
@@ -98,7 +98,7 @@
     justify-content: center;
     text-align: center;
     padding: 120px 40px 80px;
-    background: #1A1A1A;
+    background: transparent;
     position: relative;
 }
 .cp-hero-inner {

@@ -21,7 +21,7 @@
     margin-left: calc(-50vw + 50%);
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    background: #1A1A1A;
+    background: transparent;
     overflow-x: hidden;
     position: relative;
     z-index: 5;
@@ -87,7 +87,7 @@
 .cp-pinwall {
     padding: 100px 40px;
     text-align: center;
-    background: #1A1A1A;
+    background: transparent;
 }
 .cp-pinwall-inner {
     max-width: 960px;

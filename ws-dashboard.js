@@ -25,7 +25,7 @@
 }
 
 .ws-dashboard-page {
-    background: #0F0F0F;
+    background: transparent;
     color: #F4F0EC;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
