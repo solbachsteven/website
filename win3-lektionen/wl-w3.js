@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 3: Schwarz auf Weiß
+// Win³ Kurs - Lektion 3: Schwarz auf Weiß
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w3.js"></script>
 (function() {
     if (window.__WL_W3) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 3",
+            label: "LEKTION 3",
             title: "Schwarz auf Wei\u00df",
             subtitle: "Phase 1: Be Yourself"
         },
@@ -26,7 +26,7 @@
             { type: "text", content: "Alles, was du in W2 nach innen gesehen hast, zeigt sich auch nach au\u00dfen. Die Teile, die in dir ziehen, ziehen auch an deinem Leben. Der Anteil, der Sicherheit will, h\u00e4lt dich in der Komfortzone - in dem Job, der dich nicht erf\u00fcllt, aber zahlt. Der Anteil, der Anerkennung sucht, treibt dich zur \u00dcberfunktion - du arbeitest mehr, gibst mehr, leistest mehr, und es ist nie genug. Der Anteil, der Ablehnung f\u00fcrchtet, l\u00e4sst dich verstummen - in Meetings, in Beziehungen, im Leben." },
             { type: "text", content: "Du siehst es in dem, was sich immer wiederholt. Du wechselst den Job, und nach zwei Jahren ist es wieder dasselbe Gef\u00fchl. Du beendest eine Beziehung, und die n\u00e4chste hat ein verbl\u00fcffend \u00e4hnliches Muster. Du nimmst dir vor, Grenzen zu setzen - und drei Wochen sp\u00e4ter sagst du wieder zu allem Ja." },
             { type: "text", content: "Das ist nicht dein Versagen. Das ist dein Inneres, das sich nach au\u00dfen zeigt. Die meisten Menschen sehen den Spiegel und reagieren auf das Spiegelbild. Sie \u00e4ndern Umst\u00e4nde. Neuer Job. Neuer Partner. Neue Stadt. Und wundern sich, warum das Muster mitreist." },
-            { type: "text", content: "Das Muster reist mit, weil es nicht im Au\u00dfen lebt. Es lebt in dir. In den Anteilen, die du letzte Woche kennengelernt hast." },
+            { type: "text", content: "Das Muster reist mit, weil es nicht im Au\u00dfen lebt. Es lebt in dir. In den Anteilen, die du in der letzten Lektion kennengelernt hast." },
             { type: "text", content: "Die gute Nachricht: Du kannst den Spiegel lesen lernen. Und das m\u00e4chtigste Werkzeug daf\u00fcr ist etwas, das du jeden Tag tust, ohne seine Kraft zu ahnen." },
             { type: "emphasis", content: "Schreiben." },
 
@@ -37,7 +37,7 @@
             { type: "text", content: "<strong>James Pennebaker</strong> ist Psychologieprofessor an der University of Texas. Seit den 1980er-Jahren erforscht er eine einfache Frage: Was passiert, wenn Menschen \u00fcber das schreiben, was sie wirklich besch\u00e4ftigt?" },
             { type: "text", content: "Die Antwort, belegt in \u00fcber 200 Studien: Fast alles wird besser. Immunsystem. Stressverarbeitung. Emotionale Klarheit. Weniger Arztbesuche. Besserer Schlaf. Klarere Entscheidungen." },
             { type: "text", content: "Nicht weil Schreiben magisch ist. Sondern weil es etwas tut, das sonst selten passiert: Es zwingt dich, den Film in deinem Kopf anzuhalten und ihn in W\u00f6rter zu \u00fcbersetzen. In dem Moment, in dem du einen Gedanken aufschreibst, ist er nicht mehr nur ein nebul\u00f6ses Gef\u00fchl, das durch dich hindurchrauscht. Er steht da. Schwarz auf wei\u00df. Du kannst ihn anschauen. Er kann dich nicht mehr von innen steuern, weil er jetzt au\u00dfen liegt." },
-            { type: "text", content: "Das ist die Br\u00fccke zwischen Innen und Au\u00dfen. Genau die Br\u00fccke, die dieser Kurs in dieser Woche schl\u00e4gt." },
+            { type: "text", content: "Das ist die Br\u00fccke zwischen Innen und Au\u00dfen. Genau die Br\u00fccke, die dieser Kurs in dieser Lektion schl\u00e4gt." },
             { type: "text", content: "In W1 hast du Konzepte kennengelernt, in W2 bist du nach innen gegangen. Jetzt bringst du das, was innen lebt, nach au\u00dfen. Nicht indem du dar\u00fcber redest - indem du es aufschreibst. Ungefiltert. Unzensiert. Ohne Publikum." },
 
             { type: "divider" },
@@ -54,8 +54,8 @@
 
             // --- Ankerpraktik ---
             { type: "heading", level: 2, content: "Die Ankerpraktik: 3-Schichten-Journaling" },
-            { type: "text", content: "Was ich dir jetzt vorstelle, ist nicht einfach eine \u00dcbung f\u00fcr diese Woche. Es ist die Praxis, die dich ab jetzt durch den gesamten Kurs begleitet. Jede Woche. Jede Phase. Bis zum Ende." },
-            { type: "text", content: "Drei Schichten. Aufeinander aufbauend. Du startest diese Woche mit Schicht 1 und 2. Schicht 3 erkl\u00e4re ich dir jetzt, damit du wei\u00dft, was kommt - aber du brauchst sie noch nicht." },
+            { type: "text", content: "Was ich dir jetzt vorstelle, ist nicht einfach eine \u00dcbung f\u00fcr diese Lektion. Es ist die Praxis, die dich ab jetzt durch den gesamten Kurs begleitet. Jede Lektion. Jede Phase. Bis zum Ende." },
+            { type: "text", content: "Drei Schichten. Aufeinander aufbauend. Du startest in dieser Lektion mit Schicht 1 und 2. Schicht 3 erkl\u00e4re ich dir jetzt, damit du wei\u00dft, was kommt - aber du brauchst sie noch nicht." },
 
             { type: "anchorpractice", layers: [
                 { label: "Schicht 1 (Freies Schreiben)", prompt: "Was besch\u00e4ftigt mich?" },
@@ -84,9 +84,9 @@
             { type: "divider" },
 
             // --- Was ab jetzt ---
-            { type: "heading", level: 2, content: "Was ab jetzt jede Woche passiert" },
+            { type: "heading", level: 2, content: "Was ab jetzt jede Lektion passiert" },
             { type: "text", content: "Ich will, dass du das verstehst, weil es wichtig ist: Die Ankerpraktik ist nicht eine \u00dcbung unter vielen. Sie ist das Werkzeug." },
-            { type: "text", content: "Ab n\u00e4chster Woche hat jede Lektion ein spezifisches Thema. In Phase 2 geht es um Blockaden, Loslassen, Beziehungen. In Phase 3 um Werte, Mindset, dein Angebot an die Welt. Und jedes dieser Themen bearbeitest du mit dem 3-Schichten-Journaling." },
+            { type: "text", content: "Ab der n\u00e4chsten Lektion hat jede Lektion ein spezifisches Thema. In Phase 2 geht es um Blockaden, Loslassen, Beziehungen. In Phase 3 um Werte, Mindset, dein Angebot an die Welt. Und jedes dieser Themen bearbeitest du mit dem 3-Schichten-Journaling." },
             { type: "text", content: "Das Thema \u00e4ndert sich. Die Praxis bleibt. Wie ein Musiker, der jeden Tag Tonleitern spielt - nicht weil Tonleitern das Ziel sind, sondern weil sie die Grundlage f\u00fcr alles Weitere bilden." },
             { type: "text", content: "In Phase 2 wird Schreiben zum Befreiungswerkzeug. Du erkennst Blockaden auf dem Papier, bevor sie dich im Leben blockieren. Und du l\u00f6st Konflikte im Schreiben, statt sie in Beziehungen auszuagieren." },
             { type: "text", content: "In Phase 3 wird Schreiben zum Kl\u00e4rungswerkzeug. Du entwickelst deine Werte, deine Positionierung, dein Angebot - alles schreibend. Nicht im Kopf. Auf dem Papier." },
@@ -115,10 +115,10 @@
 
             { type: "divider" },
 
-            // --- Drei Wochen ---
-            { type: "heading", level: 2, content: "Drei Wochen, drei Schritte" },
+            // --- Drei Lektionen ---
+            { type: "heading", level: 2, content: "Drei Lektionen, drei Schritte" },
             { type: "text", content: "Phase 1 neigt sich dem Ende zu. Schau zur\u00fcck auf das, was passiert ist:" },
-            { type: "text", content: "W1 war die Karte - das Konzept, wie dein Inneres aufgebaut ist. W2 war der Gang nach innen, die Anteile, der Beobachter. Und diese Woche hast du eine Br\u00fccke zwischen innen und au\u00dfen gebaut." },
+            { type: "text", content: "W1 war die Karte - das Konzept, wie dein Inneres aufgebaut ist. W2 war der Gang nach innen, die Anteile, der Beobachter. Und in dieser Lektion hast du eine Br\u00fccke zwischen innen und au\u00dfen gebaut." },
             { type: "emphasis", content: "Verstehen, f\u00fchlen, handeln. Be Yourself." },
 
             { type: "divider" },
@@ -126,15 +126,15 @@
             // --- Was kommt ---
             { type: "heading", level: 2, content: "Was kommt" },
             { type: "text", content: "Du kannst jetzt nach innen schauen. Du kannst es aufschreiben. Du hast Zugang zu deinem Selbst - nicht perfekt, nicht dauerhaft, aber real." },
-            { type: "text", content: "Ab n\u00e4chster Woche beginnt Phase 2: Do Good. Und dort wird es anders." },
+            { type: "text", content: "Ab der n\u00e4chsten Lektion beginnt Phase 2: Do Good. Und dort wird es anders." },
             { type: "text", content: "In Phase 1 hast du erkannt, wer du bist. In Phase 2 lernst du, dich zu befreien. Die Teile, die du in W2 kennengelernt hast - du lernst, mit ihnen zu arbeiten. Die Konflikte zu l\u00f6sen. Die Muster zu unterbrechen, die sich in deinem Leben wiederholen." },
-            { type: "text", content: "Dein Schreibwerkzeug wird dabei zum Befreiungswerkzeug. Was du diese Woche als Br\u00fccke zwischen innen und au\u00dfen gebaut hast, wird in Phase 2 zum Hebel." },
+            { type: "text", content: "Dein Schreibwerkzeug wird dabei zum Befreiungswerkzeug. Was du in dieser Lektion als Br\u00fccke zwischen innen und au\u00dfen gebaut hast, wird in Phase 2 zum Hebel." },
             { type: "emphasis", content: "Du hast das Fundament. Jetzt bauen wir darauf." },
 
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 3 von 9", percent: 33, detail: "Phase 1: Be Yourself" },
+            { type: "progress-bar", label: "Lektion 3 von 9", percent: 33, detail: "Phase 1: Be Yourself" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",
@@ -142,7 +142,7 @@
                 "Schicht 2 (KI als Spiegel) ausprobiert"
             ]},
 
-            { type: "signoff", text: "Phase 1 ist abgeschlossen. Du wei\u00dft, wer du bist. Du hast deine innere Welt betreten. Du hast ein Werkzeug.\\n\\nAb n\u00e4chster Woche nutzen wir es.", name: "Steven" }
+            { type: "signoff", text: "Phase 1 ist abgeschlossen. Du wei\u00dft, wer du bist. Du hast deine innere Welt betreten. Du hast ein Werkzeug.\\n\\nAb der n\u00e4chsten Lektion nutzen wir es.", name: "Steven" }
         ]
     };
 

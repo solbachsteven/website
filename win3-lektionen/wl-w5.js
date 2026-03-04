@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 5: Du bist okay
+// Win³ Kurs - Lektion 5: Du bist okay
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w5.js"></script>
 (function() {
     if (window.__WL_W5) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 5",
+            label: "LEKTION 5",
             title: "Du bist okay",
             subtitle: "Phase 2: Do Good"
         },
@@ -19,7 +19,7 @@
             { type: "emphasis", content: "Der Reparatur-Reflex. Automatisch. Unsichtbar." },
             { type: "text", content: "Aber was wenn du gar nicht kaputt bist?" },
             { type: "text", content: "Du bist vielleicht nicht kaputt. Nicht als Spruch. Nicht als Poster. Als echte Frage: Was wenn das grundlegende Bild - \"Ich bin defekt und muss repariert werden\" - der eigentliche Fehler ist?" },
-            { type: "text", content: "Letzte Woche hast du deinen lautesten Anteil kalibriert. Du wei\u00dft, wo er auf der Skala lebt. Du wei\u00dft, was er braucht. Diese Woche h\u00f6rst du auf, ihn zu reparieren. Du versorgst ihn stattdessen." },
+            { type: "text", content: "In der letzten Lektion hast du deinen lautesten Anteil kalibriert. Du wei\u00dft, wo er auf der Skala lebt. Du wei\u00dft, was er braucht. Diese Woche h\u00f6rst du auf, ihn zu reparieren. Du versorgst ihn stattdessen." },
             { type: "text", content: "Es macht einen Unterschied." },
 
             { type: "divider" },
@@ -44,7 +44,7 @@
             { type: "text", content: "Die meisten versuchen, ihre Anteile loszuwerden. Angst weg. Scham versteckt. Wut runtergedr\u00fcckt. Ich verstehe das." },
             { type: "text", content: "Aber es funktioniert nicht. Teile, die du ablehnst, verschwinden nicht. Sie wirken immer noch. Nur aus deinem Sichtfeld." },
             { type: "text", content: "Der w\u00fctende Anteil, den du unterdr\u00fcckst, steuert dich trotzdem - in Momenten, wo du pl\u00f6tzlich \u00fcberreagierst. Der traurige Anteil zieht an deinem Leben. In der Schwere, die \u00fcber allem liegt. Je mehr du verdr\u00e4ngst, desto mehr Energie bindet das. Du brauchst st\u00e4ndig Kraft daf\u00fcr." },
-            { type: "text", content: "Diese Woche geht es nicht um Wegmachen oder Aufl\u00f6sen. Um Integration." },
+            { type: "text", content: "In dieser Lektion geht es nicht um Wegmachen oder Aufl\u00f6sen. Um Integration." },
             { type: "emphasis", content: "Hol zur\u00fcck, was du abgespalten hast. Mach es wieder Teil von dir." },
 
             { type: "divider" },
@@ -70,7 +70,7 @@
                 { title: "Liebevolle Aufmerksamkeit", description: "Ein Kind kommt weinend zu dir. Du nimmst es nicht auseinander. Du erkl\u00e4rst nicht, warum sein Weinen irrational ist. Du bist da. Du sagst: \"Ich sehe dich. Du bist sicher.\" Das tust du jetzt mit deinem Anteil. Wie eine gute Mutter. Ohne Urteil. Ohne den Wunsch zu reparieren." }
             ]},
 
-            { type: "text", content: "Die Selbst-Qualit\u00e4ten aus Woche 1 - Mitgef\u00fchl, Ruhe, Geduld - sind genau das, was dein Anteil jetzt braucht. Du hast sie. Sie waren die ganze Zeit da." },
+            { type: "text", content: "Die Selbst-Qualit\u00e4ten aus Lektion 1 - Mitgef\u00fchl, Ruhe, Geduld - sind genau das, was dein Anteil jetzt braucht. Du hast sie. Sie waren die ganze Zeit da." },
 
             { type: "divider" },
 
@@ -82,8 +82,8 @@
             // --- Ressourcen-Inventar ---
             { type: "heading", level: 2, content: "Dein Ressourcen-Inventar" },
             { type: "text", content: "Die Letting-Go-Methode ist der direkte Weg. Aber manchmal reicht direktes F\u00fchlen nicht. Ein Anteil braucht mehr. Etwas Konkretes. Etwas, das du tun oder dir geben kannst." },
-            { type: "text", content: "In Woche 4 hast du erkannt, was dein Anteil braucht: innere Eltern, einen Coach, Verst\u00e4ndnis, Pr\u00e4senz. Was hei\u00dft das konkret? F\u00fcr dich?" },
-            { type: "text", content: "Nimm dein Arbeitsblatt aus letzter Woche. Und schreib neben jeden Anteil: Was ist meine Ressource daf\u00fcr?" },
+            { type: "text", content: "In Lektion 4 hast du erkannt, was dein Anteil braucht: innere Eltern, einen Coach, Verst\u00e4ndnis, Pr\u00e4senz. Was hei\u00dft das konkret? F\u00fcr dich?" },
+            { type: "text", content: "Nimm dein Arbeitsblatt aus der letzten Lektion. Und schreib neben jeden Anteil: Was ist meine Ressource daf\u00fcr?" },
             { type: "text", content: "Ein Beispiel: Dein Anteil lebt in Scham. Er braucht Sicherheit, Annahme. Was k\u00f6nnte helfen? Ein Satz, den du dir sagst. Eine Erinnerung. Die Hand auf dein Herz." },
             { type: "text", content: "Ein anderes Beispiel: Dein Anteil lebt in Angst. Er braucht Mut, Perspektive. Eine Erinnerung an einen mutigen Moment. Eine Atem\u00fcbung. \"Ich habe das schon gemacht.\"" },
             { type: "text", content: "Diese Liste ist dein Werkzeug. F\u00fcr die Session, f\u00fcr schwierige Momente, f\u00fcr alles danach." },
@@ -95,7 +95,7 @@
             { type: "text", content: "Nimm 20 bis 30 Minuten. Kein Handy, keine Ablenkung. Ein sicherer Ort." },
 
             { type: "steps", title: "Letting-Go-Session", items: [
-                { title: "Vorbereitung", description: "Nimm dein Arbeitsblatt aus Woche 4. Der Anteil, den du kalibriert hast - mit dem arbeitest du jetzt. Augen zu. Atme tief ein und aus. Lass es nat\u00fcrlich werden. Ruf den Anteil auf - denk an ihn und warte." },
+                { title: "Vorbereitung", description: "Nimm dein Arbeitsblatt aus Lektion 4. Der Anteil, den du kalibriert hast - mit dem arbeitest du jetzt. Augen zu. Atme tief ein und aus. Lass es nat\u00fcrlich werden. Ruf den Anteil auf - denk an ihn und warte." },
                 { title: "F\u00fchlen", description: "Wo im K\u00f6rper sp\u00fcrst du ihn? Geh mit deiner Aufmerksamkeit dorthin. Bleib dort." },
                 { title: "Story loslassen", description: "Wenn Gedanken kommen - und sie werden kommen -, lass sie vorbeiziehen. Zur\u00fcck zum K\u00f6rpergef\u00fchl. Immer wieder." },
                 { title: "Erlauben", description: "Sag innerlich: \"Ich erlaube diesem Gef\u00fchl, da zu sein.\" Nicht als Mantra, nicht als Formel. Als Haltung. Du machst nichts falsch und nichts richtig. Du bist einfach da." },
@@ -108,8 +108,8 @@
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Woche" },
-            { type: "text", content: "Dein t\u00e4gliches Schreiben bekommt diese Woche einen Selbstf\u00fcrsorge-Fokus:" },
+            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
+            { type: "text", content: "Dein t\u00e4gliches Schreiben bekommt in dieser Lektion einen Selbstf\u00fcrsorge-Fokus:" },
 
             { type: "anchorpractice", layers: [
                 { label: "Schicht 1 (Freies Schreiben)", prompt: "Welcher Anteil meldet sich? Was erz\u00e4hlt er? Welche Geschichte habe ich geglaubt?" },
@@ -137,7 +137,7 @@
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 5 von 9", percent: 56, detail: "Phase 2: Do Good" },
+            { type: "progress-bar", label: "Lektion 5 von 9", percent: 56, detail: "Phase 2: Do Good" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

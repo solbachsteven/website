@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 1: Wer bin ich?
+// Win³ Kurs - Lektion 1: Wer bin ich?
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w1.js"></script>
 (function() {
     if (window.__WL_W1) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 1",
+            label: "LEKTION 1",
             title: "Wer bin ich?",
             subtitle: "Phase 1: Be Yourself"
         },
@@ -34,7 +34,7 @@
 
             // --- IFS / Selbst ---
             { type: "heading", level: 2, content: "Was unter den Stimmen liegt" },
-            { type: "text", content: "In der letzten Woche habe ich dir eine Karte gezeigt: dein Selbst. Dreizehn nat\u00fcrliche Qualit\u00e4ten - Ruhe, Klarheit, Neugier, Mitgef\u00fchl und neun weitere. Ich habe gesagt: Die sind schon da. Versch\u00fcttet vielleicht, verdeckt - aber da." },
+            { type: "text", content: "In der letzten Lektion habe ich dir eine Karte gezeigt: dein Selbst. Dreizehn nat\u00fcrliche Qualit\u00e4ten - Ruhe, Klarheit, Neugier, Mitgef\u00fchl und neun weitere. Ich habe gesagt: Die sind schon da. Versch\u00fcttet vielleicht, verdeckt - aber da." },
             { type: "text", content: "Jetzt schauen wir genauer hin." },
             { type: "text", content: "Die Psychologie hat ein Modell daf\u00fcr, wie unsere innere Welt aufgebaut ist. Es hei\u00dft <strong>IFS</strong> - <strong>Internal Family Systems</strong>. Und es sagt etwas Einfaches, aber Tiefgreifendes:" },
             { type: "emphasis", content: "Du bestehst aus Teilen. Und du bist mehr als deine Teile." },
@@ -51,7 +51,7 @@
             { type: "text", content: "Das Wort \"Erwachen\" klingt gro\u00df. Mystisch. Nach Blitz und Erleuchtung und einem Moment, in dem sich alles ver\u00e4ndert. Vergiss das." },
             { type: "text", content: "Erwachen ist nicht mystisch. Erwachen ist der Moment, in dem du den Unterschied erkennst zwischen den Teilen und dem Selbst. Zwischen dem, was du zu sein glaubst, und dem, was du bist." },
             { type: "text", content: "Das ist kein einmaliges Event. Es ist ein Prozess. Manchmal erkennst du es f\u00fcr eine Sekunde - und dann \u00fcbernehmen die Teile wieder das Steuer. Manchmal h\u00e4lt es l\u00e4nger. Mit der Zeit wird der Zugang stabiler. Nicht weil du etwas erreichst, sondern weil du aufh\u00f6rst, dich mit den Stimmen zu verwechseln." },
-            { type: "text", content: "In der letzten Woche habe ich dir die <strong>Hawkins-Karte</strong> gezeigt. Die Schwelle bei 200 - alles darunter destruktiv, alles dar\u00fcber konstruktiv. Hier wird sie lebendig:" },
+            { type: "text", content: "In der letzten Lektion habe ich dir die <strong>Hawkins-Karte</strong> gezeigt. Die Schwelle bei 200 - alles darunter destruktiv, alles dar\u00fcber konstruktiv. Hier wird sie lebendig:" },
             { type: "text", content: "Unter 200 lebst du aus den Teilen heraus. Angst, \u00c4rger, Stolz, Scham - das sind nicht \"du\". Das sind Teile, die das Steuer \u00fcbernommen haben. Sie sehen die Welt durch ihren Filter und reagieren entsprechend." },
             { type: "text", content: "\u00dcber 200 beginnt etwas anderes durchzuscheinen. Mut. Akzeptanz. Neugier. Das sind nicht neue Eigenschaften, die du dir antrainierst. Das sind Qualit\u00e4ten des Selbst, die sichtbar werden, wenn die Teile ein St\u00fcck zur Seite treten." },
             { type: "callout", content: "Erwachen ist der Moment, in dem du erkennst, was wahr ist. Erleuchtung geht weiter: die vollst\u00e4ndige Verk\u00f6rperung von dem, was wahr ist. Nicht nur erkennen. Leben. Durchgehend. Das ist ein Zustand, der entsteht, wenn die Teile zur Ruhe kommen und das Selbst nicht mehr verdeckt ist." },
@@ -85,16 +85,16 @@
             // --- Bedeutung ---
             { type: "heading", level: 2, content: "Was das f\u00fcr dein Leben bedeutet" },
             { type: "text", content: "Okay, aber was bringt dir das?" },
-            { type: "text", content: "Ehrliche Antwort: Diese Woche noch nichts Spektakul\u00e4res. Du baust ein Fundament. Du lernst eine neue Art, dich selbst zu sehen. Und das ver\u00e4ndert mehr, als du gerade ahnst." },
+            { type: "text", content: "Ehrliche Antwort: Diese Lektion noch nichts Spektakul\u00e4res. Du baust ein Fundament. Du lernst eine neue Art, dich selbst zu sehen. Und das ver\u00e4ndert mehr, als du gerade ahnst." },
             { type: "text", content: "Wenn du anf\u00e4ngst, deine inneren Stimmen als Teile zu erkennen statt als \"dich selbst\", passiert etwas Entscheidendes: Du bekommst Abstand. Nicht kalten Abstand. Eher den Abstand von jemandem, der alle Stimmen kennt - und keiner von ihnen auf den Leim geht." },
-            { type: "text", content: "Dieser Abstand ist der Anfang von allem, was in diesem Kurs kommt. In Phase 2 lernst du, mit diesen Teilen zu arbeiten - sie zu verstehen, zu befreien, zu aktualisieren. In Phase 3 lebst du aus dem Selbst heraus in die Welt hinein. Aber all das braucht ein Fundament. Und das Fundament ist die Erkenntnis dieser Woche:" },
+            { type: "text", content: "Dieser Abstand ist der Anfang von allem, was in diesem Kurs kommt. In Phase 2 lernst du, mit diesen Teilen zu arbeiten - sie zu verstehen, zu befreien, zu aktualisieren. In Phase 3 lebst du aus dem Selbst heraus in die Welt hinein. Aber all das braucht ein Fundament. Und das Fundament ist die Erkenntnis dieser Lektion:" },
             { type: "highlight", title: "Das Fundament", content: "Du bist nicht deine Teile. Du bist das, was deine Teile kennt." },
 
             { type: "divider" },
 
             // --- Übung ---
             { type: "heading", level: 2, content: "Deine \u00dcbung" },
-            { type: "text", content: "Diese Woche hast du die Wahl. Drei Optionen - w\u00e4hle die, die dich anspricht. Mach sie mindestens dreimal in dieser Woche." },
+            { type: "text", content: "In dieser Lektion hast du die Wahl. Drei Optionen - w\u00e4hle die, die dich anspricht. Mach sie mindestens dreimal." },
 
             { type: "heading", level: 3, content: "Option A: \"Ich bin.\" (Kontemplation)" },
             { type: "text", content: "Setz dich hin. F\u00fcnf Minuten. Schlie\u00df die Augen." },
@@ -118,12 +118,12 @@
             { type: "heading", level: 2, content: "Was kommt" },
             { type: "text", content: "Du hast jetzt ein Konzept. Eine Idee davon, was das Selbst ist und was die Teile sind. Das ist wertvoll. Und es reicht nicht." },
             { type: "emphasis", content: "\u00dcber Schwimmen zu lesen macht dich nicht zum Schwimmer." },
-            { type: "text", content: "N\u00e4chste Woche springen wir rein. Du wirst deine innere Welt direkt erkunden - nicht als Konzept, sondern als Erfahrung. Du wirst die verschiedenen Stimmen und Teile in dir kennenlernen. Nicht theoretisch. Praktisch." },
+            { type: "text", content: "In der n\u00e4chsten Lektion springen wir rein. Du wirst deine innere Welt direkt erkunden - nicht als Konzept, sondern als Erfahrung. Du wirst die verschiedenen Stimmen und Teile in dir kennenlernen. Nicht theoretisch. Praktisch." },
 
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 1 von 9", percent: 11, detail: "Phase 1: Be Yourself" },
+            { type: "progress-bar", label: "Lektion 1 von 9", percent: 11, detail: "Phase 1: Be Yourself" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

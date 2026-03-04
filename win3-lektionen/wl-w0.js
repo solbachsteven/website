@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 0: Einführung
+// Win³ Kurs - Lektion 0: Einführung
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w0.js"></script>
 (function() {
     if (window.__WL_W0) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 0",
+            label: "LEKTION 0",
             title: "Einf\u00fchrung",
             subtitle: "Dein Ger\u00e4t kam ohne Anleitung"
         },
@@ -45,7 +45,7 @@
             { type: "text", content: "Was bleibt?" },
             { type: "text", content: "Die Psychologie nennt es \"das Selbst\". Nicht eine weitere Stimme. Nicht eine bessere Version von dir. Sondern das, was unter allen Stimmen liegt. Das, was alle Stimmen kennt, ohne selbst eine zu sein." },
             { type: "text", content: "Dieses Selbst hat nat\u00fcrliche Qualit\u00e4ten. Nicht Ziele, die du erreichen musst - Eigenschaften, die bereits da sind. Ruhe, Klarheit, Neugier, Mitgef\u00fchl - um nur ein paar zu nennen. Dreizehn Qualit\u00e4ten insgesamt. Kreativit\u00e4t, Mut, Verbundenheit, Freude, Beharrlichkeit, Pr\u00e4senz, Spielfreude, Geduld und Perspektive. Versch\u00fcttet vielleicht. Verdeckt durch Jahrzehnte von Anpassung und Selbstschutz. Aber da." },
-            { type: "text", content: "In den n\u00e4chsten Wochen wirst du sie freilegen. Nicht indem du etwas hinzuf\u00fcgst. Indem du erkennst, was schon da ist." },
+            { type: "text", content: "In den n\u00e4chsten Lektionen wirst du sie freilegen. Nicht indem du etwas hinzuf\u00fcgst. Indem du erkennst, was schon da ist." },
 
             { type: "heading", level: 3, content: "Karte 2: Bewusstsein" },
             { type: "text", content: "Die zweite Karte zeigt die Landschaft, in der du dich bewegst. Und diese Landschaft ist nicht flach." },
@@ -101,7 +101,7 @@
             { type: "heading", level: 2, content: "Dein Commitment" },
             { type: "text", content: "Ein Kurs ist nur so gut wie deine Entscheidung, ihn wirklich zu machen. Nicht \"mal reinschauen\". Nicht \"wenn ich Zeit habe\". Sondern: Ich mache das." },
             { type: "text", content: "Hier ist eine Sache, die die meisten Menschen nicht wissen: Ein Commitment ohne sofortige Handlung ist ein frommer Wunsch. Es f\u00fchlt sich gut an, es verfl\u00fcchtigt sich schnell. Aber ein Commitment mit sofortiger Handlung ist ein Versprechen, das in deinem K\u00f6rper verankert ist. Der Unterschied ist nicht die Intensit\u00e4t der Absicht - es ist der Moment, in dem du etwas tust." },
-            { type: "highlight", title: "Deine erste Handlung", content: "Wann machst du die n\u00e4chste Lektion? Nicht \"irgendwann diese Woche.\" Ein Tag. Eine Uhrzeit. Trag es ein. Jetzt. Nicht gleich. Jetzt. Das ist deine erste Handlung in diesem Kurs. Klein und konkret. Aber verbindlich." },
+            { type: "highlight", title: "Deine erste Handlung", content: "Wann machst du die n\u00e4chste Lektion? Nicht \"irgendwann.\" Ein Tag. Eine Uhrzeit. Trag es ein. Jetzt. Nicht gleich. Jetzt. Das ist deine erste Handlung in diesem Kurs. Klein und konkret. Aber verbindlich." },
 
             { type: "divider" },
 
@@ -128,7 +128,7 @@
             ]},
 
             // --- Signoff ---
-            { type: "signoff", text: "N\u00e4chste Woche beginnen wir mit der ersten und wichtigsten Frage: Wer bist du wirklich?\\n\\nNicht wer du glaubst zu sein oder wer andere in dir sehen. Sondern wer du bist, wenn das alles wegf\u00e4llt.\\n\\nBis dahin.", name: "Steven" }
+            { type: "signoff", text: "In der n\u00e4chsten Lektion beginnen wir mit der ersten und wichtigsten Frage: Wer bist du wirklich?\\n\\nNicht wer du glaubst zu sein oder wer andere in dir sehen. Sondern wer du bist, wenn das alles wegf\u00e4llt.\\n\\nBis dahin.", name: "Steven" }
         ]
     };
 

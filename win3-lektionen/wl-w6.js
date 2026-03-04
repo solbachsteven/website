@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 6: Du als dein Coach
+// Win³ Kurs - Lektion 6: Du als dein Coach
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w6.js"></script>
 (function() {
     if (window.__WL_W6) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 6",
+            label: "LEKTION 6",
             title: "Du als dein Coach",
             subtitle: "Phase 2: Do Good"
         },
@@ -18,7 +18,7 @@
             { type: "text", content: "Ges\u00fcnder essen. Fr\u00fcher aufstehen. Das Gespr\u00e4ch, das du vor dir herschiebst. Den Job, die Beziehung, den ersten Schritt." },
             { type: "text", content: "Du wei\u00dft es. Und trotzdem tust du es nicht." },
             { type: "text", content: "Nicht aus Faulheit. Nicht aus Unwissen. Es ist ein Graben zwischen Erkennen und Tun. Und den schaffen die meisten nicht." },
-            { type: "text", content: "In Woche 4 hast du erkannt, was dich festh\u00e4lt. In Woche 5, wie du es losl\u00e4sst. Das reicht nicht." },
+            { type: "text", content: "In Lektion 4 hast du erkannt, was dich festh\u00e4lt. In Lektion 5, wie du es losl\u00e4sst. Das reicht nicht." },
             { type: "emphasis", content: "Es braucht eine Br\u00fccke zur Handlung. Diese Woche baust du sie." },
 
             { type: "divider" },
@@ -28,7 +28,7 @@
             { type: "text", content: "Drei Schritte. Immer die gleichen. F\u00fcr alles." },
             { type: "emphasis", content: "Verstehen. F\u00fchlen. Handeln." },
             { type: "text", content: "Und dann wieder von vorn." },
-            { type: "text", content: "Das ist die gleiche Struktur wie der gesamte Kurs. Meta, Innen, Au\u00dfen. Woche 4 war Verstehen. Woche 5 war F\u00fchlen. Woche 6 ist Handeln. Was der Kurs im Gro\u00dfen macht, machst du jetzt im Kleinen." },
+            { type: "text", content: "Das ist die gleiche Struktur wie der gesamte Kurs. Meta, Innen, Au\u00dfen. Lektion 4 war Verstehen. Lektion 5 war F\u00fchlen. Lektion 6 ist Handeln. Was der Kurs im Gro\u00dfen macht, machst du jetzt im Kleinen." },
             { type: "text", content: "Die Schleife ist kein Weg mit Start und Ziel. Sie dreht sich. Jede Handlung f\u00fchrt zu neuen Erkenntnissen. Die f\u00fchren zu neuen Gef\u00fchlen. Die erm\u00f6glichen neue Handlung. Mit jeder Runde gehst du tiefer." },
             { type: "text", content: "Du kennst die einzelnen Teile bereits. Jetzt lernst du, sie bewusst als Prozess einzusetzen." },
 
@@ -62,10 +62,10 @@
             { type: "emphasis", content: "Was l\u00f6st das in mir aus?" },
             { type: "text", content: "Hier brechen die meisten ab. Du hast verstanden, was los ist - und springst direkt zur L\u00f6sung. Neuer Plan. Neue Strategie. Neue Willenskraft." },
             { type: "text", content: "Und es funktioniert nicht. Du hast den wichtigen Teil \u00fcbersprungen." },
-            { type: "text", content: "Die Letting-Go-Methode aus Woche 5 - nutze sie jetzt. Nicht separat. Hier, direkt, in deinem Coaching." },
+            { type: "text", content: "Die Letting-Go-Methode aus Lektion 5 - nutze sie jetzt. Nicht separat. Hier, direkt, in deinem Coaching." },
             { type: "text", content: "<strong>Was f\u00fchle ich, wenn ich an dieses Thema denke?</strong> Nicht was du denkst - was du f\u00fchlst. Im K\u00f6rper, nicht im Kopf." },
             { type: "text", content: "<strong>Wo sitzt es?</strong> Bauch, Brust, Kehle, Schultern? Geh mit deiner Aufmerksamkeit dorthin." },
-            { type: "text", content: "<strong>Welcher Anteil meldet sich?</strong> Du kennst deine Anteile aus Woche 2 und 4. Wer ist hier aktiv? Der \u00c4ngstliche? Der Perfektionist? Das verletzte Kind?" },
+            { type: "text", content: "<strong>Welcher Anteil meldet sich?</strong> Du kennst deine Anteile aus Lektion 2 und 4. Wer ist hier aktiv? Der \u00c4ngstliche? Der Perfektionist? Das verletzte Kind?" },
             { type: "text", content: "<strong>Kann ich die Story loslassen und beim reinen Gef\u00fchl bleiben?</strong> Du wei\u00dft, wie das geht. Schritt 2 der Letting-Go-Methode. Die Geschichte loslassen, beim K\u00f6rpergef\u00fchl bleiben, erlauben." },
             { type: "text", content: "Nimm dir Zeit. Der Wechsel vom Kopf in den K\u00f6rper braucht manchmal Minuten, nicht Sekunden. Das ist nicht ineffizient - das ist der Prozess. Wenn du diesen Schritt \u00fcberspringst, baust du auf Sand." },
 
@@ -75,7 +75,7 @@
             { type: "heading", level: 2, content: "Schritt 3: Handeln" },
             { type: "emphasis", content: "Was ist der kleinste n\u00e4chste Schritt?" },
             { type: "text", content: "Nicht der perfekte Plan. Ein Schritt. So klein, dass dein Widerstand keine Chance hat." },
-            { type: "text", content: "<strong>Was w\u00e4re ein konkreter Schritt, den ich diese Woche tun k\u00f6nnte?</strong> Ein Schritt. Nicht f\u00fcnf. Nicht ein ganzer Aktionsplan. Einer. So konkret, dass du morgen wei\u00dft, was zu tun ist." },
+            { type: "text", content: "<strong>Was w\u00e4re ein konkreter Schritt, den ich als N\u00e4chstes tun k\u00f6nnte?</strong> Ein Schritt. Nicht f\u00fcnf. Nicht ein ganzer Aktionsplan. Einer. So konkret, dass du morgen wei\u00dft, was zu tun ist." },
             { type: "text", content: "<strong>Was h\u00e4lt mich davon ab?</strong> Die wichtigste Frage. Wenn die Antwort ein Gef\u00fchl ist - zur\u00fcck zu Schritt 2. Ein Gedanke - zur\u00fcck zu Schritt 1." },
             { type: "text", content: "<strong>Woran merke ich, dass sich etwas ver\u00e4ndert hat?</strong> Nicht zur Kontrolle. Um zu sehen, was sich ver\u00e4ndert. Ver\u00e4nderung ist klein. Du siehst sie nur, wenn du wei\u00dft, worauf du achten musst." },
             { type: "text", content: "Wenn du nicht handeln kannst, gibt es etwas Unerledigtes zwischen Verstehen und F\u00fchlen. Geh zur\u00fcck. Die Schleife erlaubt das." },
@@ -86,7 +86,7 @@
             { type: "heading", level: 2, content: "KI als Coaching-Partner" },
             { type: "text", content: "Die Selbstcoaching-Schleife funktioniert komplett allein. Du brauchst nichts au\u00dfer dich selbst, dein Journal und ehrliche Fragen." },
             { type: "text", content: "Aber du kannst sie mit KI verst\u00e4rken. Und das ver\u00e4ndert die Tiefe erheblich." },
-            { type: "text", content: "Deine Ankerpraktik - das 3-Schichten-Journaling aus Woche 3 - ist im Grunde schon Coaching. Schicht 1 ist freies Schreiben. Schicht 2 ist KI als Spiegel. Schicht 3 ist KI als Coach. Jetzt verbindest du beides bewusst." },
+            { type: "text", content: "Deine Ankerpraktik - das 3-Schichten-Journaling aus Lektion 3 - ist im Grunde schon Coaching. Schicht 1 ist freies Schreiben. Schicht 2 ist KI als Spiegel. Schicht 3 ist KI als Coach. Jetzt verbindest du beides bewusst." },
 
             { type: "heading", level: 3, content: "Verstehen verst\u00e4rken" },
             { type: "text", content: "Beschreibe deine Situation einer KI. Und dann lass sie nicht antworten - lass sie fragen. KI hat kein Ego, kein Urteil, keine Agenda. Ein neutraler Spiegel." },
@@ -132,7 +132,7 @@
             { type: "heading", level: 3, content: "Der Durchlauf" },
             { type: "steps", title: "Selbstcoaching-Durchlauf", items: [
                 { title: "Verstehen (10 Minuten)", description: "Schreib auf, was los ist. Was ist das Thema? Die Geschichte? Was ist Fakt? Sei ehrlich." },
-                { title: "F\u00fchlen (10 Minuten)", description: "Vom Kopf in den K\u00f6rper. Wo sitzt es? Was meldet sich? Welcher Anteil? Wenn es zu viel wird, nutze die Letting-Go-Methode aus Woche 5. Erlaube es, \u00e4ndere es nicht." },
+                { title: "F\u00fchlen (10 Minuten)", description: "Vom Kopf in den K\u00f6rper. Wo sitzt es? Was meldet sich? Welcher Anteil? Wenn es zu viel wird, nutze die Letting-Go-Methode aus Lektion 5. Erlaube es, \u00e4ndere es nicht." },
                 { title: "Handeln (10 Minuten)", description: "Was ist dein n\u00e4chster Schritt? Schreib ihn auf - so konkret, dass du morgen wei\u00dft, was zu tun ist. Nicht \"mutiger sein\". \"Am Dienstag anrufen.\" So konkret." }
             ]},
 
@@ -141,7 +141,7 @@
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Woche" },
+            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
             { type: "text", content: "Dein 3-Schichten-Journaling wird zum Coaching-Ritual. Das war es immer schon, jetzt machst du es bewusst." },
 
             { type: "anchorpractice", layers: [
@@ -155,9 +155,9 @@
             // --- Phase 2: Abschluss ---
             { type: "heading", level: 2, content: "Phase 2: Abschluss" },
             { type: "text", content: "Du hast jetzt ein vollst\u00e4ndiges Werkzeugset." },
-            { type: "text", content: "Woche 4: Erkennen. Du wei\u00dft, was dich festh\u00e4lt und wo deine Anteile auf der Skala leben." },
-            { type: "text", content: "Woche 5: F\u00fchlen. Du wei\u00dft, wie du diese Anteile versorgst, statt sie zu reparieren. Du hast die Letting-Go-Methode als Praxis." },
-            { type: "text", content: "Woche 6: Handeln. Du wei\u00dft, wie du dich selbst coachst. Verstehen, F\u00fchlen, Handeln - die Schleife, die alles verbindet." },
+            { type: "text", content: "Lektion 4: Erkennen. Du wei\u00dft, was dich festh\u00e4lt und wo deine Anteile auf der Skala leben." },
+            { type: "text", content: "Lektion 5: F\u00fchlen. Du wei\u00dft, wie du diese Anteile versorgst, statt sie zu reparieren. Du hast die Letting-Go-Methode als Praxis." },
+            { type: "text", content: "Lektion 6: Handeln. Du wei\u00dft, wie du dich selbst coachst. Verstehen, F\u00fchlen, Handeln - die Schleife, die alles verbindet." },
             { type: "emphasis", content: "Das ist die Do-Good-Phase. Selbstbefreiung." },
             { type: "text", content: "Du bist nicht mehr nur Zuschauer. Du bist handlungsf\u00e4hig. Du erkennst, versorgst, begleitest dich selbst. Nicht perfekt. Du machst es." },
 
@@ -173,7 +173,7 @@
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 6 von 9", percent: 67, detail: "Phase 2: Do Good" },
+            { type: "progress-bar", label: "Lektion 6 von 9", percent: 67, detail: "Phase 2: Do Good" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

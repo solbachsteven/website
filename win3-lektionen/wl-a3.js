@@ -35,7 +35,7 @@
             // --- Fähigkeiten ---
             { type: "heading", level: 2, content: "F\u00e4higkeiten: Was darf ich noch lernen?" },
             { type: "text", content: "F\u00e4higkeiten sind das, was du kannst. Und was du noch nicht kannst." },
-            { type: "text", content: "Neun Wochen. Du hast gelernt, dich selbst zu coachen. Du kennst deine Werkzeuge - die Ankerpraktik, wie man Emotionen f\u00fchlt und losl\u00e4sst, wie man tiefer geht. Das sind echte F\u00e4higkeiten jetzt." },
+            { type: "text", content: "Neun Lektionen. Du hast gelernt, dich selbst zu coachen. Du kennst deine Werkzeuge - die Ankerpraktik, wie man Emotionen f\u00fchlt und losl\u00e4sst, wie man tiefer geht. Das sind echte F\u00e4higkeiten jetzt." },
             { type: "text", content: "Die meisten Menschen lernen das nie. Das ist der Unterschied." },
             { type: "text", content: "Aber f\u00fcr dein Ziel brauchst du vielleicht noch mehr F\u00e4higkeiten. Andere." },
             { type: "text", content: "W7 hast du dein Ikigai-Mapping gemacht. Da siehst du, wo L\u00fccken sind. Dinge, die du liebst und k\u00f6nntest, aber nicht bekommst bezahlt. Oder was die Welt braucht und du nicht kannst. F\u00e4higkeits-L\u00fccken." },
@@ -114,7 +114,7 @@
             ]},
 
             { type: "text", content: "Drei Bereiche. Ein Weg. Das ist die Idee." },
-            { type: "text", content: "Das ist kein Versprechen auf ein perfektes Leben. Das ist ein Prozess, der heute anf\u00e4ngt. Dieser Prozess hat vor zehn Wochen angefangen. Jetzt erreicht er die n\u00e4chste Stufe." },
+            { type: "text", content: "Das ist kein Versprechen auf ein perfektes Leben. Das ist ein Prozess, der heute anf\u00e4ngt. Dieser Prozess hat mit dem Kurs angefangen. Jetzt erreicht er die n\u00e4chste Stufe." },
 
             { type: "divider" },
 

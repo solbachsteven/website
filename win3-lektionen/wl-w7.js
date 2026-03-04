@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 7: Dein Platz in der Welt
+// Win³ Kurs - Lektion 7: Dein Platz in der Welt
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w7.js"></script>
 (function() {
     if (window.__WL_W7) return;
@@ -8,14 +8,14 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 7",
+            label: "LEKTION 7",
             title: "Dein Platz in der Welt",
             subtitle: "Phase 3: Make Money"
         },
         sections: [
             // --- Intro ---
             { type: "text", content: "Du hast dich befreit." },
-            { type: "text", content: "Sechs Wochen. Du hast erkannt, wer du bist - nicht die Rollen, nicht die Stimmen im Kopf. Du kannst nach innen schauen ohne Panik. Du siehst die Blockaden, setzt sie um, lernst selbst zu coachen." },
+            { type: "text", content: "Sechs Lektionen. Du hast erkannt, wer du bist - nicht die Rollen, nicht die Stimmen im Kopf. Du kannst nach innen schauen ohne Panik. Du siehst die Blockaden, setzt sie um, lernst selbst zu coachen." },
             { type: "text", content: "Du stehst hier anders. Leichter. Klarer." },
             { type: "emphasis", content: "Und die Frage, die jetzt kommt, ist die nat\u00fcrlichste der Welt: Was mache ich damit?" },
 
@@ -42,13 +42,13 @@
             { type: "text", content: "Das ist ein vollst\u00e4ndiger Satz." },
             { type: "text", content: "Wert schaffen: etwas in die Welt bringen, das andere brauchen. Wertsch\u00e4tzung empfangen: bereit sein, daf\u00fcr etwas anzunehmen - echte, auch finanzielle Wertsch\u00e4tzung." },
             { type: "text", content: "Geld ist ein Spiegel - aber kein vollst\u00e4ndiger. Es zeigt dir, wie viel du in einem Bereich bringst, in dem Menschen bereit und in der Lage sind, daf\u00fcr zu zahlen. Und wie viel du bereit bist, daf\u00fcr anzunehmen. Viele der wertvollsten Dinge, die du tust, werden nie mit Geld verg\u00fctet. Das macht sie nicht weniger wertvoll. Aber dort, wo Geld flie\u00dft, zeigt es dir etwas \u00fcber dein Verh\u00e4ltnis zu deinem eigenen Wert." },
-            { type: "text", content: "Diese Woche schauen wir auf das Erste - das Schaffen. In W8 schauen wir auf das Zweite - das Annehmen. Beides geh\u00f6rt zusammen." },
+            { type: "text", content: "In dieser Lektion schauen wir auf das Erste - das Schaffen. In W8 schauen wir auf das Zweite - das Annehmen. Beides geh\u00f6rt zusammen." },
 
             { type: "divider" },
 
             // --- Was du schon weißt ---
             { type: "heading", level: 2, content: "Was du schon wei\u00dft" },
-            { type: "text", content: "Du hast in sechs Wochen mehr \u00fcber dich gelernt als die meisten in Jahren." },
+            { type: "text", content: "Du hast in sechs Lektionen mehr \u00fcber dich gelernt als die meisten in Jahren." },
             { type: "text", content: "Die meisten leben, ohne nach innen zu schauen. Ohne ihre Teile zu kennen. Ohne zu lernen, welche \u00dcberzeugungen sie fesseln." },
             { type: "emphasis", content: "Du hast das alles getan." },
             { type: "text", content: "In W1 hast du erkannt: Du bist nicht deine Gedanken, nicht deine Gef\u00fchle, nicht deine Geschichte. Unter den Stimmen liegt etwas, das sie alle kennt." },
@@ -142,7 +142,7 @@
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 7 von 9", percent: 78, detail: "Phase 3: Make Money" },
+            { type: "progress-bar", label: "Lektion 7 von 9", percent: 78, detail: "Phase 3: Make Money" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

@@ -16,19 +16,19 @@
 
     // ======== LESSON META (for matrix cards) ========
     var META = {
-        w0: { week: 'Woche 0', title: 'Einf\u00fchrung', fw: 'Start' },
-        w1: { week: 'W1', title: 'Wer bin ich?', fw: 'IFS Selbst' },
-        w2: { week: 'W2', title: 'Die innere Welt', fw: 'Tolle + Wittemann' },
-        w3: { week: 'W3', title: 'Schwarz auf Wei\u00df', fw: 'Pennebaker + Ankerpraktik' },
-        w4: { week: 'W4', title: 'Deine Fesseln', fw: 'Hawkins Map' },
-        w5: { week: 'W5', title: 'Du bist okay', fw: 'Letting-Go' },
-        w6: { week: 'W6', title: 'Du als dein Coach', fw: 'Selbstcoaching-Schleife' },
-        w7: { week: 'W7', title: 'Dein Platz in der Welt', fw: 'Ikigai' },
-        w8: { week: 'W8', title: 'Dein Wert', fw: 'Deborah Price' },
-        w9: { week: 'W9', title: 'Zeig dich', fw: 'Integration' },
-        a1: { week: 'A1', title: 'Dein Leben auf dem Pr\u00fcfstand', fw: 'Ist vs. Soll' },
-        a2: { week: 'A2', title: 'Inneres Alignment', fw: 'Top-Down' },
-        a3: { week: 'A3', title: '\u00c4u\u00dferes Alignment', fw: 'Alignment-Plan' }
+        w0: { week: 'LEKTION 0', title: 'Einf\u00fchrung', points: ['Kurs-Struktur kennenlernen', 'Dein Journal einrichten'] },
+        w1: { week: 'LEKTION 1', title: 'Wer bin ich?', points: ['Dein wahres Selbst erkennen', 'Innere Stimmen unterscheiden'] },
+        w2: { week: 'LEKTION 2', title: 'Die innere Welt', points: ['Innere Anteile kennenlernen', 'Pr\u00e4senz als Schl\u00fcssel'] },
+        w3: { week: 'LEKTION 3', title: 'Schwarz auf Wei\u00df', points: ['Expressives Schreiben', 'Die Ankerpraktik starten'] },
+        w4: { week: 'LEKTION 4', title: 'Deine Fesseln', points: ['Blockaden kalibrieren', 'Die Hawkins-Skala nutzen'] },
+        w5: { week: 'LEKTION 5', title: 'Du bist okay', points: ['Die Letting-Go-Methode', 'Emotionen loslassen'] },
+        w6: { week: 'LEKTION 6', title: 'Du als dein Coach', points: ['Selbstcoaching-Schleife', 'Verstehen \u2192 F\u00fchlen \u2192 Handeln'] },
+        w7: { week: 'LEKTION 7', title: 'Dein Platz in der Welt', points: ['Dein Ikigai finden', 'Berufung erkennen'] },
+        w8: { week: 'LEKTION 8', title: 'Dein Wert', points: ['Geld-Archetypen verstehen', 'Preise selbstbewusst setzen'] },
+        w9: { week: 'LEKTION 9', title: 'Zeig dich', points: ['Sichtbarkeit \u00fcben', 'Integration aller Lektionen'] },
+        a1: { week: 'ALIGNMENT 1', title: 'Dein Leben auf dem Pr\u00fcfstand', points: ['Neurologische Ebenen', 'Ist vs. Soll Alignment-Map'] },
+        a2: { week: 'ALIGNMENT 2', title: 'Inneres Alignment', points: ['Dein h\u00f6chstes Ziel finden', 'Top-Down-Processing'] },
+        a3: { week: 'ALIGNMENT 3', title: '\u00c4u\u00dferes Alignment', points: ['F\u00e4higkeiten & Verhalten', 'Dein Alignment-Plan'] }
     };
 
     // ======== PROGRESS (localStorage) ========
@@ -117,7 +117,9 @@
 .intro-card.cell-done { background: rgba(188,128,52,0.08); border-color: rgba(188,128,52,0.20); }\n\
 .matrix-cell .cell-week { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: #b8b0a4; margin-bottom: 0.3rem; }\n\
 .matrix-cell .cell-title { font-size: 0.85rem; font-weight: 500; color: #FCF0D6; line-height: 1.3; flex: 1; }\n\
-.matrix-cell .cell-fw { font-family: "Caveat", cursive; font-size: 0.8rem; color: #BC8034; margin-top: 0.4rem; }\n\
+.matrix-cell .cell-points { list-style: none; padding: 0; margin: 0.4rem 0 0; }\n\
+.matrix-cell .cell-points li { font-size: 0.7rem; color: #b8b0a4; line-height: 1.4; padding-left: 0.8rem; position: relative; }\n\
+.matrix-cell .cell-points li::before { content: "\\2022"; position: absolute; left: 0; color: rgba(188,128,52,0.5); }\n\
 .matrix-cell .progress-check { position: absolute; top: 0.7rem; right: 0.7rem; width: 18px; height: 18px; font-size: 10px; margin: 0; }\n\
 /* Alignment Section */\n\
 .alignment-section { margin-top: 1.5rem; }\n\
@@ -179,11 +181,19 @@
         var cls = 'matrix-cell' + (isDone ? ' cell-done' : '');
         var checkCls = 'progress-check' + (isDone ? ' done' : '');
         var checkInner = isDone ? '\u2713' : '';
+        var pointsHtml = '';
+        if (m.points) {
+            pointsHtml = '<ul class="cell-points">';
+            for (var i = 0; i < m.points.length; i++) {
+                pointsHtml += '<li>' + m.points[i] + '</li>';
+            }
+            pointsHtml += '</ul>';
+        }
         return '<div class="' + cls + '" data-lesson="' + id + '" tabindex="0" role="button" aria-label="' + m.title + '">'
             + '<div class="' + checkCls + '">' + checkInner + '</div>'
             + '<div class="cell-week">' + m.week + '</div>'
             + '<div class="cell-title">' + m.title + '</div>'
-            + '<div class="cell-fw">' + m.fw + '</div>'
+            + pointsHtml
             + '</div>';
     }
 
@@ -207,7 +217,7 @@
 
         // W0
         h += '<div class="intro-card' + w0done + '" data-lesson="w0" tabindex="0" role="button" aria-label="Einf\u00fchrung">'
-            + '<div><div class="week">Woche 0</div><div class="title">Einf\u00fchrung</div></div>'
+            + '<div><div class="week">LEKTION 0</div><div class="title">Einf\u00fchrung</div></div>'
             + '<div style="display:flex;align-items:center;gap:0.8rem;">'
             + '<span class="badge">Start</span>'
             + '<div class="' + w0check + '">' + w0tick + '</div>'

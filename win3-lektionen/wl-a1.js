@@ -15,7 +15,7 @@
         sections: [
             // --- Intro ---
             { type: "text", content: "Du hast ein neues Betriebssystem." },
-            { type: "text", content: "Neun Wochen. Du hast erkannt, wer du jenseits deiner Rollen bist. Du warst in deiner inneren Welt unterwegs. Kennengelernt hast du dort Teile, die dein Leben lenken. Du hast Werkzeuge bekommen: dich ausdr\u00fccken, Blockaden f\u00fchlen, loslassen. Coach wurdest du deswegen selbst. Dein Platz. Dein Verh\u00e4ltnis zu Geld. Und dass du dich zeigst." },
+            { type: "text", content: "Neun Lektionen. Du hast erkannt, wer du jenseits deiner Rollen bist. Du warst in deiner inneren Welt unterwegs. Kennengelernt hast du dort Teile, die dein Leben lenken. Du hast Werkzeuge bekommen: dich ausdr\u00fccken, Blockaden f\u00fchlen, loslassen. Coach wurdest du deswegen selbst. Dein Platz. Dein Verh\u00e4ltnis zu Geld. Und dass du dich zeigst." },
             { type: "emphasis", content: "Das ist kein kleines Ding. Das ist ein komplettes Software-Update." },
             { type: "text", content: "Aber: L\u00e4uft die neue Software auf der richtigen Hardware?" },
 

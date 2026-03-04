@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 8: Dein Wert
+// Win³ Kurs - Lektion 8: Dein Wert
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w8.js"></script>
 (function() {
     if (window.__WL_W8) return;
@@ -8,14 +8,14 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 8",
+            label: "LEKTION 8",
             title: "Dein Wert",
             subtitle: "Phase 3: Make Money"
         },
         sections: [
             // --- Intro ---
             { type: "text", content: "Du wei\u00dft jetzt, was du in die Welt bringen kannst." },
-            { type: "text", content: "Letzte Woche hast du vier Kreise gezeichnet. Du hast hingeschaut, was du liebst, was du kannst, was die Welt braucht. Vielleicht war dein Mapping unvollst\u00e4ndig. Vielleicht voller Fragezeichen. Vielleicht hast du zum ersten Mal schwarz auf wei\u00df gesehen, was du eigentlich schon l\u00e4ngst gesp\u00fcrt hast." },
+            { type: "text", content: "In der letzten Lektion hast du vier Kreise gezeichnet. Du hast hingeschaut, was du liebst, was du kannst, was die Welt braucht. Vielleicht war dein Mapping unvollst\u00e4ndig. Vielleicht voller Fragezeichen. Vielleicht hast du zum ersten Mal schwarz auf wei\u00df gesehen, was du eigentlich schon l\u00e4ngst gesp\u00fcrt hast." },
             { type: "emphasis", content: "Und trotzdem." },
             { type: "text", content: "Da ist etwas zwischen dir und dem Tun. Ein leises Fl\u00fcstern. Manchmal kaum h\u00f6rbar. Manchmal ohrenbet\u00e4ubend." },
             { type: "emphasis", content: "\"Wer bin ich, dass ich daf\u00fcr Geld nehme?\"" },
@@ -135,7 +135,7 @@
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Woche" },
+            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
             { type: "text", content: "Jeden Tag eine Frage:" },
 
             { type: "anchorpractice", layers: [
@@ -150,7 +150,7 @@
 
             // --- Zum Schluss ---
             { type: "heading", level: 2, content: "Zum Schluss" },
-            { type: "text", content: "Geld-Mindset ist keine neue Sache. Es ist eine Anwendung. Von allem, was du in sieben Wochen gelernt hast." },
+            { type: "text", content: "Geld-Mindset ist keine neue Sache. Es ist eine Anwendung. Von allem, was du in sieben Lektionen gelernt hast." },
             { type: "text", content: "W2, W4, W5, W6 - alles das brauchst du hier. Nur ist das Thema Geld. Das Thema, das die meisten vermeiden." },
             { type: "text", content: "Wenn du dein Geld-Mindset kl\u00e4rst, kl\u00e4rst du dein Verh\u00e4ltnis zu dir selbst. Nicht nur Geld. Selbstwert. Sichtbarkeit. Erlaubnis. Das ist alles dabei." },
             { type: "emphasis", content: "In W9 kommt die letzte Sache. Die alte Geschichte ist weg. Du wei\u00dft, was du brauchst. Du erlaubst es dir. Dann zeigst du dich." },
@@ -158,7 +158,7 @@
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 8 von 9", percent: 89, detail: "Phase 3: Make Money" },
+            { type: "progress-bar", label: "Lektion 8 von 9", percent: 89, detail: "Phase 3: Make Money" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

@@ -1014,7 +1014,7 @@
                     case 'anchorpractice':
                         el = document.createElement('div');
                         el.className = 'lesson-block lesson-anchorpractice';
-                        var apHTML = '<div class="lesson-anchorpractice-label">Ankerpraktik diese Woche</div>';
+                        var apHTML = '<div class="lesson-anchorpractice-label">Ankerpraktik diese Lektion</div>';
                         s.layers.forEach(function(layer) {
                             apHTML +=
                                 '<div class="lesson-anchorpractice-layer">' +

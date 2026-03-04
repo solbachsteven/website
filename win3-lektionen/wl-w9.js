@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 9: Zeig dich
+// Win³ Kurs - Lektion 9: Zeig dich
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w9.js"></script>
 (function() {
     if (window.__WL_W9) return;
@@ -8,14 +8,14 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 9",
+            label: "LEKTION 9",
             title: "Zeig dich",
             subtitle: "Phase 3: Make Money"
         },
         sections: [
             // --- Intro ---
             { type: "emphasis", content: "Selbstbewusstsein." },
-            { type: "text", content: "Ein Wort. Zwei Bedeutungen. Und darin liegt alles, was du in neun Wochen gelernt hast." },
+            { type: "text", content: "Ein Wort. Zwei Bedeutungen. Und darin liegt alles, was du in neun Lektionen gelernt hast." },
             { type: "text", content: "Sich seiner selbst bewusst sein. Das ist die eine Bedeutung. Die stille. Die nach innen gerichtete. Die Frage: Wer bin ich? Und die Antwort, die kein Satz ist, sondern eine Erfahrung." },
             { type: "text", content: "Selbstbewusst auftreten. Das ist die andere. Die laute. Die nach au\u00dfen gerichtete. Die Art, wie du in einen Raum gehst, wie du sprichst, wie du stehst, wenn dich jemand fragt, was du tust." },
             { type: "text", content: "Die meisten Menschen trainieren die zweite Bedeutung, ohne die erste jemals ber\u00fchrt zu haben. Sie \u00fcben K\u00f6rpersprache. Stimme. Elevator Pitch. Und wundern sich, warum es sich hohl anf\u00fchlt." },
@@ -32,7 +32,7 @@
             { type: "text", content: "Dann kam Phase 2. Du hast die Blockaden gesehen. Klar: Auf welcher Ebene? Welcher Anteil tr\u00e4gt sie? Du hast gelernt, loszulassen - nicht durch Willenskraft, sondern durch Hingabe. Nicht indem du k\u00e4mpfst, sondern indem du aufh\u00f6rst zu k\u00e4mpfen. Du hast dich selbst coachen gelernt. Verstehen. F\u00fchlen. Handeln. Die Schleife, die dich unabh\u00e4ngig macht." },
             { type: "text", content: "Phase 3 war anders. Du hast die vier Kreise angeschaut. Was du liebst, kannst, die Welt braucht. Du hast erkannt, wo du dir selbst im Weg stehst - beim Geld, bei der Erlaubnis. Und dann hast du die Erlaubnis gegeben." },
             { type: "text", content: "Das war kein Zufall. Das war ein Bogen. Be Yourself. Do Good. Make Money. Erkennen. Befreien. Verwirklichen." },
-            { type: "emphasis", content: "Drei Phasen. Neun Wochen. Ein Weg." },
+            { type: "emphasis", content: "Drei Phasen. Neun Lektionen. Ein Weg." },
             { type: "text", content: "Und jetzt stehst du hier." },
 
             { type: "divider" },
@@ -89,7 +89,7 @@
 
             // --- Was kommt danach ---
             { type: "heading", level: 2, content: "Was kommt danach" },
-            { type: "text", content: "Dieser Kurs hat neun Wochen gedauert. Er ist ein Anfang. Kein Ende." },
+            { type: "text", content: "Dieser Kurs hatte neun Lektionen. Er ist ein Anfang. Kein Ende." },
             { type: "text", content: "Du hast Werkzeuge, die du f\u00fcr den Rest deines Lebens nutzen kannst. Nicht als Marketingsatz. Als Tatsache." },
             { type: "text", content: "Die Ankerpraktik. Freies Schreiben, Muster, vertiefen. Das h\u00e4lt dich in Kontakt mit dir selbst. Immer." },
             { type: "text", content: "Die Selbstcoaching-Schleife: Verstehen, F\u00fchlen, Handeln. Bei jedem Thema, das kommt." },
@@ -111,7 +111,7 @@
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Woche" },
+            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
             { type: "text", content: "Jeden Tag, einmal:" },
 
             { type: "anchorpractice", layers: [
@@ -126,7 +126,7 @@
 
             // --- Dreiklang wird Einklang ---
             { type: "heading", level: 2, content: "Dreiklang wird Einklang" },
-            { type: "text", content: "Drei Phasen. Neun Wochen. Ein Bogen." },
+            { type: "text", content: "Drei Phasen. Neun Lektionen. Ein Bogen." },
 
             { type: "bigthree", items: [
                 { title: "Be Yourself", description: "Du hast erkannt, wer du bist. Nicht deine Rollen. Nicht deine Geschichte. Das, was alle Rollen und Geschichten kennt.", color: "be" },
@@ -143,7 +143,7 @@
             { type: "heading", level: 2, content: "Was noch kommt" },
             { type: "emphasis", content: "Du bist nicht fertig. Du bist angefangen. Und das ist genug." },
             { type: "text", content: "Dieser Kurs hat dir Werkzeuge gegeben. Werkzeuge, die du jetzt nutzen kannst - nicht irgendwann, nicht wenn du bereit bist. Jetzt. Jeden Tag. Bei jedem Thema, das auftaucht." },
-            { type: "text", content: "In den Alignment-Lektionen, die nach dieser Woche kommen, geht es um etwas anderes. Nicht um neue Werkzeuge. Sondern um die Ebenen, auf denen Ver\u00e4nderung tats\u00e4chlich stattfindet. Neurologische Ebenen. Ist versus Soll. Das Hardware-Update, das daf\u00fcr sorgt, dass die Software, die du in neun Wochen installiert hast, auch wirklich l\u00e4uft." },
+            { type: "text", content: "In den Alignment-Lektionen, die nach dieser Lektion kommen, geht es um etwas anderes. Nicht um neue Werkzeuge. Sondern um die Ebenen, auf denen Ver\u00e4nderung tats\u00e4chlich stattfindet. Neurologische Ebenen. Ist versus Soll. Das Hardware-Update, das daf\u00fcr sorgt, dass die Software, die du in neun Wochen installiert hast, auch wirklich l\u00e4uft." },
             { type: "text", content: "Diese Lektionen sind kein Bonus. Sie sind der Pr\u00fcfstand - die innere Arbeit, die sicherstellt, dass alle drei Ebenen wirklich zusammenspielen. Alignment. Aber der Kern ist dieser:" },
             { type: "text", content: "Du wei\u00dft jetzt, wer du bist. Du bist frei genug, um dich zu zeigen. Du hast dir die Erlaubnis gegeben." },
             { type: "text", content: "Der Rest ist Praxis. Nicht perfekte Praxis. Echte Praxis. Stolpernde, lernende, wachsende Praxis. Die Art von Praxis, die nicht aufh\u00f6rt, wenn der Kurs aufh\u00f6rt." },
@@ -154,7 +154,7 @@
             // --- Celebration + Progress + Checklist + Signoff ---
             { type: "celebration", text: "Neun Wochen. Drei Phasen. Dein Weg." },
 
-            { type: "progress-bar", label: "Woche 9 von 9", percent: 100, detail: "Phase 3: Make Money" },
+            { type: "progress-bar", label: "Lektion 9 von 9", percent: 100, detail: "Phase 3: Make Money" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",

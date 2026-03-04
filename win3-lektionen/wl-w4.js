@@ -1,4 +1,4 @@
-// Win³ Kurs - Woche 4: Deine Fesseln
+// Win³ Kurs - Lektion 4: Deine Fesseln
 // Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w4.js"></script>
 (function() {
     if (window.__WL_W4) return;
@@ -8,7 +8,7 @@
 
     var LESSON_DATA = {
         meta: {
-            label: "WOCHE 4",
+            label: "LEKTION 4",
             title: "Deine Fesseln",
             subtitle: "Phase 2: Do Good"
         },
@@ -31,7 +31,7 @@
             { type: "text", content: "Du denkst, die Blockaden sind Gedankenfehler. Also rationalisierst du sie weg. Du argumentierst gegen deine Angst. Du erkl\u00e4rst dir selbst, warum deine Wut keinen Grund hat. Du versuchst dich selbst zu \u00fcberzeugen, dass du es schaffen kannst." },
             { type: "emphasis", content: "Nichts passiert." },
             { type: "text", content: "Blockaden sitzen im Kopf und im K\u00f6rper. Im Nervensystem. Seit Jahren aktiv. Manchmal seit Jahrzehnten. Der Fehler ist zu glauben, dass sie nur Gedankenfehler sind. Dass du sie wegdenken kannst. Scham weg-argumentieren. Trauer analysieren. Nein. Die emotionale Ladung sitzt tiefer." },
-            { type: "text", content: "Du kennst die Anteile aus Woche 2. Jeder tr\u00e4gt eine emotionale Ladung. Der \u00e4ngstliche Anteil operiert nicht auf der Ebene von falschen Gedanken. Er operiert auf Furcht. Der w\u00fctende auf Wut. Der resignierte auf Apathie." },
+            { type: "text", content: "Du kennst die Anteile aus Lektion 2. Jeder tr\u00e4gt eine emotionale Ladung. Der \u00e4ngstliche Anteil operiert nicht auf der Ebene von falschen Gedanken. Er operiert auf Furcht. Der w\u00fctende auf Wut. Der resignierte auf Apathie." },
             { type: "text", content: "Sie denken nicht falsch. Sie f\u00fchlen etwas, das noch nicht verarbeitet ist." },
             { type: "text", content: "Das erkl\u00e4rt, warum all die B\u00fccher dir nicht geholfen haben. Sie setzten am falschen Ort an." },
 
@@ -72,7 +72,7 @@
             { type: "text", content: "<strong>Ein Anteil bei Wut</strong> braucht Verst\u00e4ndnis. Welche Grenze wurde verletzt? Wut zeigt dir, wo was nicht stimmt. Sie braucht \u00dcbersetzung: Was dahinter?" },
             { type: "text", content: "<strong>Ein Anteil bei Stolz</strong> braucht Ehrlichkeit. Vergleich ist keine St\u00e4rke. Du brauchst nicht besser zu sein." },
             { type: "callout", content: "Und hier die Realit\u00e4t: Dein Selbst kann all das. Es hat die Qualit\u00e4ten daf\u00fcr. Ruhe, Klarheit, Mitgef\u00fchl, Mut, Geduld - das sind nicht abstrakt. Das sind Werkzeuge. Dein Selbst ist der innere Elternteil. Der Coach. Das Verst\u00e4ndnis. Die Pr\u00e4senz. Alles in einem." },
-            { type: "text", content: "In Woche 5 lernst du die Selbstf\u00fcrsorge - wie du diesen Anteilen gibst, was sie brauchen. In Woche 6 das Selbstcoaching - wie du dich durch den Prozess begleitest." },
+            { type: "text", content: "In Lektion 5 lernst du die Selbstf\u00fcrsorge - wie du diesen Anteilen gibst, was sie brauchen. In Lektion 6 das Selbstcoaching - wie du dich durch den Prozess begleitest." },
             { type: "text", content: "Aber zuerst musst du wissen, wo du stehst." },
 
             { type: "divider" },
@@ -89,19 +89,19 @@
 
             // --- Übung ---
             { type: "heading", level: 2, content: "Pflicht\u00fcbung: Den lautesten Anteil kalibrieren" },
-            { type: "text", content: "Das hier ist keine Theorie. Das ist dein Arbeitsblatt f\u00fcr die n\u00e4chsten zwei Wochen." },
+            { type: "text", content: "Das hier ist keine Theorie. Das ist dein Arbeitsblatt f\u00fcr die n\u00e4chsten zwei Lektionen." },
 
             { type: "steps", title: "Den lautesten Anteil kalibrieren", items: [
                 { title: "Den lautesten Anteil w\u00e4hlen", description: "Welcher innere Anteil ist gerade am aktivsten? Nicht der, von dem du denkst, du solltest an ihm arbeiten. Der, der sich am h\u00e4ufigsten meldet. Der, der am meisten Energie bindet. Der, der dich nachts wach h\u00e4lt oder morgens schwer macht." },
                 { title: "Auf der Skala verorten", description: "Wo lebt dieser Anteil? Schau dir die Hawkins-Ebenen an. Nicht mit dem Kopf - mit dem Gef\u00fchl. Wenn dieser Anteil sich meldet, welche Ebene passt? Ist es eher Angst? Eher Scham? Eher Wut? Eher Trauer?" },
                 { title: "Was braucht er?", description: "Basierend auf seiner Ebene: Was k\u00f6nnte diesem Anteil helfen? Innere Eltern? Einen inneren Coach? Verst\u00e4ndnis? Pr\u00e4senz? Lies die Zuordnung von oben noch mal durch und frag dich: Was davon klingt wahr f\u00fcr diesen Anteil?" },
-                { title: "Aufschreiben", description: "Schreib es auf. Klar und einfach: Name oder Rolle des Anteils. Hawkins-Ebene. Was er braucht. Das ist dein Arbeitsblatt. Bewahre es auf - du brauchst es in Woche 5 und 6." }
+                { title: "Aufschreiben", description: "Schreib es auf. Klar und einfach: Name oder Rolle des Anteils. Hawkins-Ebene. Was er braucht. Das ist dein Arbeitsblatt. Bewahre es auf - du brauchst es in Lektion 5 und 6." }
             ]},
 
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Woche" },
+            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
             { type: "text", content: "Ab jetzt richtest du dein Schreiben gezielt auf Blockaden. Dein 3-Schichten-Journaling bekommt einen neuen Fokus:" },
 
             { type: "anchorpractice", layers: [
@@ -115,13 +115,13 @@
             // --- Was kommt ---
             { type: "heading", level: 2, content: "Was kommt" },
             { type: "text", content: "Du wei\u00dft jetzt, was dich festh\u00e4lt. Du hast es nicht nur durchdacht. Du hast es verortet. Du hast deinem lautesten Anteil ein Gesicht gegeben. Eine Position auf der Karte. Eine erste Ahnung davon, was er braucht." },
-            { type: "text", content: "N\u00e4chste Woche gehst du weiter. Du lernst, diesen Anteil zu f\u00fchlen, nicht nur zu verstehen. Zu versorgen. Zu integrieren, statt ihn loszuwerden." },
-            { type: "text", content: "N\u00e4chste Woche hei\u00dft: Du bist okay. Auch wenn dein lautester Anteil das nicht glaubt." },
+            { type: "text", content: "In der n\u00e4chsten Lektion gehst du weiter. Du lernst, diesen Anteil zu f\u00fchlen, nicht nur zu verstehen. Zu versorgen. Zu integrieren, statt ihn loszuwerden." },
+            { type: "text", content: "Die n\u00e4chste Lektion hei\u00dft: Du bist okay. Auch wenn dein lautester Anteil das nicht glaubt." },
 
             { type: "divider" },
 
             // --- Progress + Checklist + Signoff ---
-            { type: "progress-bar", label: "Woche 4 von 9", percent: 44, detail: "Phase 2: Do Good" },
+            { type: "progress-bar", label: "Lektion 4 von 9", percent: 44, detail: "Phase 2: Do Good" },
 
             { type: "checklist", items: [
                 "Lektion vollst\u00e4ndig gelesen",
