@@ -127,7 +127,7 @@
             + '<div class="ap-auth-card">'
             + '<div class="ap-auth-icon">✍️</div>'
             + '<h2 class="ap-auth-title">Ankerpraktik</h2>'
-            + '<p class="ap-auth-subtitle">Dein persönliches Journal mit KI-Spiegel und KI-Coach.<br>Kein Passwort nötig - wir senden dir einen Magic Link.</p>'
+            + '<p class="ap-auth-subtitle">Dein persönliches Journal mit KI-Spiegel und KI-Coach.<br>Gib deine Email ein und leg direkt los.</p>'
             + errorHtml
             + '<form class="ap-auth-form" id="ap-auth-form">'
             + '<div>'
@@ -136,7 +136,7 @@
             + '</div>'
             + nicknameField
             + '<button class="ap-btn" type="submit" style="width:100%;justify-content:center;margin-top:8px;" ' + (authState.loading ? 'disabled' : '') + '>'
-            + (authState.loading ? '<span class="ap-spinner"></span> Wird gesendet...' : '📧 Magic Link senden')
+            + (authState.loading ? '<span class="ap-spinner"></span> Wird eingeloggt...' : '🚀 Einloggen')
             + '</button>'
             + '</form>'
             + (authState.isNewUser ? '' : '<p style="margin-top:16px;font-size:13px;color:rgba(252,240,214,0.4);">Noch kein Konto? <button style="background:none;border:none;color:#BC8034;cursor:pointer;font-size:13px;font-family:Poppins,sans-serif;text-decoration:underline;" onclick="window.__AP_AUTH_TOGGLE_NEW()">Registrieren</button></p>')
@@ -195,6 +195,23 @@
         try {
             var body = { email: authState.email };
             if (authState.nickname) body.nickname = authState.nickname;
+
+            // Dev-Login: Sofort einloggen ohne Magic Link
+            try {
+                var devData = await window.__AP.api('/auth/dev-login', {
+                    method: 'POST',
+                    body: body
+                });
+                // Sofort eingeloggt!
+                window.__AP.state.token = devData.session_token;
+                window.__AP.state.user = devData.user;
+                window.__AP.saveSession();
+                authState.loading = false;
+                window.__AP.navigate('writer');
+                return;
+            } catch(devErr) {
+                // Dev-Login nicht verfügbar, Fallback auf Magic Link
+            }
 
             await window.__AP.api('/auth/request', {
                 method: 'POST',
