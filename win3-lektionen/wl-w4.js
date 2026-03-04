@@ -133,6 +133,7 @@
         ]
     };
 
+    if (window.__WL_KURS) { window.__WL_KURS.register('w4', LESSON_DATA); return; }
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
