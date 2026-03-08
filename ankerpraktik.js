@@ -6,24 +6,36 @@
     window.__AP_LOADED = true;
 
     // === CONFIG ===
+    // Cloudflare Worker: Auth, Data (D1) + KI (Anthropic API)
     var API_URL = 'https://win3-community.solbachsteven.workers.dev';
-    // BASE_PATH dynamisch: lokal oder GitHub Pages
-    var scripts = document.getElementsByTagName('script');
-    var selfSrc = '';
-    for (var si = 0; si < scripts.length; si++) {
-        if (scripts[si].src && scripts[si].src.indexOf('ankerpraktik.js') !== -1) {
-            selfSrc = scripts[si].src;
-            break;
+    // Dev-Modus: KI-Calls lokal via claude -p CLI
+    var LOCAL_AI_URL = (typeof location !== 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1'))
+        ? 'http://localhost:3465' : null;
+    var LOCAL_KI_PATHS = ['/ankerpraktik/mirror', '/ankerpraktik/coach', '/ankerpraktik/patterns', '/ankerpraktik/development-arc', '/ankerpraktik/test-synthesis'];
+    // BASE_PATH dynamisch: Portal-Override, lokal oder GitHub Pages
+    var BASE_PATH;
+    if (window.__AP_BASE_PATH) {
+        BASE_PATH = window.__AP_BASE_PATH;
+    } else {
+        var scripts = document.getElementsByTagName('script');
+        var selfSrc = '';
+        for (var si = 0; si < scripts.length; si++) {
+            // Exakter Match: nur /ankerpraktik.js am Ende, nicht p-ankerpraktik.js
+            if (scripts[si].src && scripts[si].src.match(/\/ankerpraktik\.js(\?|$)/)) {
+                selfSrc = scripts[si].src;
+                break;
+            }
         }
+        BASE_PATH = selfSrc ? selfSrc.replace(/ankerpraktik\.js(\?.*)?$/, 'ankerpraktik/') : '/ankerpraktik/';
     }
-    var BASE_PATH = selfSrc ? selfSrc.replace('ankerpraktik.js', 'ankerpraktik/') : '/ankerpraktik/';
 
     // === STATE ===
     var state = {
         user: null,
         token: null,
         currentView: null,
-        lesson: null
+        lesson: null,
+        testId: null
     };
 
     // === FONTS ===
@@ -74,28 +86,48 @@
 }
 .ap-nav {
     display: flex;
-    gap: 8px;
+    gap: 2px;
     align-items: center;
+    background: rgba(45, 39, 38, 0.55);
+    border: 1px solid rgba(188, 128, 52, 0.15);
+    border-radius: 14px;
+    padding: 4px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 .ap-nav-btn {
     background: none;
-    border: 1px solid rgba(188, 128, 52, 0.3);
-    color: #BC8034;
-    padding: 6px 14px;
-    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: rgba(252, 240, 214, 0.45);
+    padding: 8px 14px 6px;
+    border-radius: 10px;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+.ap-nav-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.8;
 }
 .ap-nav-btn:hover {
-    background: rgba(188, 128, 52, 0.15);
-    border-color: #BC8034;
+    color: rgba(252, 240, 214, 0.7);
+    background: rgba(252, 240, 214, 0.04);
 }
 .ap-nav-btn.ap-active {
-    background: #BC8034;
-    color: #2D2726;
-    border-color: #BC8034;
+    color: #BC8034;
+    border-bottom-color: #BC8034;
+    background: rgba(188, 128, 52, 0.08);
+}
+.ap-nav-btn .ap-nav-label {
+    font-size: 10px;
+    letter-spacing: 0.3px;
 }
 .ap-user-badge {
     font-size: 12px;
@@ -183,7 +215,8 @@
     line-height: 1.7;
     outline: none;
     resize: vertical;
-    min-height: 200px;
+    min-height: 60vh;
+    max-height: 80vh;
     transition: border-color 0.3s ease;
 }
 .ap-textarea:focus {
@@ -191,6 +224,10 @@
 }
 .ap-textarea::placeholder {
     color: rgba(252, 240, 214, 0.25);
+}
+/* Globale Scrollbar fuer alle AP-Elemente */
+.ap-page, .ap-page * {
+    scrollbar-color: #BC8034 rgba(45, 39, 38, 0.3);
 }
 
 .ap-label {
@@ -234,6 +271,26 @@
     to { transform: rotate(360deg); }
 }
 
+.ap-dots {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 0;
+}
+.ap-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(252, 240, 214, 0.4);
+    animation: ap-bounce 1.2s ease-in-out infinite;
+}
+.ap-dots span:nth-child(2) { animation-delay: 0.15s; }
+.ap-dots span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes ap-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
+}
+
 .ap-fade-in {
     animation: ap-fadeIn 0.4s ease;
 }
@@ -270,7 +327,9 @@
     .ap-main { padding: 16px; }
     .ap-card { padding: 20px; }
     .ap-logo { font-size: 24px; }
-    .ap-nav-btn { padding: 5px 10px; font-size: 12px; }
+    .ap-nav { gap: 0; padding: 3px; }
+    .ap-nav-btn { padding: 6px 10px 4px; }
+    .ap-nav-btn .ap-nav-label { display: none; }
 }
 `;
     document.head.appendChild(style);
@@ -286,7 +345,12 @@
             if (state.token) {
                 headers['Authorization'] = 'Bearer ' + state.token;
             }
-            var resp = await fetch(API_URL + path, {
+            // Dev-Modus: KI-Calls lokal routen
+            var baseUrl = API_URL;
+            if (LOCAL_AI_URL && LOCAL_KI_PATHS.some(function(p) { return path === p; })) {
+                baseUrl = LOCAL_AI_URL;
+            }
+            var resp = await fetch(baseUrl + path, {
                 method: options.method || 'GET',
                 headers: headers,
                 body: options.body ? JSON.stringify(options.body) : undefined
@@ -300,6 +364,7 @@
             params = params || {};
             state.currentView = view;
             if (params.lesson) state.lesson = params.lesson;
+            if (params.testId) state.testId = params.testId;
             renderApp();
         },
 
@@ -308,7 +373,12 @@
             state.token = null;
             localStorage.removeItem('ap_token');
             localStorage.removeItem('ap_user');
-            window.__AP.navigate('auth');
+            // Portal-Logout nutzen wenn verfügbar
+            if (window.__W3 && window.__W3.logout) {
+                window.__W3.logout();
+            } else {
+                location.href = '/portal.html';
+            }
         },
 
         saveSession: function() {
@@ -348,9 +418,12 @@
     if (!wrapper) {
         wrapper = document.createElement('div');
         wrapper.className = 'ap-page';
-        var target = document.querySelector('[data-ankerpraktik]') || document.body;
+        var target = window.__AP_PORTAL_CONTAINER || document.querySelector('[data-ankerpraktik]') || document.body;
         if (target === document.body) {
             document.body.innerHTML = '';
+        } else if (window.__AP_PORTAL_CONTAINER) {
+            // Loading-Placeholder entfernen
+            target.innerHTML = '';
         }
         target.appendChild(wrapper);
     }
@@ -377,19 +450,44 @@
 
     // === RENDER ===
     function renderApp() {
+        // Re-create wrapper if destroyed (portal navigation)
+        if (!wrapper.parentNode) {
+            var target = window.__AP_PORTAL_CONTAINER || document.querySelector('[data-ankerpraktik]') || document.body;
+            if (target === document.body) {
+                document.body.innerHTML = '';
+            }
+            target.appendChild(wrapper);
+        }
+
         var headerHtml = '';
         var mainHtml = '';
+        var inPortal = !!window.__AP_PORTAL_CONTAINER;
 
         if (state.user) {
-            headerHtml = '<div class="ap-header">'
-                + '<span class="ap-logo" onclick="window.__AP.navigate(\'writer\')">Ankerpraktik</span>'
+            headerHtml = '<div class="ap-header' + (inPortal ? ' ap-portal-mode' : '') + '">'
+                + (inPortal ? '' : '<span class="ap-logo" onclick="window.__AP.navigate(\'writer\')">Ankerpraktik</span>')
                 + '<div class="ap-nav">'
-                + '<span class="ap-user-badge">' + escapeHtml(state.user.nickname) + '</span>'
-                + '<button class="ap-nav-btn' + (state.currentView === 'writer' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'writer\')">Schreiben</button>'
-                + '<button class="ap-nav-btn' + (state.currentView === 'history' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'history\')">Journal</button>'
-                + '<button class="ap-nav-btn" onclick="window.__AP.logout()">Logout</button>'
+                + (inPortal ? '' : '<span class="ap-user-badge">' + escapeHtml(state.user.nickname) + '</span>')
+                + '<button class="ap-nav-btn' + (state.currentView === 'writer' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'writer\')">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>'
+                + '<span class="ap-nav-label">Schreiben</span></button>'
+                + '<button class="ap-nav-btn' + (state.currentView === 'history' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'history\')">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'
+                + '<span class="ap-nav-label">Journal</span></button>'
+                + '<button class="ap-nav-btn' + (state.currentView === 'tests' || state.currentView === 'test' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'tests\')">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
+                + '<span class="ap-nav-label">Tests</span></button>'
+                + '<button class="ap-nav-btn' + (state.currentView === 'coach' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'coach\')">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+                + '<span class="ap-nav-label">Coach</span></button>'
+                + '<button class="ap-nav-btn' + (state.currentView === 'profile' ? ' ap-active' : '') + '" onclick="window.__AP.navigate(\'profile\')">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>'
+                + '<span class="ap-nav-label">Profil</span></button>'
+                + (inPortal ? '' : '<button class="ap-nav-btn" onclick="window.__AP.logout()">'
+                + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>'
+                + '<span class="ap-nav-label">Logout</span></button>')
                 + '</div></div>';
-        } else {
+        } else if (!inPortal) {
             headerHtml = '<div class="ap-header">'
                 + '<span class="ap-logo">Ankerpraktik</span>'
                 + '</div>';
@@ -400,15 +498,48 @@
         var viewEl = document.getElementById('ap-view');
 
         if (!state.user) {
-            loadModule('ap-auth', function() {
-                if (window.__AP_AUTH_RENDER) window.__AP_AUTH_RENDER(viewEl);
-            });
+            // Kein eigener Auth-Screen mehr - Portal ist der Einstiegspunkt
+            var inPortal = !!window.__AP_PORTAL_CONTAINER;
+            if (!inPortal) {
+                // Standalone-Zugriff: auf Portal umleiten
+                var portalUrl = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+                    ? '/portal.html#/ankerpraktik'
+                    : 'https://solbachsteven.github.io/website/portal.html#/ankerpraktik';
+                location.href = portalUrl;
+                return;
+            }
+            // Im Portal: Hinweis (sollte nie passieren, Portal synct Token vorher)
+            viewEl.innerHTML = '<div style="text-align:center;padding:60px 24px;opacity:0.5;">'
+                + '<p>Sitzung abgelaufen. Bitte neu einloggen.</p>'
+                + '</div>';
             return;
         }
 
         if (state.currentView === 'history') {
             loadModule('ap-history', function() {
                 if (window.__AP_HISTORY_RENDER) window.__AP_HISTORY_RENDER(viewEl);
+            });
+        } else if (state.currentView === 'tests') {
+            loadModule('ap-test-defs', function() {
+                loadModule('ap-test', function() {
+                    if (window.__AP_TEST_RENDER) window.__AP_TEST_RENDER(viewEl, null);
+                });
+            });
+        } else if (state.currentView === 'test') {
+            loadModule('ap-test-defs', function() {
+                loadModule('ap-test', function() {
+                    if (window.__AP_TEST_RENDER) window.__AP_TEST_RENDER(viewEl, state.testId);
+                });
+            });
+        } else if (state.currentView === 'coach') {
+            loadModule('ap-coach', function() {
+                if (window.__AP_COACH_RENDER) window.__AP_COACH_RENDER(viewEl);
+            });
+        } else if (state.currentView === 'profile') {
+            loadModule('ap-test-defs', function() {
+                loadModule('ap-profile', function() {
+                    if (window.__AP_PROFILE_RENDER) window.__AP_PROFILE_RENDER(viewEl);
+                });
             });
         } else {
             // Default: Writer
@@ -460,12 +591,15 @@
                     viewEl.innerHTML = '<div class="ap-card ap-fade-in" style="text-align:center;margin-top:60px;">'
                         + '<p style="font-size:18px;margin-bottom:12px;">Link ungültig oder abgelaufen</p>'
                         + '<p style="font-size:14px;opacity:0.6;margin-bottom:24px;">Bitte fordere einen neuen Magic Link an.</p>'
-                        + '<button class="ap-btn" onclick="window.__AP.navigate(\'auth\')">Zum Login</button>'
+                        + '<button class="ap-btn" onclick="location.href=\'/portal.html\'">Zum Login</button>'
                         + '</div>';
                 }
             }, 100);
         }
     }
+
+    // Portal-API: renderApp exponieren
+    window.__AP.renderApp = renderApp;
 
     // === SESSION RESTORE ===
     async function init() {
