@@ -135,6 +135,35 @@
     margin-right: 8px;
 }
 
+/* ======== DEV INDICATOR ======== */
+.ap-dev-badge {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(80, 80, 80, 0.4);
+    color: rgba(252, 240, 214, 0.35);
+    z-index: 99999;
+    pointer-events: none;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+.ap-dev-badge.ap-dev-local {
+    color: #4fc3f7;
+    border-color: rgba(79, 195, 247, 0.3);
+}
+.ap-dev-badge.ap-dev-remote {
+    color: #BC8034;
+    border-color: rgba(188, 128, 52, 0.3);
+}
+.ap-dev-badge.ap-dev-flash {
+    transform: scale(1.1);
+}
+
 /* ======== MAIN ======== */
 .ap-main {
     width: 100%;
@@ -347,8 +376,13 @@
             }
             // Dev-Modus: KI-Calls lokal routen
             var baseUrl = API_URL;
-            if (LOCAL_AI_URL && LOCAL_KI_PATHS.some(function(p) { return path === p; })) {
+            var isLocal = LOCAL_AI_URL && LOCAL_KI_PATHS.some(function(p) { return path === p; });
+            if (isLocal) {
                 baseUrl = LOCAL_AI_URL;
+            }
+            // Dev-Indicator bei KI-Calls flashen
+            if (LOCAL_AI_URL && LOCAL_KI_PATHS.some(function(p) { return path === p || path.indexOf('/coach') !== -1 || path.indexOf('/mirror') !== -1; })) {
+                flashDevBadge(isLocal, path);
             }
             var resp = await fetch(baseUrl + path, {
                 method: options.method || 'GET',
@@ -426,6 +460,28 @@
             target.innerHTML = '';
         }
         target.appendChild(wrapper);
+    }
+
+    // === DEV INDICATOR ===
+    if (LOCAL_AI_URL) {
+        var devBadge = document.createElement('div');
+        devBadge.className = 'ap-dev-badge';
+        devBadge.id = 'ap-dev-badge';
+        devBadge.textContent = 'DEV';
+        document.body.appendChild(devBadge);
+    }
+    function flashDevBadge(isLocal, path) {
+        var badge = document.getElementById('ap-dev-badge');
+        if (!badge) return;
+        var shortPath = path.split('/').pop();
+        badge.textContent = (isLocal ? 'LOCAL' : 'REMOTE') + ' ' + shortPath;
+        badge.className = 'ap-dev-badge ' + (isLocal ? 'ap-dev-local' : 'ap-dev-remote') + ' ap-dev-flash';
+        setTimeout(function() { badge.classList.remove('ap-dev-flash'); }, 200);
+        clearTimeout(badge._resetTimer);
+        badge._resetTimer = setTimeout(function() {
+            badge.textContent = 'DEV';
+            badge.className = 'ap-dev-badge';
+        }, 4000);
     }
 
     // === MODULE LOADER ===
