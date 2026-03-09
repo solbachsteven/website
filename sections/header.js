@@ -76,9 +76,11 @@
     left: 0;\
     right: 0;\
     border-radius: 16px;\
-    background: rgba(45,39,38,0.55);\
-    border: 1px solid rgba(188,128,52,0.1);\
-    box-shadow: none;\
+    background: rgba(45,39,38,0.75);\
+    backdrop-filter: blur(12px);\
+    -webkit-backdrop-filter: blur(12px);\
+    border: 1px solid rgba(188,128,52,0.12);\
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);\
     pointer-events: none;\
     z-index: 0;\
     opacity: 0;\
@@ -90,9 +92,7 @@
     opacity: 1;\
 }\
 .ss-header.scrolled {\
-    background: rgba(26,26,26,0.92);\
-    backdrop-filter: blur(16px);\
-    -webkit-backdrop-filter: blur(16px);\
+    background: transparent;\
 }\
 .ss-header.header-hidden {\
     transform: translateY(-100%);\
@@ -468,35 +468,35 @@
         var gapR = (cx + cr + pad) - innerRect.left;
         if (gapL < 0) gapL = 0;
         if (gapR > W) gapR = W;
-        // Inset + Taper proportional (4%), min 10px
-        var inset = Math.max(10, Math.round(W * 0.04));
-        var taper = Math.max(10, Math.round(W * 0.04));
+        // Taper-Werte: Edge-Taper adaptiv, Gap-Taper symmetrisch
+        var edgeInset = Math.max(10, Math.round(W * 0.04));
+        var edgeTaper = Math.max(10, Math.round(W * 0.04));
+        var gapTaper = Math.max(15, Math.round(cr * 0.4)); // symmetrisch am Gap
         var rightSpace = W - gapR;
-        // Gradient-Stops bauen - Inset/Taper adaptiv an verfuegbaren Platz
         var stops = [];
         // LINKES Segment
         if (gapL > 20) {
-            // Inset/Taper an verfuegbaren Platz anpassen
-            var lI = Math.min(inset, Math.round(gapL * 0.15));
-            var lT = Math.min(taper, Math.round(gapL * 0.3));
+            var lI = Math.min(edgeInset, Math.round(gapL * 0.15));
+            var lT = Math.min(edgeTaper, Math.round(gapL * 0.3));
+            var lGT = Math.min(gapTaper, Math.round(gapL * 0.4)); // Gap-Taper links
             stops.push('transparent 0');
             stops.push('transparent ' + lI + 'px');
             stops.push('black ' + (lI + lT) + 'px');
-            stops.push('black ' + Math.max(lI + lT, gapL - lT) + 'px');
+            stops.push('black ' + Math.max(lI + lT, gapL - lGT) + 'px');
             stops.push('transparent ' + gapL + 'px');
         } else {
             stops.push('transparent 0');
             stops.push('transparent ' + gapL + 'px');
         }
-        // RECHTES Segment - adaptiv an verfuegbaren Platz
+        // RECHTES Segment
         if (rightSpace > 20) {
-            var rI = Math.min(inset, Math.round(rightSpace * 0.15));
-            var rT = Math.min(taper, Math.round(rightSpace * 0.3));
-            var rStart = gapR + rT;
+            var rI = Math.min(edgeInset, Math.round(rightSpace * 0.15));
+            var rT = Math.min(edgeTaper, Math.round(rightSpace * 0.3));
+            var rGT = Math.min(gapTaper, Math.round(rightSpace * 0.4)); // Gap-Taper rechts
             var rEnd = W - rI - rT;
-            if (rEnd < rStart) rEnd = rStart;
+            if (rEnd < gapR + rGT) rEnd = gapR + rGT;
             stops.push('transparent ' + gapR + 'px');
-            stops.push('black ' + rStart + 'px');
+            stops.push('black ' + (gapR + rGT) + 'px');
             stops.push('black ' + rEnd + 'px');
             stops.push('transparent ' + (W - rI) + 'px');
             stops.push('transparent ' + W + 'px');
