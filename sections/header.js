@@ -48,10 +48,25 @@
     background: transparent;\
     transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;\
 }\
-.ss-header {\
-    border-top: 2px solid #BC8034;\
-    border-bottom: 2px solid #BC8034;\
+.ss-header::before,\
+.ss-header::after {\
+    content: "";\
+    position: absolute;\
+    left: 0;\
+    right: 0;\
+    height: 2px;\
+    background: #BC8034;\
+    -webkit-mask-image: linear-gradient(to right,\
+        black 0, black var(--logo-gap-start, 0px),\
+        transparent var(--logo-gap-start, 0px), transparent var(--logo-gap-end, 0px),\
+        black var(--logo-gap-end, 0px));\
+    mask-image: linear-gradient(to right,\
+        black 0, black var(--logo-gap-start, 0px),\
+        transparent var(--logo-gap-start, 0px), transparent var(--logo-gap-end, 0px),\
+        black var(--logo-gap-end, 0px));\
 }\
+.ss-header::before { top: 0; }\
+.ss-header::after { bottom: 0; }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -389,6 +404,36 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // Initial check
+
+    // ======== GOLD LINE GAP (Logo-Unterbrechung) ========
+    function updateLogoGap() {
+        var h = document.getElementById('ss-header');
+        if (!h) return;
+        var logo = h.querySelector('.ss-header-logo');
+        if (!logo) return;
+        var headerRect = h.getBoundingClientRect();
+        var logoRect = logo.getBoundingClientRect();
+        var gapPad = 12; // px Abstand links/rechts vom Logo
+        var start = (logoRect.left - headerRect.left) - gapPad;
+        var end = (logoRect.right - headerRect.left) + gapPad;
+        if (start < 0) start = 0;
+        h.style.setProperty('--logo-gap-start', start + 'px');
+        h.style.setProperty('--logo-gap-end', end + 'px');
+    }
+
+    // Initial + bei Resize aktualisieren
+    updateLogoGap();
+    window.addEventListener('resize', updateLogoGap);
+
+    // Nach Logo-Bild-Load nochmal aktualisieren (Bild kann spaeter laden)
+    var logoImg = header ? header.querySelector('.ss-header-logo img') : null;
+    if (logoImg) {
+        if (logoImg.complete) {
+            updateLogoGap();
+        } else {
+            logoImg.addEventListener('load', updateLogoGap);
+        }
+    }
 
     // ======== SMOOTH SCROLL ========
     target.addEventListener('click', function(e) {
