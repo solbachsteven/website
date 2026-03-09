@@ -1,5 +1,5 @@
 // Community Pinnwand - Hero Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/community/cp-hero.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/community/cp-hero.js"></script>
 (function() {
     if (window.__CP_HERO_LOADED) return;
     window.__CP_HERO_LOADED = true;

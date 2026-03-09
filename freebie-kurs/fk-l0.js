@@ -1,5 +1,5 @@
 // Freebie Kurs - Lektion 0: Gibt es so etwas wie eine Lebensaufgabe (Standalone)
-// <script src="https://solbachsteven.github.io/website/freebie-kurs/fk-l0.js"></script>
+// <script src="https://stevensolbach.de/freebie-kurs/fk-l0.js"></script>
 (function() {
     if (window.__FK_L0) return;
     window.__FK_L0 = true;
@@ -212,11 +212,14 @@
     ]
 };
 
+    // Dual-Mode: Portal-Registration
+    if (window.__FK_KURS) { window.__FK_KURS.register('l0', LESSON_DATA); return; }
+
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     function init() { window.__FK_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__FK_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/freebie-kurs/fk-engine.js';
+    s.src = 'https://stevensolbach.de/freebie-kurs/fk-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

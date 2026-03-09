@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - FX Effects (Standalone)
 // Cursor Ring, Particles, Glow - Optional Enhancement
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-fx.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-fx.js"></script>
 (function() {
     if (window.__WM_FX_LOADED) return;
     window.__WM_FX_LOADED = true;

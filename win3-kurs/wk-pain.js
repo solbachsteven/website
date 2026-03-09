@@ -1,5 +1,5 @@
 // Win³ Kurs Landingpage - Pain/Problem Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-pain.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-pain.js"></script>
 (function() {
     if (window.__WK_PAIN_LOADED) return;
     window.__WK_PAIN_LOADED = true;

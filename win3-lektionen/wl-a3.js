@@ -1,5 +1,5 @@
-// Win³ Kurs - Alignment 3: Äußeres Alignment
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-a3.js"></script>
+// Win³ Kurs - Alignment 3: Dein Leben anfassen
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-a3.js"></script>
 (function() {
     if (window.__WL_A3) return;
     window.__WL_A3 = true;
@@ -9,147 +9,115 @@
     var LESSON_DATA = {
         meta: {
             label: "ALIGNMENT 3",
-            title: "\u00c4u\u00dferes Alignment",
-            subtitle: "Alignment"
+            title: "Dein Leben anfassen",
+            subtitle: "Dein Leben anfassen"
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Innen stimmt es." },
-            { type: "text", content: "Du wei\u00dft, wof\u00fcr du lebst. Du wei\u00dft, wer du bist. Deine \u00dcberzeugungen sind sortiert - zumindest die wichtigsten. Der Kompass zeigt." },
-            { type: "emphasis", content: "Jetzt das Au\u00dfen." },
-            { type: "text", content: "Nicht alles auf einmal. Nutze die Klarheit aus den letzten beiden Lektionen. Damit kannst du anfangen. St\u00fcck f\u00fcr St\u00fcck. Entscheidung f\u00fcr Entscheidung." },
-            { type: "text", content: "Dein Leben anfassen. Das ist nicht schauen. Das ist tun. Ver\u00e4ndern." },
+            { type: "emphasis", content: "In A2 haben wir die oberen drei Ebenen geklärt: Zugehörigkeit, Identität und Überzeugungen. Die innere Landkarte steht. Jetzt fließt diese Klarheit nach unten, dorthin, wo andere Menschen sie sehen können: in das, was wir lernen, was wir tun und wo wir es tun." },
 
             { type: "divider" },
 
-            // --- Die drei äußeren Ebenen ---
-            { type: "heading", level: 2, content: "Die drei \u00e4u\u00dferen Ebenen" },
-            { type: "text", content: "A1 waren alle sechs Ebenen. A2 hast du die inneren drei gekl\u00e4rt - Zugeh\u00f6rigkeit, Identit\u00e4t, \u00dcberzeugungen. Jetzt kommen die \u00e4u\u00dferen drei. F\u00e4higkeiten, Verhalten, Umgebung." },
-            { type: "text", content: "Das sind die Ebenen, an denen Ver\u00e4nderung sichtbar wird. Die, an denen andere Menschen merken, dass sich etwas getan hat." },
-            { type: "emphasis", content: "Das ist der Knackpunkt." },
-            { type: "text", content: "Du kannst alles wissen und morgens aufstehen und alles bleibt gleich. Innere Klarheit ist eine Sache. \u00c4u\u00dfere Ver\u00e4nderung eine andere. Du brauchst beides." },
-            { type: "text", content: "Blind handeln ist doof. Nur wissen und nicht handeln ist noch d\u00fcmmer. Beides zusammen." },
+            // --- Von innen nach außen ---
+            { type: "heading", level: 2, content: "Von innen nach außen" },
+            { type: "text", content: "In A1 haben wir die sechs Neurologischen Ebenen kennengelernt und den Ist-Zustand mit dem Soll-Zustand verglichen. In A2 haben wir die oberen drei Ebenen durchgearbeitet: Zugehörigkeit, Identität, Überzeugungen. Wer bin ich? Wovon bin ich Teil? Was glaube ich wirklich? Auf diese Fragen haben wir Antworten gefunden, die aus dem Selbst kommen statt aus alten Schutzmechanismen." },
+            { type: "text", content: "Jetzt die unteren drei: Fähigkeiten, Verhalten, Umgebung. Die Ebenen, die man anfassen kann. Wo Veränderung sichtbar wird, messbar, spürbar - für uns selbst und für die Menschen um uns herum." },
+            { type: "text", content: "Dilts' Modell zeigt, warum die Reihenfolge wichtig ist. Veränderungen auf den oberen Ebenen kaskadieren nach unten. Wer geklärt hat, wer er ist und wofür er steht, trifft auf den unteren Ebenen Entscheidungen mit einer Sicherheit, die vorher nicht da war. Die Frage verschiebt sich: weg von \u201eWas soll ich tun?\u201c hin zu \u201eWas passt zu dem, was ich über mich weiß?\u201c" },
 
             { type: "divider" },
 
             // --- Fähigkeiten ---
-            { type: "heading", level: 2, content: "F\u00e4higkeiten: Was darf ich noch lernen?" },
-            { type: "text", content: "F\u00e4higkeiten sind das, was du kannst. Und was du noch nicht kannst." },
-            { type: "text", content: "Neun Lektionen. Du hast gelernt, dich selbst zu coachen. Du kennst deine Werkzeuge - die Ankerpraktik, wie man Emotionen f\u00fchlt und losl\u00e4sst, wie man tiefer geht. Das sind echte F\u00e4higkeiten jetzt." },
-            { type: "text", content: "Die meisten Menschen lernen das nie. Das ist der Unterschied." },
-            { type: "text", content: "Aber f\u00fcr dein Ziel brauchst du vielleicht noch mehr F\u00e4higkeiten. Andere." },
-            { type: "text", content: "W7 hast du dein Ikigai-Mapping gemacht. Da siehst du, wo L\u00fccken sind. Dinge, die du liebst und k\u00f6nntest, aber nicht bekommst bezahlt. Oder was die Welt braucht und du nicht kannst. F\u00e4higkeits-L\u00fccken." },
-            { type: "text", content: "Das ist keine Schw\u00e4che. Das zeigt dir, was noch kommt." },
-            { type: "text", content: "Du hast auch F\u00e4higkeiten, die dir zu selbstverst\u00e4ndlich sind. Du siehst sie nicht, weil sie dir leicht fallen. Die anderen aber schon." },
-            { type: "callout", content: "Es gibt Dinge, die nicht gelernt, sondern gel\u00f6st werden wollen. \"Ich kann nicht vor Menschen sprechen\" - manchmal ist das eine fehlende F\u00e4higkeit. Manchmal ist es Angst. Du wirst es sp\u00fcren, wenn du hinf\u00fchlst." },
+            { type: "heading", level: 2, content: "Fähigkeiten: Was darf ich noch lernen?" },
+            { type: "text", content: "In der Architektur gibt es den Schlussstein - den letzten Stein, der in einen Bogen eingesetzt wird. Vorher hält die Konstruktion nicht, nachher trägt sie Tonnen. Manchmal fehlt in einem Leben genau so ein Stein: eine einzelne Fähigkeit, die alles andere zusammenhält, was bereits da ist." },
+            { type: "text", content: "In W7 haben wir das Ikigai erarbeitet: den Schnittpunkt zwischen dem, was wir lieben, was wir können, was die Welt braucht und wofür jemand bezahlt. Bei vielen zeigt sich an diesem Schnittpunkt eine Lücke, etwas, das sie lieben und das die Welt braucht, aber wofür ihnen noch das Handwerk fehlt. Diese Lücke ist eine Einladung, kein Versäumnis. Sie zeigt, wohin der nächste Schritt gehen darf." },
+            { type: "text", content: "Gleichzeitig tragen viele von uns Fähigkeiten mit sich, die sie nie als solche anerkannt haben. Die Kollegin, die in jedem Meeting die richtige Frage stellt, hält das für selbstverständlich. Der Freund, der komplizierte Sachverhalte so erklären kann, dass jeder sie versteht, sagt \u201eDas kann doch jeder.\u201c Manche Fähigkeiten sind so alltäglich geworden, dass sie unsichtbar sind - auch und gerade für die Person, die sie hat." },
+            { type: "text", content: "Das höchste Ziel aus A2 gibt die Richtung vor. Zwei Fragen helfen bei der Orientierung:" },
+            { type: "text", content: "Welche Fähigkeit fehlt, um das zu tun, was das Ikigai und das höchste Ziel verlangen? Das ist der Schlussstein, der die Konstruktion tragfähig macht." },
+            { type: "text", content: "Und: Was kann ich bereits, ohne es als Fähigkeit zu sehen? Was sagen andere über mich, das ich selbst abtue? Die Antwort darauf macht oft etwas sichtbar, das im eigenen Blickfeld liegt, aber nie als Ressource betrachtet wurde." },
 
             { type: "divider" },
 
             // --- Verhalten ---
-            { type: "heading", level: 2, content: "Verhalten: Wo lebt mein Alltag noch das alte Muster?" },
-            { type: "text", content: "Verhalten ist, was du jeden Tag wirklich tust. Nicht was du planst. Das wird brutale Ehrlichkeit." },
-            { type: "text", content: "Du kannst alles wissen. Aber wenn du morgens aufstehst und machst das Gleiche wie vorher, hat sich nichts ver\u00e4ndert." },
-            { type: "emphasis", content: "Jedes Verhalten, das nicht zu deinem Ziel passt, ist ein Misalignment. Ein rotes Licht." },
-            { type: "text", content: "Wo sind die Gewohnheiten, die nicht mehr passen? Das Handy morgens. Die Stunde Fernsehen abends, die dir nichts gibt. Die Ja-Sagen zu Dingen, die du nicht willst." },
-            { type: "text", content: "Merkst du, wo du dich schon ver\u00e4ndert hast? Ruhiger wirst, Dinge sagst, die du fr\u00fcher nicht gesagt h\u00e4ttest? Das ist nicht Zufall. Das ist, dass dein Inneres anf\u00e4ngt, dein \u00c4u\u00dferes zu bestimmen." },
-            { type: "text", content: "Nicht alles auf einmal \u00e4ndern. Such dir eine. Die eine, wo du wei\u00dft: Das ver\u00e4ndert den Rest." },
-            { type: "text", content: "Eine Gewohnheit, die wenn du sie \u00e4nderst, alles andere leichter wird. Vielleicht ist es die Art, wie du deinen Morgen beginnst. Vielleicht ist es ein Gespr\u00e4ch, das du seit Wochen aufschiebst. Vielleicht ist es die Entscheidung, mit etwas aufzuh\u00f6ren, das dir nicht mehr dient." },
-            { type: "emphasis", content: "Fang klein an. Der n\u00e4chste Schritt, nicht die Revolution." },
+            { type: "heading", level: 2, content: "Verhalten: Wo lebt das alte Muster noch?" },
+            { type: "text", content: "Verhalten ist die ehrlichste Ebene. Überzeugungen kann man sich einreden, Identität kann man sich erzählen, aber Verhalten lässt sich beobachten. Was jemand an einem normalen Dienstag zwischen sieben Uhr morgens und zehn Uhr abends tatsächlich tut, sagt mehr über seine Prioritäten als jedes Vision Board." },
+            { type: "text", content: "Charles Duhigg, der Autor von \u201eThe Power of Habit\u201c, beschreibt ein Phänomen, das er Schlüsselgewohnheiten nennt. Als Paul O'Neill CEO von Alcoa wurde, konzentrierte er sich auf eine einzige Sache: Arbeitssicherheit. Nicht auf Gewinne, nicht auf Effizienz. Nur Sicherheit. Innerhalb weniger Jahre stiegen Gewinne, Mitarbeiterzufriedenheit und Produktivität, weil diese eine Veränderung das gesamte System in Bewegung brachte. O'Neill hatte den einen Hebel gefunden, der alles andere mitbewegt." },
+            { type: "text", content: "Im eigenen Alltag funktioniert das genauso. Die Frage ist nicht, wo überall das Verhalten vom inneren Kompass abweicht - das ist an vielen Stellen der Fall, bei jedem von uns. Die Frage ist: Welche eine Gewohnheit, wenn sie sich ändert, bringt am meisten in Bewegung?" },
+            { type: "text", content: "Die Selbstcoaching-Schleife aus W6 ist das Werkzeug, um diese Stelle zu finden. Ein normaler Dienstag, ehrlich angeschaut: Wo stimmt das Verhalten mit dem höchsten Ziel überein? Wo weicht es ab? Und welche Abweichung erzeugt die größte Reibung?" },
+            { type: "text", content: "Dabei geht es nicht um den großen Wurf. Es geht um den kleinsten Schritt, der in die richtige Richtung zeigt. Jeden Morgen zehn Minuten schreiben statt durch das Handy scrollen. Einmal pro Woche das Gespräch suchen, das überfällig ist. Den Nachmittag anders strukturieren, weil die wichtigste Arbeit morgens passiert, nicht abends. Kleine Verschiebungen, die in der Summe die Achse des Alltags verändern." },
+            { type: "text", content: "Jedes Verhalten, das nicht zum höchsten Ziel passt, ist dabei keine Anklage, sondern Information. Es zeigt eine Stelle, an der der Alltag noch nach den Regeln eines alten Systems läuft. Und wenn beim Umstellen ein Anteil laut wird, der sagt, dass das nicht durchzuhalten ist, dann ist das kein Hindernis - das ist ein Anteil, der beschützen will. Die Werkzeuge dafür haben wir: Selbstcoaching, Letting Go, Ankerpraktik." },
 
             { type: "divider" },
 
             // --- Umgebung ---
-            { type: "heading", level: 2, content: "Umgebung: Die h\u00e4rteste Frage" },
-            { type: "text", content: "Die Umgebung ist eine andere Sache. Hier z\u00f6gern die meisten Menschen am l\u00e4ngsten." },
-            { type: "text", content: "Passt wo du lebst zu dir? Und die Menschen um dich herum - n\u00e4hren sie dich? Oder nehmen sie dir Energie?" },
-            { type: "text", content: "Ist dein Arbeitsplatz ein Ort, der zu deinem Ziel passt? Oder gehst du jeden Morgen irgendwohin, wo ein Teil von dir stirbt?" },
-            { type: "text", content: "Das sind schwere Fragen. Manche lassen sich gleich l\u00f6sen - den Schreibtisch umstellen. Andere brauchen Monate - einen Job suchen. Wieder andere Jahre - den Ort wechseln." },
-            { type: "text", content: "Manche Antworten werden weh tun. Wenn du merkst, dass ein Mensch, den du liebst, nicht zu dem Leben passt, das du f\u00fchren willst." },
-            { type: "text", content: "Du wei\u00dft aber jetzt, wie du damit umgehen kannst. F\u00fchlen, nicht verdr\u00e4ngen. Dann loslassen." },
-            { type: "text", content: "Du wei\u00dft die Selbstcoaching-Schleife: Verstehen, F\u00fchlen, Handeln. Du brauchst keine Antworten von au\u00dfen." },
+            { type: "heading", level: 2, content: "Umgebung: Die härteste Frage" },
+            { type: "text", content: "Die Umgebung ist die Ebene, die am schwierigsten zu verändern ist, weil sie am stärksten mit dem Leben anderer Menschen verflochten ist. Einen Glaubenssatz loszulassen betrifft erst einmal nur uns selbst. Den Wohnort zu wechseln, den Arbeitsplatz zu verlassen oder eine Beziehung grundlegend zu verändern betrifft ein ganzes Netz von Menschen." },
+            { type: "text", content: "Genau deshalb ist die Frage auf dieser Ebene so wichtig: Unterstützt mein Umfeld den Menschen, der ich wirklich bin, oder den, der ich früher war?" },
+            { type: "text", content: "Manche Antworten sind schnell und einfach. Den Schreibtisch umstellen. Das Handy aus dem Schlafzimmer verbannen. Den Arbeitsweg nutzen, um die Ankerpraktik zu machen. Kleine Veränderungen in der physischen Umgebung, die sofort wirken, weil sie die Bedingungen verändern, unter denen der Alltag stattfindet." },
+            { type: "text", content: "Andere Antworten brauchen Monate oder Jahre. Ein Berufswechsel. Ein Umzug. Eine grundlegende Veränderung im sozialen Umfeld. Das sind keine Entscheidungen, die an einem Nachmittag fallen. Aber es sind Entscheidungen, die benannt werden dürfen, auch wenn der Zeitpunkt noch nicht gekommen ist. Das Benennen allein verändert etwas, weil es den Unterschied macht zwischen \u201eIch weiß nicht, was ich will\u201c und \u201eIch weiß, was ich will, und ich arbeite darauf hin.\u201c" },
+            { type: "text", content: "Geduld gehört zu dieser Ebene dazu. In W5 haben wir die Letting-Go-Methode gelernt, und sie ist gerade hier unverzichtbar: um die Spannung zwischen dem, was ist, und dem, was sein soll, auszuhalten, ohne in Resignation oder blinden Aktionismus zu verfallen." },
 
             { type: "divider" },
 
-            // --- Alignment ist ein Prozess ---
-            { type: "heading", level: 2, content: "Alignment ist ein Prozess, kein Event" },
-            { type: "text", content: "Eines ist wichtig: Dein Leben muss sich nicht morgen \u00e4ndern." },
-            { type: "text", content: "Alignment ist kein Moment, wo alles klickt. Es ist ein Prozess. Manche Dinge \u00e4ndern sich in Tagen. Manche brauchen Jahre." },
-            { type: "emphasis", content: "Die Richtung z\u00e4hlt, nicht die Geschwindigkeit." },
-            { type: "text", content: "Du musst nicht alles auf einmal verstehen. Du musst wissen, in welche Richtung du gehst. Und du musst gehen. Einen Schritt. Dann den n\u00e4chsten." },
-            { type: "text", content: "Der Alignment-Plan ist kein Versprechen. Es ist eine Orientierung. Ein Bild davon, wie es aussehen k\u00f6nnte." },
-            { type: "text", content: "Manche Dinge \u00e4ndern sich schneller als gedacht. Manche langsamer. Manche ganz anders. Das ist normal." },
+            // --- Übung: Dein Alignment-Plan ---
+            { type: "heading", level: 2, content: "Übung: Dein Alignment-Plan" },
+            { type: "text", content: "Nimm dir 30 bis 45 Minuten, die Alignment-Map aus A1 und das höchste Ziel aus A2. Erstelle für jede der drei äußeren Ebenen einen konkreten Plan - kein Manifest, sondern eine ehrliche Bestandsaufnahme mit einem nächsten Schritt." },
 
-            { type: "divider" },
-
-            // --- Einladung: Alignment-Plan ---
-            { type: "heading", level: 2, content: "Einladung: Dein Alignment-Plan" },
-            { type: "text", content: "30 bis 45 Minuten. Alignment-Map und Journal. Das ist alles, was du brauchst." },
-            { type: "text", content: "Was ver\u00e4ndere ich? Jetzt? In ein paar Monaten? Sp\u00e4ter?" },
-
-            { type: "heading", level: 3, content: "F\u00e4higkeiten" },
-            { type: "text", content: "Was lernst du als N\u00e4chstes? Eine Sache. Die, die dein Ziel voranbringt. Wann fange ich an? Diese Woche? Dieser Monat?" },
-            { type: "text", content: "Welche Blockade ist getarnt als fehlende F\u00e4higkeit? Wo ist Angst im Spiel, und du redest von \"Ich kann nicht\"?" },
-            { type: "text", content: "Was kannst du schon, siehst es aber nicht?" },
+            { type: "heading", level: 3, content: "Fähigkeiten" },
+            { type: "text", content: "Was ist mein Schlussstein - die eine Fähigkeit, die am meisten fehlt?" },
+            { type: "text", content: "Was lerne ich als nächstes? (Diese Woche ein erster konkreter Schritt, diesen Monat ein Anfang.)" },
+            { type: "text", content: "Welche vorhandene Fähigkeit habe ich bisher unterschätzt?" },
 
             { type: "heading", level: 3, content: "Verhalten" },
-            { type: "text", content: "Welche Gewohnheit \u00e4ndert sich diese Woche? Die mit dem gr\u00f6\u00dften Effekt. Vielleicht etwas Neues anfangen. Vielleicht etwas Altes lassen." },
-            { type: "text", content: "Welche Verhaltensweise passt nicht mehr zu dem, wer du bist?" },
+            { type: "text", content: "Welche eine Gewohnheit ändere ich diese Woche? (Konkret und überprüfbar formulieren.)" },
+            { type: "text", content: "Welches Verhalten lasse ich los, weil es zu einem alten Muster gehört?" },
+            { type: "text", content: "Was ist mein kleinstmöglicher erster Schritt?" },
 
             { type: "heading", level: 3, content: "Umgebung" },
-            { type: "text", content: "Was \u00e4ndert sich sofort? Der Arbeitsplatz. Ein Gespr\u00e4ch, das du schiebst." },
-            { type: "text", content: "Was \u00e4ndert sich in den n\u00e4chsten Monaten? Job? Wo du lebst? Wer dein Leben mit dir teilt?" },
-            { type: "text", content: "Wie sieht dein Leben in einem Jahr aus? Nicht detailliert - die Richtung reicht." },
-            { type: "text", content: "Schreib es auf. Nicht als Versprechen. Als Orientierung." },
+            { type: "text", content: "Was verändere ich sofort? (Physische Kleinigkeiten, die keinen Widerstand erzeugen.)" },
+            { type: "text", content: "Was plane ich mittelfristig? (Gespräche, Entscheidungen, Weichenstellungen in den nächsten drei bis sechs Monaten.)" },
+            { type: "text", content: "Was ist die langfristige Vision für mein Umfeld, auch wenn sie Jahre braucht?" },
+
+            { type: "text", content: "Wenn der Plan fertig ist, lies ihn einmal durch und halte ihn neben die oberen drei Ebenen aus A2. Passt das, was hier steht, zu dem, was dort steht? Wenn ja, ist der Plan stimmig. Wenn nicht, zeigt die Lücke, wo noch Arbeit wartet." },
+            { type: "text", content: "Ein Alignment-Plan ist kein Dokument mit Deadlines. Er ist ein Kompass. Ein Kompass zeigt die Richtung, und er zeigt sie immer neu - egal, wo wir gerade stehen, wie weit wir gekommen sind oder wie oft wir vom Weg abgekommen sind. Die Richtung zählt, nicht die Geschwindigkeit." },
+
+            { type: "divider" },
+
+            // --- Ankerpraktik ---
+            { type: "heading", level: 2, content: "Ankerpraktik" },
+            { type: "quote", content: "Was habe ich heute getan, das zu dem Menschen passt, der ich wirklich bin? Was nicht - und was will ich morgen anders machen?" },
 
             { type: "divider" },
 
             // --- Dreiklang wird Einklang ---
             { type: "heading", level: 2, content: "Dreiklang wird Einklang" },
-            { type: "text", content: "Schau zur\u00fcck. Nicht nur auf diese drei Lektionen. Auf den ganzen Weg." },
-
-            { type: "bigthree", items: [
-                { title: "Be Yourself", description: "Du wei\u00dft jetzt, wer du bist. Unter den Rollen und Masken. Das ist Erfahrung, nicht Theorie.", color: "be" },
-                { title: "Do Good", description: "Du wei\u00dft jetzt, wie du mit dir selbst arbeitest. Nicht weil dich alles gel\u00f6st hat, sondern weil du wei\u00dft, wie es geht.", color: "do" },
-                { title: "Make Money", description: "Du zeigst dich jetzt. Nicht perfekt. Du. Und du hast dein Verh\u00e4ltnis zu Geld gekl\u00e4rt.", color: "make" }
-            ]},
-
-            { type: "text", content: "Drei Bereiche. Ein Weg. Das ist die Idee." },
-            { type: "text", content: "Das ist kein Versprechen auf ein perfektes Leben. Das ist ein Prozess, der heute anf\u00e4ngt. Dieser Prozess hat mit dem Kurs angefangen. Jetzt erreicht er die n\u00e4chste Stufe." },
+            { type: "text", content: "Am Anfang dieses Kurses standen drei Wörter: Be Yourself. Do Good. Make Money. Zwölf Lektionen und drei Bonus-Lektionen später haben sie eine andere Tiefe bekommen." },
+            { type: "text", content: "<strong>Be Yourself</strong> bedeutet, zu wissen, wer wir sind, wenn die Anteile Platz machen und das Selbst führt. Es bedeutet, die eigene Bewusstseinsebene zu kennen und bewusst zu wählen, von welchem Ort aus wir die Welt sehen." },
+            { type: "text", content: "<strong>Do Good</strong> bedeutet, uns von dem zu befreien, was uns zurückhält - festgehaltene Emotionen, übernommene Überzeugungen, alte Rollen - und aus dieser Freiheit heraus einen Beitrag zu leisten, der größer ist als wir selbst." },
+            { type: "text", content: "<strong>Make Money</strong> bedeutet, den eigenen Platz in der Welt einzunehmen, das Ikigai, den Schnittpunkt zwischen dem, was wir lieben, können, was die Welt braucht und wofür jemand bezahlt, und daraus ein Leben zu bauen, das trägt." },
+            { type: "text", content: "Drei Dimensionen, die nur zusammen funktionieren. Und drei Werkzeuge, die bleiben: die Ankerpraktik, um täglich den Kontakt zum Selbst zu halten. Die Selbstcoaching-Schleife, um Muster zu erkennen und Verhalten zu verändern. Die Letting-Go-Methode, um loszulassen, was nicht mehr passt." },
 
             { type: "divider" },
 
-            // --- Was bleibt ---
-            { type: "heading", level: 2, content: "Was bleibt" },
-            { type: "text", content: "Du hast Werkzeuge jetzt. Keine Theorien." },
-            { type: "text", content: "Die Ankerpraktik. Journaling. Das h\u00e4lt dich mit dir selbst verbunden. Es zeigt dir, was in dir arbeitet." },
-            { type: "text", content: "Verstehen. F\u00fchlen. Handeln. Das ist deine Schleife f\u00fcr jedes Problem. Du brauchst keinen Coach. Du hast dich selbst." },
-            { type: "text", content: "Letting-Go-Methode. Vier Schritte. F\u00fcr alles, das dich blockiert." },
-            { type: "text", content: "Die Neurologischen Ebenen sind dein Kompass. Du kannst jederzeit pr\u00fcfen: Stimmt mein Leben noch?" },
-            { type: "text", content: "Das sind echte Werkzeuge. Sie funktionieren f\u00fcr immer. Sie werden besser, weil du besser wirst, nicht weil sie sich \u00e4ndern." },
-
-            { type: "divider" },
-
-            // --- Der letzte Satz ---
-            { type: "heading", level: 2, content: "Der letzte Satz" },
-            { type: "emphasis", content: "Du bist nicht fertig. Das ist keine Kritik. Das ist Freiheit." },
-            { type: "text", content: "Du bist nicht fertig. Keiner ist fertig. Das ist das Leben, nicht ein Problem." },
-            { type: "text", content: "Aber du wei\u00dft jetzt, wer du bist und wof\u00fcr du lebst. Du hast Werkzeuge. Du hast einen Plan. Das reicht." },
-            { type: "emphasis", content: "Du bist nicht fertig. Aber du wei\u00dft, wohin es geht. Das gen\u00fcgt." },
+            // --- Abschluss ---
+            { type: "text", content: "In W0 stand ein Satz auf einem Blatt Papier: <em>Wenn ich diesen Kurs beendet habe, ist meine beste Hoffnung, dass ...</em>" },
+            { type: "text", content: "Lies ihn jetzt noch einmal." },
+            { type: "text", content: "Vielleicht hat sich die Antwort verändert. Vielleicht ist sie klarer geworden, oder sie zeigt in eine andere Richtung als am Anfang. Beides wäre richtig, weil es zeigt, dass sich etwas bewegt hat." },
+            { type: "text", content: "Wir sind nicht fertig. Wir haben angefangen. Und das ist genug." },
 
             { type: "divider" },
 
             // --- Celebration + Progress + Checklist + Signoff ---
-            { type: "celebration", text: "Der gesamte Win\u00b3 Kurs - geschafft." },
+            { type: "celebration", text: "Zwölf Lektionen. Drei Phasen. Ein Alignment. Dein Weg." },
 
             { type: "progress-bar", label: "Alignment 3 von 3", percent: 100, detail: "Alignment" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Alignment-Plan erstellt",
-                "Einen ersten Schritt geplant"
+                "Lektion vollständig gelesen",
+                "Alignment-Plan erstellt (Fähigkeiten, Verhalten, Umgebung)",
+                "Einen ersten konkreten Schritt festgelegt"
             ]},
 
-            { type: "signoff", text: "Du bist nicht fertig. Aber du wei\u00dft, wohin es geht.\\n\\nDas gen\u00fcgt.", name: "Steven" }
+            { type: "signoff", text: "Wir sind nicht fertig. Wir haben angefangen.\\n\\nUnd das ist genug.", name: "Steven" }
         ]
     };
 
@@ -157,7 +125,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

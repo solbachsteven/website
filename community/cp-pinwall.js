@@ -1,6 +1,6 @@
 // Community Pinnwand - Pinwall Section (Standalone)
 // Display-only: Zeigt Eintraege an, kein Formular
-// Loaded via: <script src="https://solbachsteven.github.io/website/community/cp-pinwall.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/community/cp-pinwall.js"></script>
 (function() {
     if (window.__CP_PINWALL_LOADED) return;
     window.__CP_PINWALL_LOADED = true;

@@ -1,6 +1,6 @@
 // Win³ Mentoring Landingpage - Steven als Mentor Section (Standalone)
 // 2-Spalten Layout: Steven-Foto links, Text + Trait Cards rechts
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-steven.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-steven.js"></script>
 (function() {
     if (window.__WM_STEVEN_LOADED) return;
     window.__WM_STEVEN_LOADED = true;

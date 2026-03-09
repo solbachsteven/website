@@ -1,5 +1,5 @@
 // Freebie Landingpage - Ergebnis Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-result.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-result.js"></script>
 (function() {
     if (window.__FL_RESULT_LOADED) return;
     window.__FL_RESULT_LOADED = true;

@@ -3,15 +3,15 @@
  * Laedt alle Freebie-Sections sequentiell in der richtigen Reihenfolge.
  *
  * Systeme.io Einzeiler:
- * <script src="https://solbachsteven.github.io/website/freebie-landingpage.js"></script>
+ * <script src="https://stevensolbach.de/freebie-landingpage.js"></script>
  *
  * Oder einzelne Sections standalone laden:
- * <script src="https://solbachsteven.github.io/website/freebie/fl-hero.js"></script>
- * <script src="https://solbachsteven.github.io/website/freebie/fl-steps.js"></script>
- * <script src="https://solbachsteven.github.io/website/freebie/fl-result.js"></script>
- * <script src="https://solbachsteven.github.io/website/freebie/fl-pinwall.js"></script>
- * <script src="https://solbachsteven.github.io/website/freebie/fl-final-cta.js"></script>
- * <script src="https://solbachsteven.github.io/website/freebie/fl-fx.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-hero.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-steps.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-result.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-pinwall.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-final-cta.js"></script>
+ * <script src="https://stevensolbach.de/freebie/fl-fx.js"></script>
  */
 (function() {
     if (window.__FL_LOADED) {
@@ -26,7 +26,7 @@
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     anchor.parentNode.insertBefore(container, anchor.nextSibling);
 
-    var BASE = 'https://solbachsteven.github.io/website/freebie/';
+    var BASE = 'https://stevensolbach.de/freebie/';
     var sections = [
         'fl-hero',
         'fl-steps',

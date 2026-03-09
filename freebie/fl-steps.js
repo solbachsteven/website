@@ -1,5 +1,5 @@
 // Freebie Landingpage - 3 Schritte Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-steps.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-steps.js"></script>
 (function() {
     if (window.__FL_STEPS_LOADED) return;
     window.__FL_STEPS_LOADED = true;

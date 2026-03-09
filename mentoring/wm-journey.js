@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - Journey Section (Standalone)
 // Die Reise: Selbsterkenntnis \u2192 Selbstbefreiung \u2192 Selbstverwirklichung
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-journey.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-journey.js"></script>
 (function() {
     if (window.__WM_JOURNEY_LOADED) return;
     window.__WM_JOURNEY_LOADED = true;

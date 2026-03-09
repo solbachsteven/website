@@ -1,5 +1,5 @@
 // Freebie Kurs - Lektion 1: Dein tieferes Warum (Standalone)
-// <script src="https://solbachsteven.github.io/website/freebie-kurs/fk-l1.js"></script>
+// <script src="https://stevensolbach.de/freebie-kurs/fk-l1.js"></script>
 (function() {
     if (window.__FK_L1) return;
     window.__FK_L1 = true;
@@ -188,11 +188,14 @@
     ]
 };
 
+    // Dual-Mode: Portal-Registration
+    if (window.__FK_KURS) { window.__FK_KURS.register('l1', LESSON_DATA); return; }
+
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     function init() { window.__FK_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__FK_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/freebie-kurs/fk-engine.js';
+    s.src = 'https://stevensolbach.de/freebie-kurs/fk-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

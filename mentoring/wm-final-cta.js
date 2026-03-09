@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - Final CTA Section (Standalone)
 // Letzter Push mit Badge, emotionaler Headline und CTA
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-final-cta.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-final-cta.js"></script>
 (function() {
     if (window.__WM_FINALCTA_LOADED) return;
     window.__WM_FINALCTA_LOADED = true;

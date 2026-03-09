@@ -3,13 +3,13 @@
  * Laedt alle Community-Sections sequentiell in der richtigen Reihenfolge.
  *
  * Systeme.io Einzeiler:
- * <script src="https://solbachsteven.github.io/website/community-pinnwand.js"></script>
+ * <script src="https://stevensolbach.de/community-pinnwand.js"></script>
  *
  * Oder einzelne Sections standalone laden:
- * <script src="https://solbachsteven.github.io/website/community/cp-hero.js"></script>
- * <script src="https://solbachsteven.github.io/website/community/cp-pinwall.js"></script>
- * <script src="https://solbachsteven.github.io/website/community/cp-final-cta.js"></script>
- * <script src="https://solbachsteven.github.io/website/community/cp-fx.js"></script>
+ * <script src="https://stevensolbach.de/community/cp-hero.js"></script>
+ * <script src="https://stevensolbach.de/community/cp-pinwall.js"></script>
+ * <script src="https://stevensolbach.de/community/cp-final-cta.js"></script>
+ * <script src="https://stevensolbach.de/community/cp-fx.js"></script>
  */
 (function() {
     if (window.__CP_LOADED) {
@@ -24,7 +24,7 @@
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     anchor.parentNode.insertBefore(container, anchor.nextSibling);
 
-    var BASE = 'https://solbachsteven.github.io/website/community/';
+    var BASE = 'https://stevensolbach.de/community/';
     var sections = [
         'cp-hero',
         'cp-pinwall',

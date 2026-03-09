@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - FAQ Section (Standalone)
 // Accordion mit häufigen Fragen
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-faq.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-faq.js"></script>
 (function() {
     if (window.__WK_FAQ_LOADED) return;
     window.__WK_FAQ_LOADED = true;

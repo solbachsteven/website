@@ -1,5 +1,5 @@
-// Win³ Kurs - Lektion 8: Dein Wert
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w8.js"></script>
+// Win³ Kurs - Lektion 8: Die unsichtbare Quittung
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w8.js"></script>
 (function() {
     if (window.__WL_W8) return;
     window.__WL_W8 = true;
@@ -9,151 +9,110 @@
     var LESSON_DATA = {
         meta: {
             label: "LEKTION 8",
-            title: "Dein Wert",
+            title: "Die unsichtbare Quittung",
             subtitle: "Phase 3: Make Money"
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Du wei\u00dft jetzt, was du in die Welt bringen kannst." },
-            { type: "text", content: "In der letzten Lektion hast du vier Kreise gezeichnet. Du hast hingeschaut, was du liebst, was du kannst, was die Welt braucht. Vielleicht war dein Mapping unvollst\u00e4ndig. Vielleicht voller Fragezeichen. Vielleicht hast du zum ersten Mal schwarz auf wei\u00df gesehen, was du eigentlich schon l\u00e4ngst gesp\u00fcrt hast." },
-            { type: "emphasis", content: "Und trotzdem." },
-            { type: "text", content: "Da ist etwas zwischen dir und dem Tun. Ein leises Fl\u00fcstern. Manchmal kaum h\u00f6rbar. Manchmal ohrenbet\u00e4ubend." },
-            { type: "emphasis", content: "\"Wer bin ich, dass ich daf\u00fcr Geld nehme?\"" },
+            { type: "emphasis", content: "In W7 haben wir herausgefunden, was wir in die Welt bringen können - durch das Ikigai-Mapping, durch die einzigartige Linse, durch die Frage, was wir sehen, das andere nicht sehen. Diese Woche schauen wir uns an, was viele davon abhält, den nächsten Schritt zu gehen: unser Verhältnis zu Geld und Wert." },
 
             { type: "divider" },
 
-            // --- Das Flüstern ---
-            { type: "heading", level: 2, content: "Das Fl\u00fcstern, das du kennst" },
-            { type: "text", content: "Es klingt vern\u00fcnftig. Bescheiden sogar. Und wer will schon arrogant wirken." },
-            { type: "text", content: "Klingt gut. Ist aber gef\u00e4hrlich." },
-            { type: "text", content: "Denn hinter diesem Fl\u00fcstern steckt nicht Bescheidenheit. Da steckt eine \u00dcberzeugung. Alte. Tief. \u00dcber deinen Wert." },
-            { type: "text", content: "Und die meisten Menschen merken nicht einmal, dass sie da ist." },
-            { type: "text", content: "Sie ist kein gro\u00dfes Drama. Das ist das Perfide. Sie ist unsichtbar. Eine Quittung, die du zahlst, ohne es zu merken. Jedes Mal, wenn du deine Arbeit unter Wert anbietest. Jedes Mal, wenn du \"Ach, das war doch nichts\" sagst, obwohl es etwas war. Jedes Mal, wenn du das Kompliment wegwischst. Jedes Mal, wenn du Ja sagst, aber kein Geld daf\u00fcr nimmst." },
-            { type: "emphasis", content: "Das ist sie: die unsichtbare Quittung." },
-            { type: "text", content: "Du zahlst sie t\u00e4glich. Nicht sichtbar. Nicht bewusst. Nur unbewusst. Diese Woche schauen wir, warum das passiert." },
+            // --- Eine Szene, drei Varianten ---
+            { type: "heading", level: 2, content: "Eine Szene, drei Varianten" },
+            { type: "text", content: "Ein Handwerker renoviert seit drei Wochen die Wohnung eines Bekannten. Neue Böden, Wände gestrichen, Badezimmer gefliest. Als der Bekannte fragt, was er schuldet, winkt der Handwerker ab. \"Lass mal, wir kennen uns doch.\" Drei Wochen Arbeit, Material hat er selbst bezahlt. Auf dem Heimweg rechnet er im Kopf und merkt, dass er seit zwei Monaten von seinen Ersparnissen lebt." },
+            { type: "text", content: "Eine Entwicklerin baut eine Website für ein Startup. Responsive Design, Datenbank-Anbindung, Content-Management-System - siebzig Stunden Arbeit, Abende und Wochenenden. Als sie die Rechnung schreibt, steht dort ein Betrag, der ungefähr dem entspricht, was ein Berufseinsteiger für zwanzig Stunden berechnen würde. Sie schaut auf die Zahl, findet sie zu niedrig, ändert nichts und drückt auf Senden." },
+            { type: "text", content: "Eine Beraterin tippt ein Angebot für einen Workshop. Sie schreibt eine Zahl. Löscht sie. Schreibt eine niedrigere. Löscht sie wieder. Schreibt eine noch niedrigere, bei der sich ihr Magen zusammenzieht. Drückt auf Senden. Am nächsten Tag sagt der Kunde sofort zu, ohne zu verhandeln, und sie weiß in diesem Moment, dass sie zu wenig verlangt hat." },
+            { type: "text", content: "Drei verschiedene Menschen, drei verschiedene Berufe, dasselbe Muster: Sie stellen sich selbst eine Quittung aus, auf der weniger steht als sie wert sind." },
 
             { type: "divider" },
 
             // --- Geld als Spiegel ---
             { type: "heading", level: 2, content: "Geld als Spiegel" },
-            { type: "text", content: "Geld ist keine abstrakte Zahl. Es ist ein Spiegel." },
-            { type: "text", content: "In W7 hast du auf die eine Seite geschaut: Was bringe ich in die Welt? Was ist mein Beitrag? Diese Woche schauen wir auf die andere Seite: Was bin ich bereit, daf\u00fcr anzunehmen?" },
-            { type: "text", content: "Denn die meisten k\u00f6nnen Wert schaffen. Das Problem ist nicht das Schaffen. Das Problem ist das Annehmen. Sie tun es t\u00e4glich - privat, beruflich, \u00fcberall - nur nicht f\u00fcr sich selbst." },
-            { type: "emphasis", content: "Woran sie scheitern, ist das Annehmen." },
-            { type: "text", content: "Geld zeigt dir, wo du stehst in dieser Frage. Nicht weil Geld das Ma\u00df aller Dinge ist. Sondern weil Geld der Bereich ist, in dem deine \u00dcberzeugungen \u00fcber Selbstwert am deutlichsten sichtbar werden. Du kannst dir viel zutrauen - und dich trotzdem unwohl f\u00fchlen, wenn die Rechnung kommt." },
-            { type: "text", content: "Da liegt eine tiefere Schicht. Unter dem, was du denkst, dass du denkst." },
+            { type: "text", content: "Geld misst nicht den Wert eines Menschen. Das ist wichtig, und es stimmt. Aber Geld zeigt etwas anderes mit einer Genauigkeit, die unbequem ist: die Lücke zwischen dem, was wir geben, und dem, was wir dafür annehmen." },
+            { type: "text", content: "Der Handwerker ist gut in dem, was er tut. Die Entwicklerin auch. Die Beraterin erst recht. Am Können liegt es nicht. Am Markt liegt es auch nicht - Studien zeigen, dass Selbstständige im Schnitt zwanzig bis vierzig Prozent weniger verlangen, als Kunden bereit wären zu zahlen. Die Lücke entsteht woanders." },
+            { type: "text", content: "Sie entsteht in dem, was wir über uns selbst glauben." },
+            { type: "text", content: "Brad Klontz, Finanzpsychologe und Autor von \"Mind Over Money\", hat dafür den Begriff \"Money Scripts\" geprägt: unbewusste Überzeugungen über Geld, die in der Kindheit entstehen und unser finanzielles Verhalten als Erwachsene steuern. Wie ein Programm, das im Hintergrund läuft, ohne dass wir wissen, dass es existiert." },
 
             { type: "divider" },
 
-            // --- Geld-Archetypen ---
-            { type: "heading", level: 2, content: "Deine Geld-Archetypen" },
-            { type: "text", content: "<strong>Deborah Price</strong>, Gr\u00fcnderin des Money Coaching Institute, hat acht Geld-Archetypen identifiziert - Muster, die auf der Tiefenpsychologie <strong>C.G. Jungs</strong> basieren. Jeder Mensch tr\u00e4gt mehrere davon in sich. Manche bewusst, manche unsichtbar." },
-            { type: "text", content: "F\u00fcr diesen Kurs sind vier besonders relevant - die vier, die dich am h\u00e4ufigsten daran hindern, deinen Wert anzunehmen." },
+            // --- Vier Geld-Archetypen ---
+            { type: "heading", level: 2, content: "Vier Geld-Archetypen" },
+            { type: "text", content: "In der Forschung zu Money Scripts und Geld-Psychologie tauchen vier Muster besonders häufig auf - vor allem bei Menschen, die innere Arbeit machen und etwas Sinnvolles in die Welt bringen wollen." },
 
-            { type: "heading", level: 3, content: "Der Unschuldige" },
-            { type: "text", content: "\"Geld ist mir nicht so wichtig.\" Der Unschuldige will sich sicher f\u00fchlen und vermeidet alles, was mit Geld zu tun hat. Er schaut nicht auf Kontoausz\u00fcge. Er plant nicht. Er hofft, dass es irgendwie gut wird." },
-            { type: "text", content: "Was dahintersteckt: Nicht Gleichg\u00fcltigkeit - Angst. Angst, dass Geld ihn ver\u00e4ndern w\u00fcrde. Dass Reichtum und Integrit\u00e4t nicht zusammenpassen. Der Unschuldige hat entschieden: Wenn ich mich nicht damit besch\u00e4ftige, kann es mir nicht schaden." },
-            { type: "text", content: "Die unsichtbare Quittung: Er bleibt dauerhaft unter seinen M\u00f6glichkeiten. Nicht weil er nicht kann - sondern weil er nicht hinschaut." },
+            { type: "text", content: "<strong>Der Vermeider.</strong> \"Geld ist mir nicht so wichtig.\" Das klingt nach Freiheit, aber dahinter steckt oft etwas anderes: die Angst, dass Geld den Charakter verdirbt. Dass wer gut verdient, irgendwo einen Kompromiss gemacht hat. Der Vermeider schaut nicht auf seinen Kontostand, öffnet Rechnungen spät, redet ungern über Finanzen. Die Überzeugung, die ihn steuert: Geld und gute Menschen passen nicht zusammen." },
 
-            { type: "heading", level: 3, content: "Der M\u00e4rtyrer" },
-            { type: "text", content: "\"Ich helfe gerne - das ist mir Belohnung genug.\" Der M\u00e4rtyrer gibt. Und gibt. Und gibt. Er ber\u00e4t umsonst. Er arbeitet \u00fcber seine Grenzen. Er sagt nie Nein, wenn jemand seine Hilfe braucht." },
-            { type: "text", content: "Was dahintersteckt: Die \u00dcberzeugung, dass Helfen und Verdienen sich ausschlie\u00dfen. Dass wer Geld nimmt, nicht wirklich helfen will. Dass gute Menschen nicht reich sind. Der M\u00e4rtyrer hat Geben mit Sich-Aufopfern verwechselt." },
-            { type: "text", content: "Die unsichtbare Quittung: Er brennt aus. Nicht weil er zu viel gibt - sondern weil er nichts zur\u00fccknimmt. Die Gleichung ist dauerhaft unbalanciert." },
+            { type: "text", content: "<strong>Der Märtyrer.</strong> \"Ich helfe gerne, dafür braucht man mich nicht zu bezahlen.\" Die Beraterin mit dem Workshop-Angebot kennt dieses Muster. Helfen fühlt sich richtig an, Geld nehmen fühlt sich falsch an - als ob beides sich gegenseitig ausschließen würde. Der Märtyrer gibt und gibt, bis er erschöpft ist, und wundert sich dann, warum niemand sieht, wie viel er geleistet hat. Die verborgene Überzeugung: Wer für Hilfe Geld nimmt, hilft nicht wirklich." },
 
-            { type: "heading", level: 3, content: "Der Idealist" },
-            { type: "text", content: "\"Wenn es perfekt ist, darf ich daf\u00fcr Geld nehmen.\" Price nennt diesen Archetyp den Creator/Artist - jemand, der seine innere Vision \u00fcber alles stellt. Im Kontext dieses Kurses zeigt er sich als Perfektionist: noch eine Qualifikation, noch ein Kurs, noch eine \u00dcberarbeitung. Nie fertig genug." },
-            { type: "text", content: "Was dahintersteckt: Angst vor Bewertung. Die \u00dcberzeugung, dass er so wie er jetzt ist, nicht ausreicht. Dass das Werk erst perfekt sein muss, bevor er daf\u00fcr etwas verlangen darf." },
-            { type: "text", content: "Die unsichtbare Quittung: Er startet nie. Oder er startet und sabotiert sich, indem er das Ergebnis f\u00fcr nicht gut genug erkl\u00e4rt. Die perfekte Version existiert nur in seinem Kopf - und dort bleibt sie auch." },
+            { type: "text", content: "<strong>Der Perfektionist.</strong> \"Wenn es perfekt ist, darf ich Geld verlangen.\" Die Entwicklerin mit der Website erkennt sich hier vielleicht wieder. Es gibt immer noch einen Bug zu fixen, eine Funktion zu verbessern, einen Rand zu polieren. Der Moment, in dem der Preis gerechtfertigt wäre, wird auf einen Zeitpunkt verschoben, der nie kommt - denn nichts ist jemals perfekt genug. Was dahintersteckt, ist weniger der Wunsch nach Qualität als die Angst vor Bewertung. Und da nichts makellos ist, muss man sich der Bewertung nie stellen." },
 
-            { type: "heading", level: 3, content: "Das Opfer" },
-            { type: "text", content: "\"Bei mir funktioniert das nicht.\" Das Opfer f\u00fchlt sich den Umst\u00e4nden ausgeliefert. Andere k\u00f6nnen das. Andere haben Gl\u00fcck. Bei ihm ist alles anders - schwieriger, unfairer, aussichtsloser." },
-            { type: "text", content: "Was dahintersteckt: Tiefe \u00dcberzeugung, nicht genug zu sein. Nicht klug genug. Nicht talentiert genug. Oft eine Erfahrung, in der sein Wert nicht gesehen oder aktiv abgesprochen wurde. Das Opfer hat gelernt: Ich kann nichts daran \u00e4ndern. Also versuche ich es nicht." },
-            { type: "text", content: "Die unsichtbare Quittung: Er lebt dauerhaft unter seinem Potenzial. Nicht weil die Welt ihn begrenzt - sondern weil er sich selbst begrenzt." },
+            { type: "text", content: "<strong>Der Unwürdige.</strong> \"Wer bin ich, dass ich das verdiene?\" Dieses Muster ist das leiseste und das tiefste. Es hat nichts mit der Qualität der Arbeit zu tun und alles mit dem Bild, das jemand von sich selbst trägt. Der Unwürdige kann sehen, dass andere für vergleichbare Arbeit mehr verlangen. Er kann es sogar für richtig halten. Aber wenn er selbst an der Reihe ist, greift etwas tiefer als Logik: die Überzeugung, dass es zu viel wäre, dass er irgendwann auffliegt, dass ihm dieser Platz eigentlich nicht zusteht." },
 
-            { type: "text", content: "Price beschreibt noch vier weitere Archetypen - den Krieger, den Narren, den Tyrannen und den Magier. Wenn dich das Thema tiefer interessiert, schau dir ihre Arbeit an. F\u00fcr unsere Zwecke reichen diese vier: Sie zeigen die h\u00e4ufigsten Muster, die Menschen daran hindern, ihren Wert anzunehmen." },
+            { type: "text", content: "Die meisten Menschen finden sich in mehr als einem Archetyp wieder. Und die meisten sind überrascht, wie tief diese Muster sitzen." },
 
             { type: "divider" },
 
-            // --- Welcher bist du? ---
-            { type: "heading", level: 2, content: "Welcher bist du?" },
-            { type: "text", content: "Lies sie nochmal durch. Wo zuckst du zusammen? Das ist deine Antwort." },
-            { type: "text", content: "Es geht nicht um den, der sich richtig anh\u00f6rt. Es geht um den, der sich im Bauch anf\u00fchlt. Dein K\u00f6rper kennt die Antwort." },
-            { type: "emphasis", content: "Genau da schau hin." },
-            { type: "text", content: "Die meisten Menschen haben einen dominanten Archetyp und einen zweiten, der sich in bestimmten Situationen meldet. Der M\u00e4rtyrer im Privaten, der Perfektionist im Beruflichen. Der Vermeider bei gro\u00dfen Summen, der Unw\u00fcrdige bei pers\u00f6nlichen Themen." },
-            { type: "text", content: "Erkenn das Muster. Das ist alles. Du kannst es nur ver\u00e4ndern, wenn du es siehst." },
+            // --- Woher kommt das? ---
+            { type: "heading", level: 2, content: "Woher kommt das?" },
+            { type: "text", content: "Kein Mensch wird mit der Überzeugung geboren, dass Geld verdienen etwas Schlechtes sei. Diese Muster werden gelernt - früh, beiläufig und so gründlich, dass sie sich anfühlen wie Tatsachen." },
+            { type: "text", content: "Klontz nennt die prägenden Momente \"Financial Flashpoints\": Erlebnisse rund um Geld, die eine emotionale Ladung hatten. Das muss kein dramatisches Ereignis gewesen sein. Manchmal reicht der Blick des Vaters, wenn die Mutter etwas \"Teures\" gekauft hat. Das Schweigen am Esstisch, als eine Rechnung kam. Die beiläufige Bemerkung einer Tante beim Familienessen." },
+            { type: "text", content: "Welche Sätze haben wir als Kinder über Geld gehört?" },
+            { type: "text", content: "\"Geld verdirbt den Charakter.\" \"Über Geld spricht man nicht.\" \"Sei froh mit dem, was du hast.\" \"Die Reichen werden immer reicher und die Armen immer ärmer.\" \"Geld wächst nicht auf Bäumen.\"" },
+            { type: "text", content: "Diese Sätze sitzen deshalb so tief, weil wir sie gehört haben, bevor wir sie einordnen konnten. Für ein Kind ist das, was die Eltern sagen, die Realität. Es gibt keinen Filter, kein \"Das ist deren Meinung.\" Es geht direkt ins System, wird Teil des Betriebssystems und steuert dreißig Jahre später, wie die Beraterin auf ihre Angebotsmail schaut, bevor sie auf Senden drückt." },
 
             { type: "divider" },
 
-            // --- Deine Geld-Geschichte ---
-            { type: "heading", level: 2, content: "Deine Geld-Geschichte" },
-            { type: "text", content: "Sie kommen nicht von nirgendwo. Das ist antrainiert. Durch tausend Momente, nicht durch einen." },
-            { type: "text", content: "Was hast du als Kind \u00fcber Geld geh\u00f6rt?" },
-            { type: "text", content: "\"Geld verdirbt den Charakter.\" \"Wir k\u00f6nnen uns das nicht leisten.\" \"Reiche Menschen sind gierig.\" \"Sei froh mit dem, was du hast.\" \"Geld w\u00e4chst nicht auf B\u00e4umen.\"" },
-            { type: "text", content: "Solche S\u00e4tze. Beim Essen. Am Tisch. Wenn die Rechnung kam. Nebenbei. Immer." },
-            { type: "text", content: "Nicht als Lektion pr\u00e4sentiert. Waren aber welche." },
-            { type: "text", content: "Wer hat in deiner Familie das Geld verdient? Wie wurde dar\u00fcber gesprochen? War Geld ein Tabuthema? Ein Angstthema? Ein Machtthema? War es immer knapp - oder war es da, wurde aber trotzdem als Problem behandelt?" },
-            { type: "text", content: "Was war deine erste eigene Erfahrung mit Geld verdienen? Dein erster Job, dein erstes Taschengeld, dein erstes eigenes Einkommen. Wie hat sich das angef\u00fchlt? Stolz? Scham? Erleichterung? Oder etwas dazwischen?" },
-            { type: "text", content: "Das sind Wurzeln. Wenn jemand fragt \"Was kostet das?\", dann antwortet hier deine Geschichte mit." },
+            // --- Bekannte Werkzeuge, neues Terrain ---
+            { type: "heading", level: 2, content: "Bekannte Werkzeuge, neues Terrain" },
+            { type: "text", content: "Die gute Nachricht: Wir haben in den letzten Wochen alles kennengelernt, was wir brauchen, um diese Muster zu verändern. Das Thema ist neu, die Methode ist dieselbe." },
+            { type: "text", content: "<strong>Kalibrierung (W4).</strong> In Woche 4 haben wir gelernt, Überzeugungen auf der Hawkins-Skala einzuordnen. Jetzt können wir dasselbe mit Geld-Überzeugungen tun. \"Ich darf kein Geld für Hilfe nehmen\" - wo steht dieser Satz? Für die meisten kalibriert er zwischen Schuld (30) und Angst (100). Allein das Erkennen, aus welchem inneren Ort eine Überzeugung kommt, verändert den Umgang mit ihr." },
+            { type: "text", content: "<strong>Letting Go (W5).</strong> Die Überzeugung \"Ich bin es nicht wert\" ist kein Gedanke. Sie sitzt im Körper - als Enge im Brustkorb, als Schwere im Magen, als das Zusammenziehen, das die Beraterin spürt, bevor sie auf Senden drückt. In Woche 5 haben wir gelernt, Gefühle durchzulassen statt sie zu unterdrücken, zu analysieren oder wegzudrücken. Diese Methode funktioniert auf Geld-Blockaden genauso wie auf jede andere festgehaltene Emotion." },
+            { type: "text", content: "<strong>Selbstcoaching-Schleife (W6).</strong> Verstehen, Fühlen, Handeln. Der Kreislauf aus Woche 6 gibt uns den Rahmen: Erst die Überzeugung erkennen (Verstehen), dann das Gefühl dahinter durchlassen (Fühlen), dann einen konkreten Schritt machen (Handeln). Keine der drei Stufen allein reicht - zusammen bewegen sie etwas." },
 
             { type: "divider" },
 
-            // --- Kalibrieren ---
-            { type: "heading", level: 2, content: "Kalibrieren - du kennst das" },
-            { type: "text", content: "Du hast die Werkzeuge. Alle. W4 - emotionale Felder. W5 - loslassen. W6 - selbst coachen. Jetzt machst du dasselbe mit Geld." },
-            { type: "text", content: "Nimm deinen st\u00e4rksten Geld-Satz. Den, der dir wahr vorkommt. \"Ich darf nicht.\" Oder: \"Ich bin nicht genug.\" Oder \"Geld ist schmutzig.\" Dein Satz." },
-            { type: "text", content: "Und dann frag:" },
-            { type: "text", content: "Auf welcher Ebene sitzt er? Ist das Scham - die tiefste Frequenz, das \"Ich bin falsch\"? Ist es Angst - \"Wenn ich mich zeige, werde ich verletzt\"? Ist es Stolz - \"Ich stehe \u00fcber so etwas wie Geld\"? Du kennst die <strong>Hawkins-Karte</strong>. Nutze sie." },
-            { type: "text", content: "Welcher Anteil tr\u00e4gt diese \u00dcberzeugung? Ein innerer Besch\u00fctzer vielleicht - einer, der dich klein h\u00e4lt, um dich sicher zu halten? Gibt es einen Teil, der vor langer Zeit entschieden hat, dass es gef\u00e4hrlich ist, sich seinen Wert einzugestehen?" },
-            { type: "text", content: "Was br\u00e4uchte dieser Anteil, um loslassen zu k\u00f6nnen?" },
-            { type: "text", content: "Derselbe Prozess. Erkennen, f\u00fchlen, loslassen - das kennst du. Nur dass es jetzt um Geld geht." },
+            // --- Die Erlaubnis ---
+            { type: "heading", level: 2, content: "Die Erlaubnis" },
+            { type: "text", content: "Es gibt einen Satz, den viele Menschen irgendwann in ihrer inneren Arbeit brauchen und den ihnen niemand sagen kann außer sie sich selbst: Ich darf Wert schaffen und dafür bezahlt werden." },
+            { type: "text", content: "Keine Instanz von außen kann diese Erlaubnis erteilen. Kein Kurs, kein Coach, kein Partner, der sagt \"Du bist es wert.\" Das kann bestätigend sein, aber es ändert nichts an der inneren Überzeugung, solange die Erlaubnis nicht von innen kommt." },
+            { type: "text", content: "Und sie kommt selten als große Erkenntnis. Sie kommt als kleiner Moment - wenn jemand zum ersten Mal einen Preis nennt und nicht sofort relativiert. Wenn jemand \"Danke\" sagt statt \"Das war doch nichts.\" Wenn jemand eine Rechnung schreibt und sie abschickt, ohne sie vorher dreimal nach unten zu korrigieren." },
+            { type: "text", content: "Diese Momente sind der Anfang. Jeder einzelne dehnt den Raum, in dem die neue Überzeugung Platz finden kann." },
 
             { type: "divider" },
 
-            // --- Du darfst ---
-            { type: "heading", level: 2, content: "Du darfst" },
-            { type: "text", content: "Was kommt jetzt, ist wichtig." },
-            { type: "highlight", title: "Erlaubnis", content: "Du darfst Wert schaffen und Geld daf\u00fcr nehmen. Du darfst zeigen, was du kannst. Du darfst erfolgreich sein und gleichzeitig eine gute Person. Beides geht." },
-            { type: "emphasis", content: "Erlaubnis ist ein einfaches Wort. Und f\u00fcr die meisten unm\u00f6glich." },
-            { type: "text", content: "Weil die einzige Erlaubnis, die z\u00e4hlt, kommt von dir. Nicht von au\u00dfen. Nicht von mir. Von innen." },
-            { type: "text", content: "Niemand kann dir die Erlaubnis geben. Das ist eine T\u00fcr, die nur von innen aufgeht. Du musst hindurchgehen." },
-            { type: "text", content: "Vielleicht ist jetzt dein Moment. Nicht irgendwann. Jetzt." },
-            { type: "emphasis", content: "Du darfst." },
-
-            { type: "divider" },
-
-            // --- Geld-Archetyp-Session ---
-            { type: "heading", level: 2, content: "Deine Einladung: Geld-Archetyp-Session" },
-            { type: "text", content: "Nimm dir 30 bis 45 Minuten. Journal. Dein Hawkins-Arbeitsblatt, falls du es magst." },
+            // --- Übung: Geld-Archetyp-Session ---
+            { type: "heading", level: 2, content: "Übung: Geld-Archetyp-Session (30-45 Minuten)" },
+            { type: "text", content: "Nimm dir einen ruhigen Ort und etwas zum Schreiben. Diese Übung verbindet die Werkzeuge der letzten Wochen und richtet sie auf ein Thema, das die meisten Menschen lieber vermeiden." },
 
             { type: "steps", title: "Geld-Archetyp-Session", items: [
-                { title: "Archetyp erkennen (10 Minuten)", description: "Lies die vier Archetypen nochmal. Welcher l\u00f6st die st\u00e4rkste Reaktion aus? Welcher hat dich innerlich zusammenzucken lassen? Das ist dein wahrscheinlich. Schreib auf, in welchen konkreten Situationen er sich zeigt." },
-                { title: "\u00dcberzeugung finden (10 Minuten)", description: "Was ist der automatische Satz? \"Ich darf nicht...\" \"Ich bin nicht genug...\" Der, der wahr klingt. Der, bei dem du etwas sp\u00fcrst. Nicht den, der am kl\u00fcgsten klingt. Schreib ihn auf." },
-                { title: "Kalibrieren (5 Minuten)", description: "Welche Hawkins-Ebene? Welcher Anteil spricht hier? Wie alt ist er? Wann hat er angefangen, das zu glauben?" },
-                { title: "Selbstcoaching-Schleife (15 Minuten)", description: "Verstehen: Was besch\u00fctzt dieser Anteil? Wof\u00fcr war die \u00dcberzeugung n\u00f6tig? F\u00fchlen: Was sitzt darunter? Welches Gef\u00fchl? Handeln: Dein kleinster n\u00e4chster Schritt. Nicht gro\u00df. Winzig." }
+                { title: "Archetyp erkennen", description: "Lies die vier Archetypen oben noch einmal. In welchem erkennst du dich am stärksten wieder? Es können auch zwei sein. Schreib auf, welcher es ist und in welchen konkreten Situationen er auftaucht." },
+                { title: "Überzeugung finden", description: "Was ist der Satz, der unter dem Muster liegt? Nicht der vernünftige, den du jemandem erzählen würdest, sondern der echte - der, bei dem sich etwas im Körper bewegt, wenn du ihn aussprichst. \"Ich bin es nicht wert.\" \"Wenn ich Geld nehme, bin ich gierig.\" \"Meine Arbeit ist nicht gut genug.\" Schreib ihn auf." },
+                { title: "Kalibrieren", description: "Wo steht dieser Satz auf der Hawkins-Skala? Kommt er aus Scham, Schuld oder Angst? Welcher Anteil spricht ihn, und was versucht er zu beschützen? Schreib die Zahl daneben - als Standortbestimmung, nicht als Urteil." },
+                { title: "Fühlen", description: "Lies den Satz laut vor. Was passiert im Körper? Wo spürst du etwas? Lass das Gefühl da sein, ohne es wegzuschieben oder zu analysieren. Atme. Lass es durch dein System laufen, wie in W5 geübt." },
+                { title: "Kleinster nächster Schritt", description: "Was wäre eine Handlung in den nächsten sieben Tagen, die das Muster um einen Millimeter verschiebt? Den Preis nicht senken. Das Kompliment annehmen statt abzuwehren. Die Rechnung am selben Tag schicken statt drei Wochen zu warten. Schreib den Schritt auf, und dann mach ihn." }
             ]},
 
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
-            { type: "text", content: "Jeden Tag eine Frage:" },
+            { type: "heading", level: 2, content: "Ankerpraktik: Wert sichtbar machen" },
+            { type: "text", content: "Ab dieser Woche bekommt die Ankerpraktik einen neuen Fokus, der die Frage aus W7 ergänzt. Neben \"Was habe ich heute gesehen, das andere nicht sehen?\" kommt eine zweite Frage dazu:" },
+            { type: "text", content: "<strong>\"Wo habe ich heute meinen Wert kleiner gemacht?\"</strong>" },
+            { type: "text", content: "Das kann überall passieren. Im Gespräch mit einem Kunden, der nach einem Rabatt fragt. In der Antwort auf ein Kompliment. In der Art, wie wir über unsere eigene Arbeit sprechen: \"Das war ja nichts Besonderes.\" \"Das hätte jeder gekonnt.\" \"Ach, das war nicht so viel Aufwand.\"" },
+            { type: "text", content: "Und als Gegengewicht, einmal am Tag:" },
+            { type: "text", content: "<strong>\"Was würde ich tun, wenn ich wüsste, dass ich es verdiene?\"</strong>" },
+            { type: "text", content: "Diese Frage muss nicht zu einer Handlung führen. Manchmal reicht es, sie zu stellen und zu bemerken, was als Antwort kommt." },
 
             { type: "anchorpractice", layers: [
-                { label: "Schicht 1 (Freies Schreiben)", prompt: "Wo hab ich mich selbst kleiner gemacht?" },
-                { label: "Schicht 2 (Muster)", prompt: "Wo habe ich mir die Erlaubnis verweigert?" },
-                { label: "Schicht 3 (Vertiefen)", prompt: "Was w\u00fcrde ich tun, wenn ich w\u00fcsste, dass ich es verdiene?" }
+                { label: "Schicht 1 (Freies Schreiben)", prompt: "Wo habe ich heute meinen Wert kleiner gemacht?" },
+                { label: "Schicht 2 (Reflexion)", prompt: "Welcher Geld-Archetyp hat sich heute gezeigt?" },
+                { label: "Schicht 3 (Vertiefen)", prompt: "Was würde ich tun, wenn ich wüsste, dass ich es verdiene?" }
             ]},
-
-            { type: "text", content: "Die dritte Frage ist die sch\u00e4rfste. Sie zeigt die L\u00fccke: was du tust versus was du tun w\u00fcrdest, wenn du dich nicht im Weg st\u00fcndest." },
 
             { type: "divider" },
 
-            // --- Zum Schluss ---
-            { type: "heading", level: 2, content: "Zum Schluss" },
-            { type: "text", content: "Geld-Mindset ist keine neue Sache. Es ist eine Anwendung. Von allem, was du in sieben Lektionen gelernt hast." },
-            { type: "text", content: "W2, W4, W5, W6 - alles das brauchst du hier. Nur ist das Thema Geld. Das Thema, das die meisten vermeiden." },
-            { type: "text", content: "Wenn du dein Geld-Mindset kl\u00e4rst, kl\u00e4rst du dein Verh\u00e4ltnis zu dir selbst. Nicht nur Geld. Selbstwert. Sichtbarkeit. Erlaubnis. Das ist alles dabei." },
-            { type: "emphasis", content: "In W9 kommt die letzte Sache. Die alte Geschichte ist weg. Du wei\u00dft, was du brauchst. Du erlaubst es dir. Dann zeigst du dich." },
+            // --- Closing ---
+            { type: "emphasis", content: "In W7 haben wir gesehen, was wir in die Welt bringen können. Heute haben wir uns angeschaut, was viele davon abhält, den Gegenwert anzunehmen, und woher diese Blockaden stammen. Die Werkzeuge, um sie zu lösen, haben wir bereits. Was bleibt, wenn die innere Erlaubnis da ist, ist die Frage nach dem Außen: Wie zeigen wir uns? Wie werden wir sichtbar? Darum geht es in W9." },
 
             { type: "divider" },
 
@@ -161,12 +120,12 @@
             { type: "progress-bar", label: "Lektion 8 von 9", percent: 89, detail: "Phase 3: Make Money" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Geld-Archetyp-Session durchgef\u00fchrt",
-                "Ankerpraktik begonnen"
+                "Lektion vollständig gelesen",
+                "Geld-Archetyp-Session durchgeführt (30-45 Min)",
+                "Ankerpraktik: Wert sichtbar machen begonnen"
             ]},
 
-            { type: "signoff", text: "Dein Wert ist kein Preisschild. Er ist deine Erlaubnis, ganz hier zu sein.\\n\\nN\u00e4chste Woche: Zeig dich.", name: "Steven" }
+            { type: "signoff", text: "Die Werkzeuge, um Geld-Blockaden zu lösen, hast du bereits. Was bleibt, ist die Frage: Wie zeigst du dich? Darum geht es in W9.", name: "Steven" }
         ]
     };
 
@@ -174,7 +133,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

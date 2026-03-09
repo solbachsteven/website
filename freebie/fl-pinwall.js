@@ -1,6 +1,6 @@
 // Freebie Landingpage - Pinwall Section (Standalone)
 // Social Proof: Echte Saetze von Kursteilnehmern
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-pinwall.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-pinwall.js"></script>
 (function() {
     if (window.__FL_PINWALL_LOADED) return;
     window.__FL_PINWALL_LOADED = true;

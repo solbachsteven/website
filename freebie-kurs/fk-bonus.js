@@ -1,5 +1,5 @@
 // Freebie Kurs - Bonus: So gewinnst du das Spiel des Lebens (Standalone)
-// <script src="https://solbachsteven.github.io/website/freebie-kurs/fk-bonus.js"></script>
+// <script src="https://stevensolbach.de/freebie-kurs/fk-bonus.js"></script>
 (function() {
     if (window.__FK_BONUS) return;
     window.__FK_BONUS = true;
@@ -409,11 +409,14 @@
     ]
 };
 
+    // Dual-Mode: Portal-Registration
+    if (window.__FK_KURS) { window.__FK_KURS.register('bonus', LESSON_DATA); return; }
+
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     function init() { window.__FK_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__FK_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/freebie-kurs/fk-engine.js';
+    s.src = 'https://stevensolbach.de/freebie-kurs/fk-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

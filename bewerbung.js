@@ -1,7 +1,7 @@
 // Win³ Mentoring - Bewerbungsformular (Standalone)
 // Multi-Step Form mit Client-Side Scoring + Backend (D1 + Resend Email)
 // Qualifiziert → Kalender-Link / Nicht qualifiziert → Win³ Kurs
-// Loaded via: <script src="https://solbachsteven.github.io/website/bewerbung.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/bewerbung.js"></script>
 (function() {
     if (window.__BW_LOADED) return;
     window.__BW_LOADED = true;

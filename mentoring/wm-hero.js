@@ -1,6 +1,6 @@
 // Win³ Mentoring Landingpage - Hero Section (Standalone)
 // 2-Spalten Layout: Text links, Coaching-Call-Mockup rechts (Desktop + Mobile Frame)
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-hero.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-hero.js"></script>
 (function() {
     if (window.__WM_HERO_LOADED) return;
     window.__WM_HERO_LOADED = true;

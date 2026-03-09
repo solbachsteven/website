@@ -1,0 +1,377 @@
+/* ======== WIN³ ACADEMY PORTAL ======== */
+
+/* Reset */
+.w3-portal, .w3-portal *, .w3-portal *::before, .w3-portal *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.w3-portal {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #FCF0D6;
+    background: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ======== SIDEBAR ======== */
+.w3-sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: rgba(45, 39, 38, 0.55);
+    border-right: 1px solid rgba(188, 128, 52, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow:
+        1px 0 2px rgba(0,0,0,0.03),
+        2px 0 6px rgba(0,0,0,0.025),
+        4px 0 12px rgba(0,0,0,0.02),
+        8px 0 24px rgba(0,0,0,0.015),
+        16px 0 48px rgba(0,0,0,0.01),
+        inset -1px 0 0 rgba(255,255,255,0.04);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.w3-sidebar-logo {
+    padding: 28px 24px 24px 12px;
+    border-bottom: 1px solid rgba(188, 128, 52, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Navigation */
+.w3-sidebar-nav {
+    flex: 1;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.w3-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(252, 240, 214, 0.6);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.w3-nav-item:hover {
+    background: rgba(252, 240, 214, 0.05);
+    color: rgba(252, 240, 214, 0.85);
+}
+
+.w3-nav-item.active {
+    background: rgba(188, 128, 52, 0.12);
+    color: #BC8034;
+    font-weight: 500;
+}
+
+.w3-nav-item.locked {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.w3-nav-item.locked:hover {
+    background: none;
+    color: rgba(252, 240, 214, 0.6);
+}
+
+.w3-nav-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.w3-nav-lock {
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    opacity: 0.5;
+}
+
+.w3-nav-separator {
+    height: 1px;
+    background: rgba(188, 128, 52, 0.1);
+    margin: 8px 12px;
+}
+
+/* User Section (bottom of sidebar) */
+.w3-sidebar-user {
+    padding: 16px;
+    border-top: 1px solid rgba(188, 128, 52, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.w3-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(188, 128, 52, 0.15);
+    border: 1px solid rgba(188, 128, 52, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #BC8034;
+    flex-shrink: 0;
+}
+
+.w3-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.w3-user-name {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.w3-user-tier {
+    font-size: 11px;
+    color: rgba(252, 240, 214, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.w3-logout-btn {
+    background: none;
+    border: none;
+    color: rgba(252, 240, 214, 0.3);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.w3-logout-btn:hover {
+    color: rgba(252, 240, 214, 0.7);
+}
+
+/* ======== CONTENT AREA ======== */
+.w3-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 240px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ======== MOBILE HAMBURGER ======== */
+.w3-hamburger {
+    display: none;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 130;
+    background: rgba(30, 28, 27, 0.9);
+    border: 1px solid rgba(188, 128, 52, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: #BC8034;
+    width: 44px;
+    height: 44px;
+}
+
+.w3-hamburger-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+}
+
+.w3-hamburger-icon span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #BC8034;
+    border-radius: 1px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.w3-hamburger-icon span:nth-child(1) { top: 0; }
+.w3-hamburger-icon span:nth-child(2) { top: 8px; }
+.w3-hamburger-icon span:nth-child(3) { top: 16px; }
+
+/* X state */
+.w3-hamburger.is-active .w3-hamburger-icon span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.w3-hamburger.is-active .w3-hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.w3-hamburger.is-active .w3-hamburger-icon span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+/* ======== MOBILE LOGO ======== */
+.w3-mobile-logo {
+    display: none;
+    position: fixed;
+    top: 16px;
+    left: 12px;
+    height: 44px;
+    z-index: 110;
+    align-items: center;
+    gap: 6px;
+}
+
+.w3-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+/* ======== LOCK OVERLAY ======== */
+.w3-lock-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 40px;
+    text-align: center;
+}
+
+.w3-lock-icon {
+    width: 64px;
+    height: 64px;
+    color: rgba(188, 128, 52, 0.3);
+    margin-bottom: 24px;
+}
+
+.w3-lock-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.w3-lock-text {
+    font-size: 15px;
+    color: rgba(252, 240, 214, 0.5);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* ======== SHARED BUTTONS (portal-level) ======== */
+.w3-btn {
+    background: #BC8034;
+    color: #2D2726;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.w3-btn:hover {
+    background: #D4973F;
+    transform: translateY(-1px);
+}
+
+.w3-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .w3-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .w3-sidebar.open {
+        transform: translateX(0);
+        z-index: 120;
+    }
+
+    .w3-content {
+        margin-left: 0;
+        padding-top: 56px;
+    }
+
+    .w3-hamburger {
+        display: block;
+    }
+
+    .w3-mobile-logo {
+        display: flex;
+    }
+
+    .w3-overlay.visible {
+        display: block;
+    }
+}
+
+/* ======== Ankerpraktik im Portal: Header als Sub-Nav ======== */
+.w3-portal .ap-header.ap-portal-mode {
+    display: flex;
+    background: transparent;
+    border-bottom: 1px solid rgba(188,128,52,0.15);
+    padding: 8px 24px;
+    justify-content: center;
+}
+.w3-portal .ap-header.ap-portal-mode .ap-nav {
+    gap: 4px;
+}
+
+.w3-portal .ap-page {
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
+    background: transparent;
+}
+
+/* Kurs-Lektionen: Hintergrund ans Portal anpassen */
+.w3-portal .lesson-section {
+    background: #1a1a1a;
+    --lesson-bg: #1a1a1a;
+    --lesson-dark: #1a1a1a;
+}

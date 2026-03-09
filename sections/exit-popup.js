@@ -1,7 +1,7 @@
 // Exit-Intent Popup - Freebie Rettungsanker
 // Zeigt kostenlosen Freebie-Kurs an wenn User die Seite verlassen will
 // Trigger: Mouse verlässt Viewport (Desktop) / 60s Inaktivität (Mobile)
-// Loaded via: <script src="https://solbachsteven.github.io/website/sections/exit-popup.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/sections/exit-popup.js"></script>
 (function() {
     if (window.__EP_LOADED) return;
     window.__EP_LOADED = true;
@@ -102,7 +102,7 @@
 }
 .ep-subline {
     font-family: 'Caveat', cursive;
-    font-size: 22px;
+    font-size: 28px;
     color: #BC8034;
     margin-bottom: 20px;
 }
@@ -147,6 +147,8 @@
 .ep-dismiss {
     display: block;
     margin-top: 20px;
+    text-align: center;
+    width: 100%;
     font-size: 13px;
     font-weight: 400;
     color: rgba(44, 39, 38, 0.35);
@@ -168,7 +170,7 @@
         border-radius: 20px;
     }
     .ep-headline { font-size: 24px; }
-    .ep-subline { font-size: 20px; }
+    .ep-subline { font-size: 24px; }
     .ep-description { font-size: 14px; }
     .ep-cta { font-size: 15px; padding: 15px 36px; width: 100%; max-width: 300px; }
 }

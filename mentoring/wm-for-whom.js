@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - F\u00fcr Wen Section (Standalone)
 // Zwei Spalten: "Das Mentoring ist f\u00fcr dich" / "Das Mentoring ist nichts f\u00fcr dich"
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-for-whom.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-for-whom.js"></script>
 (function() {
     if (window.__WM_FORWHOM_LOADED) return;
     window.__WM_FORWHOM_LOADED = true;

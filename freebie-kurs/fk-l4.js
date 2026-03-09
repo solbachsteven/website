@@ -1,6 +1,6 @@
 // Freebie Kurs - Lektion 4: Deine drei Saetze festhalten (Standalone)
 // Laedt Engine fuer Base-CSS, rendert selbst (Form + Pinwand Interaktionslogik)
-// <script src="https://solbachsteven.github.io/website/freebie-kurs/fk-l4.js"></script>
+// <script src="https://stevensolbach.de/freebie-kurs/fk-l4.js"></script>
 (function() {
     if (window.__FK_L4) return;
     window.__FK_L4 = true;
@@ -190,6 +190,19 @@
             }
         ]
     };
+
+    // Dual-Mode: Portal-Registration (L4 hat eigenen Renderer)
+    if (window.__FK_KURS) {
+        window.__FK_KURS.register('l4', LESSON_DATA, function(portalAnchor) {
+            anchor = portalAnchor;
+            if (window.__FK_ENGINE) { init(); return; }
+            var es = document.createElement('script');
+            es.src = 'https://stevensolbach.de/freebie-kurs/fk-engine.js';
+            es.onload = init;
+            document.head.appendChild(es);
+        });
+        return;
+    }
 
     function init() {
         // === L4-SPECIFIC CSS (Form + Pinwall) ===
@@ -895,7 +908,7 @@
     // === LOAD ENGINE (for base CSS) THEN INIT ===
     if (window.__FK_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/freebie-kurs/fk-engine.js';
+    s.src = 'https://stevensolbach.de/freebie-kurs/fk-engine.js';
     s.onload = init;
     s.onerror = function() {
         // Fallback: init without engine (base CSS might be missing, but form/pinwall works)

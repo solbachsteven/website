@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Hero Section (Standalone)
 // 2-Spalten Layout: Text links, Kurs-Mockup rechts (Desktop + Mobile Frame)
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-hero.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-hero.js"></script>
 (function() {
     if (window.__WK_HERO_LOADED) return;
     window.__WK_HERO_LOADED = true;

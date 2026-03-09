@@ -878,7 +878,7 @@
             // Content Blocks
             var blocks = [];
 
-            data.sections.forEach(function(s) {
+            data.sections.forEach(function(s, sIdx) {
                 var el;
                 switch (s.type) {
 
@@ -1123,6 +1123,9 @@
                     default:
                         return;
                 }
+                // Reference-Daten für Click-to-Reference
+                el.setAttribute('data-block-idx', sIdx);
+                el.setAttribute('data-block-type', s.type);
                 container.appendChild(el);
                 blocks.push(el);
             });
@@ -1157,6 +1160,13 @@
                 header.classList.add('visible');
                 blocks.forEach(function(b) { b.classList.add('visible'); });
             }
+
+            // Lesson-Metadaten für Click-to-Reference speichern
+            window.__WL_ENGINE._lastLesson = {
+                meta: data.meta,
+                sectionCount: data.sections.length,
+                sections: data.sections
+            };
 
             return { section: section, container: container, header: header, blocks: blocks };
         }

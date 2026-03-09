@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Features Section (Standalone)
 // Was du bekommst - Feature Grid
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-features.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-features.js"></script>
 (function() {
     if (window.__WK_FEATURES_LOADED) return;
     window.__WK_FEATURES_LOADED = true;

@@ -1,5 +1,5 @@
 // Win³ Kurs - Lektion 5: Du bist okay
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w5.js"></script>
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w5.js"></script>
 (function() {
     if (window.__WL_W5) return;
     window.__WL_W5 = true;
@@ -14,125 +14,107 @@
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Du versuchst seit Jahren, dich zu reparieren." },
-            { type: "text", content: "Neue Strategie. Neuer Vorsatz. Neues Buch. Und immer dasselbe: Du analysierst, verstehst, planst. Morgen wird es anders sein. Du machst Listen, setzt Ziele. Und wenn es nicht funktioniert, suchst du nach dem n\u00e4chsten Werkzeug, dem n\u00e4chsten Modell, der n\u00e4chsten Erkl\u00e4rung." },
-            { type: "emphasis", content: "Der Reparatur-Reflex. Automatisch. Unsichtbar." },
-            { type: "text", content: "Aber was wenn du gar nicht kaputt bist?" },
-            { type: "text", content: "Du bist vielleicht nicht kaputt. Nicht als Spruch. Nicht als Poster. Als echte Frage: Was wenn das grundlegende Bild - \"Ich bin defekt und muss repariert werden\" - der eigentliche Fehler ist?" },
-            { type: "text", content: "In der letzten Lektion hast du deinen lautesten Anteil kalibriert. Du wei\u00dft, wo er auf der Skala lebt. Du wei\u00dft, was er braucht. Diese Woche h\u00f6rst du auf, ihn zu reparieren. Du versorgst ihn stattdessen." },
-            { type: "text", content: "Es macht einen Unterschied." },
+            { type: "text", content: "Letzte Woche hast du einen Anteil kalibriert. Du hast ihm eine Ebene auf der Hawkins-Skala zugeordnet, gespürt, wo er im Körper sitzt, und aufgeschrieben, was er braucht." },
+            { type: "text", content: "Vielleicht hast du dabei etwas bemerkt: Es ist eine Sache, das Wort \"Mitgefühl\" auf ein Blatt Papier zu schreiben. Es ist eine ganz andere, es tatsächlich zu fühlen - einem Anteil gegenüber, der dich seit Jahren im Kreis laufen lässt." },
+            { type: "text", content: "Genau darum geht es diese Woche. Wir gehen vom Erkennen ins Fühlen, vom Verstehen ins Versorgen. Und wir beginnen mit einer Frage, die unbequemer ist, als sie klingt." },
 
             { type: "divider" },
 
-            // --- Die Gruselgeschichte ---
-            { type: "heading", level: 2, content: "Die Gruselgeschichte" },
-            { type: "text", content: "Deine Anteile halten an ihren Mustern fest. Nicht aus Dummheit. Aus \u00dcberzeugung." },
-            { type: "text", content: "Der \u00e4ngstliche Anteil glaubt, dass Gefahr droht. Der schambesetzte, dass er falsch ist. Der resignierte, dass alles sinnlos ist. F\u00fcr sie sind das Tatsachen. Erlebte Tatsachen." },
-            { type: "text", content: "Und deshalb ist Loslassen bedrohlich. Sie m\u00fcssen wachsam sein, kontrollieren, besch\u00fctzen. Oder es geht schief. Das ist ihre tiefste Programmierung." },
-            { type: "text", content: "Aber was wenn die Geschichte, die sie erz\u00e4hlen, nie wahr war?" },
-            { type: "text", content: "Du sitzt als Kind im Dunkeln. H\u00f6rst ein Ger\u00e4usch. Dein Verstand macht daraus ein Monster. Dein K\u00f6rper reagiert. Herzrasen. Schwei\u00df. Anspannung. Alles in dir schreit: Gefahr!" },
-            { type: "text", content: "In dem Moment ist die Angst absolut real. Dein K\u00f6rper unterscheidet nicht zwischen einem echten Monster und einem eingebildeten. Die Reaktion ist dieselbe." },
-            { type: "text", content: "Jetzt bist du erwachsen. Das Ger\u00e4usch ist weg. Aber die Geschichte l\u00e4uft weiter. Im Hintergrund. Leise. Automatisch. Und dein K\u00f6rper reagiert immer noch." },
-            { type: "text", content: "Du hast eine Geschichte geglaubt. Solange du sie nicht pr\u00fcfst - wirklich pr\u00fcfst - bleibt die Angst. Egal wie viele B\u00fccher du liest. Egal wie klug du dar\u00fcber sprichst." },
-            { type: "highlight", title: "Die Befreiung", content: "Wenn du die Geschichte pr\u00fcfst, stellst du fest: Das Ereignis war real. Aber die Bedeutung, die du ihm gegeben hast, war es nicht. \"Dieses Erlebnis beweist, dass ich nicht liebenswert bin.\" Das hast du geglaubt. Es war nie wahr. Nur eine Bedeutung, die ein Kind einer Erfahrung gegeben hat. Wenn du das siehst - wirklich siehst -, entl\u00e4dt sich die Energie. Du bist frei." },
-            { type: "text", content: "Das gilt nicht nur f\u00fcr Angst. Angst, Scham, Schuld - alle basieren auf Bedeutungen, die nie wahr waren. Die Erfahrungen waren real. Die Schlussfolgerungen daraus nicht. Und die Schlussfolgerungen haben dein Leben gesteuert." },
+            // --- Was, wenn du gar nicht kaputt bist? ---
+            { type: "heading", level: 2, content: "Was, wenn du gar nicht kaputt bist?" },
+            { type: "text", content: "Die meisten von uns tragen eine Grundannahme mit sich herum, die so selbstverständlich geworden ist, dass wir sie gar nicht mehr bemerken: Irgendetwas an mir muss repariert werden." },
+            { type: "text", content: "Wir lesen Bücher darüber, wie wir besser denken, fühlen, handeln könnten. Wir machen Kurse, um uns zu optimieren. Wir vergleichen uns mit Versionen von uns selbst, die produktiver, gelassener, disziplinierter sind, und der Abstand zwischen dem, was wir sind, und dem, was wir sein sollten, fühlt sich an wie ein Defizit." },
+            { type: "text", content: "Aber Richard Schwartz, der Begründer von IFS, hat bei tausenden Patienten etwas beobachtet, das dieser Annahme widerspricht: Sobald die Anteile Platz machen, taucht das Selbst auf - ruhig, klar, mitfühlend. Bei jedem. Zuverlässig." },
+            { type: "text", content: "In W1 haben wir das als Idee kennengelernt. Die dreizehn Qualitäten des Selbst - Ruhe, Klarheit, Neugier, Mitgefühl und die anderen - sind kein Ziel, das erreicht werden muss. Sie sind der Ausgangszustand, der zum Vorschein kommt, wenn die Anteile nicht mehr das Steuer halten." },
+            { type: "text", content: "Das Problem ist: Die Anteile wissen das nicht." },
+            { type: "text", content: "Für den Wächter, den Kritiker, den Perfektionisten ist Loslassen keine Erleichterung, sondern eine Bedrohung. Ihre ganze Existenz dreht sich um eine Geschichte, die sie einmal gelernt haben: \"Du bist in Gefahr. Wenn ich aufhöre, dich zu schützen, passiert etwas Schlimmes.\" Diese Geschichte war vielleicht einmal wahr - in der Kindheit, in einer bestimmten Situation, in einem Moment, in dem Schutz tatsächlich nötig war." },
+            { type: "text", content: "Aber die Situation hat sich längst geändert. Und die Geschichte läuft trotzdem weiter." },
 
             { type: "divider" },
 
-            // --- Unterdrückte Anteile ---
-            { type: "heading", level: 2, content: "Warum unterdr\u00fcckte Anteile nicht verschwinden" },
-            { type: "text", content: "Die meisten versuchen, ihre Anteile loszuwerden. Angst weg. Scham versteckt. Wut runtergedr\u00fcckt. Ich verstehe das." },
-            { type: "text", content: "Aber es funktioniert nicht. Teile, die du ablehnst, verschwinden nicht. Sie wirken immer noch. Nur aus deinem Sichtfeld." },
-            { type: "text", content: "Der w\u00fctende Anteil, den du unterdr\u00fcckst, steuert dich trotzdem - in Momenten, wo du pl\u00f6tzlich \u00fcberreagierst. Der traurige Anteil zieht an deinem Leben. In der Schwere, die \u00fcber allem liegt. Je mehr du verdr\u00e4ngst, desto mehr Energie bindet das. Du brauchst st\u00e4ndig Kraft daf\u00fcr." },
-            { type: "text", content: "In dieser Lektion geht es nicht um Wegmachen oder Aufl\u00f6sen. Um Integration." },
-            { type: "emphasis", content: "Hol zur\u00fcck, was du abgespalten hast. Mach es wieder Teil von dir." },
+            // --- Was wir abspalten, verschwindet nicht ---
+            { type: "heading", level: 2, content: "Was wir abspalten, verschwindet nicht" },
+            { type: "text", content: "Carl Jung hat vor über hundert Jahren etwas formuliert, das die Psychologie bis heute beschäftigt: Was wir an uns selbst ablehnen, verschwindet nicht. Es wandert ins Unbewusste und wirkt von dort aus weiter." },
+            { type: "text", content: "Jung nannte es den Schatten - alles, was wir verdrängen, abspalten oder verleugnen, weil es nicht in unser Selbstbild passt. Die Wut, die wir nicht zeigen dürfen. Die Traurigkeit, die wir für Schwäche halten. Die Bedürfnisse, die wir uns abgewöhnt haben, weil sie als Kind nicht willkommen waren." },
+            { type: "text", content: "Diese abgespaltenen Teile melden sich trotzdem. Als überstarke Reaktionen auf Kleinigkeiten, als Muster in Beziehungen, die sich immer wiederholen, als eine Erschöpfung, die mit Schlaf nicht besser wird. Je mehr Energie ins Verdrängen fließt, desto weniger bleibt für alles andere." },
+            { type: "text", content: "Integration bedeutet das Gegenteil von Abspalten: Was als getrennt von uns gesehen wurde, wieder zurückholen. Den Anteilen, die wir in W2 kennengelernt haben, erlauben, Teil von uns zu sein, statt gegen sie zu kämpfen." },
+            { type: "text", content: "Das klingt theoretisch. Es wird gleich sehr praktisch." },
 
             { type: "divider" },
 
-            // --- Wenn mehr kommt ---
-            { type: "heading", level: 2, content: "Wenn mehr kommt als erwartet" },
-            { type: "text", content: "Manchmal kommt was Gro\u00dfes. Eine Welle. Alt. Tief." },
-            { type: "text", content: "<strong>Eckhart Tolle</strong> nennt das den Schmerzk\u00f6rper: alte, ungef\u00fchlte Emotionen, die sich \u00fcber Jahre angesammelt haben und sich pl\u00f6tzlich aktivieren. Es f\u00fchlt sich an, als w\u00fcrde etwas das Steuer \u00fcbernehmen. Du reagierst \u00fcber. Sagst Dinge, die du nicht meinst." },
-            { type: "text", content: "Nicht weil du verr\u00fcckt bist - sondern weil alter Schmerz getriggert wird." },
-            { type: "text", content: "Das zu wissen ist wichtig. Besonders bevor du gleich in die Praxis gehst." },
-            { type: "callout", content: "<strong>Wenn das passiert:</strong> <strong>Bemerken.</strong> \"Das ist der Schmerzk\u00f6rper, nicht ich.\" <strong>Nicht einsteigen.</strong> Dein Verstand will Geschichten erz\u00e4hlen - folge dem nicht. Bleib beim Gef\u00fchl. <strong>Nicht wegdr\u00fccken.</strong> Lass es da sein. <strong>Boden unter den F\u00fc\u00dfen.</strong> Augen auf. F\u00fc\u00dfe auf den Boden. Was siehst du? Du bist hier." },
+            // --- Der Schmerzkörper ---
+            { type: "heading", level: 2, content: "Der Schmerzkörper" },
+            { type: "text", content: "Bevor wir zur Methode kommen, muss etwas gesagt werden. Denn wenn wir anfangen, unterdrückte Emotionen bewusst zu fühlen, kann etwas passieren, das sich überwältigend anfühlt, wenn man nicht darauf vorbereitet ist." },
+            { type: "text", content: "Eckhart Tolle beschreibt ein Phänomen, das er den Schmerzkörper nennt: eine Ansammlung alter, ungefühlter Emotionen, die sich irgendwann aktiviert und das Steuer übernimmt. Der Auslöser kann eine Bemerkung sein, ein Geruch, eine Situation, die einer alten Verletzung ähnelt. Plötzlich ist da eine emotionale Intensität, die in keinem Verhältnis zum Anlass steht." },
+            { type: "text", content: "In solchen Momenten denkt niemand: \"Oh, das ist eine alte Emotion, die gerade hochkommt.\" Man denkt: \"Ich bin wütend, ich bin traurig, ich bin verletzt\" - und meint es vollkommen ernst. Die alte Emotion hat sich mit dem Ich verschmolzen, und alles wird durch diesen Filter eingefärbt." },
+            { type: "text", content: "Tolle sagt: Der erste und wichtigste Schritt ist, den Schmerzkörper zu bemerken, wenn er aktiv wird. \"Das ist der Schmerzkörper, nicht ich.\" Diese Unterscheidung allein verändert alles, weil sie eine minimale Distanz schafft zwischen dem, der beobachtet, und dem, was gefühlt wird." },
+            { type: "text", content: "Wenn das passiert, helfen drei Dinge:" },
+            { type: "text", content: "<strong>Erstens, nicht einsteigen.</strong> Der Schmerzkörper bietet Geschichten an - Geschichten darüber, wer dir Unrecht getan hat, was alles schiefgelaufen ist, warum alles keinen Sinn hat. Diese Geschichten fühlen sich absolut wahr an, aber sie sind das Futter, von dem der Schmerzkörper lebt. Jeder Gedanke, den du der Geschichte hinterherschickst, gibt ihm Energie." },
+            { type: "text", content: "<strong>Zweitens, nicht wegdrücken.</strong> Der Schmerzkörper ist nicht der Feind. Er ist gespeicherte Erfahrung, die endlich gefühlt werden will. Ihn wegzudrücken ist genau das, was ihn all die Jahre am Leben gehalten hat." },
+            { type: "text", content: "<strong>Drittens, da sein.</strong> Bemerken, dass etwas in dir aktiv ist, und es beobachten, wie jemand am Ufer eines Flusses steht und zuschaut, wie das Wasser vorbeizieht. Das Wasser ist real und die Strömung ist stark, aber du stehst am Ufer." },
 
             { type: "divider" },
 
-            // --- Letting-Go ---
+            // --- Die Letting-Go-Methode ---
             { type: "heading", level: 2, content: "Die Letting-Go-Methode" },
-            { type: "text", content: "<strong>David Hawkins</strong> hat eine Methode beschrieben. Vier Schritte. Keine komplizierte Technik. Nur eine bestimmte Art, mit dem zu sein, was da ist." },
+            { type: "text", content: "In W0 haben wir David Hawkins' vierten Weg kennengelernt: Gefühle durchlassen, statt sie zu unterdrücken, auszuleben oder zu vermeiden. Jetzt wird dieser Weg konkret." },
+            { type: "text", content: "Hawkins hat in \"Letting Go\" eine Methode beschrieben, die so einfach ist, dass man ihr kaum zutraut, etwas zu bewirken. Vier Schritte." },
 
-            { type: "steps", title: "Die Letting-Go-Methode", items: [
-                { title: "F\u00fchlen im K\u00f6rper", description: "Wo sitzt das Gef\u00fchl? Nicht denken - sp\u00fcren. Bauch? Brust? Kehle? Schultern? Geh mit deiner Aufmerksamkeit dorthin. Nicht um etwas zu \u00e4ndern. Nur um wahrzunehmen, was da ist. Druck. Enge. Schwere. Hitze. K\u00e4lte. Kribbeln." },
-                { title: "Die Story loslassen", description: "Der schwierigste Schritt. Dein Verstand will erkl\u00e4ren - warum du so f\u00fchlst, wer schuld ist, was du tun solltest. Lass ihn reden. Aber folge ihm nicht. Bleib beim reinen Gef\u00fchl. Angst ohne Geschichte ist nur Energie. Die Geschichte h\u00e4lt das Gef\u00fchl fest. Ohne Geschichte flie\u00dft es." },
-                { title: "Erlauben", description: "Nicht dagegen k\u00e4mpfen. Nicht verstehen wollen. Erlaube einfach. Du hast gek\u00e4mpft, verdr\u00e4ngt, kontrolliert. Erlauben hei\u00dft: Ich h\u00f6re auf. Widerstand h\u00e4lt fest. Erlauben l\u00e4sst flie\u00dfen." },
-                { title: "Liebevolle Aufmerksamkeit", description: "Ein Kind kommt weinend zu dir. Du nimmst es nicht auseinander. Du erkl\u00e4rst nicht, warum sein Weinen irrational ist. Du bist da. Du sagst: \"Ich sehe dich. Du bist sicher.\" Das tust du jetzt mit deinem Anteil. Wie eine gute Mutter. Ohne Urteil. Ohne den Wunsch zu reparieren." }
-            ]},
+            { type: "heading", level: 3, content: "Schritt 1: Im Körper fühlen" },
+            { type: "text", content: "Der erste Schritt ist, das Gefühl nicht im Kopf zu suchen, sondern im Körper. Wo sitzt es? Im Bauch, in der Brust, im Hals, in den Schultern? Was passiert dort genau - ein Druck, eine Enge, eine Hitze, ein Ziehen?" },
+            { type: "text", content: "Das ist der entscheidende Unterschied zum Nachdenken über ein Gefühl. Wer über Angst nachdenkt, erzeugt meistens mehr Angst, weil der Verstand sofort anfängt, Szenarien durchzuspielen. Wer Angst im Körper spürt, bemerkt vielleicht ein Zusammenziehen im Magen und eine flache Atmung - und das ist alles. Es ist körperliche Empfindung, und als solche ist sie aushaltbar." },
 
-            { type: "text", content: "Die Selbst-Qualit\u00e4ten aus Lektion 1 - Mitgef\u00fchl, Ruhe, Geduld - sind genau das, was dein Anteil jetzt braucht. Du hast sie. Sie waren die ganze Zeit da." },
+            { type: "heading", level: 3, content: "Schritt 2: Die Geschichte loslassen" },
+            { type: "text", content: "Jedes Gefühl kommt mit einer Geschichte. Die Angst kommt mit \"Was wenn das schiefgeht?\", die Wut mit \"Das hätte nicht passieren dürfen\", die Scham mit \"Ich bin nicht gut genug.\"" },
+            { type: "text", content: "Hawkins sagt: Lass die Geschichte fallen und bleib beim reinen Gefühl. Das bedeutet nicht, dass die Geschichte falsch ist. Es bedeutet, dass sie gerade nicht hilft. Die Geschichte hält das Gefühl fest, weil jeder Gedanke über die Ursache das Gefühl neu entfacht. Ohne die Geschichte ist ein Gefühl nur Energie im Körper, und Energie, die nicht festgehalten wird, löst sich auf." },
 
-            { type: "divider" },
+            { type: "heading", level: 3, content: "Schritt 3: Erlauben" },
+            { type: "text", content: "Hier wird es kontraintuitiv: Statt das Gefühl loswerden zu wollen, erlaubst du ihm, da zu sein. Vollständig, so wie es ist." },
+            { type: "text", content: "Hawkins nennt das Allowing - die Bereitschaft, dem Gefühl Raum zu geben. Widerstand ist es, der ein Gefühl am Leben hält. Wer gegen Angst ankämpft, erzeugt Angst vor der Angst. Wer Trauer nicht zulässt, verwandelt sie in eine chronische Schwere, die sich wie Erschöpfung anfühlt. Erlauben ist das Gegenteil von Widerstand, und ohne Widerstand hat ein Gefühl keinen Grund zu bleiben." },
 
-            { type: "text", content: "Wenn die Story weg ist, bleibt du. Ohne Bewertung, ohne Geschichte. Einfach da." },
-            { type: "emphasis", content: "Was bleibt, wenn die Geschichte wegf\u00e4llt? Du. Nicht repariert. Nie kaputt." },
-
-            { type: "divider" },
-
-            // --- Ressourcen-Inventar ---
-            { type: "heading", level: 2, content: "Dein Ressourcen-Inventar" },
-            { type: "text", content: "Die Letting-Go-Methode ist der direkte Weg. Aber manchmal reicht direktes F\u00fchlen nicht. Ein Anteil braucht mehr. Etwas Konkretes. Etwas, das du tun oder dir geben kannst." },
-            { type: "text", content: "In Lektion 4 hast du erkannt, was dein Anteil braucht: innere Eltern, einen Coach, Verst\u00e4ndnis, Pr\u00e4senz. Was hei\u00dft das konkret? F\u00fcr dich?" },
-            { type: "text", content: "Nimm dein Arbeitsblatt aus der letzten Lektion. Und schreib neben jeden Anteil: Was ist meine Ressource daf\u00fcr?" },
-            { type: "text", content: "Ein Beispiel: Dein Anteil lebt in Scham. Er braucht Sicherheit, Annahme. Was k\u00f6nnte helfen? Ein Satz, den du dir sagst. Eine Erinnerung. Die Hand auf dein Herz." },
-            { type: "text", content: "Ein anderes Beispiel: Dein Anteil lebt in Angst. Er braucht Mut, Perspektive. Eine Erinnerung an einen mutigen Moment. Eine Atem\u00fcbung. \"Ich habe das schon gemacht.\"" },
-            { type: "text", content: "Diese Liste ist dein Werkzeug. F\u00fcr die Session, f\u00fcr schwierige Momente, f\u00fcr alles danach." },
+            { type: "heading", level: 3, content: "Schritt 4: Liebevolle Aufmerksamkeit" },
+            { type: "text", content: "Der letzte Schritt bringt alles zusammen. Du gibst dem Gefühl nicht nur Raum, sondern Zuwendung - so wie jemand mit einem Kind umgeht, das weint. Nicht \"Hör auf zu weinen\", nicht \"Es ist doch gar nicht so schlimm.\" Sondern daneben sitzen, da sein und das Kind weinen lassen, so lange es weinen muss." },
+            { type: "text", content: "Und hier schließt sich der Kreis zu W1. Die Qualitäten des Selbst - Ruhe, Mitgefühl, Präsenz - sind keine abstrakten Tugenden, die wir irgendwann erreichen sollten. Sie sind genau das, was ein verletzter Anteil braucht, um seine Last abzulegen. Das Selbst ist der innere Elternteil, den der Anteil nie hatte." },
+            { type: "text", content: "Der Anteil bei Scham braucht Annahme. Der bei Angst braucht Präsenz. Der bei Trauer braucht jemanden, der bleibt. All das sind Qualitäten, die bereits in dir vorhanden sind - sie müssen nicht erzeugt werden, sondern nur den Anteilen zugänglich gemacht werden, die sie brauchen." },
 
             { type: "divider" },
 
-            // --- Pflichtübung ---
-            { type: "heading", level: 2, content: "Pflicht\u00fcbung: Letting-Go-Session" },
-            { type: "text", content: "Nimm 20 bis 30 Minuten. Kein Handy, keine Ablenkung. Ein sicherer Ort." },
+            // --- Pflichtübung: Letting-Go-Session ---
+            { type: "heading", level: 2, content: "Pflichtübung: Letting-Go-Session" },
+            { type: "text", content: "Plane dafür 20 bis 30 Minuten ein, in denen du ungestört bist. Das ist keine Übung, die nebenbei funktioniert." },
+            { type: "text", content: "<strong>Vorbereitung:</strong> Nimm das Arbeitsblatt aus W4 - den Anteil, den du kalibriert hast. Lies durch, was du über ihn aufgeschrieben hast: seine Rolle, seine Hawkins-Ebene, wo er im Körper sitzt, was er braucht." },
+            { type: "text", content: "<strong>Die vier Schritte:</strong>" },
+            { type: "text", content: "Setz dich bequem hin und schließ die Augen. Denk an eine Situation, in der dieser Anteil zuletzt aktiv war - und dann geh die Schritte durch:" },
 
             { type: "steps", title: "Letting-Go-Session", items: [
-                { title: "Vorbereitung", description: "Nimm dein Arbeitsblatt aus Lektion 4. Der Anteil, den du kalibriert hast - mit dem arbeitest du jetzt. Augen zu. Atme tief ein und aus. Lass es nat\u00fcrlich werden. Ruf den Anteil auf - denk an ihn und warte." },
-                { title: "F\u00fchlen", description: "Wo im K\u00f6rper sp\u00fcrst du ihn? Geh mit deiner Aufmerksamkeit dorthin. Bleib dort." },
-                { title: "Story loslassen", description: "Wenn Gedanken kommen - und sie werden kommen -, lass sie vorbeiziehen. Zur\u00fcck zum K\u00f6rpergef\u00fchl. Immer wieder." },
-                { title: "Erlauben", description: "Sag innerlich: \"Ich erlaube diesem Gef\u00fchl, da zu sein.\" Nicht als Mantra, nicht als Formel. Als Haltung. Du machst nichts falsch und nichts richtig. Du bist einfach da." },
-                { title: "Liebevolle Aufmerksamkeit", description: "Was w\u00fcrdest du diesem Anteil sagen, wenn er ein Kind w\u00e4re? Sag es ihm. Innerlich, leise. \"Ich sehe dich. Ich bin hier.\"" },
-                { title: "Pr\u00fcfen", description: "Wenn du bereit bist: Ist die Geschichte, die dieser Anteil erz\u00e4hlt, wahr? Was bleibt ohne die Geschichte? Bleib so lange es sich richtig anf\u00fchlt. Minimum zehn Minuten." }
+                { title: "Fühlen", description: "Spüre ins Körpergefühl hinein. Wo meldet sich dieser Anteil? Was passiert dort?" },
+                { title: "Geschichte loslassen", description: "Wenn Gedanken kommen - über die Situation, über die Person, über dich selbst -, lass sie ziehen und komm zurück zum Körpergefühl." },
+                { title: "Erlauben", description: "Kämpf nicht dagegen, versuch nicht, es zu verändern. Lass das Gefühl da sein, so wie es ist." },
+                { title: "Zuwendung", description: "Wende dich dem Gefühl zu, als würdest du neben einem Freund sitzen, der gerade eine schwere Zeit durchmacht. Du musst nichts sagen und nichts tun. Da sein reicht." }
             ]},
 
-            { type: "callout", content: "<strong>Wenn starke Emotionen kommen:</strong> Es bedeutet, dass sich etwas bewegt. Lass es flie\u00dfen. Wenn zu viel: Augen auf. F\u00fc\u00dfe auf Boden. Raum wahrnehmen. Du bist sicher." },
+            { type: "callout", content: "<strong>Wenn starke Emotionen kommen:</strong> Öffne die Augen. Spüre deine Füße auf dem Boden. Schau dich um, benenne drei Dinge, die du siehst. Das bringt dich zurück ins Hier und Jetzt. Du kannst jederzeit abbrechen und es ein anderes Mal versuchen. Es gibt kein Richtig oder Falsch, und es gibt keine Eile." },
+
+            { type: "text", content: "<strong>Nach der Übung:</strong> Schreib auf, was du erlebt hast. Was hast du gefühlt? Was hat sich verändert? Was hat dich überrascht?" },
 
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
-            { type: "text", content: "Dein t\u00e4gliches Schreiben bekommt in dieser Lektion einen Selbstf\u00fcrsorge-Fokus:" },
+            { type: "heading", level: 2, content: "Ankerpraktik: Der Anteil des Tages" },
+            { type: "text", content: "Die Ankerpraktik bekommt diese Woche zwei Fragen, die du in dein tägliches Schreiben mitnehmen kannst:" },
+            { type: "text", content: "<strong>\"Welcher Anteil meldet sich heute?\"</strong> - Nicht jeder Tag bringt denselben Anteil zum Vorschein. Mal ist es der Kritiker, mal der Ängstliche, mal einer, den du noch gar nicht benannt hast. Die Frage hilft, den Autopiloten zu unterbrechen und zu bemerken, was gerade im Hintergrund läuft." },
+            { type: "text", content: "<strong>\"Welche Geschichte habe ich heute geglaubt, die vielleicht nicht wahr ist?\"</strong> - Jeder Anteil erzählt Geschichten. \"Du schaffst das nicht.\" \"Die anderen sind besser.\" \"Es reicht nie.\" Diese Geschichten fühlen sich an wie Fakten, solange man sie nicht hinterfragt. Die Frage \"Ist das wahr?\" ist oft alles, was es braucht, um die Geschichte als Geschichte zu erkennen." },
 
             { type: "anchorpractice", layers: [
-                { label: "Schicht 1 (Freies Schreiben)", prompt: "Welcher Anteil meldet sich? Was erz\u00e4hlt er? Welche Geschichte habe ich geglaubt?" },
-                { label: "Schicht 2 (KI als Spiegel)", prompt: "Welches Gef\u00fchl spiegelt sich in meinem Text? Was sehe ich nicht?" },
-                { label: "Schicht 3 (KI als Coach)", prompt: "Was braucht der Anteil, der sich heute meldet? Was w\u00e4re liebevoll?" }
+                { label: "Schicht 1 (Freies Schreiben)", prompt: "Welcher Anteil meldet sich heute? Was erzählt er?" },
+                { label: "Schicht 2 (Reflexion)", prompt: "Welche Geschichte habe ich heute geglaubt, die vielleicht nicht wahr ist?" },
+                { label: "Schicht 3 (Zuwendung)", prompt: "Was braucht der Anteil, der sich heute meldet? Was wäre liebevoll?" }
             ]},
 
             { type: "divider" },
 
-            // --- Integration ---
-            { type: "heading", level: 2, content: "Integration" },
-            { type: "text", content: "Nicht, Teile loszuwerden. Sie zu integrieren." },
-            { type: "text", content: "Was abgespalten war, darf wieder Teil sein. Was gewirkt hat, darf sichtbar werden. Um es zu sehen, zu f\u00fchlen. Nicht um es zu reparieren." },
-            { type: "text", content: "Die Methode ist kein einmaliges Ding. Ein Werkzeug, das du immer wieder nutzt - bei alten Themen, bei neuen, bei allem." },
-            { type: "emphasis", content: "Du musst dich nicht reparieren. Du warst nie kaputt." },
-
-            { type: "divider" },
-
-            // --- Was kommt ---
-            { type: "heading", level: 2, content: "Was kommt" },
-            { type: "text", content: "Du kannst f\u00fchlen und integrieren. Ein Werkzeug, das tiefer geht als Verstehen." },
-            { type: "text", content: "N\u00e4chste Woche baust du eine Br\u00fccke: Erkenntnis, Gef\u00fchl, Handlung. Du lernst, dich selbst zu coachen. Eine Schleife f\u00fcr alles." },
-            { type: "text", content: "Nach Phase 2 kommt etwas Neues. Die Energie, die in deinen Blockaden gebunden war, wird frei. Phase 3 zeigt dir: in die Welt." },
+            // --- Closing ---
+            { type: "emphasis", content: "In W1 hast du die Qualitäten deines Selbst kennengelernt. In W4 hast du erkannt, was deine Anteile festhält. Diese Woche hast du die beiden zusammengebracht: Die Qualitäten des Selbst sind genau das, was die Anteile brauchen, um loszulassen. In W6 gehen wir einen Schritt weiter - du wirst dein eigener Coach und lernst, diese innere Arbeit gezielt und eigenständig fortzuführen." },
 
             { type: "divider" },
 
@@ -140,12 +122,12 @@
             { type: "progress-bar", label: "Lektion 5 von 9", percent: 56, detail: "Phase 2: Do Good" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Letting-Go-Session durchgef\u00fchrt",
-                "Ressourcen-Inventar erstellt"
+                "Lektion vollständig gelesen",
+                "Letting-Go-Session durchgeführt (20-30 Min)",
+                "Ankerpraktik: Anteil des Tages beantwortet"
             ]},
 
-            { type: "signoff", text: "Du bist nicht kaputt. Du warst es nie. In W6 lernst du, dich selbst zu coachen.", name: "Steven" }
+            { type: "signoff", text: "Die Qualitäten des Selbst sind genau das, was deine Anteile brauchen, um loszulassen. In W6 wirst du dein eigener Coach.", name: "Steven" }
         ]
     };
 
@@ -153,7 +135,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

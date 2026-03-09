@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Testimonials Section (Standalone)
 // Exaktes Template von Website testimonials.js: Masonry Grid, Title Card, Mobile Swipe
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-testimonials.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-testimonials.js"></script>
 (function() {
     if (window.__WK_TESTIMONIALS_LOADED) return;
     window.__WK_TESTIMONIALS_LOADED = true;

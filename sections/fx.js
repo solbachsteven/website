@@ -46,7 +46,7 @@
     box-shadow: 0 0 4px rgba(188, 128, 52, 0.4);
 }
 
-/* 3. DAS LICHT (GLOW) */
+/* 3. DAS LICHT (GLOW) - immer HINTER Content */
 .glow-element {
     position: fixed;
     width: 500px;
@@ -55,13 +55,18 @@
     pointer-events: none;
     transform: translate(-50%, -50%);
     filter: blur(40px);
-    z-index: 0;
+    z-index: 1;
 }
 
-/* 4. CONTENT-LIFT */
-.section, .container, .elText, .elHeadline, .elButton {
+/* 4. CONTENT-LIFT - alles ueber Glow und BG-Partikel */
+.section, .container, .elText, .elHeadline, .elButton,
+.w3-portal, .w3-main, .ss-header,
+#win3-portal {
     position: relative;
     z-index: 5;
+}
+#win3-portal {
+    min-height: 100vh;
 }
 
 /* 5. MOBILE WEICHE (CSS) */

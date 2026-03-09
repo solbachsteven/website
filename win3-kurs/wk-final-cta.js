@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Final CTA Section (Standalone)
 // Letzter Push mit emotionaler Headline und CTA
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-final-cta.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-final-cta.js"></script>
 (function() {
     if (window.__WK_FINALCTA_LOADED) return;
     window.__WK_FINALCTA_LOADED = true;

@@ -1,5 +1,5 @@
 // Community Pinnwand - Final CTA Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/community/cp-final-cta.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/community/cp-final-cta.js"></script>
 (function() {
     if (window.__CP_FINAL_LOADED) return;
     window.__CP_FINAL_LOADED = true;

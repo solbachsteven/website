@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - Testimonials Section (Standalone)
 // Masonry Grid mit Title Card, Mobile Swipe, Dots
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-testimonials.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-testimonials.js"></script>
 (function() {
     if (window.__WM_TESTIMONIALS_LOADED) return;
     window.__WM_TESTIMONIALS_LOADED = true;
@@ -323,7 +323,7 @@
         titleLine3: "sagen",
         items: [
             {
-                image: "https://solbachsteven.github.io/website/images/simon.jpg",
+                image: "https://stevensolbach.de/images/simon.jpg",
                 name: "Simon Kocksch",
                 role: "Physiotherapeut",
                 quote: "In einer Lebensphase voller Chaos hat Steven mir geholfen, die L\u00fccken zwischen meinen Gedanken zu schlie\u00dfen. Durch ihn ist mir klar geworden, dass es m\u00f6glich ist, die Distanz zwischen Gef\u00fchl und Reaktion zu vergr\u00f6\u00dfern. Dadurch treffe ich Entscheidungen, die mich meinen Zielen n\u00e4her bringen.",
@@ -331,7 +331,7 @@
                 mobileOrder: 1
             },
             {
-                image: "https://solbachsteven.github.io/website/images/anna.jpg",
+                image: "https://stevensolbach.de/images/anna.jpg",
                 name: "Anna Herpel",
                 role: "Coach, \u00c4rztin",
                 quote: "Neben Herzensw\u00e4rme und bedingungsloser Annahme zeichnet ihn seine treffsichere Analyse, seine spirituelle Anbindung ans H\u00f6here, welche er in Alltagstipps einflie\u00dfen l\u00e4sst, und die F\u00e4higkeit, sich in menschliche H\u00f6hen und Tiefen zu bewegen aus. Absolut empfehlenswert!",
@@ -339,7 +339,7 @@
                 mobileOrder: 2
             },
             {
-                image: "https://solbachsteven.github.io/website/images/natascha.jpg",
+                image: "https://stevensolbach.de/images/natascha.jpg",
                 name: "Natascha",
                 role: "Musikp\u00e4dagogin",
                 quote: "Ich mag an dir deine ruhige, freundliche und klare Art. Du bist f\u00fcr mich ein Vorbild in Sachen Selbstliebe, jemand, der schon so manche H\u00fcrde genommen hat auf dem Weg der Innenarbeit. Ich erlebe dich als einen Menschen, dem es am Herzen liegt, anderen auf ihrem Weg zu helfen.",
@@ -347,7 +347,7 @@
                 mobileOrder: 3
             },
             {
-                image: "https://solbachsteven.github.io/website/images/julia.jpg",
+                image: "https://stevensolbach.de/images/julia.jpg",
                 name: "Julia Adam",
                 role: "Massagetherapeutin & Content Creator",
                 quote: "Steven hat ein gro\u00dfes Talent darin, mir liebevoll meine inneren Themen aufzuzeigen und mich zu begleiten, meine Schatten zu erkennen. Durch seine einf\u00fchlsame und zugleich direkte Art hat er mir geholfen, ehrlich hinzuschauen.",
@@ -355,7 +355,7 @@
                 mobileOrder: 4
             },
             {
-                image: "https://solbachsteven.github.io/website/images/sabrina.jpg",
+                image: "https://stevensolbach.de/images/sabrina.jpg",
                 name: "Dr. Sabrina Schmitz",
                 role: "Coachin, Heilbegleiterin",
                 quote: "An Steven ist wunderbar, dass er so klar und deutlich spricht - und dadurch genau die blinden Flecken trifft, die man alleine nicht sieht. Gleichzeitig strahlt er eine Ruhe und W\u00e4rme aus, in der man sich sicher f\u00fchlt.",
@@ -363,7 +363,7 @@
                 mobileOrder: 5
             },
             {
-                image: "https://solbachsteven.github.io/website/images/sophie.jpg",
+                image: "https://stevensolbach.de/images/sophie.jpg",
                 name: "Sophie",
                 role: "Psychologiestudentin",
                 quote: "Stevens Coaching hat mir geholfen, meine St\u00e4rken zu erkennen und Klarheit \u00fcber meinen Weg zu gewinnen. Seine authentische Art macht es leicht, sich zu \u00f6ffnen.",
@@ -371,7 +371,7 @@
                 mobileOrder: 6
             },
             {
-                image: "https://solbachsteven.github.io/website/images/stefan.jpg",
+                image: "https://stevensolbach.de/images/stefan.jpg",
                 name: "Stefan",
                 role: "Unternehmer",
                 quote: "Was mich beeindruckt hat: Steven gibt keine fertigen Antworten. Er stellt die Fragen, die dich selbst zur Antwort f\u00fchren. Das ist nachhaltiger als jeder Ratschlag.",
@@ -379,7 +379,7 @@
                 mobileOrder: 7
             },
             {
-                image: "https://solbachsteven.github.io/website/images/maria.jpg",
+                image: "https://stevensolbach.de/images/maria.jpg",
                 name: "Maria",
                 role: "Lehrerin",
                 quote: "Ich war skeptisch, ob Coaching etwas f\u00fcr mich ist. Nach den Sessions mit Steven wei\u00df ich: Es war eine der besten Entscheidungen meines Lebens.",

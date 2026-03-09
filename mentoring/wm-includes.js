@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - Includes/Features Section (Standalone)
 // Was du bekommst - 6 Feature Cards
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-includes.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-includes.js"></script>
 (function() {
     if (window.__WM_INCLUDES_LOADED) return;
     window.__WM_INCLUDES_LOADED = true;

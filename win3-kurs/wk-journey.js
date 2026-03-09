@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Journey Section (Standalone) - HERZSTUECK
 // Die Reise: Selbsterkenntnis → Selbstbefreiung → Selbstverwirklichung
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-journey.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-journey.js"></script>
 (function() {
     if (window.__WK_JOURNEY_LOADED) return;
     window.__WK_JOURNEY_LOADED = true;

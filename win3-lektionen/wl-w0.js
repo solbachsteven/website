@@ -1,5 +1,5 @@
 // Win³ Kurs - Lektion 0: Einführung
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w0.js"></script>
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w0.js"></script>
 (function() {
     if (window.__WL_W0) return;
     window.__WL_W0 = true;
@@ -9,126 +9,102 @@
     var LESSON_DATA = {
         meta: {
             label: "LEKTION 0",
-            title: "Einf\u00fchrung",
-            subtitle: "Dein Ger\u00e4t kam ohne Anleitung"
+            title: "Einführung",
+            subtitle: "Die Landkarte"
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Du hast ein Ger\u00e4t bekommen. Das komplizierteste Ger\u00e4t, das es gibt. Und wahrscheinlich das faszinierendste." },
-            { type: "emphasis", content: "Dein Leben." },
-            { type: "text", content: "Es kam ohne Anleitung. Kein Handbuch. Kein Beipackzettel. Du bist irgendwann aufgewacht, und da war die Welt. Mit Eltern, die selbst keine Anleitung hatten. Mit Lehrern, die dir beigebracht haben, wie die Welt funktioniert - aber nicht, wie du funktionierst. Mit einer Gesellschaft, die dir gesagt hat, was du tun sollst - aber nie, wer du bist." },
-            { type: "text", content: "Also hast du improvisiert. Wie jeder." },
-            { type: "text", content: "Du hast Rollen \u00fcbernommen. Erwartungen erf\u00fcllt. Strategien entwickelt, die funktioniert haben - zumindest eine Zeit lang. Und irgendwann hast du etwas gesp\u00fcrt. Nicht laut, eher wie ein leises Summen im Hintergrund: Das funktioniert. Aber es reicht nicht. Da ist mehr. Oder etwas anderes. Etwas, das du nicht benennen kannst, aber das dich nicht in Ruhe l\u00e4sst." },
-            { type: "text", content: "Wenn du dieses Summen kennst, bist du hier richtig." },
+            { type: "text", content: "Genau so kommen wir in dieses Leben. Niemand hat uns eine Anleitung gegeben. Niemand hat gesagt: \u201eDas ist die Welt. So funktioniert sie. Das bist du. Das ist, wofür du hier bist.\u201c" },
+            { type: "text", content: "Wir bekommen ein hochkomplexes Gerät - einen Körper, ein Bewusstsein, eine Innenwelt voller Stimmen und Impulse - und müssen irgendwie selbst herausfinden, was hier abgeht. Wir schauen uns ab, was die anderen tun. Wir übernehmen Rollen, entwickeln Strategien, bauen uns ein Leben auf. Manches davon funktioniert erstaunlich gut. Anderes funktioniert nur von außen betrachtet." },
+            { type: "text", content: "Und irgendwann taucht bei vielen Menschen eine Frage auf, die sich nicht mehr ignorieren lässt. Sie kommt morgens unter der Dusche, abends auf dem Sofa, im Auto auf dem Heimweg. Manchmal leise, manchmal so laut, dass sie alles übertönt:" },
+            { type: "emphasis", content: "Ist das wirklich mein Leben - oder lebe ich das Leben von jemand anderem?" },
+            { type: "text", content: "Dieser Kurs ist für Menschen, die diese Frage ernst nehmen. Er gibt keine fertigen Antworten, weil die nur von dir selbst kommen können. Aber er gibt dir Werkzeuge, mit denen du deine eigenen Antworten finden kannst." },
 
             { type: "divider" },
 
             // --- Drei Fragen ---
             { type: "heading", level: 2, content: "Drei Fragen" },
-            { type: "text", content: "Jeder Mensch tr\u00e4gt drei Fragen in sich. Manche stellen sie sich bewusst. Manche sp\u00fcren sie nur als Unruhe, als L\u00fccke, als ein diffuses \"Irgendwas stimmt nicht.\"" },
+            { type: "text", content: "Der Kurs dreht sich um drei Fragen. Jede davon klingt einfach, und keine davon lässt sich in einem Nachmittag beantworten." },
             { type: "text", content: "<strong>Wer bin ich?</strong>" },
-            { type: "text", content: "Nicht dein Name. Nicht dein Beruf. Nicht deine Rolle als Partner, Mutter, Vater, Kollege. Wer bist du, wenn all das wegf\u00e4llt? Wer ist da, wenn es still wird?" },
-            { type: "text", content: "<strong>Was h\u00e4lt mich fest - und wie befreie ich mich?</strong>" },
-            { type: "text", content: "Du wei\u00dft vermutlich genau, was du \u00e4ndern m\u00fcsstest. Du hast B\u00fccher gelesen, Podcasts geh\u00f6rt, vielleicht Therapie gemacht. Du verstehst dein Problem. Und trotzdem sitzt du fest. Nicht weil du dumm bist. Nicht weil du faul bist. Sondern weil Verstehen und Befreien zwei v\u00f6llig verschiedene Dinge sind." },
+            { type: "text", content: "Unter den Rollen, die wir spielen. Unter den Erwartungen, die wir erfüllen. Unter den Geschichten, die wir uns über uns selbst erzählen. Wer ist da, wenn all das zur Ruhe kommt?" },
+            { type: "text", content: "<strong>Was hält mich fest?</strong>" },
+            { type: "text", content: "Die meisten Menschen, die etwas verändern wollen, wissen längst, was sie tun sollten. Trotzdem tun sie es nicht. Wissen und Befreiung sind zwei verschiedene Dinge, und der Abstand zwischen beiden ist größer, als die meisten Ratgeber zugeben." },
             { type: "text", content: "<strong>Was bringe ich in die Welt?</strong>" },
-            { type: "text", content: "Nicht was du tun sollst. Was du zu geben hast. Was nur du sehen, f\u00fchlen, schaffen kannst - und ja, wof\u00fcr du auch bezahlt werden darfst." },
-            { type: "text", content: "Dieser Kurs beantwortet alle drei Fragen. Nicht mit Theorie. Mit Erfahrung." },
+            { type: "text", content: "Wenn du weißt, wer du bist, und wenn du dich von dem befreit hast, was dich festhält, bleibt eine Frage übrig: Was machst du jetzt damit? Wie bringst du das, was in dir steckt, in eine Form, die anderen dient und dich gleichzeitig trägt?" },
+            { type: "text", content: "Jede dieser Fragen entspricht einer Phase im Kurs. Phase 1 handelt von Selbsterkenntnis, Phase 2 von Selbstbefreiung, Phase 3 von Selbstverwirklichung. Die Reihenfolge ist kein Zufall: Ohne zu wissen, wer du bist, kannst du nicht erkennen, was dich festhält. Und ohne dich zu befreien, baust du auf einem Fundament, das nicht trägt." },
+            { type: "text", content: "Für diese Reise brauchen wir zwei Karten: eine für die Innenwelt und eine für die Entwicklung." },
 
             { type: "divider" },
 
-            // --- Zwei Karten ---
-            { type: "heading", level: 2, content: "Zwei Karten" },
-            { type: "text", content: "Bevor wir losgehen, brauchst du Orientierung. Nicht eine Landkarte - zwei. Eine f\u00fcr deine Innenwelt. Eine f\u00fcr deine Au\u00dfenwelt." },
+            // --- Die Innenwelt-Karte ---
+            { type: "heading", level: 2, content: "Die Innenwelt-Karte: Das Selbst" },
+            { type: "text", content: "Richard Schwartz war Familientherapeut. In den 80er Jahren fiel ihm auf, dass seine Patienten immer wieder sagten: \u201eEin Teil von mir will das, aber ein anderer Teil will das Gegenteil.\u201c Die meisten Therapeuten hätten das als Redewendung abgetan. Schwartz nahm es wörtlich." },
+            { type: "text", content: "Er fing an, diese Teile direkt anzusprechen. Und sie antworteten." },
+            { type: "text", content: "Über Jahrzehnte beobachtete er dasselbe Muster bei tausenden von Menschen: Wir tragen verschiedene innere Anteile in uns - den Kritiker, der uns antreibt, den Ängstlichen, der uns bremst, den Perfektionisten, der nie zufrieden ist. Diese Anteile sind keine Störungen - sie sind Schutzstrategien, die irgendwann einmal sinnvoll waren." },
+            { type: "text", content: "Aber das Bemerkenswerte war etwas anderes. Schwartz beobachtete, dass unter all diesen Schutzschichten bei jedem Menschen etwas zum Vorschein kam, das sich erstaunlich ähnlich anfühlte: ein Zustand von Ruhe, Klarheit, Mitgefühl und Neugier. Keine Technik, kein Training - diese Qualitäten tauchten auf, sobald die Anteile Platz machten. Zuverlässig. Bei jedem." },
+            { type: "text", content: "Er nannte es das Selbst." },
+            { type: "text", content: "Schwartz beschrieb dreizehn natürliche Qualitäten dieses Selbst: Ruhe, Klarheit, Neugier, Mitgefühl, Vertrauen, Mut, Kreativität, Verbundenheit, Geduld, Ausdauer, Perspektive, Präsenz und Verspieltheit. Das sind keine Ziele, die du erreichen musst. Es sind Eigenschaften, die bereits da sind - verdeckt von den Schutzschichten, die sich im Laufe eines Lebens angesammelt haben." },
+            { type: "text", content: "Stell dir die Sonne vor. Auch wenn der Himmel schwarz ist vor Wolken, auch wenn es stürmt und regnet - die Sonne ist immer da. Sie muss nicht erzeugt werden. Sie muss nur freigelegt werden. Die Wolken sind die Anteile. Die Sonne ist das Selbst." },
+            { type: "text", content: "Diese Karte begleitet uns durch Phase 1 und Phase 2 des Kurses. In Phase 1 lernen wir die Anteile kennen, die uns lenken, ohne dass wir es merken. In Phase 2 arbeiten wir daran, ihnen den Druck zu nehmen, damit das Selbst durchscheinen kann." },
 
-            { type: "heading", level: 3, content: "Karte 1: Dein Selbst" },
-            { type: "text", content: "Du ziehst alles aus, was du dir im Laufe deines Lebens angezogen hast. Rollen, die du gespielt hast. \u00dcberzeugungen, die gar nicht deine waren. Strategien, Masken. Die ganzen Stimmen im Kopf, die immer wissen, was du sollst." },
-            { type: "text", content: "Was bleibt?" },
-            { type: "text", content: "Die Psychologie nennt es \"das Selbst\". Nicht eine weitere Stimme. Nicht eine bessere Version von dir. Sondern das, was unter allen Stimmen liegt. Das, was alle Stimmen kennt, ohne selbst eine zu sein." },
-            { type: "text", content: "Dieses Selbst hat nat\u00fcrliche Qualit\u00e4ten. Nicht Ziele, die du erreichen musst - Eigenschaften, die bereits da sind. Ruhe, Klarheit, Neugier, Mitgef\u00fchl - um nur ein paar zu nennen. Dreizehn Qualit\u00e4ten insgesamt. Kreativit\u00e4t, Mut, Verbundenheit, Freude, Beharrlichkeit, Pr\u00e4senz, Spielfreude, Geduld und Perspektive. Versch\u00fcttet vielleicht. Verdeckt durch Jahrzehnte von Anpassung und Selbstschutz. Aber da." },
-            { type: "text", content: "In den n\u00e4chsten Lektionen wirst du sie freilegen. Nicht indem du etwas hinzuf\u00fcgst. Indem du erkennst, was schon da ist." },
+            { type: "divider" },
 
-            { type: "heading", level: 3, content: "Karte 2: Bewusstsein" },
-            { type: "text", content: "Die zweite Karte zeigt die Landschaft, in der du dich bewegst. Und diese Landschaft ist nicht flach." },
-            { type: "text", content: "<strong>David Hawkins</strong> hat \u00fcber Jahrzehnte eine Karte des menschlichen Bewusstseins erstellt. Sie zeigt: Unser Erleben bewegt sich auf einer Skala. Am unteren Ende stehen Scham, Schuld, Apathie, Angst. Am oberen Ende Akzeptanz, Liebe, Frieden." },
-            { type: "text", content: "Dazwischen liegt eine entscheidende Schwelle: Mut. Bei 200 auf Hawkins' Skala. Alles darunter wirkt destruktiv - gegen dich selbst, gegen andere, gegen das Leben. Alles dar\u00fcber wirkt konstruktiv - f\u00fcr dich, f\u00fcr andere, f\u00fcr das Ganze." },
-            { type: "text", content: "Das ist keine Bewertung. Es ist eine Beobachtung. Und sie erkl\u00e4rt, warum manches in deinem Leben sich so schwer anf\u00fchlt: Nicht weil du versagst. Sondern weil bestimmte Teile von dir noch unterhalb dieser Schwelle operieren. Das ist kein Urteil. Das ist eine Diagnose. Und eine Diagnose ist der erste Schritt zur Ver\u00e4nderung." },
-
-            { type: "heading", level: 3, content: "Beide Karten zusammen" },
-            { type: "text", content: "Dein Inneres und dein \u00c4u\u00dferes bedingen sich gegenseitig. Wer innerlich in Angst lebt, sieht \u00fcberall Bedrohung. Das ist kein Charakterfehler - das ist Physik. Und umgekehrt: Wer aus dem Selbst heraus lebt, sieht M\u00f6glichkeiten, wo vorher W\u00e4nde waren." },
-            { type: "text", content: "Dieser Kurs arbeitet immer mit beiden Karten gleichzeitig. Wer du innen bist und wie du au\u00dfen lebst. Die Beziehung zwischen beiden - das ist der eigentliche Weg." },
+            // --- Die Entwicklungs-Karte ---
+            { type: "heading", level: 2, content: "Die Entwicklungs-Karte: Bewusstsein" },
+            { type: "text", content: "Die zweite Karte stammt von David Hawkins, einem Psychiater, der jahrzehntelang forschte und tausende Patienten behandelte. Irgendwann fiel ihm auf, dass sich seine Patienten nicht nur in ihren Geschichten unterschieden, sondern in der Art, wie sie mit der Welt in Beziehung standen. Manche Menschen sahen in allem Bedrohungen. Andere sahen überall Möglichkeiten. Und dazwischen gab es eine Schwelle, an der sich etwas Grundlegendes veränderte." },
+            { type: "text", content: "Hawkins baute eine Skala, die das gesamte Spektrum menschlichen Bewusstseins abbildet - die Map of Consciousness, von 20 bis 1000." },
+            { type: "text", content: "Am unteren Ende findest du Zustände wie Scham, Schuld, Apathie, Trauer und Angst. Das sind die Bereiche, in denen die Welt eng und bedrohlich wirkt, in denen du reagierst statt zu gestalten. Weiter oben kommen Verlangen, Wut und Stolz - hier ist immerhin Bewegung drin, aber es ist die Bewegung von jemandem, der gegen etwas kämpft: gegen Mangel, gegen andere, gegen die eigene Bedeutungslosigkeit." },
+            { type: "text", content: "Und dann gibt es diesen Punkt bei 200: Mut." },
+            { type: "text", content: "200 ist die wichtigste Zahl auf der ganzen Skala. Hawkins fand heraus, dass sich hier etwas Grundlegendes verschiebt. Unter 200 erlebst du das Leben als etwas, das dir passiert. Über 200 beginnst du, es als etwas zu begreifen, das du gestalten kannst. Er nannte das den Unterschied zwischen Force und Power: Force ist Druck, Kontrolle und Kampf - Energie, die etwas erzwingen will. Power zwingt nicht, sie zieht an. Sie ist die ruhige Klarheit, aus der heraus ein Mensch handelt, der weiß, was er tut und warum." },
+            { type: "text", content: "Diese Karte begleitet uns durch Phase 2 und Phase 3. In Phase 2 erkennst du, was dich unter 200 hält - und lernst, es loszulassen. In Phase 3 arbeitest du aus dem Bereich über 200 heraus: aus Mut, Akzeptanz und Gestaltungskraft." },
 
             { type: "divider" },
 
             // --- Win³ ---
-            { type: "heading", level: 2, content: "Win\u00b3: Drei Dimensionen, ein Weg" },
-            { type: "text", content: "Drei Fragen, drei Antworten. Und drei Dimensionen, die alle zum selben Weg geh\u00f6ren." },
+            { type: "heading", level: 2, content: "Win³: Be Yourself, Do Good, Make Money" },
+            { type: "text", content: "Jetzt kennst du die drei Fragen und die beiden Karten. Was fehlt, ist die Struktur, die alles zusammenhält." },
+            { type: "text", content: "Win³ steht für drei Dimensionen desselben Lebens:" },
 
             { type: "bigthree", items: [
-                { title: "Be Yourself", description: "Erkenne, wer du bist. Nicht wer du sein sollst - wer du bist. Unter den Rollen, den Erwartungen, dem L\u00e4rm.", color: "be" },
-                { title: "Do Good", description: "Befreie dich von dem, was dich festh\u00e4lt. Nicht indem du dich reparierst - indem du erkennst, was dich blockiert, und es losl\u00e4sst. Dann tu das, was richtig ist. F\u00fcr dich und f\u00fcr andere. Beides ist dasselbe.", color: "do" },
-                { title: "Make Money", description: "Bring das, was du bist und kannst, in die Welt. Schaffe Wert. Und nimm die Wertsch\u00e4tzung an - auch die finanzielle. Nicht aus Gier. Aus Integrit\u00e4t.", color: "make" }
+                { title: "Be Yourself", description: "Lebe aus deinem wahren Selbst heraus, nicht aus deinen Schutzstrategien.", color: "be" },
+                { title: "Do Good", description: "Trage etwas zur Welt bei, das größer ist als du selbst.", color: "do" },
+                { title: "Make Money", description: "Verdiene damit, was du ohnehin tun würdest, wenn Geld keine Rolle spielen würde.", color: "make" }
             ]},
 
-            { type: "text", content: "Drei Dimensionen. Nicht drei Schritte, die nacheinander abgehakt werden. Sondern drei Aspekte desselben Lebens, die gleichzeitig wirken. In diesem Kurs gehen wir sie nacheinander durch - aber sie geh\u00f6ren zusammen. Wie die drei Seiten eines Dreiecks. Nimm eine weg, und das Ganze f\u00e4llt in sich zusammen." },
-            { type: "emphasis", content: "Dreiklang wird Einklang." },
+            { type: "text", content: "Die meisten Menschen haben eine oder zwei dieser Dimensionen, aber selten alle drei. Da ist der Job, der gut bezahlt, aber innerlich aushöhlt. Die Leidenschaft, die erfüllt, aber nicht trägt. Das Engagement, das der Welt dient, aber einen selbst aufreibt. Wenn eine Dimension fehlt, kippt das Ganze - früher oder später." },
+            { type: "text", content: "Der Kurs ist so aufgebaut, dass jede Phase einer Dimension entspricht. Phase 1 (Be Yourself) klärt, wer du bist. Phase 2 (Do Good) klärt, was du in die Welt bringst. Phase 3 (Make Money) klärt, wie du damit ein Leben aufbaust, das dich trägt. Die drei Dimensionen sind keine Schritte, die du nacheinander abhakst. Sie sind drei Seiten desselben Dreiecks. Aber es hilft, eine Seite nach der anderen zu betrachten, bevor du das Ganze siehst." },
 
             { type: "divider" },
 
-            // --- Einkaufsladen ---
-            { type: "heading", level: 2, content: "Das Einkaufsladen-Prinzip" },
-            { type: "text", content: "Bevor wir starten, die wichtigste Sache." },
-            { type: "text", content: "Dieser Kurs ist wie ein Einkaufsladen. Du gehst durch die Regale. Du schaust dir an, was da liegt. Manches spricht dich an, manches nicht. Manches verstehst du sofort, manches erst Wochen sp\u00e4ter. Manches vielleicht nie." },
-            { type: "emphasis", content: "Du entscheidest, was du mitnimmst." },
-            { type: "text", content: "Ich habe diesen Kurs nach bestem Wissen und Gewissen gemacht. Alles hier ist darauf ausgerichtet, dir zu dienen. Aber ich bin ein Mensch mit Verzerrungen, blinden Flecken und Grenzen. Das hier ist meine beste Sicht auf die Wahrheit - nicht die Wahrheit selbst." },
-            { type: "callout", content: "<strong>Gleiche alles mit deiner eigenen Intuition ab.</strong> Hier und \u00fcberall sonst. Du bist die h\u00f6chste Autorit\u00e4t in deinem Leben. Nicht ich. Nicht ein Buch. Nicht ein Lehrer. Du. Das meine ich nicht als nette Geste - ich meine es als Grundprinzip. Wenn etwas in diesem Kurs sich falsch anf\u00fchlt, vertrau dir. Nicht mir." },
+            // --- Der Einkaufsladen ---
+            { type: "heading", level: 2, content: "Der Einkaufsladen" },
+            { type: "text", content: "Bevor wir in den Kurs einsteigen, will ich etwas über unsere Beziehung sagen - die zwischen dir und mir." },
+            { type: "text", content: "Ich habe diesen Kurs nach bestem Wissen und Gewissen gebaut. Die Frameworks, die du hier kennenlernst, haben mir selbst geholfen, und ich halte sie für solide Werkzeuge. Aber ich bin keine Autorität über dein Leben. Das bist du." },
+            { type: "text", content: "Stell dir diesen Kurs wie einen Laden vor. Du gehst durch die Regale, schaust dir die Sachen an, nimmst mit, was für dich passt, und lässt liegen, was nicht passt. Kein Verkäufer, der dir etwas aufdrängt. Kein Druck, alles zu kaufen. Du entscheidest, was in deinen Warenkorb kommt." },
+            { type: "text", content: "Das klingt selbstverständlich, ist es aber nicht. Die meisten Kurse, Bücher und Programme funktionieren implizit nach einem anderen Prinzip: \u201eIch weiß, was gut für dich ist. Folge meiner Methode, dann wird alles gut.\u201c Ich glaube nicht daran. Ich glaube, dass du die höchste Autorität in deinem Leben bist und dass kein Kurs der Welt deine eigene Intuition ersetzen kann." },
+            { type: "text", content: "Also: Nimm mit, was sich richtig anfühlt. Hinterfrage, was sich komisch anfühlt. Und wenn etwas in diesem Kurs deiner inneren Wahrheit widerspricht, dann vertraue deiner inneren Wahrheit." },
 
             { type: "divider" },
 
-            // --- Nordstern ---
-            { type: "heading", level: 2, content: "Dein Nordstern" },
-            { type: "text", content: "Bevor es losgeht, eine Sache." },
-            { type: "text", content: "Nimm dir f\u00fcnf Minuten. Augen zu. Ein paar tiefe Atemz\u00fcge. Und dann stell dir eine Frage:" },
-
-            { type: "reflection", label: "Dein Nordstern", prompt: "Wenn ich alles weglasse - jede Erwartung, jede Pflicht, jede Angst - was bleibt? Was will wirklich gelebt werden?" },
-
-            { type: "text", content: "Kein Druck. Einfach nur lauschen." },
-            { type: "text", content: "Vielleicht kommt was. Ein Bild, ein Gef\u00fchl. Vielleicht auch nicht. Beides ist egal. Die Frage arbeitet weiter, auch wenn du jetzt nichts h\u00f6rst." },
-            { type: "text", content: "Wenn etwas kommt, schreib es auf. Das ist dein Nordstern. Nicht f\u00fcr immer - f\u00fcr jetzt. Ein Punkt am Himmel, nach dem du dich ausrichten kannst, wenn der Weg un\u00fcbersichtlich wird." },
+            // --- Übung ---
+            { type: "heading", level: 2, content: "Übung: Deine beste Hoffnung" },
+            { type: "text", content: "Bevor du zur nächsten Lektion weitergehst, nimm dir drei Minuten für diese eine Aufgabe. Du brauchst nur einen Stift und ein Blatt Papier - oder die Notizen-App auf deinem Handy." },
+            { type: "text", content: "Vervollständige diesen Satz:" },
+            { type: "emphasis", content: "Wenn ich diesen Kurs beendet habe, ist meine beste Hoffnung, dass ..." },
+            { type: "text", content: "Schreib, was kommt. Nicht, was klug klingt. Nicht, was du glaubst, schreiben zu sollen. Das, was kommt, wenn du ehrlich bist." },
+            { type: "text", content: "Dieser Satz ist dein persönlicher Maßstab für den Kurs. Am Ende wirst du darauf zurückschauen und sehen, wie weit du gekommen bist - und in welche Richtung. Manchmal ist das eine Überraschung. Oft eine gute." },
+            { type: "text", content: "Schreib den Satz auf und leg ihn irgendwo hin, wo du ihn wiederfindest. Wir kommen am Ende des Kurses darauf zurück." },
 
             { type: "divider" },
 
-            // --- Commitment ---
-            { type: "heading", level: 2, content: "Dein Commitment" },
-            { type: "text", content: "Ein Kurs ist nur so gut wie deine Entscheidung, ihn wirklich zu machen. Nicht \"mal reinschauen\". Nicht \"wenn ich Zeit habe\". Sondern: Ich mache das." },
-            { type: "text", content: "Hier ist eine Sache, die die meisten Menschen nicht wissen: Ein Commitment ohne sofortige Handlung ist ein frommer Wunsch. Es f\u00fchlt sich gut an, es verfl\u00fcchtigt sich schnell. Aber ein Commitment mit sofortiger Handlung ist ein Versprechen, das in deinem K\u00f6rper verankert ist. Der Unterschied ist nicht die Intensit\u00e4t der Absicht - es ist der Moment, in dem du etwas tust." },
-            { type: "highlight", title: "Deine erste Handlung", content: "Wann machst du die n\u00e4chste Lektion? Nicht \"irgendwann.\" Ein Tag. Eine Uhrzeit. Trag es ein. Jetzt. Nicht gleich. Jetzt. Das ist deine erste Handlung in diesem Kurs. Klein und konkret. Aber verbindlich." },
-
-            { type: "divider" },
-
-            // --- Was kommt ---
-            { type: "heading", level: 2, content: "Was kommt" },
-            { type: "text", content: "Der Kurs hat drei Phasen und ein Hardware-Update." },
-
-            { type: "levels", items: [
-                { number: 1, title: "Phase 1: Be Yourself", description: "Wer bin ich? Du erkennst dein wahres Selbst, erkundest deine innere Welt direkt, und lernst ein Werkzeug, das dich ab dann durch den ganzen Kurs begleitet.", color: "be" },
-                { number: 2, title: "Phase 2: Do Good", description: "Was h\u00e4lt mich fest? Du erkennst deine Blockaden, lernst sie zu f\u00fchlen und loszulassen, und wirst dein eigener Coach.", color: "do" },
-                { number: 3, title: "Phase 3: Make Money", description: "Was bringe ich in die Welt? Du findest deinen Platz, kl\u00e4rst dein Verh\u00e4ltnis zu Wert und Geld, und zeigst dich - unversteckt.", color: "make" }
-            ]},
-
-            { type: "text", content: "<strong>Alignment</strong> - Stimmt mein Leben? Du pr\u00fcfst alle Ebenen deines Lebens - von deinem h\u00f6chsten Ziel bis zu deinem Alltag - und bringst sie in Einklang." },
-            { type: "text", content: "Jede Phase baut auf der vorherigen auf. Was du in Phase 1 \u00fcber dich erkennst, brauchst du in Phase 2, um dich zu befreien. Und was du da befreist, wird in Phase 3 zu etwas Neuem. Im Alignment pr\u00fcfst du dann, ob dein tats\u00e4chliches Leben das widerspiegelt." },
-
-            { type: "divider" },
-
-            // --- Checklist ---
+            // --- Checklist + Signoff ---
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Nordstern-Frage beantwortet",
-                "N\u00e4chste Lektion im Kalender eingetragen"
+                "Lektion vollständig gelesen",
+                "Die drei Fragen und zwei Karten verstanden",
+                "Übung \u201eDeine beste Hoffnung\u201c abgeschlossen"
             ]},
 
-            // --- Signoff ---
-            { type: "signoff", text: "In der n\u00e4chsten Lektion beginnen wir mit der ersten und wichtigsten Frage: Wer bist du wirklich?\\n\\nNicht wer du glaubst zu sein oder wer andere in dir sehen. Sondern wer du bist, wenn das alles wegf\u00e4llt.\\n\\nBis dahin.", name: "Steven" }
+            { type: "signoff", text: "Nächste Woche beginnt Phase 1: Wer bist du wirklich? Wir starten mit der Frage, die Ramana Maharshi für die wichtigste aller Fragen hielt - und die sich als erstaunlich schwer zu beantworten herausstellt.\\n\\nBis dahin.", name: "Steven" }
         ]
     };
 
@@ -136,7 +112,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

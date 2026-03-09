@@ -1,6 +1,6 @@
 // Community Pinnwand - FX Effects (Standalone)
 // Cursor Ring, Particles, Glow - Optional Enhancement
-// Loaded via: <script src="https://solbachsteven.github.io/website/community/cp-fx.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/community/cp-fx.js"></script>
 (function() {
     if (window.__CP_FX_LOADED) return;
     window.__CP_FX_LOADED = true;

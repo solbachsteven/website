@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - FX Effects (Standalone)
 // Cursor Ring, Particles, Glow - Optional Enhancement
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-fx.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-fx.js"></script>
 (function() {
     if (window.__WK_FX_LOADED) return;
     window.__WK_FX_LOADED = true;

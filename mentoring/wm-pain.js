@@ -1,6 +1,6 @@
 // Win³ Mentoring Landingpage - Pain/Problem Section (Standalone)
 // Zentrierte Headline + 2x2 Card Grid + Bridge Text
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-pain.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-pain.js"></script>
 (function() {
     if (window.__WM_PAIN_LOADED) return;
     window.__WM_PAIN_LOADED = true;

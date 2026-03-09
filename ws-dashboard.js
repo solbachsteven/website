@@ -1,6 +1,6 @@
 // WS Dashboard - Wer bin ich (Standalone)
 // 15 Systeme: MBTI, Enneagram, DISC, Human Design, VIA, Numerologie, Big Five, etc.
-// Loaded via: <script src="https://solbachsteven.github.io/website/ws-dashboard.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/ws-dashboard.js"></script>
 (function() {
     if (window.__WS_DASHBOARD_LOADED) return;
     window.__WS_DASHBOARD_LOADED = true;

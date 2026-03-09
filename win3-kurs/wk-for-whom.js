@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Für Wen Section (Standalone)
 // Zwei Spalten: "Das bist du" / "Das bist du nicht"
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-for-whom.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-for-whom.js"></script>
 (function() {
     if (window.__WK_FORWHOM_LOADED) return;
     window.__WK_FORWHOM_LOADED = true;

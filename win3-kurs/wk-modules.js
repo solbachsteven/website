@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Modul-Übersicht Section (Standalone)
 // 4 Module im Überblick: Modul 0-3
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-modules.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-modules.js"></script>
 (function() {
     if (window.__WK_MODULES_LOADED) return;
     window.__WK_MODULES_LOADED = true;

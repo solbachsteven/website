@@ -1,5 +1,5 @@
 // Freebie Landingpage - Final CTA Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-final-cta.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-final-cta.js"></script>
 (function() {
     if (window.__FL_FINAL_LOADED) return;
     window.__FL_FINAL_LOADED = true;

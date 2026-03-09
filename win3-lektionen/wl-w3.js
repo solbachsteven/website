@@ -1,5 +1,5 @@
 // Win³ Kurs - Lektion 3: Schwarz auf Weiß
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w3.js"></script>
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w3.js"></script>
 (function() {
     if (window.__WL_W3) return;
     window.__WL_W3 = true;
@@ -9,127 +9,85 @@
     var LESSON_DATA = {
         meta: {
             label: "LEKTION 3",
-            title: "Schwarz auf Wei\u00df",
+            title: "Schwarz auf Weiß",
             subtitle: "Phase 1: Be Yourself"
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "In W1 hast du verstanden, was das Selbst ist. In W2 hast du es erlebt - du bist nach innen gegangen, hast deine Teile gesehen, deine inneren Konflikte auf Papier gebracht. Du hast gemerkt: Da drin ist es voll. Und du bist mehr als die Summe all dessen, was da lebt." },
-            { type: "emphasis", content: "Jetzt drehen wir uns um. Nach au\u00dfen." },
+            { type: "text", content: "Letzte Woche hast du auf ein Blatt Papier geschaut und gesehen, wer an deinem inneren Konferenztisch sitzt. Der Wächter, der Antreiber, der Perfektionist - jeder mit seiner Rolle, seinem Bedürfnis, seiner Geschichte." },
+            { type: "text", content: "Was wir uns noch nicht angeschaut haben: Diese Figuren bleiben nicht brav an ihrem Tisch sitzen. Sie laufen mit durch den Tag." },
 
             { type: "divider" },
 
             // --- Der Spiegel ---
-            { type: "heading", level: 2, content: "Der Spiegel, den niemand liest" },
-            { type: "text", content: "Deine Beziehungen. Dein Beruf. Deine Gewohnheiten. Deine wiederkehrenden Probleme. Die Situationen, die dich immer wieder triggern. Die Muster, die du kennst, aber nicht loswirst." },
-            { type: "emphasis", content: "Das ist kein Zufall. Das ist ein Spiegel." },
-            { type: "text", content: "Alles, was du in W2 nach innen gesehen hast, zeigt sich auch nach au\u00dfen. Die Teile, die in dir ziehen, ziehen auch an deinem Leben. Der Anteil, der Sicherheit will, h\u00e4lt dich in der Komfortzone - in dem Job, der dich nicht erf\u00fcllt, aber zahlt. Der Anteil, der Anerkennung sucht, treibt dich zur \u00dcberfunktion - du arbeitest mehr, gibst mehr, leistest mehr, und es ist nie genug. Der Anteil, der Ablehnung f\u00fcrchtet, l\u00e4sst dich verstummen - in Meetings, in Beziehungen, im Leben." },
-            { type: "text", content: "Du siehst es in dem, was sich immer wiederholt. Du wechselst den Job, und nach zwei Jahren ist es wieder dasselbe Gef\u00fchl. Du beendest eine Beziehung, und die n\u00e4chste hat ein verbl\u00fcffend \u00e4hnliches Muster. Du nimmst dir vor, Grenzen zu setzen - und drei Wochen sp\u00e4ter sagst du wieder zu allem Ja." },
-            { type: "text", content: "Das ist nicht dein Versagen. Das ist dein Inneres, das sich nach au\u00dfen zeigt. Die meisten Menschen sehen den Spiegel und reagieren auf das Spiegelbild. Sie \u00e4ndern Umst\u00e4nde. Neuer Job. Neuer Partner. Neue Stadt. Und wundern sich, warum das Muster mitreist." },
-            { type: "text", content: "Das Muster reist mit, weil es nicht im Au\u00dfen lebt. Es lebt in dir. In den Anteilen, die du in der letzten Lektion kennengelernt hast." },
-            { type: "text", content: "Die gute Nachricht: Du kannst den Spiegel lesen lernen. Und das m\u00e4chtigste Werkzeug daf\u00fcr ist etwas, das du jeden Tag tust, ohne seine Kraft zu ahnen." },
-            { type: "emphasis", content: "Schreiben." },
+            { type: "heading", level: 2, content: "Der Spiegel" },
+            { type: "text", content: "Der Wächter, der in der Inneren-Kräfte-Map als \u201eVorsicht\u201c aufgetaucht ist, sitzt nicht nur im Kopf. Er sitzt mit am Tisch, wenn jemand mit dem Chef spricht. Er steht daneben, wenn eine Nachricht dreimal umformuliert wird, bevor sie abgeschickt wird. Er sorgt dafür, dass in der Teamrunde nichts gesagt wird, obwohl eine klare Meinung da wäre." },
+            { type: "text", content: "Und der Antreiber? Der klingelt sonntags um sechs, weil die Präsentation ja noch besser werden könnte. Der lässt den LinkedIn-Feed zu einem Wettbewerb werden, bei dem jeder Erfolg anderer als eigener Rückstand erscheint. Der macht aus einer Pause etwas, das sich nach Versagen anfühlt." },
+            { type: "text", content: "Richard Schwartz hat dafür eine Formulierung gefunden, die in ihrer Einfachheit schmerzt: Du tust dir selbst an, was dir angetan wurde, und du tust anderen an, was du dir selbst antust. Die Teile, die in der Vergangenheit eingefroren sind - die wir in W2 kennengelernt haben -, laufen mit ihren alten Programmen. Und diese Programme steuern nicht nur Gedanken, sondern Entscheidungen, Gewohnheiten und Beziehungsmuster." },
+            { type: "text", content: "Wer sich fragt, warum dieselbe Art Konflikt immer wiederkommt, warum bestimmte Chancen liegen bleiben oder warum der Tag erschöpfender war, als er hätte sein müssen - die Antwort steht meistens schon auf der Map von letzter Woche." },
 
             { type: "divider" },
 
-            // --- Warum Schreiben ---
-            { type: "heading", level: 2, content: "Warum Schreiben alles ver\u00e4ndert" },
-            { type: "text", content: "<strong>James Pennebaker</strong> ist Psychologieprofessor an der University of Texas. Seit den 1980er-Jahren erforscht er eine einfache Frage: Was passiert, wenn Menschen \u00fcber das schreiben, was sie wirklich besch\u00e4ftigt?" },
-            { type: "text", content: "Die Antwort, belegt in \u00fcber 200 Studien: Fast alles wird besser. Immunsystem. Stressverarbeitung. Emotionale Klarheit. Weniger Arztbesuche. Besserer Schlaf. Klarere Entscheidungen." },
-            { type: "text", content: "Nicht weil Schreiben magisch ist. Sondern weil es etwas tut, das sonst selten passiert: Es zwingt dich, den Film in deinem Kopf anzuhalten und ihn in W\u00f6rter zu \u00fcbersetzen. In dem Moment, in dem du einen Gedanken aufschreibst, ist er nicht mehr nur ein nebul\u00f6ses Gef\u00fchl, das durch dich hindurchrauscht. Er steht da. Schwarz auf wei\u00df. Du kannst ihn anschauen. Er kann dich nicht mehr von innen steuern, weil er jetzt au\u00dfen liegt." },
-            { type: "text", content: "Das ist die Br\u00fccke zwischen Innen und Au\u00dfen. Genau die Br\u00fccke, die dieser Kurs in dieser Lektion schl\u00e4gt." },
-            { type: "text", content: "In W1 hast du Konzepte kennengelernt, in W2 bist du nach innen gegangen. Jetzt bringst du das, was innen lebt, nach au\u00dfen. Nicht indem du dar\u00fcber redest - indem du es aufschreibst. Ungefiltert. Unzensiert. Ohne Publikum." },
+            // --- Die Lücke ---
+            { type: "heading", level: 2, content: "Die Lücke" },
+            { type: "text", content: "In W1 haben wir die Karte studiert: das Selbst und die Anteile als Konzept. In W2 sind wir ins Terrain gegangen und haben erfahren, wer in unserer inneren Welt lebt. Jetzt wissen wir, was los ist." },
+            { type: "text", content: "Und hier entsteht eine Lücke, die den meisten Menschen nicht auffällt." },
+            { type: "text", content: "Verstehen und Verändern sind zwei verschiedene Dinge. Jemand kann genau wissen, dass der innere Wächter ihn davon abhält, sich zu zeigen, kann es sogar in einem Gespräch eloquent erklären - und sitzt am nächsten Morgen wieder in der Teamrunde und sagt nichts." },
+            { type: "text", content: "Wissen allein reicht nicht, weil die Anteile nicht auf der Ebene des Verstandes operieren. Sie sitzen tiefer: im Körper, in automatischen Reaktionen, in Mustern, die schneller sind als jeder Gedanke. Um an sie heranzukommen, braucht es eine Brücke zwischen dem, was wir denken, und dem, was wir fühlen - zwischen dem Konferenzraum im Kopf und dem, was tatsächlich in uns lebt." },
+            { type: "text", content: "Diese Brücke ist das Schreiben." },
 
             { type: "divider" },
 
-            // --- Die Methode ---
-            { type: "heading", level: 2, content: "Die Methode" },
-            { type: "text", content: "<strong>Pennebakers</strong> Methode ist so einfach, dass sie fast beleidigend wirkt. Und genau deshalb funktioniert sie." },
-            { type: "text", content: "Du schreibst. 20 Minuten. \u00dcber das, was dich wirklich besch\u00e4ftigt. Was dich nachts wachh\u00e4lt. Was du niemandem erz\u00e4hlen w\u00fcrdest. Was du selbst kaum zugeben kannst. Die Angst, die Wut, die Scham. Was unter der Oberfl\u00e4che brodelt." },
-            { type: "callout", content: "<strong>Die Regeln:</strong> Schreib. H\u00f6r nicht auf. Wenn dir nichts einf\u00e4llt, schreib \"Mir f\u00e4llt nichts ein\" bis etwas kommt. Es kommt immer etwas. Filter nicht. Zensiere nicht. Korrigiere keine Grammatik, keinen Satzbau, keine Wiederholungen. Niemand liest das au\u00dfer du." },
-            { type: "text", content: "Das ist kein Tagebuch im klassischen Sinn. Du schreibst nicht \"Heute war ein guter Tag, ich habe das und das gemacht.\" Du gehst dorthin, wo es weh tut. Wo es echt wird. Wo die Teile in dir ihre ungefilterte Stimme haben d\u00fcrfen." },
-            { type: "text", content: "Es kann sein, dass das am Anfang unangenehm ist. Dass Sachen hochkommen, die du lieber in der Schublade gelassen h\u00e4ttest. Das ist normal. Das ist sogar der Punkt. Was hochkommt, war schon da. Du gibst ihm nur endlich einen Weg nach drau\u00dfen." },
+            // --- Was Schreiben kann ---
+            { type: "heading", level: 2, content: "Was Schreiben kann" },
+            { type: "text", content: "James Pennebaker war Professor für Psychologie an der University of Texas. Im Herbst 1983 machte er ein Experiment, das seine Karriere veränderte." },
+            { type: "text", content: "Er teilte Studenten in zwei Gruppen auf. Die eine Gruppe sollte vier Tage lang jeweils fünfzehn Minuten über etwas schreiben, das sie emotional tief beschäftigte - eine Erfahrung, die sie nie richtig verarbeitet hatten, ein Geheimnis, eine Angst. Die einzige Regel: nicht aufhören, nicht den Stift absetzen, nicht zensieren. Die andere Gruppe schrieb über neutrale Themen wie ihren Tagesablauf." },
+            { type: "text", content: "Die Studenten, die über ihre emotionalen Themen geschrieben hatten, gingen in den folgenden sechs Monaten nur halb so oft zum Arzt wie die Kontrollgruppe. Als Pennebaker das Experiment zusammen mit den Immunologen Kiecolt-Glaser und Glaser wiederholte, fanden sie messbare Veränderungen im Immunsystem: Die Schreibgruppe zeigte einen signifikanten Anstieg der Lymphozyten, also genau der Zellen, die den Körper vor Krankheit schützen." },
+            { type: "text", content: "Inzwischen haben über hundert Studien diese Ergebnisse bestätigt. Expressives Schreiben verbessert die Stressverarbeitung, die emotionale Klarheit und die Fähigkeit, schwierige Erfahrungen einzuordnen. Die körperlichen Effekte sind dabei sogar stärker als die psychologischen - was darauf hindeutet, dass es nicht um Wohlbefinden geht, sondern um etwas Tieferes." },
+            { type: "text", content: "Pennebakers Erklärung ist einfach: Wenn wir Erfahrungen unterdrücken, kostet das den Körper Energie. Diese Unterdrückung ist physiologische Arbeit - der Organismus hält ständig etwas unten, und das bindet Ressourcen. Sobald wir das Erlebte in Worte fassen, endet diese Arbeit. Das Unausgesprochene wird zu etwas, das sich verarbeiten lässt." },
+            { type: "text", content: "Pennebaker nennt diesen Vorgang \u201ekognitive Integration\u201c: Diffuse Gefühle werden in Sprache übersetzt, und Sprache lässt sich ordnen. Was vorher ein Knäuel war, bekommt Struktur. Was im Kreis lief, findet einen Anfang und ein Ende." },
+            { type: "text", content: "Und genau hier schließt sich der Kreis zu dem, was wir in den ersten beiden Lektionen erarbeitet haben. Die Anteile am Konferenztisch, die wir in W2 gesehen haben, tragen Erfahrungen in sich, die nie ausgesprochen wurden. Das Schreiben gibt ihnen zum ersten Mal eine Stimme - auf dem Papier, wo wir sie anschauen können, statt von ihnen gesteuert zu werden." },
 
             { type: "divider" },
 
-            // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Die Ankerpraktik: 3-Schichten-Journaling" },
-            { type: "text", content: "Was ich dir jetzt vorstelle, ist nicht einfach eine \u00dcbung f\u00fcr diese Lektion. Es ist die Praxis, die dich ab jetzt durch den gesamten Kurs begleitet. Jede Lektion. Jede Phase. Bis zum Ende." },
-            { type: "text", content: "Drei Schichten. Aufeinander aufbauend. Du startest in dieser Lektion mit Schicht 1 und 2. Schicht 3 erkl\u00e4re ich dir jetzt, damit du wei\u00dft, was kommt - aber du brauchst sie noch nicht." },
+            // --- Die Ankerpraktik ---
+            { type: "heading", level: 2, content: "Die Ankerpraktik" },
+            { type: "text", content: "In W1 haben wir das Konzept verstanden. In W2 haben wir die direkte Erfahrung gemacht. Jetzt kommt der dritte Schritt: das, was in uns lebt, nach außen bringen." },
+            { type: "text", content: "Ab dieser Woche begleitet eine Praxis den gesamten Kurs - wir nennen sie die Ankerpraktik, weil sie genau das tut: einen festen Punkt setzen im Strom des Alltags, an dem regelmäßig innegehalten und hingeschaut wird." },
+            { type: "text", content: "Die Ankerpraktik besteht aus drei Schichten, die aufeinander aufbauen." },
 
-            { type: "anchorpractice", layers: [
-                { label: "Schicht 1 (Freies Schreiben)", prompt: "Was besch\u00e4ftigt mich?" },
-                { label: "Schicht 2 (KI als Spiegel)", prompt: "Was sehe ich nicht?" },
-                { label: "Schicht 3 (KI als Coach)", prompt: "Was ist mein n\u00e4chster Schritt?" }
-            ]},
-
-            { type: "heading", level: 3, content: "Schicht 1: Freies Schreiben (Du allein)" },
-            { type: "text", content: "Das ist Pennebaker pur. 20 Minuten. Ungefiltert. Nur du und das Papier - oder der Bildschirm, wenn dir das lieber ist." },
-            { type: "text", content: "Keine Struktur. Kein Ziel. Kein \"Ich sollte \u00fcber X schreiben.\" Was auch immer kommt - schreib es auf. Wut, Verwirrung, Langeweile - egal. Klarheit, Widerspr\u00fcche, was auch immer. Alles gilt." },
-            { type: "text", content: "Mach das jeden Tag. Wenn das nicht geht: Mindestens dreimal pro Woche. Am besten morgens, bevor der Tag deine Aufmerksamkeit fordert. Aber jeder Zeitpunkt ist besser als keiner." },
-            { type: "text", content: "Diese Schicht ist das Fundament. Hier entsteht das Rohmaterial. Hier sprichst du mit dir selbst, ohne dass jemand zuh\u00f6rt oder bewertet. Ohne diese Schicht funktionieren die anderen beiden nicht." },
+            { type: "heading", level: 3, content: "Schicht 1: Freies Schreiben" },
+            { type: "text", content: "Zwanzig Minuten, allein, ohne Unterbrechung. Timer stellen und schreiben. Alles, was kommt - Wut, Verwirrung, Langeweile, Klarheit, Widersprüche. Kein Thema vorgegeben, keine Struktur, kein Ziel." },
+            { type: "text", content: "Das ist Pennebakers Methode in ihrer reinsten Form. Der Stift bleibt auf dem Papier, die Finger auf der Tastatur. Kein Innehalten, kein Korrigieren, kein Überlegen, ob das Sinn ergibt. Was dabei herauskommt, überrascht oft: Themen, die gar nicht auf dem Radar waren. Zusammenhänge, die erst beim Schreiben sichtbar werden. Sätze, bei denen klar wird, dass da etwas gemeint ist, was vorher keine Worte hatte." },
+            { type: "text", content: "Diese Schicht gehört dir allein. Was hier entsteht, muss niemand lesen." },
 
             { type: "heading", level: 3, content: "Schicht 2: KI als Spiegel" },
-            { type: "text", content: "Das ist der Punkt, an dem dieser Kurs etwas macht, was kein Kurs vor ihm machen konnte." },
-            { type: "text", content: "Nachdem du geschrieben hast, gibst du deinen Text an eine KI. ChatGPT, Claude, was auch immer du nutzt. Und du fragst:" },
-            { type: "copyblock", content: "Was siehst du in diesem Text, das ich vielleicht nicht sehe? Welche Muster erkennst du? Welche Emotionen stehen zwischen den Zeilen?" },
-            { type: "text", content: "Die KI gibt dir keine Ratschl\u00e4ge. Sie gibt dir keine Diagnose. Sie h\u00e4lt dir einen Spiegel vor. Sie erkennt Muster, die du nicht siehst, weil du mittendrin steckst. Wiederkehrende Themen. Blinde Flecken. Widerspr\u00fcche zwischen dem, was du sagst, und dem, was du meinst." },
-            { type: "text", content: "Das ist kein Ersatz f\u00fcr einen Therapeuten oder Coach. Es ist ein Spiegel, der jederzeit verf\u00fcgbar ist und nicht urteilt. Und der \u00fcber Wochen und Monate Muster erkennen kann, die du selbst nie sehen w\u00fcrdest." },
-            { type: "text", content: "Benutze Schicht 2, wann immer du willst. Nicht jedes Mal. Aber besonders nach emotional aufgeladenen Eintr\u00e4gen. Wenn du das Gef\u00fchl hast, da war etwas Wichtiges - aber du kommst nicht ran." },
+            { type: "text", content: "Hier macht dieser Kurs etwas, das vor wenigen Jahren noch unmöglich gewesen wäre." },
+            { type: "text", content: "Nach dem Schreiben gibst du den Text an eine KI - ChatGPT, Claude, was immer du nutzt - und stellst eine einzige Frage: \u201eWas siehst du in diesem Text, das ich vielleicht nicht sehe?\u201c" },
+            { type: "text", content: "Die KI hat keinen emotionalen Anteil an deiner Geschichte. Sie wird weder trösten noch recht geben. Sie kann wiederkehrende Wörter erkennen, Themen die umkreist werden, ohne direkt angesprochen zu werden, und Widersprüche zwischen dem Gesagten und dem Gemeinten." },
+            { type: "text", content: "Das ist kein Ersatz für einen Therapeuten oder ein gutes Gespräch. Es ist ein Spiegel, der jederzeit verfügbar ist, der keine eigene Agenda hat und der über Wochen Muster sehen kann, die einem selbst nie auffallen würden." },
 
-            { type: "heading", level: 3, content: "Schicht 3: KI als Coach (Vorschau)" },
-            { type: "text", content: "Du gehst mit der KI in den Dialog. Aber nicht die KI f\u00fchrt - du f\u00fchrst. Du bestimmst das Thema. Du bestimmst die Tiefe. Die KI stellt Fragen. Sokratisches Coaching: \"Was w\u00fcrde passieren, wenn das stimmt?\" Reframing: \"Wie s\u00e4he die Situation aus der Perspektive deines Selbst aus?\"" },
-            { type: "text", content: "Diese Schicht wird ab Phase 2 richtig kraftvoll, wenn du anf\u00e4ngst, deine Blockaden zu bearbeiten. Jetzt wei\u00dft du, dass sie existiert. Du wei\u00dft, was kommt. Wenn du neugierig bist, probier es aus. Wenn nicht, reichen Schicht 1 und 2 vollkommen." },
+            { type: "heading", level: 3, content: "Schicht 3: KI als Coach" },
+            { type: "text", content: "Die dritte Schicht ist ein Dialog. Du nimmst, was die KI gespiegelt hat, und gehst tiefer. Stell Rückfragen. Bitte um sokratische Fragen - also Fragen, die nicht erklären, sondern aufdecken: \u201eWas könnte dahinterstecken?\u201c, \u201eWelches Bedürfnis zeigt sich hier?\u201c, \u201eWas wäre, wenn das Gegenteil wahr wäre?\u201c" },
+            { type: "text", content: "Sokratische Fragen funktionieren, weil sie keine Antwort von außen liefern, sondern dorthin führen, wo die Antwort bereits liegt. Die KI wird zum Gesprächspartner, der die richtigen Fragen stellt, ohne vorzugeben, was dabei herauskommen soll." },
 
-            { type: "divider" },
-
-            // --- Was ab jetzt ---
-            { type: "heading", level: 2, content: "Was ab jetzt jede Lektion passiert" },
-            { type: "text", content: "Ich will, dass du das verstehst, weil es wichtig ist: Die Ankerpraktik ist nicht eine \u00dcbung unter vielen. Sie ist das Werkzeug." },
-            { type: "text", content: "Ab der n\u00e4chsten Lektion hat jede Lektion ein spezifisches Thema. In Phase 2 geht es um Blockaden, Loslassen, Beziehungen. In Phase 3 um Werte, Mindset, dein Angebot an die Welt. Und jedes dieser Themen bearbeitest du mit dem 3-Schichten-Journaling." },
-            { type: "text", content: "Das Thema \u00e4ndert sich. Die Praxis bleibt. Wie ein Musiker, der jeden Tag Tonleitern spielt - nicht weil Tonleitern das Ziel sind, sondern weil sie die Grundlage f\u00fcr alles Weitere bilden." },
-            { type: "text", content: "In Phase 2 wird Schreiben zum Befreiungswerkzeug. Du erkennst Blockaden auf dem Papier, bevor sie dich im Leben blockieren. Und du l\u00f6st Konflikte im Schreiben, statt sie in Beziehungen auszuagieren." },
-            { type: "text", content: "In Phase 3 wird Schreiben zum Kl\u00e4rungswerkzeug. Du entwickelst deine Werte, deine Positionierung, dein Angebot - alles schreibend. Nicht im Kopf. Auf dem Papier." },
-            { type: "emphasis", content: "Das ist der rote Faden. Und er beginnt heute." },
+            { type: "heading", level: 3, content: "Wie die Schichten zusammenspielen" },
+            { type: "text", content: "Schicht 1 ist das Fundament: allein, ehrlich, ungefiltert. Schicht 2 bringt Perspektive von außen. Schicht 3 vertieft. Nicht jedes Mal müssen alle drei Schichten durchlaufen werden, aber Schicht 1 - das freie Schreiben - ist jede Woche Pflicht." },
+            { type: "text", content: "Jede Woche hat die Ankerpraktik einen anderen Fokus. Diese Woche geht es darum, die Praxis kennenzulernen und die erste Erfahrung zu machen. In Phase 2 wird das Schreiben zum Befreiungswerkzeug: Blockaden erkennen, innere Konflikte auf dem Papier lösen, statt sie in Beziehungen auszuagieren. In Phase 3 wird es zum Klärungswerkzeug: Werte schärfen, Positionierung finden, den eigenen Platz in der Welt definieren." },
+            { type: "text", content: "Das Thema ändert sich. Die Praxis bleibt." },
 
             { type: "divider" },
 
             // --- Übung ---
-            { type: "heading", level: 2, content: "Deine \u00dcbung: Die erste Expressive Writing Session" },
-            { type: "text", content: "Keine Wahl. Keine drei Optionen. Das hier machst du. Jetzt. Oder heute Abend. Aber heute." },
-
-            { type: "steps", title: "Expressive Writing Session", items: [
-                { title: "Vorbereitung", description: "Stell einen Timer auf 20 Minuten. Papier oder Bildschirm - was dir leichter f\u00e4llt. Sorge daf\u00fcr, dass dich niemand st\u00f6rt. Handy weg. T\u00fcr zu. Nur du und die leere Seite." },
-                { title: "Schreiben (20 Minuten)", description: "Was besch\u00e4ftigt dich gerade am meisten? Was h\u00e4lt dich nachts wach? Was hast du in W2 \u00fcber deine inneren Anteile entdeckt? H\u00f6r nicht auf zu schreiben. Filter nicht. Zensiere nicht. Das ist nur f\u00fcr dich." },
-                { title: "Schicht 2 (empfohlen)", description: "Gib deinen Text in eine KI und nutze den Prompt unten. Lies, was kommt. Nicht als Urteil. Als Spiegel." }
-            ]},
-
-            { type: "copyblock", content: "Was siehst du in diesem Text, das ich vielleicht nicht sehe? Welche Muster erkennst du? Welche Emotionen stehen zwischen den Zeilen?" },
-
-            { type: "divider" },
-
-            // --- Verankern ---
-            { type: "heading", level: 2, content: "Die Ankerpraktik verankern" },
-            { type: "highlight", title: "Ab jetzt", content: "Schicht 1 mindestens dreimal pro Woche. Besser t\u00e4glich. 20 Minuten. Morgens ist ideal, aber jeder Zeitpunkt ist besser als keiner. Schicht 2, wann immer du tiefer schauen willst." },
-            { type: "text", content: "Das ist kein Zusatz zum Kurs. Das ist der Kurs. Alles andere baut darauf auf." },
-
-            { type: "divider" },
-
-            // --- Drei Lektionen ---
-            { type: "heading", level: 2, content: "Drei Lektionen, drei Schritte" },
-            { type: "text", content: "Phase 1 neigt sich dem Ende zu. Schau zur\u00fcck auf das, was passiert ist:" },
-            { type: "text", content: "W1 war die Karte - das Konzept, wie dein Inneres aufgebaut ist. W2 war der Gang nach innen, die Anteile, der Beobachter. Und in dieser Lektion hast du eine Br\u00fccke zwischen innen und au\u00dfen gebaut." },
-            { type: "emphasis", content: "Verstehen, f\u00fchlen, handeln. Be Yourself." },
-
-            { type: "divider" },
-
-            // --- Was kommt ---
-            { type: "heading", level: 2, content: "Was kommt" },
-            { type: "text", content: "Du kannst jetzt nach innen schauen. Du kannst es aufschreiben. Du hast Zugang zu deinem Selbst - nicht perfekt, nicht dauerhaft, aber real." },
-            { type: "text", content: "Ab der n\u00e4chsten Lektion beginnt Phase 2: Do Good. Und dort wird es anders." },
-            { type: "text", content: "In Phase 1 hast du erkannt, wer du bist. In Phase 2 lernst du, dich zu befreien. Die Teile, die du in W2 kennengelernt hast - du lernst, mit ihnen zu arbeiten. Die Konflikte zu l\u00f6sen. Die Muster zu unterbrechen, die sich in deinem Leben wiederholen." },
-            { type: "text", content: "Dein Schreibwerkzeug wird dabei zum Befreiungswerkzeug. Was du in dieser Lektion als Br\u00fccke zwischen innen und au\u00dfen gebaut hast, wird in Phase 2 zum Hebel." },
-            { type: "emphasis", content: "Du hast das Fundament. Jetzt bauen wir darauf." },
+            { type: "heading", level: 2, content: "Übung: Deine erste Expressive Writing Session" },
+            { type: "text", content: "Das hier ist keine optionale Aufgabe. Sie ist das Fundament für alles, was in diesem Kurs noch kommt." },
+            { type: "text", content: "<strong>Was du brauchst:</strong> Zwanzig Minuten ungestörte Zeit, einen Timer und etwas zum Schreiben - Papier oder Bildschirm, beides funktioniert." },
+            { type: "text", content: "<strong>Schritt 1: Timer stellen.</strong> Zwanzig Minuten." },
+            { type: "text", content: "<strong>Schritt 2: Schreiben.</strong> Schreib über das, was dich gerade am meisten beschäftigt. Das kann etwas Großes sein - eine Lebensphase, eine Beziehung, eine Entscheidung, die seit Wochen aufgeschoben wird. Es kann auch etwas sein, das klein erscheint, aber nicht aufhört, im Kopf zu kreisen." },
+            { type: "text", content: "Die Regeln:" },
+            { type: "text", content: "- Nicht aufhören, bis der Timer klingelt.\n- Nicht korrigieren, nicht streichen, nicht umformulieren.\n- Nicht zensieren. Niemand wird das lesen.\n- Wenn nichts kommt, schreib \u201eMir fällt nichts ein\u201c und mach weiter. Es kommt etwas." },
+            { type: "text", content: "<strong>Schritt 3 (optional): KI-Spiegel.</strong> Kopiere deinen Text in eine KI deiner Wahl und stell die Frage: \u201eWas siehst du in diesem Text, das ich vielleicht nicht sehe?\u201c Lies die Antwort, ohne dich zu verteidigen. Lass sie wirken." },
+            { type: "text", content: "<strong>Ab jetzt:</strong> Schicht 1, mindestens dreimal pro Woche. Morgens ist ideal, aber jeder Zeitpunkt ist besser als keiner." },
 
             { type: "divider" },
 
@@ -137,12 +95,12 @@
             { type: "progress-bar", label: "Lektion 3 von 9", percent: 33, detail: "Phase 1: Be Yourself" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Erste Expressive Writing Session (20 Min.) durchgef\u00fchrt",
+                "Lektion vollständig gelesen",
+                "Erste Expressive Writing Session (20 Min.) durchgeführt",
                 "Schicht 2 (KI als Spiegel) ausprobiert"
             ]},
 
-            { type: "signoff", text: "Phase 1 ist abgeschlossen. Du wei\u00dft, wer du bist. Du hast deine innere Welt betreten. Du hast ein Werkzeug.\\n\\nAb der n\u00e4chsten Lektion nutzen wir es.", name: "Steven" }
+            { type: "signoff", text: "In W1 hast du die Karte studiert - das Selbst und die Anteile als Konzept. In W2 bist du ins Terrain gegangen und hast gesehen, wer in deiner inneren Welt lebt. In dieser Woche hast du die Brücke gebaut: Schreiben als Werkzeug, um das Innere sichtbar zu machen und zu verarbeiten. Ab W4 beginnt Phase 2 - dort wird das Schreiben zum Befreiungswerkzeug, mit dem du anfängst, alte Muster zu lösen.", name: "Steven" }
         ]
     };
 
@@ -150,7 +108,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

@@ -1,5 +1,5 @@
 // Win³ Kurs - Lektion 1: Wer bin ich?
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w1.js"></script>
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w1.js"></script>
 (function() {
     if (window.__WL_W1) return;
     window.__WL_W1 = true;
@@ -14,111 +14,68 @@
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Du hast eine Stimme im Kopf." },
-            { type: "text", content: "Gerade jetzt. W\u00e4hrend du das liest. Sie kommentiert. Bewertet. Sortiert ein. Vielleicht sagt sie gerade: \"Ja klar, meine innere Stimme, die kenne ich.\" Oder: \"Was soll das jetzt?\" Oder sie liest einfach mit und wartet, wo das hinf\u00fchrt." },
-            { type: "text", content: "Jeder Mensch hat diese Stimme. Manche erleben sie als Strom von W\u00f6rtern, manche eher als Bilder oder als ein Gef\u00fchl, das sofort wei\u00df, was es von etwas h\u00e4lt - bevor ein einziger Gedanke formuliert ist." },
-            { type: "text", content: "Die meisten Menschen halten diese Stimme f\u00fcr sich selbst." },
-            { type: "emphasis", content: "Das bist du nicht." },
+            { type: "text", content: "Du stehst unter der Dusche, und mitten im Shampoo meldet sich eine Stimme: \u201eDu hättest gestern anders reagieren sollen.\u201c Eine halbe Sekunde später eine zweite: \u201eLass es gut sein, ist doch vorbei.\u201c Und dann eine dritte, leiser: \u201eAber was, wenn sie jetzt schlecht von dir denkt?\u201c" },
+            { type: "text", content: "Die meisten Menschen halten diese Stimmen für sich selbst. Für das eigene Denken, den eigenen Verstand, die eigene Persönlichkeit. Aber wenn du genau hinschaust, merkst du etwas Seltsames: Die Stimmen widersprechen sich. Die eine will vorwärts, die andere bremst. Die eine sagt \u201etrau dich\u201c, die andere sagt \u201ebloß nicht\u201c. Wenn das alles du wärst, müsstest du dich permanent selbst widersprechen." },
+            { type: "text", content: "Die Wahrheit ist einfacher und gleichzeitig weitreichender: Das sind Teile von dir, aber sie sind nicht du." },
 
             { type: "divider" },
 
-            // --- Die Stimme ---
-            { type: "heading", level: 2, content: "Die Stimme, die du f\u00fcr dich h\u00e4ltst" },
-            { type: "text", content: "Achte mal darauf, was diese Stimme den ganzen Tag \u00fcber tut. Sie bewertet alles. \"Das war gut.\" \"Das war peinlich.\" \"Hoffentlich hat keiner gemerkt, dass ich keine Ahnung hatte.\" Sie plant, sie sorgt sich, sie motiviert. \"Jetzt rei\u00df dich zusammen.\" Und manchmal tr\u00f6stet sie: \"Ist doch nicht so schlimm.\"" },
-            { type: "text", content: "Manchmal spricht sie in deiner eigenen Stimme. Manchmal klingt sie verd\u00e4chtig nach deiner Mutter. Oder deinem Vater. Oder dem Lehrer aus der f\u00fcnften Klasse, der gesagt hat, aus dir wird nichts." },
-            { type: "text", content: "Es ist nicht immer dieselbe Stimme. Es sind mehrere. Manchmal ziehen sie in die gleiche Richtung. Oft nicht. Der eine Teil sagt: \"Spring!\" Der andere: \"Bleib wo du bist.\" Der eine: \"Zeig dich.\" Der andere: \"Blo\u00df nicht auffallen.\"" },
-            { type: "text", content: "Du kennst das. Dieses Hin-und-Her. Dieses Gef\u00fchl, zerrissen zu sein zwischen dem, was du willst, und dem, was du dich traust. Zwischen dem, was du wei\u00dft, und dem, was du tust." },
-            { type: "text", content: "Das ist nicht dein Versagen. Das ist nicht Willensschw\u00e4che. Das sind Teile von dir, die verschiedene Dinge wollen. Und keiner von ihnen ist das ganze Bild." },
+            // --- Die Teile ---
+            { type: "heading", level: 2, content: "Die Teile" },
+            { type: "text", content: "In der letzten Lektion habe ich Richard Schwartz vorgestellt, den Familientherapeuten, der seine Patienten wörtlich nahm, als sie sagten: \u201eEin Teil von mir will das, ein anderer Teil will das Gegenteil.\u201c Er fing an, diese Teile direkt anzusprechen, und sie antworteten." },
+            { type: "text", content: "Was er über Jahrzehnte bei tausenden von Menschen beobachtete, war immer dasselbe Muster: Wir tragen verschiedene innere Anteile in uns. Einen Kritiker, der uns antreibt und nie zufrieden ist. Einen Ängstlichen, der Risiken sieht, wo andere Chancen sehen. Einen Perfektionisten, der lieber gar nicht anfängt, als etwas Mittelmäßiges abzuliefern. Einen Rebellen, der alles über den Haufen werfen will." },
+            { type: "text", content: "Diese Anteile sind keine Fehler. Sie sind Schutzstrategien, die irgendwann einmal einen Zweck erfüllt haben. Das Kind, das lernte, es allen recht zu machen, weil Widerspruch bestraft wurde, trägt diesen Anpassungs-Teil auch mit dreißig und vierzig noch in sich. Er ist nicht mehr nötig, aber er weiß das nicht. Er tut weiterhin, was er immer getan hat: schützen." },
+            { type: "text", content: "Das Problem ist nicht, dass wir Teile haben. Das Problem ist, dass wir sie für uns selbst halten." },
 
             { type: "divider" },
 
-            // --- IFS / Selbst ---
-            { type: "heading", level: 2, content: "Was unter den Stimmen liegt" },
-            { type: "text", content: "In der letzten Lektion habe ich dir eine Karte gezeigt: dein Selbst. Dreizehn nat\u00fcrliche Qualit\u00e4ten - Ruhe, Klarheit, Neugier, Mitgef\u00fchl und neun weitere. Ich habe gesagt: Die sind schon da. Versch\u00fcttet vielleicht, verdeckt - aber da." },
-            { type: "text", content: "Jetzt schauen wir genauer hin." },
-            { type: "text", content: "Die Psychologie hat ein Modell daf\u00fcr, wie unsere innere Welt aufgebaut ist. Es hei\u00dft <strong>IFS</strong> - <strong>Internal Family Systems</strong>. Und es sagt etwas Einfaches, aber Tiefgreifendes:" },
-            { type: "emphasis", content: "Du bestehst aus Teilen. Und du bist mehr als deine Teile." },
-            { type: "text", content: "Die Stimmen in deinem Kopf - der Kritiker, der Antreiber, das \u00e4ngstliche Kind, der Rebell - das sind Teile. Jeder davon hat eine Rolle. Jeder glaubt, er besch\u00fctzt dich - und dass ohne ihn alles zusammenbrechen w\u00fcrde." },
-            { type: "text", content: "Unter all diesen Teilen liegt etwas anderes. Nicht eine weitere Stimme. Nicht eine bessere, kl\u00fcgere, spirituellere Version von dir. Sondern das, was alle Stimmen kennt, ohne selbst eine zu sein. Das Selbst." },
-            { type: "text", content: "Wenn ein Teil von dir w\u00fctend ist - wer bemerkt die Wut? Wer sp\u00fcrt die Angst, wenn ein Teil Angst hat? Und wer h\u00f6rt eigentlich zu, wenn alle Stimmen durcheinanderreden?" },
-            { type: "emphasis", content: "Das bist du." },
-            { type: "text", content: "Nicht der Inhalt. Der Raum, in dem der Inhalt erscheint." },
+            // --- Das Selbst ---
+            { type: "heading", level: 2, content: "Das Selbst" },
+            { type: "text", content: "Schwartz beobachtete etwas, das er nicht erwartet hatte. Wenn in einer Therapiesitzung alle Teile bereit waren, einen Schritt zurückzutreten - der Kritiker, der Ängstliche, der Kontrolleur -, dann tauchte bei den Patienten ein Zustand auf, der sich erstaunlich ähnlich anfühlte. Unabhängig von Alter, Herkunft oder Lebensgeschichte. Ein Zustand von Ruhe, Klarheit und Mitgefühl, der nicht erzeugt oder trainiert werden musste. Er war einfach da, sobald die Teile Platz machten." },
+            { type: "text", content: "Schwartz nannte es das Selbst." },
+            { type: "text", content: "Er beschrieb dreizehn natürliche Qualitäten dieses Selbst, die in zwei Gruppen zusammengefasst werden: die acht C's - Calm, Clarity, Curiosity, Compassion, Confidence, Courage, Creativity, Connectedness - und die fünf P's - Presence, Patience, Persistence, Perspective, Playfulness." },
+            { type: "text", content: "Das Entscheidende an diesen Qualitäten: Sie sind keine Ziele. Du musst sie nicht entwickeln, nicht üben, nicht verdienen. Sie sind bereits da - verdeckt von den Schutzschichten, die sich im Laufe eines Lebens aufgebaut haben. Erinnere dich an das Bild aus der letzten Lektion: Die Sonne scheint immer, auch wenn der Himmel schwarz ist vor Wolken. Die Wolken sind die Teile, die Sonne ist das Selbst." },
+            { type: "text", content: "Und genau das macht den Unterschied zu fast jedem anderen Ansatz, der dir sagt, du müsstest an dir arbeiten, dich verbessern, eine bessere Version deiner selbst werden. IFS sagt das Gegenteil: Du bist schon da. Du musst nur das aus dem Weg räumen, was dich verdeckt." },
 
             { type: "divider" },
 
             // --- Erwachen ---
-            { type: "heading", level: 2, content: "Was ist Erwachen?" },
-            { type: "text", content: "Das Wort \"Erwachen\" klingt gro\u00df. Mystisch. Nach Blitz und Erleuchtung und einem Moment, in dem sich alles ver\u00e4ndert. Vergiss das." },
-            { type: "text", content: "Erwachen ist nicht mystisch. Erwachen ist der Moment, in dem du den Unterschied erkennst zwischen den Teilen und dem Selbst. Zwischen dem, was du zu sein glaubst, und dem, was du bist." },
-            { type: "text", content: "Das ist kein einmaliges Event. Es ist ein Prozess. Manchmal erkennst du es f\u00fcr eine Sekunde - und dann \u00fcbernehmen die Teile wieder das Steuer. Manchmal h\u00e4lt es l\u00e4nger. Mit der Zeit wird der Zugang stabiler. Nicht weil du etwas erreichst, sondern weil du aufh\u00f6rst, dich mit den Stimmen zu verwechseln." },
-            { type: "text", content: "In der letzten Lektion habe ich dir die <strong>Hawkins-Karte</strong> gezeigt. Die Schwelle bei 200 - alles darunter destruktiv, alles dar\u00fcber konstruktiv. Hier wird sie lebendig:" },
-            { type: "text", content: "Unter 200 lebst du aus den Teilen heraus. Angst, \u00c4rger, Stolz, Scham - das sind nicht \"du\". Das sind Teile, die das Steuer \u00fcbernommen haben. Sie sehen die Welt durch ihren Filter und reagieren entsprechend." },
-            { type: "text", content: "\u00dcber 200 beginnt etwas anderes durchzuscheinen. Mut. Akzeptanz. Neugier. Das sind nicht neue Eigenschaften, die du dir antrainierst. Das sind Qualit\u00e4ten des Selbst, die sichtbar werden, wenn die Teile ein St\u00fcck zur Seite treten." },
-            { type: "callout", content: "Erwachen ist der Moment, in dem du erkennst, was wahr ist. Erleuchtung geht weiter: die vollst\u00e4ndige Verk\u00f6rperung von dem, was wahr ist. Nicht nur erkennen. Leben. Durchgehend. Das ist ein Zustand, der entsteht, wenn die Teile zur Ruhe kommen und das Selbst nicht mehr verdeckt ist." },
+            { type: "heading", level: 2, content: "Erwachen" },
+            { type: "text", content: "\u201eErwachen\u201c ist ein Wort, das viel Ballast mit sich trägt. Es klingt nach Räucherstäbchen und Lotussitz, nach einem blitzartigen Erleuchtungserlebnis, das das gesamte Leben von einer Sekunde auf die nächste verändert." },
+            { type: "text", content: "In Wirklichkeit ist Erwachen viel unspektakulärer: Es bedeutet, den Unterschied zu bemerken zwischen den Teilen und dem Selbst. Zwischen den Stimmen unter der Dusche und dem, was die Stimmen hört." },
+            { type: "text", content: "Ramana Maharshi, ein indischer Weiser des 20. Jahrhunderts, wurde berühmt für eine einzige Frage:" },
+            { type: "emphasis", content: "Wer bin ich?" },
+            { type: "text", content: "Er meinte damit keine philosophische Übung und kein intellektuelles Rätsel. Er meinte es als Einladung, die Aufmerksamkeit nach innen zu richten. Wer ist das, der gerade denkt? Wer ist das, der die Stimmen hört? Wer ist das, der sich Sorgen macht, der plant, der urteilt?" },
+            { type: "text", content: "Wenn du dieser Frage folgst, passiert etwas Merkwürdiges: Du findest keinen Denker. Du findest Gedanken, aber niemanden, der sie denkt. Du findest Gefühle, aber niemanden, der sie hat. Du findest Meinungen, Erinnerungen, Pläne - aber kein festes, greifbares Ich, dem das alles gehört." },
+            { type: "text", content: "Was du stattdessen findest, ist etwas, das sich schwer in Worte fassen lässt: ein stilles Gewahrsein, das all diese Inhalte kennt, ohne selbst ein Inhalt zu sein. Die Teile kommen und gehen, aber das, was sie bemerkt, bleibt." },
+            { type: "text", content: "Das ist das Selbst, von dem Schwartz spricht. Und es ist genau das, worauf Ramana Maharshi zeigt." },
 
             { type: "divider" },
 
-            // --- Bildschirm-Metapher ---
+            // --- Der Bildschirm und der Film ---
             { type: "heading", level: 2, content: "Der Bildschirm und der Film" },
-            { type: "text", content: "Ein Bildschirm. Auf dem Bildschirm laufen Filme - Dramen, Kom\u00f6dien, Horrorfilme. Manche rei\u00dfen dich mit, manche langweilen dich." },
-            { type: "text", content: "Der Bildschirm wird nie nass, wenn es im Film regnet. Er trauert nicht, wenn jemand stirbt. Er zeigt alles - und wird von nichts davon ber\u00fchrt." },
-            { type: "emphasis", content: "Du bist der Bildschirm. Nicht der Film." },
-            { type: "text", content: "Deine Gedanken, Gef\u00fchle, \u00c4ngste - das sind Filme. Sie sind real, sie sind lebendig, sie sind wichtig. Aber sie sind nicht das, was du bist. Du bist das, was sie erm\u00f6glicht." },
-            { type: "text", content: "Klingt abstrakt? Ist es nicht. Es ist das Konkreteste, was es gibt. Weil es die Frage beantwortet, mit der diese Lektion begonnen hat." },
-            { type: "text", content: "Wer bin ich?" },
-            { type: "text", content: "Nicht meine Gedanken, nicht meine Gef\u00fchle, nicht meine Geschichte. Sondern das, was all das kennt." },
-
-            { type: "divider" },
-
-            // --- Ramana ---
-            { type: "heading", level: 2, content: "Die Frage, die keine Antwort braucht" },
-            { type: "quote", content: "Wer bin ich?", attribution: "Ramana Maharshi" },
-            { type: "text", content: "Der indische Weise <strong>Ramana Maharshi</strong> hat sein ganzes Leben auf eine einzige Frage reduziert: \"Wer bin ich?\"" },
-            { type: "text", content: "Seine Methode war radikal einfach. Wenn ein Gedanke auftaucht, frag: Wer denkt das? Die Antwort kommt: \"Ich.\" Dann frag weiter: Wer ist dieses \"Ich\"?" },
-            { type: "text", content: "Das ist keine intellektuelle \u00dcbung. Es ist eher wie eine Taschenlampe, die du nach innen richtest. Jede Antwort, die kommt, ist ein Teil. \"Ich bin Steven.\" Teil. \"Ich bin Coach.\" Teil. \"Ich bin \u00e4ngstlich.\" Teil. \"Ich bin der, der all das beobachtet.\" Auch das - ein Teil, der sich f\u00fcr das Ganze h\u00e4lt." },
-            { type: "text", content: "Was bleibt, wenn keine Antwort mehr kommt?" },
-            { type: "text", content: "Du musst das nicht beantworten. Die Frage selbst ist das Werkzeug. Sie r\u00e4umt auf. Sie zieht Schicht um Schicht ab. Nicht brutal, nicht gewaltsam - eher wie Wasser, das langsam den Stein freilegt." },
-            { type: "callout", content: "Es ist die Beziehung zwischen deinem Selbstbild und deinem Weltbild. Und du bist die Kapazit\u00e4t f\u00fcr beides. Das, was Selbstbilder und Weltbilder hat - ohne eines davon zu sein." },
-
-            { type: "divider" },
-
-            // --- Bedeutung ---
-            { type: "heading", level: 2, content: "Was das f\u00fcr dein Leben bedeutet" },
-            { type: "text", content: "Okay, aber was bringt dir das?" },
-            { type: "text", content: "Ehrliche Antwort: Diese Lektion noch nichts Spektakul\u00e4res. Du baust ein Fundament. Du lernst eine neue Art, dich selbst zu sehen. Und das ver\u00e4ndert mehr, als du gerade ahnst." },
-            { type: "text", content: "Wenn du anf\u00e4ngst, deine inneren Stimmen als Teile zu erkennen statt als \"dich selbst\", passiert etwas Entscheidendes: Du bekommst Abstand. Nicht kalten Abstand. Eher den Abstand von jemandem, der alle Stimmen kennt - und keiner von ihnen auf den Leim geht." },
-            { type: "text", content: "Dieser Abstand ist der Anfang von allem, was in diesem Kurs kommt. In Phase 2 lernst du, mit diesen Teilen zu arbeiten - sie zu verstehen, zu befreien, zu aktualisieren. In Phase 3 lebst du aus dem Selbst heraus in die Welt hinein. Aber all das braucht ein Fundament. Und das Fundament ist die Erkenntnis dieser Lektion:" },
-            { type: "highlight", title: "Das Fundament", content: "Du bist nicht deine Teile. Du bist das, was deine Teile kennt." },
+            { type: "text", content: "Ramana Maharshi nutzte ein Bild, das bis heute eine der klarsten Beschreibungen für diesen Unterschied ist: die Kinoleinwand." },
+            { type: "text", content: "Auf einer Leinwand laufen Filme. Liebesfilme, Actionfilme, Dramen, Komödien. Auf der Leinwand brennen Häuser, fließen Tränen, explodieren Bomben, küssen sich Menschen. Aber die Leinwand selbst wird nie nass, nie heiß, nie traurig. Sie bleibt, was sie ist, egal welcher Film gerade läuft. Und wenn der Film zu Ende ist, ist die Leinwand immer noch da - unverändert, unberührt, bereit für den nächsten Film." },
+            { type: "text", content: "Wir verwechseln uns mit dem Film. Wir glauben, wir sind die Geschichte, die gerade läuft - die Rolle, der Beruf, die Beziehung, die Sorgen, die Erfolge. Und wenn der Film dramatisch wird, leiden wir, weil wir vergessen haben, dass wir die Leinwand sind." },
+            { type: "text", content: "Die Teile, von denen Schwartz spricht, sind Figuren im Film. Der Kritiker ist eine Figur. Der Ängstliche ist eine Figur. Der Ehrgeizige, der Kontrolleur, der Anpasser - alles Figuren, die ihre Rollen spielen, manchmal überzeugend, manchmal übertrieben, aber immer auf der Leinwand." },
+            { type: "text", content: "Das Selbst ist die Leinwand." },
+            { type: "text", content: "Diese Unterscheidung klingt abstrakt, hat aber praktische Konsequenzen. Wenn du dich mit einer Figur im Film verwechselst, bist du ihr ausgeliefert. Wenn der Ängstliche Angst hat, hast du Angst. Wenn der Kritiker urteilt, glaubst du das Urteil. Aber wenn du merkst, dass du die Leinwand bist, ändert sich deine Beziehung zu den Figuren. Du kannst den Ängstlichen hören, ohne von der Angst überwältigt zu werden. Du kannst den Kritiker bemerken, ohne sein Urteil für die Wahrheit zu halten." },
+            { type: "text", content: "Das bedeutet nicht, dass die Gefühle verschwinden. Auf der Leinwand laufen weiterhin Filme, und manche davon sind intensiv. Aber du weißt, wer du bist: nicht der Film, sondern das, was den Film möglich macht." },
 
             { type: "divider" },
 
             // --- Übung ---
-            { type: "heading", level: 2, content: "Deine \u00dcbung" },
-            { type: "text", content: "In dieser Lektion hast du die Wahl. Drei Optionen - w\u00e4hle die, die dich anspricht. Mach sie mindestens dreimal." },
+            { type: "heading", level: 2, content: "Übung: Drei Wege zur selben Frage" },
+            { type: "text", content: "Diese Woche geht es darum, die Unterscheidung zwischen den Teilen und dem Selbst nicht nur zu verstehen, sondern zu erleben. Wähle eine der drei Optionen, die am besten zu dir passt. Es gibt keine richtige Wahl - nur deine." },
 
-            { type: "heading", level: 3, content: "Option A: \"Ich bin.\" (Kontemplation)" },
-            { type: "text", content: "Setz dich hin. F\u00fcnf Minuten. Schlie\u00df die Augen." },
-            { type: "text", content: "Sag innerlich: \"Ich bin.\"" },
-            { type: "text", content: "Ohne irgendetwas dahinter. Kein \"Ich bin Steven.\" Kein \"Ich bin gut.\" Kein \"Ich bin m\u00fcde.\" Nur: Ich bin." },
-            { type: "text", content: "Was ist schon da - ohne dass du dem etwas hinzuf\u00fcgen musst? Beobachte. F\u00fchle. Keine Antwort n\u00f6tig. Nur da sein mit dem, was ist." },
+            { type: "heading", level: 3, content: "Option A: Die \u201eIch bin\u201c-Kontemplation (5 Minuten Stille)" },
+            { type: "text", content: "Setz dich hin, schließ die Augen und stell dir leise die Frage: \u201eWer bin ich?\u201c Nicht als Frage, auf die du eine Antwort erwartest, sondern als Einladung, nach innen zu schauen. Wenn Antworten kommen - \u201eIch bin Mutter\u201c, \u201eIch bin Angestellter\u201c, \u201eIch bin ängstlich\u201c -, bemerk sie und frag erneut: Und wer ist es, der das weiß? Bleib bei der Frage, nicht bei den Antworten. Fünf Minuten reichen." },
 
-            { type: "heading", level: 3, content: "Option B: \"Wer denkt das?\" (Alltags\u00fcbung)" },
-            { type: "text", content: "Keine Extrazeit n\u00f6tig. Diese \u00dcbung passiert mitten im Alltag." },
-            { type: "text", content: "Wenn ein Gedanke kommt - egal welcher - frag: \"Wer denkt das?\" Wenn ein Gef\u00fchl kommt: \"Wer f\u00fchlt das?\" Wenn eine Bewertung auftaucht: \"Wer bewertet hier?\"" },
-            { type: "text", content: "Keine Antwort n\u00f6tig. Die Frage reicht. Sie unterbricht den Autopiloten f\u00fcr eine Sekunde. Und in dieser Sekunde bist du das Selbst." },
+            { type: "heading", level: 3, content: "Option B: \u201eWer denkt das?\u201c im Alltag (passiv, über die Woche verteilt)" },
+            { type: "text", content: "Wenn du diese Woche merkst, dass eine innere Stimme besonders laut ist - der Kritiker, der Zweifler, der Sorgenträger -, halte kurz inne und frag dich: \u201eWer bemerkt diese Stimme gerade?\u201c Du musst nichts tun, nichts verändern, nichts lösen. Nur bemerken, dass da jemand ist, der bemerkt." },
 
-            { type: "heading", level: 3, content: "Option C: Stimmen-Inventar (Journaling)" },
-            { type: "text", content: "Nimm dir zwanzig Minuten. Papier oder Bildschirm." },
-            { type: "text", content: "Schreibe f\u00fcnf innere Stimmen auf, die du regelm\u00e4\u00dfig h\u00f6rst. Der Kritiker. Der Antreiber. Der \u00c4ngstliche. Der Perfektionist. Das verletzte Kind. Wer auch immer in dir spricht - gib jeder Stimme einen Namen oder eine Rolle." },
-            { type: "text", content: "Dann frag dich: Wer hat gerade diese Liste geschrieben? Wer konnte alle diese Stimmen erkennen, ohne selbst eine davon zu sein?" },
-
-            { type: "divider" },
-
-            // --- Was kommt ---
-            { type: "heading", level: 2, content: "Was kommt" },
-            { type: "text", content: "Du hast jetzt ein Konzept. Eine Idee davon, was das Selbst ist und was die Teile sind. Das ist wertvoll. Und es reicht nicht." },
-            { type: "emphasis", content: "\u00dcber Schwimmen zu lesen macht dich nicht zum Schwimmer." },
-            { type: "text", content: "In der n\u00e4chsten Lektion springen wir rein. Du wirst deine innere Welt direkt erkunden - nicht als Konzept, sondern als Erfahrung. Du wirst die verschiedenen Stimmen und Teile in dir kennenlernen. Nicht theoretisch. Praktisch." },
+            { type: "heading", level: 3, content: "Option C: Stimmen-Inventar (aktiv, 15 Minuten Journaling)" },
+            { type: "text", content: "Nimm ein Blatt Papier und schreib die inneren Stimmen auf, die du in den letzten Tagen gehört hast. Gib jeder einen Namen oder eine Rolle: der Antreiber, der Skeptiker, die Perfektionistin, der Harmoniesüchtige. Beschreib kurz, was jede Stimme typischerweise sagt und in welchen Situationen sie auftaucht. Wenn du fertig bist, schau auf die Liste und stell dir eine Frage: Wer hat diese Liste geschrieben? Wer kennt alle diese Stimmen, ohne selbst eine von ihnen zu sein?" },
 
             { type: "divider" },
 
@@ -126,12 +83,12 @@
             { type: "progress-bar", label: "Lektion 1 von 9", percent: 11, detail: "Phase 1: Be Yourself" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "\u00dcbung mindestens einmal durchgef\u00fchrt",
-                "Reflexionsfrage beantwortet"
+                "Lektion vollständig gelesen",
+                "Eine der drei Übungen mindestens einmal durchgeführt",
+                "Den Unterschied zwischen Teilen und Selbst erlebt"
             ]},
 
-            { type: "signoff", text: "Du hast die Karte. In W2 betrittst du das Terrain.", name: "Steven" }
+            { type: "signoff", text: "In W0 hast du die zwei Karten kennengelernt: die Innenwelt-Karte (IFS) und die Entwicklungs-Karte (Hawkins). Diese Woche hast du die erste Karte genauer studiert - das Selbst und die Teile. In W2 wirst du deine innere Welt direkt erkunden und die Teile kennenlernen, die dein Leben lenken, ohne dass du es merkst.", name: "Steven" }
         ]
     };
 
@@ -139,7 +96,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

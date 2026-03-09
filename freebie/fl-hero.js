@@ -1,5 +1,5 @@
 // Freebie Landingpage - Hero Section (Standalone)
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-hero.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-hero.js"></script>
 (function() {
     if (window.__FL_HERO_LOADED) return;
     window.__FL_HERO_LOADED = true;

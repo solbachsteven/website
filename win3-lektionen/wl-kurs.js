@@ -1,5 +1,5 @@
 // Win³ Kurs - Orchestrator
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-kurs.js"></script>
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-kurs.js"></script>
 (function() {
     if (window.__WL_KURS_LOADED) return;
     window.__WL_KURS_LOADED = true;
@@ -57,10 +57,17 @@
     var circumference = 97.4;
 
     // ======== CREATE ROOT ========
-    var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
-    root = document.createElement('div');
-    root.className = 'wl-kurs-root';
-    anchor.parentNode.insertBefore(root, anchor.nextSibling);
+    // Portal-Mode: __WL_PORTAL_CONTAINER gesetzt → dort mounten
+    if (window.__WL_PORTAL_CONTAINER) {
+        root = document.createElement('div');
+        root.className = 'wl-kurs-root';
+        window.__WL_PORTAL_CONTAINER.appendChild(root);
+    } else {
+        var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
+        root = document.createElement('div');
+        root.className = 'wl-kurs-root';
+        anchor.parentNode.insertBefore(root, anchor.nextSibling);
+    }
 
     // ======== INJECT CSS ========
     var style = document.createElement('style');
@@ -268,6 +275,12 @@
 
     // ======== BUILD DOM ========
     function buildDOM() {
+        // Portal: Loading-Indicator entfernen
+        if (root.parentNode) {
+            var loadingEl = root.parentNode.querySelector('.wl-loading');
+            if (loadingEl) loadingEl.remove();
+        }
+
         // Scroll progress bar
         scrollBar = document.createElement('div');
         scrollBar.className = 'wl-scroll-progress';
@@ -317,6 +330,22 @@
 
         // Scroll tracking
         window.addEventListener('scroll', updateScrollProgress);
+
+        // Portal-API: Lifecycle-Methoden exponieren
+        window.__WL_KURS.showLesson = showLesson;
+        window.__WL_KURS.showMatrix = showMatrix;
+        window.__WL_KURS.teardown = function() {
+            if (scrollBar) scrollBar.style.display = 'none';
+            if (floatEl) floatEl.style.display = 'none';
+            scrollBar.classList.remove('active');
+            floatEl.classList.remove('visible');
+            if (root.parentNode) root.parentNode.removeChild(root);
+        };
+        window.__WL_KURS.remount = function(container) {
+            container.appendChild(root);
+            if (scrollBar) scrollBar.style.display = '';
+            if (floatEl) floatEl.style.display = '';
+        };
     }
 
     // ======== NAVIGATION ========
@@ -444,7 +473,7 @@
 
     // ======== LOAD ENGINE + LESSONS ========
     var ownScript = document.currentScript || document.querySelector('script[src*="wl-kurs"]');
-    var BASE = ownScript && ownScript.src ? ownScript.src.replace(/wl-kurs\.js.*$/, '') : 'https://solbachsteven.github.io/website/win3-lektionen/';
+    var BASE = ownScript && ownScript.src ? ownScript.src.replace(/wl-kurs\.js.*$/, '') : 'https://stevensolbach.de/win3-lektionen/';
     var scripts = ['wl-engine'].concat(ORDER.map(function(id) { return 'wl-' + id; }));
 
     function loadNext(i) {

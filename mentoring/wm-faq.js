@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - FAQ Section (Standalone)
 // Accordion mit h\u00e4ufigen Fragen zum Mentoring
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-faq.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-faq.js"></script>
 (function() {
     if (window.__WM_FAQ_LOADED) return;
     window.__WM_FAQ_LOADED = true;

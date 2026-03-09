@@ -3,7 +3,7 @@
  * Laedt alle Sections sequentiell in der richtigen Reihenfolge.
  *
  * Systeme.io Einzeiler:
- * <script src="https://solbachsteven.github.io/website/website.js"></script>
+ * <script src="https://stevensolbach.de/website.js"></script>
  */
 (function() {
     // Guard: verhindere doppelte Ausfuehrung
@@ -20,7 +20,7 @@
     anchor.parentNode.insertBefore(container, anchor.nextSibling);
     window.__SS_CONTAINER = container;
 
-    var BASE = 'https://solbachsteven.github.io/website/sections/';
+    var BASE = 'https://stevensolbach.de/sections/';
     var sections = [
         'fx',
         'hero',

@@ -3,20 +3,20 @@
  * Laedt alle Mentoring-Sections sequentiell in der richtigen Reihenfolge.
  *
  * Systeme.io Einzeiler:
- * <script src="https://solbachsteven.github.io/website/mentoring-landingpage.js"></script>
+ * <script src="https://stevensolbach.de/mentoring-landingpage.js"></script>
  *
  * Oder einzelne Sections standalone laden:
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-hero.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-pain.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-steven.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-journey.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-how.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-includes.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-for-whom.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-testimonials.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-faq.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-final-cta.js"></script>
- * <script src="https://solbachsteven.github.io/website/mentoring/wm-fx.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-hero.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-pain.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-steven.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-journey.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-how.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-includes.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-for-whom.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-testimonials.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-faq.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-final-cta.js"></script>
+ * <script src="https://stevensolbach.de/mentoring/wm-fx.js"></script>
  */
 (function() {
     if (window.__WM_LOADED) {
@@ -31,7 +31,7 @@
     var anchor = document.currentScript || document.scripts[document.scripts.length - 1];
     anchor.parentNode.insertBefore(container, anchor.nextSibling);
 
-    var BASE = 'https://solbachsteven.github.io/website/mentoring/';
+    var BASE = 'https://stevensolbach.de/mentoring/';
     var sections = [
         'wm-hero',
         'wm-pain',

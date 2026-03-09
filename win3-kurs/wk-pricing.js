@@ -1,6 +1,6 @@
 // Win³ Kurs Landingpage - Pricing Section (Standalone)
 // Einzelne Kurs-Card (297€) mit Feature-Liste und CTA
-// Loaded via: <script src="https://solbachsteven.github.io/website/win3-kurs/wk-pricing.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/win3-kurs/wk-pricing.js"></script>
 (function() {
     if (window.__WK_PRICING_LOADED) return;
     window.__WK_PRICING_LOADED = true;

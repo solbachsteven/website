@@ -1,5 +1,5 @@
-// Win³ Kurs - Lektion 6: Du als dein Coach
-// Einzeiler: <script src="https://solbachsteven.github.io/website/win3-lektionen/wl-w6.js"></script>
+// Win³ Kurs - Lektion 6: Dein eigener Coach
+// Einzeiler: <script src="https://stevensolbach.de/win3-lektionen/wl-w6.js"></script>
 (function() {
     if (window.__WL_W6) return;
     window.__WL_W6 = true;
@@ -9,166 +9,112 @@
     var LESSON_DATA = {
         meta: {
             label: "LEKTION 6",
-            title: "Du als dein Coach",
+            title: "Dein eigener Coach",
             subtitle: "Phase 2: Do Good"
         },
         sections: [
             // --- Intro ---
-            { type: "text", content: "Du wei\u00dft, was du tun solltest." },
-            { type: "text", content: "Ges\u00fcnder essen. Fr\u00fcher aufstehen. Das Gespr\u00e4ch, das du vor dir herschiebst. Den Job, die Beziehung, den ersten Schritt." },
-            { type: "text", content: "Du wei\u00dft es. Und trotzdem tust du es nicht." },
-            { type: "text", content: "Nicht aus Faulheit. Nicht aus Unwissen. Es ist ein Graben zwischen Erkennen und Tun. Und den schaffen die meisten nicht." },
-            { type: "text", content: "In Lektion 4 hast du erkannt, was dich festh\u00e4lt. In Lektion 5, wie du es losl\u00e4sst. Das reicht nicht." },
-            { type: "emphasis", content: "Es braucht eine Br\u00fccke zur Handlung. Diese Woche baust du sie." },
+            { type: "text", content: "In den letzten Wochen ist einiges passiert. Wir haben Anteile kennengelernt, die seit Jahren das Steuer halten, ohne dass wir es bemerkt haben. Wir haben sie auf der Hawkins-Skala eingeordnet und zum ersten Mal gesehen, auf welcher Ebene sie operieren. Wir haben gelernt, Gefühle durchzulassen, statt sie zu unterdrücken oder wegzudrücken. Wir haben einem Anteil liebevolle Aufmerksamkeit geschenkt, vielleicht zum ersten Mal." },
+            { type: "text", content: "Und trotzdem: Irgendwann kommt der Moment, in dem man morgens aufwacht und alles genauso ist wie vorher. Die Einsicht ist da. Das Wissen ist da. Aber zwischen dem, was wir verstanden haben, und dem, was sich im Alltag tatsächlich verändert, liegt ein Abstand, den reines Verstehen nicht überbrückt." },
 
             { type: "divider" },
 
-            // --- Selbstcoaching-Schleife ---
+            // --- Der Graben ---
+            { type: "heading", level: 2, content: "Der Graben" },
+            { type: "text", content: "Die alten Griechen hatten ein Wort dafür: Akrasia - das Handeln gegen besseres Wissen. Wir wissen, dass Bewegung uns guttut, und bleiben auf dem Sofa. Wir wissen, dass ein Gespräch längst überfällig ist, und schieben es auf. Wir wissen, welcher Anteil uns gerade steuert, und lassen ihn trotzdem machen." },
+            { type: "text", content: "Das ist kein Versagen. Das ist die menschliche Grundausstattung." },
+            { type: "text", content: "Verstehen, Fühlen und Handeln sind drei verschiedene Vorgänge, und die meisten Menschen beherrschen einen davon gut und vernachlässigen die anderen. Manche verstehen alles, können ihre Muster benennen wie ein Lehrbuch, analysieren sich brillant - und trotzdem ändert sich nichts. Andere fühlen tief und intensiv, sind im Kontakt mit ihrem Innenleben - aber es bleibt beim Fühlen, ohne dass daraus eine Richtung entsteht. Und wieder andere handeln ständig, sind immer beschäftigt, immer produktiv - ohne zu wissen, wohin und warum." },
+            { type: "text", content: "Zwischen Erkenntnis und Handlung liegt ein Graben. Er ist nicht breit, aber tief genug, dass die meisten Menschen davor stehen bleiben - nicht weil ihnen der Wille fehlt, sondern weil Wissen allein keine Brücke baut." },
+            { type: "text", content: "Diese Lektion baut die Brücke." },
+
+            { type: "divider" },
+
+            // --- Die Selbstcoaching-Schleife ---
             { type: "heading", level: 2, content: "Die Selbstcoaching-Schleife" },
-            { type: "text", content: "Drei Schritte. Immer die gleichen. F\u00fcr alles." },
-            { type: "emphasis", content: "Verstehen. F\u00fchlen. Handeln." },
-            { type: "text", content: "Und dann wieder von vorn." },
-            { type: "text", content: "Das ist die gleiche Struktur wie der gesamte Kurs. Meta, Innen, Au\u00dfen. Lektion 4 war Verstehen. Lektion 5 war F\u00fchlen. Lektion 6 ist Handeln. Was der Kurs im Gro\u00dfen macht, machst du jetzt im Kleinen." },
-            { type: "text", content: "Die Schleife ist kein Weg mit Start und Ziel. Sie dreht sich. Jede Handlung f\u00fchrt zu neuen Erkenntnissen. Die f\u00fchren zu neuen Gef\u00fchlen. Die erm\u00f6glichen neue Handlung. Mit jeder Runde gehst du tiefer." },
-            { type: "text", content: "Du kennst die einzelnen Teile bereits. Jetzt lernst du, sie bewusst als Prozess einzusetzen." },
+            { type: "text", content: "Was wir in den letzten Wochen gelernt haben - Anteile erkennen, Gefühle durchlassen, den eigenen Standort bestimmen -, das waren einzelne Werkzeuge. Jetzt verbinden wir sie zu einem Kreislauf, der auf jedes Thema im Leben anwendbar ist: Verstehen, Fühlen, Handeln." },
+            { type: "text", content: "Es ist eine Schleife, kein gerader Weg. Nach dem Handeln verstehen wir oft etwas Neues, etwas Tieferes, und der nächste Durchlauf beginnt." },
 
-            { type: "divider" },
+            { type: "heading", level: 3, content: "Verstehen: Was ist eigentlich los?" },
+            { type: "text", content: "Der erste Schritt klingt banal, ist aber der, an dem die meisten scheitern. Denn was wir für Verständnis halten, ist oft schon Interpretation." },
+            { type: "text", content: "Ein Beispiel: \"Mein Chef hat mich in der Besprechung übergangen.\" Das klingt wie ein Fakt, ist aber eine Geschichte. Der Fakt wäre: \"Mein Chef hat drei Kolleginnen nach ihrer Meinung gefragt und mich nicht.\" Alles andere - übergangen, absichtlich, weil er mich nicht ernst nimmt - ist Deutung. Und Deutungen fühlen sich an wie Wahrheiten, besonders wenn sie alte Wunden berühren." },
+            { type: "text", content: "Byron Katie hat eine Methode entwickelt, die sie \"The Work\" nennt. Im Kern besteht sie aus einer einzigen Frage: \"Ist das wahr?\" Und wenn die Antwort Ja lautet, kommt die zweite: \"Kannst du mit absoluter Sicherheit wissen, dass es wahr ist?\"" },
+            { type: "text", content: "Die meisten stressauslösenden Gedanken überleben die zweite Frage nicht. Nicht weil sie erfunden wären, sondern weil die absolute Sicherheit fehlt. Der Abstand zwischen \"Ich glaube das\" und \"Ich weiß das\" ist genau der Raum, in dem Klarheit entsteht." },
+            { type: "text", content: "\"The Work\" muss keine formale Praxis werden. Aber die Gewohnheit, bei einem belastenden Gedanken innezuhalten und zu fragen \"Ist das ein Fakt oder eine Interpretation?\" verändert, wie wir mit uns selbst umgehen." },
 
-            // --- Schritt 1: Verstehen ---
-            { type: "heading", level: 2, content: "Schritt 1: Verstehen" },
-            { type: "emphasis", content: "Was ist eigentlich los?" },
-            { type: "text", content: "Das ist die Frage, an der die meisten scheitern. Nicht weil sie keine Antwort h\u00e4tten - sondern weil ihre Antwort zu vage ist. \"Irgendwas stimmt nicht.\" \"Ich bin unzufrieden.\" \"Ich stecke fest.\" Das ist keine Klarheit. Das ist ein Gef\u00fchl, das sich als Gedanke ausgibt." },
-            { type: "text", content: "Was hilft: Sch\u00e4rfe. Die Dinge beim Namen nennen." },
-            { type: "text", content: "Nimm dir ein Blatt Papier oder \u00f6ffne dein Journal und stell dir diese Fragen:" },
-            { type: "text", content: "<strong>Was genau besch\u00e4ftigt mich gerade?</strong> Nicht \"meine Karriere\". Der konkrete Punkt: \"Ich traue mich nicht, meinem Chef zu sagen, dass ich andere Aufgaben will.\"" },
-            { type: "text", content: "<strong>Was ist die Geschichte, die ich mir dar\u00fcber erz\u00e4hle?</strong> Jede Situation hat eine Geschichte. \"Wenn ich das sage, verliere ich meinen Job.\" \"Ich bin nicht gut genug.\" Schreib das auf, wie es ist." },
-            { type: "text", content: "<strong>Was davon ist Fakt, was ist Interpretation?</strong> Fakt: Ich habe meinem Chef noch nicht gesagt, was ich will. Interpretation: Wenn ich es sage, verliere ich meinen Job. Fakten: Was w\u00fcrde eine Kamera zeigen. Der Rest ist dein Kopf, der Geschichten erfindet." },
-            { type: "text", content: "<strong>Pr\u00fcfe die Geschichte.</strong> <strong>Byron Katie</strong> hat vier Fragen entwickelt, die jede Geschichte auf ihre Wahrheit pr\u00fcfen. Sie nennt es \"The Work\":" },
+            { type: "heading", level: 3, content: "Fühlen: Was löst das in mir aus?" },
+            { type: "text", content: "Wenn der Fakt von der Interpretation getrennt ist, bleibt trotzdem etwas übrig. Ein Ziehen in der Brust, ein Knoten im Magen, eine Anspannung in den Schultern. Das ist der Anteil, der sich meldet." },
+            { type: "text", content: "Hier kommt Letting-Go aus W5 zum Einsatz. Statt das Gefühl zu analysieren (\"Warum fühle ich mich so?\"), gehen wir in den Körper. Wo sitzt es? Wie fühlt es sich an? Welcher Anteil ist das - der Kritiker, der Verlassene, der Perfektionist?" },
+            { type: "text", content: "Das Gefühl muss nicht gelöst und nicht verstanden werden. Es darf da sein. Das ist der ganze Schritt: bemerken, im Körper spüren, erlauben. Was in W5 als eigenständige Übung gelernt wurde, wird hier zum Werkzeug für den Alltag." },
+            { type: "text", content: "Manchmal löst sich etwas dabei. Manchmal nicht. Beides ist in Ordnung. Der Punkt ist, dass das Gefühl aufhört zu steuern, auch wenn es bleibt." },
 
-            { type: "steps", title: "The Work - Vier Fragen", items: [
-                { title: "Ist das wahr?", description: "Dein st\u00e4rkster Gedanke - \"Ich werde abgelehnt\", \"Ich bin nicht gut genug\" - ist das wahr?" },
-                { title: "Kannst du mit absoluter Sicherheit wissen, dass das wahr ist?", description: "Wirklich? Mit absoluter Sicherheit?" },
-                { title: "Wie reagierst du, wenn du diesen Gedanken glaubst?", description: "Was passiert in dir? Was tust du? Was tust du nicht?" },
-                { title: "Wer w\u00e4rst du ohne diesen Gedanken?", description: "Stell dir vor, du k\u00f6nntest diesen Gedanken nicht denken. Wer w\u00e4rst du dann? Was w\u00e4re m\u00f6glich?" }
-            ]},
-
-            { type: "text", content: "Und dann die Umkehrung: Was ist das Gegenteil deiner Geschichte? Nicht glauben. Nur einen Moment damit sitzen. Oft zeigt die Umkehrung etwas, das mindestens genauso wahr ist wie das Original." },
-            { type: "text", content: "Schreib alles auf. Nicht im Kopf kreisen lassen - auf Papier oder Bildschirm bringen." },
-
-            { type: "divider" },
-
-            // --- Schritt 2: Fühlen ---
-            { type: "heading", level: 2, content: "Schritt 2: F\u00fchlen" },
-            { type: "emphasis", content: "Was l\u00f6st das in mir aus?" },
-            { type: "text", content: "Hier brechen die meisten ab. Du hast verstanden, was los ist - und springst direkt zur L\u00f6sung. Neuer Plan. Neue Strategie. Neue Willenskraft." },
-            { type: "text", content: "Und es funktioniert nicht. Du hast den wichtigen Teil \u00fcbersprungen." },
-            { type: "text", content: "Die Letting-Go-Methode aus Lektion 5 - nutze sie jetzt. Nicht separat. Hier, direkt, in deinem Coaching." },
-            { type: "text", content: "<strong>Was f\u00fchle ich, wenn ich an dieses Thema denke?</strong> Nicht was du denkst - was du f\u00fchlst. Im K\u00f6rper, nicht im Kopf." },
-            { type: "text", content: "<strong>Wo sitzt es?</strong> Bauch, Brust, Kehle, Schultern? Geh mit deiner Aufmerksamkeit dorthin." },
-            { type: "text", content: "<strong>Welcher Anteil meldet sich?</strong> Du kennst deine Anteile aus Lektion 2 und 4. Wer ist hier aktiv? Der \u00c4ngstliche? Der Perfektionist? Das verletzte Kind?" },
-            { type: "text", content: "<strong>Kann ich die Story loslassen und beim reinen Gef\u00fchl bleiben?</strong> Du wei\u00dft, wie das geht. Schritt 2 der Letting-Go-Methode. Die Geschichte loslassen, beim K\u00f6rpergef\u00fchl bleiben, erlauben." },
-            { type: "text", content: "Nimm dir Zeit. Der Wechsel vom Kopf in den K\u00f6rper braucht manchmal Minuten, nicht Sekunden. Das ist nicht ineffizient - das ist der Prozess. Wenn du diesen Schritt \u00fcberspringst, baust du auf Sand." },
-
-            { type: "divider" },
-
-            // --- Schritt 3: Handeln ---
-            { type: "heading", level: 2, content: "Schritt 3: Handeln" },
-            { type: "emphasis", content: "Was ist der kleinste n\u00e4chste Schritt?" },
-            { type: "text", content: "Nicht der perfekte Plan. Ein Schritt. So klein, dass dein Widerstand keine Chance hat." },
-            { type: "text", content: "<strong>Was w\u00e4re ein konkreter Schritt, den ich als N\u00e4chstes tun k\u00f6nnte?</strong> Ein Schritt. Nicht f\u00fcnf. Nicht ein ganzer Aktionsplan. Einer. So konkret, dass du morgen wei\u00dft, was zu tun ist." },
-            { type: "text", content: "<strong>Was h\u00e4lt mich davon ab?</strong> Die wichtigste Frage. Wenn die Antwort ein Gef\u00fchl ist - zur\u00fcck zu Schritt 2. Ein Gedanke - zur\u00fcck zu Schritt 1." },
-            { type: "text", content: "<strong>Woran merke ich, dass sich etwas ver\u00e4ndert hat?</strong> Nicht zur Kontrolle. Um zu sehen, was sich ver\u00e4ndert. Ver\u00e4nderung ist klein. Du siehst sie nur, wenn du wei\u00dft, worauf du achten musst." },
-            { type: "text", content: "Wenn du nicht handeln kannst, gibt es etwas Unerledigtes zwischen Verstehen und F\u00fchlen. Geh zur\u00fcck. Die Schleife erlaubt das." },
+            { type: "heading", level: 3, content: "Handeln: Was ist der kleinste nächste Schritt?" },
+            { type: "text", content: "Jetzt kommt der Moment, an dem die meisten Ansätze versagen. Verstanden, was los ist. Gefühlt, was da ist. Und dann sagt jemand: \"Jetzt musst du ins Handeln kommen.\" Und der innere Reaktion ist: Ja, morgen." },
+            { type: "text", content: "Das Problem mit \"ins Handeln kommen\" ist, dass es nach etwas Großem klingt. Ein Gespräch führen, eine Kündigung einreichen, eine Gewohnheit ändern. Der Widerstand, der dabei aufkommt, ist keine Faulheit - es ist ein Anteil, der Angst hat. Und gegen Angst hilft kein Motivationsvideo." },
+            { type: "text", content: "Was hilft: den Schritt so klein machen, dass der Widerstand keine Chance hat." },
+            { type: "text", content: "Nicht \"Ich fange an, Sport zu machen\", sondern \"Ich lege heute Abend die Laufschuhe neben die Tür.\" Nicht \"Ich spreche das Problem an\", sondern \"Ich schreibe mir auf, was ich sagen will.\" Nicht \"Ich meditiere jeden Morgen\", sondern \"Ich setze mich hin und atme dreimal bewusst.\"" },
+            { type: "text", content: "Wenn auch das zu groß wirkt, ist das ein Signal: Der Verstehen- oder Fühlen-Schritt ist noch nicht abgeschlossen. Dann geht es zurück in die Schleife - nicht als Rückschritt, sondern als notwendige Runde." },
 
             { type: "divider" },
 
             // --- KI als Coaching-Partner ---
             { type: "heading", level: 2, content: "KI als Coaching-Partner" },
-            { type: "text", content: "Die Selbstcoaching-Schleife funktioniert komplett allein. Du brauchst nichts au\u00dfer dich selbst, dein Journal und ehrliche Fragen." },
-            { type: "text", content: "Aber du kannst sie mit KI verst\u00e4rken. Und das ver\u00e4ndert die Tiefe erheblich." },
-            { type: "text", content: "Deine Ankerpraktik - das 3-Schichten-Journaling aus Lektion 3 - ist im Grunde schon Coaching. Schicht 1 ist freies Schreiben. Schicht 2 ist KI als Spiegel. Schicht 3 ist KI als Coach. Jetzt verbindest du beides bewusst." },
+            { type: "text", content: "In W3 haben wir die Ankerpraktik kennengelernt - das tägliche Schreiben, das hilft, den Tag bewusst zu beginnen. Jetzt wird sie zum Coaching-Ritual." },
+            { type: "text", content: "Die Selbstcoaching-Schleife funktioniert auch mit einer KI als Gesprächspartner. Kein Ersatz für einen Menschen, aber ein Sparringspartner, der um drei Uhr morgens genauso geduldig zuhört wie um drei Uhr nachmittags. Drei Prompts, einer pro Schritt:" },
 
-            { type: "heading", level: 3, content: "Verstehen verst\u00e4rken" },
-            { type: "text", content: "Beschreibe deine Situation einer KI. Und dann lass sie nicht antworten - lass sie fragen. KI hat kein Ego, kein Urteil, keine Agenda. Ein neutraler Spiegel." },
-            { type: "copyblock", content: "Ich beschreibe dir eine Situation, die mich besch\u00e4ftigt. Stelle mir kl\u00e4rende Fragen - keine Ratschl\u00e4ge, nur Fragen. Hilf mir zu verstehen, was wirklich los ist." },
+            { type: "heading", level: 3, content: "Verstehen" },
+            { type: "copyblock", content: "Hier ist eine Situation, die mich belastet: [Situation]. Hilf mir, Fakten von Interpretationen zu trennen. Was weiß ich sicher, und was ist meine Deutung?" },
 
-            { type: "heading", level: 3, content: "F\u00fchlen verst\u00e4rken" },
-            { type: "text", content: "Teile, was du f\u00fchlst. Lass die KI deine Empfindungen spiegeln und benennen. Manchmal reicht es, wenn jemand sagt: \"Das ist Trauer.\" Und dann wei\u00dft du, was es ist." },
-            { type: "copyblock", content: "Ich habe erkannt: [deine Erkenntnis]. Das l\u00f6st folgendes in mir aus: [beschreibe]. Hilf mir, das Gef\u00fchl genauer zu benennen und zu verstehen, welcher innere Anteil sich meldet." },
+            { type: "heading", level: 3, content: "Fühlen" },
+            { type: "copyblock", content: "Ich spüre [körperliche Empfindung] und fühle [Gefühl]. Welcher innerer Anteil könnte sich da melden? Was braucht er?" },
 
-            { type: "heading", level: 3, content: "Handeln verst\u00e4rken" },
-            { type: "text", content: "Lass die KI dir helfen, den Schritt zu konkretisieren. Von \"ich sollte mutiger sein\" zu \"ich spreche Montag meinen Kollegen auf das Thema an.\" Vom Vagen zum Konkreten." },
-            { type: "copyblock", content: "Ich habe verstanden: [deine Erkenntnis]. Ich f\u00fchle: [dein Gef\u00fchl]. Hilf mir, EINEN konkreten, kleinen Schritt zu finden, den ich diese Woche umsetzen kann." },
+            { type: "heading", level: 3, content: "Handeln" },
+            { type: "copyblock", content: "Ich verstehe jetzt besser, was los ist und habe das Gefühl zugelassen. Was ist ein konkreter nächster Schritt, den ich heute tun kann - so klein, dass ich keine Ausrede finde, ihn nicht zu tun?" },
 
-            { type: "text", content: "Diese drei Prompts sind dein Werkzeugkasten. Kopiere sie, speichere sie, nutze sie so oft du willst. Sie sind bewusst einfach gehalten - einfach bedeutet hier nicht oberfl\u00e4chlich." },
-
-            { type: "divider" },
-
-            // --- Du kannst dir selbst helfen ---
-            { type: "heading", level: 2, content: "Du kannst dir selbst helfen" },
-            { type: "text", content: "Das ist das Ziel dieser Technik. Nicht dass du nie wieder Hilfe brauchst. Nicht dass du alles alleine machen musst. Sondern dass du wei\u00dft: Du hast Werkzeuge. Du hast Fragen. Du hast eine Praxis." },
-            { type: "text", content: "Du kannst dich selbst durch schwierige Situationen begleiten. Nicht perfekt. Nicht immer. Aber immer \u00f6fter. Und mit der Zeit wirst du feststellen, dass sich etwas fundamental ver\u00e4ndert hat. Nicht die Umst\u00e4nde - dein Verh\u00e4ltnis zu den Umst\u00e4nden." },
-            { type: "highlight", title: "Agency", content: "Du bist nicht mehr ausgeliefert. Du bist handlungsf\u00e4hig. Nicht Unabh\u00e4ngigkeit. Nicht die Illusion, alles zu kontrollieren. Sondern zu wissen: Du kannst dich selbst anfangen. Du musst nicht warten, bis jemand kommt." },
+            { type: "text", content: "Das sind Ausgangspunkte, keine Formeln. Verändern, Teile weglassen, ergänzen - alles erlaubt. Die KI wird besser, je ehrlicher man mit ihr ist. Sie hat kein Ego, das urteilt, und kein Interesse daran, jemanden gut aussehen zu lassen." },
 
             { type: "divider" },
 
             // --- Was Selbstcoaching nicht kann ---
             { type: "heading", level: 2, content: "Was Selbstcoaching nicht kann" },
-            { type: "text", content: "Ehrlichkeit geh\u00f6rt hierher. Nicht am Ende, als Fu\u00dfnote. Sondern als Teil des Werkzeugs." },
-            { type: "text", content: "Manche Dinge schaffst du allein nicht. Tiefe Traumata. Muster von Jahrzehnten. Blinde Flecken, die du nicht sehen kannst - egal wie sehr du dich fragst." },
-            { type: "text", content: "Daf\u00fcr gibt es erfahrene Menschen. Coaches, Therapeuten, Mentoren. Selbstcoaching ersetzt sie nicht. Es erg\u00e4nzt sie. Es macht dich zu einem besseren Klienten, weil du bereits vorgearbeitet hast." },
-            { type: "callout", content: "<strong>Meine Haltung:</strong> Jeder Mensch sollte einen Coach haben. Nicht als Zeichen von Schw\u00e4che. Als Zeichen von Ernsthaftigkeit. Spitzensportler haben Trainer. Musiker haben Lehrer. Du navigierst dein Leben allein? Selbstcoaching ist dein t\u00e4gliches Werkzeug. Ein guter Coach bringt die Durchbr\u00fcche. Du brauchst beides." },
+            { type: "text", content: "Es gibt eine Grenze, und es wäre unehrlich, sie zu verschweigen." },
+            { type: "text", content: "Selbstcoaching funktioniert gut bei dem, was im Alltag auftaucht: wiederkehrende Muster, emotionale Reaktionen, Entscheidungen, die vor sich hergeschoben werden. Es funktioniert weniger gut bei Material, das so tief verschüttet ist, dass wir allein nicht drankommen." },
+            { type: "text", content: "Tiefe Traumata sitzen in Schichten, die der bewusste Verstand allein nicht erreicht. Eingebrannte Muster - die Geschichten, die das Nervensystem seit der Kindheit erzählt - brauchen manchmal einen Zeugen, der von außen sieht, was von innen unsichtbar bleibt. Und manche blinden Flecken sind per Definition unsichtbar: Wir können nicht hinterfragen, was wir für so selbstverständlich halten, dass wir es gar nicht bemerken." },
+            { type: "text", content: "Dafür gibt es Therapeuten, Coaches und Menschen, die diesen Weg schon gegangen sind. Selbstcoaching ergänzt ihre Arbeit. Es ersetzt sie nicht." },
 
             { type: "divider" },
 
-            // --- Übung ---
-            { type: "heading", level: 2, content: "Einladung: Dein erster Selbstcoaching-Durchlauf" },
-            { type: "text", content: "Keine Pflicht. Eine Einladung. Und ich meine das ernst." },
-            { type: "text", content: "Nimm dir 30 bis 45 Minuten. Du brauchst: Schreibmaterial oder dein Journal. Optional: eine KI." },
+            // --- Übung: Erster Selbstcoaching-Durchlauf ---
+            { type: "heading", level: 2, content: "Übung: Erster Selbstcoaching-Durchlauf (30-45 Minuten)" },
+            { type: "text", content: "Nimm dir ein aktuelles Thema - etwas, das dich gerade beschäftigt, das sich aber bewältigbar anfühlt. Kein Lebensthema, kein Trauma. Etwas Konkretes aus den letzten Tagen: eine Entscheidung, die du aufschiebst, ein Gespräch, das du vermeidest, eine Gewohnheit, die du ändern willst." },
 
-            { type: "heading", level: 3, content: "W\u00e4hle ein aktuelles Thema" },
-            { type: "text", content: "Etwas, das dich gerade besch\u00e4ftigt. Etwas, das dich belastet, wo du feststeckst, wo du nicht weiterkommst. Nichts Theoretisches. Etwas Echtes." },
-
-            { type: "heading", level: 3, content: "Der Durchlauf" },
             { type: "steps", title: "Selbstcoaching-Durchlauf", items: [
-                { title: "Verstehen (10 Minuten)", description: "Schreib auf, was los ist. Was ist das Thema? Die Geschichte? Was ist Fakt? Sei ehrlich." },
-                { title: "F\u00fchlen (10 Minuten)", description: "Vom Kopf in den K\u00f6rper. Wo sitzt es? Was meldet sich? Welcher Anteil? Wenn es zu viel wird, nutze die Letting-Go-Methode aus Lektion 5. Erlaube es, \u00e4ndere es nicht." },
-                { title: "Handeln (10 Minuten)", description: "Was ist dein n\u00e4chster Schritt? Schreib ihn auf - so konkret, dass du morgen wei\u00dft, was zu tun ist. Nicht \"mutiger sein\". \"Am Dienstag anrufen.\" So konkret." }
+                { title: "Verstehen (10-15 Min)", description: "Schreib die Situation auf. Geh deinen Text durch und unterstreiche alles, was Interpretation ist. Was bleibt als Fakt? Frag dich bei jedem belastenden Gedanken: \"Ist das wahr? Kann ich mit absoluter Sicherheit wissen, dass es wahr ist?\"" },
+                { title: "Fühlen (10-15 Min)", description: "Schließ die Augen. Spür in deinen Körper hinein. Wo meldet sich etwas? Was für eine Empfindung ist das - Druck, Enge, Hitze, Schwere? Lass es da sein. Gib dem Gefühl Raum, wie du es in W5 geübt hast." },
+                { title: "Handeln (10-15 Min)", description: "Öffne die Augen. Schreib auf: Was ist der kleinste nächste Schritt, den ich heute tun kann? Wenn dir nichts einfällt oder alles zu groß wirkt, frag dich: Was müsste ich zuerst verstehen oder fühlen, damit ein Schritt möglich wird? Dann geh zurück in die Schleife." }
             ]},
 
-            { type: "text", content: "Wenn du magst, wiederhole den Durchlauf mit KI-Unterst\u00fctzung. Nutze die Prompts von oben. Und vergleiche, was anders wird." },
+            { type: "text", content: "<strong>Optional:</strong> Nutze die drei KI-Prompts als Begleitung. Jeden Schritt zuerst allein versuchen und die KI danach als Spiegel nutzen." },
 
             { type: "divider" },
 
             // --- Ankerpraktik ---
-            { type: "heading", level: 2, content: "Ankerpraktik diese Lektion" },
-            { type: "text", content: "Dein 3-Schichten-Journaling wird zum Coaching-Ritual. Das war es immer schon, jetzt machst du es bewusst." },
+            { type: "heading", level: 2, content: "Ankerpraktik: Das Coaching-Ritual" },
+            { type: "text", content: "Ab dieser Woche bekommt die Ankerpraktik eine neue Struktur. Drei Schichten, die den drei Schritten der Selbstcoaching-Schleife entsprechen:" },
+            { type: "text", content: "<strong>Schicht 1: Was beschäftigt mich?</strong> Das ist der Verstehen-Schritt. Was ist heute präsent? Was davon ist Fakt, was ist Geschichte?" },
+            { type: "text", content: "<strong>Schicht 2: Was sehe ich nicht?</strong> Das ist der Fühlen-Schritt. Was liegt unter der Oberfläche? Welcher Anteil meldet sich, den ich noch nicht bemerkt habe?" },
+            { type: "text", content: "<strong>Schicht 3: Was tue ich als Nächstes?</strong> Das ist der Handeln-Schritt. Ein konkreter Schritt, so klein wie nötig." },
+            { type: "text", content: "Fünf Minuten am Morgen reichen. Nicht jede Schicht braucht jeden Tag gleich viel Raum. Manchmal genügt ein Satz pro Schicht. An anderen Tagen füllen sich drei Seiten zur ersten Schicht, und die dritte fällt aus. Beides ist richtig." },
 
             { type: "anchorpractice", layers: [
-                { label: "Schicht 1 (Freies Schreiben)", prompt: "Was besch\u00e4ftigt mich? Was steckt dahinter?" },
-                { label: "Schicht 2 (KI als Spiegel)", prompt: "Zeig mir, was ich nicht sehe." },
-                { label: "Schicht 3 (KI als Coach)", prompt: "Was ist mein n\u00e4chster Schritt?" }
+                { label: "Schicht 1 (Verstehen)", prompt: "Was beschäftigt mich? Was davon ist Fakt, was ist Geschichte?" },
+                { label: "Schicht 2 (Fühlen)", prompt: "Was sehe ich nicht? Welcher Anteil meldet sich unter der Oberfläche?" },
+                { label: "Schicht 3 (Handeln)", prompt: "Was tue ich als Nächstes? Ein konkreter Schritt, so klein wie nötig." }
             ]},
 
             { type: "divider" },
 
-            // --- Phase 2: Abschluss ---
-            { type: "heading", level: 2, content: "Phase 2: Abschluss" },
-            { type: "text", content: "Du hast jetzt ein vollst\u00e4ndiges Werkzeugset." },
-            { type: "text", content: "Lektion 4: Erkennen. Du wei\u00dft, was dich festh\u00e4lt und wo deine Anteile auf der Skala leben." },
-            { type: "text", content: "Lektion 5: F\u00fchlen. Du wei\u00dft, wie du diese Anteile versorgst, statt sie zu reparieren. Du hast die Letting-Go-Methode als Praxis." },
-            { type: "text", content: "Lektion 6: Handeln. Du wei\u00dft, wie du dich selbst coachst. Verstehen, F\u00fchlen, Handeln - die Schleife, die alles verbindet." },
-            { type: "emphasis", content: "Das ist die Do-Good-Phase. Selbstbefreiung." },
-            { type: "text", content: "Du bist nicht mehr nur Zuschauer. Du bist handlungsf\u00e4hig. Du erkennst, versorgst, begleitest dich selbst. Nicht perfekt. Du machst es." },
-
-            { type: "divider" },
-
-            // --- Was kommt ---
-            { type: "heading", level: 2, content: "Was kommt" },
-            { type: "text", content: "Phase 3 beginnt. Make Money." },
-            { type: "text", content: "Und bevor du zusammenzuckst: Es geht nicht darum, irgendwas zu verkaufen. Es geht darum, das, was du bist und kannst, in die Welt zu bringen. Die Energie, die du in Phase 1 und 2 freigesetzt hast - die Erkenntnis, die Befreiung - will irgendwohin. Sie will nicht nur in dir bleiben. Sie will wirken." },
-            { type: "text", content: "Woche 7 beginnt mit der Frage: Was ist deine einzigartige Position? Was siehst nur du? Was kannst nur du? Nicht als gro\u00dfspurige Behauptung - als ehrliche Inventur." },
-            { type: "emphasis", content: "Du verstehst dich. Du kannst dich begleiten. Die Frage ist jetzt: Was willst du damit in die Welt bringen?" },
+            // --- Closing ---
+            { type: "emphasis", content: "Mit dieser Lektion schließt sich Phase 2 des Kurses. In W4 hast du erkannt, was dich festhält. In W5 hast du gelernt, es zu fühlen und loszulassen. Und jetzt hast du einen Kreislauf, der beides mit Handeln verbindet - anwendbar auf jedes Thema, in jeder Situation, so oft du ihn brauchst. In Phase 3 beginnt etwas Neues: Die Energie, die in Phase 1 und 2 freigesetzt wurde, wird schöpferisch. Wir richten den Blick nach außen und fragen: Was machst du mit dem, was du hast?" },
 
             { type: "divider" },
 
@@ -176,12 +122,13 @@
             { type: "progress-bar", label: "Lektion 6 von 9", percent: 67, detail: "Phase 2: Do Good" },
 
             { type: "checklist", items: [
-                "Lektion vollst\u00e4ndig gelesen",
-                "Selbstcoaching-Durchlauf durchgef\u00fchrt",
-                "KI-Prompts ausprobiert"
+                "Lektion vollständig gelesen",
+                "Selbstcoaching-Durchlauf durchgeführt (30-45 Min)",
+                "KI-Prompts ausprobiert",
+                "Ankerpraktik: Coaching-Ritual begonnen"
             ]},
 
-            { type: "signoff", text: "Phase 2 ist abgeschlossen. Du hast die Werkzeuge. Du bist handlungsf\u00e4hig.\\n\\nPhase 3 beginnt: Was bringst du in die Welt?", name: "Steven" }
+            { type: "signoff", text: "Phase 2 ist abgeschlossen. In W4 erkannt, in W5 gefühlt, in W6 gehandelt. Phase 3 beginnt: Was bringst du in die Welt?", name: "Steven" }
         ]
     };
 
@@ -189,7 +136,7 @@
     function init() { window.__WL_ENGINE.render(LESSON_DATA, anchor); }
     if (window.__WL_ENGINE) { init(); return; }
     var s = document.createElement('script');
-    s.src = 'https://solbachsteven.github.io/website/win3-lektionen/wl-engine.js';
+    s.src = 'https://stevensolbach.de/win3-lektionen/wl-engine.js';
     s.onload = init;
     document.head.appendChild(s);
 })();

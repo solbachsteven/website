@@ -1,6 +1,6 @@
 // Freebie Landingpage - FX Effects (Standalone)
 // Cursor Ring, Particles, Glow - Optional Enhancement
-// Loaded via: <script src="https://solbachsteven.github.io/website/freebie/fl-fx.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/freebie/fl-fx.js"></script>
 (function() {
     if (window.__FL_FX_LOADED) return;
     window.__FL_FX_LOADED = true;

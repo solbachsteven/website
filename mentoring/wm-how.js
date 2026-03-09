@@ -1,6 +1,6 @@
 // Win\u00b3 Mentoring Landingpage - How It Works Section (Standalone)
 // 12 Wochen Timeline: Standort \u2192 Selbsterkenntnis \u2192 Muster \u2192 Integration
-// Loaded via: <script src="https://solbachsteven.github.io/website/mentoring/wm-how.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/mentoring/wm-how.js"></script>
 (function() {
     if (window.__WM_HOW_LOADED) return;
     window.__WM_HOW_LOADED = true;

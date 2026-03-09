@@ -1,6 +1,6 @@
 // Win³ Community - Ankerpraktik Orchestrator
 // Lädt Auth, Writer, History als Module
-// Loaded via: <script src="https://solbachsteven.github.io/website/ankerpraktik.js"></script>
+// Loaded via: <script src="https://stevensolbach.de/ankerpraktik.js"></script>
 (function() {
     if (window.__AP_LOADED) return;
     window.__AP_LOADED = true;
@@ -566,7 +566,7 @@
                 // Standalone-Zugriff: auf Portal umleiten
                 var portalUrl = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
                     ? '/portal.html#/ankerpraktik'
-                    : 'https://solbachsteven.github.io/website/portal.html#/ankerpraktik';
+                    : 'https://stevensolbach.de/portal.html#/ankerpraktik';
                 location.href = portalUrl;
                 return;
             }
