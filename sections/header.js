@@ -58,22 +58,8 @@
     background: #BC8034;\
     pointer-events: none;\
     z-index: 1;\
-    -webkit-mask-image: linear-gradient(to right,\
-        transparent 0, transparent var(--line-inset, 60px),\
-        black calc(var(--line-inset, 60px) + var(--line-taper, 50px)),\
-        black calc(var(--logo-gap-start, 50%) - var(--line-taper, 50px)),\
-        transparent var(--logo-gap-start, 50%), transparent var(--logo-gap-end, 50%),\
-        black calc(var(--logo-gap-end, 50%) + var(--line-taper, 50px)),\
-        black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
-        transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
-    mask-image: linear-gradient(to right,\
-        transparent 0, transparent var(--line-inset, 60px),\
-        black calc(var(--line-inset, 60px) + var(--line-taper, 50px)),\
-        black calc(var(--logo-gap-start, 50%) - var(--line-taper, 50px)),\
-        transparent var(--logo-gap-start, 50%), transparent var(--logo-gap-end, 50%),\
-        black calc(var(--logo-gap-end, 50%) + var(--line-taper, 50px)),\
-        black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
-        transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
+    -webkit-mask-image: var(--line-mask, none);\
+    mask-image: var(--line-mask, none);\
 }\
 .ss-header-inner::before { top: 0; }\
 .ss-header-inner::after { bottom: 0; }\
@@ -418,8 +404,8 @@
 
     // ======== GOLD LINE GAP (nur rundes Logo unterbricht) ========
     // Pseudo-Elemente liegen auf .ss-header-inner (max-width begrenzt).
-    // Logo-Bild analysiert: Kreis-Zentrum bei ~48% der Bildhoehe von links,
-    // innerer Hauptkreis (goldener Ring) hat Radius ~35% der Bildhoehe.
+    // Mask-Gradient wird komplett in JS gebaut - so koennen Edge Cases
+    // (Mobile: kein Platz fuer linkes Segment) sauber behandelt werden.
     function updateLogoGap() {
         var h = document.getElementById('ss-header');
         if (!h) return;
@@ -429,23 +415,45 @@
         var innerRect = inner.getBoundingClientRect();
         var imgRect = logoImg.getBoundingClientRect();
         var imgH = imgRect.height;
-        var containerW = innerRect.width;
+        var W = innerRect.width;
         // Kreis-Zentrum: ~48% der Bildhoehe von der linken Bildkante
-        var circleCenterX = imgRect.left + imgH * 0.48;
-        // Hauptkreis-Radius (goldener Ring, ohne aeussere Deko-Punkte): ~35%
-        var circleRadius = imgH * 0.35;
-        var gapPad = 6;
-        // Relativ zum Inner-Container (= Pseudo-Element Referenz)
-        var start = (circleCenterX - circleRadius - gapPad) - innerRect.left;
-        var end = (circleCenterX + circleRadius + gapPad) - innerRect.left;
-        if (start < 0) start = 0;
-        // Inset + Taper proportional zur Container-Breite (4% je)
-        var inset = Math.max(10, Math.round(containerW * 0.04));
-        var taper = Math.max(10, Math.round(containerW * 0.04));
-        inner.style.setProperty('--logo-gap-start', start + 'px');
-        inner.style.setProperty('--logo-gap-end', end + 'px');
-        inner.style.setProperty('--line-inset', inset + 'px');
-        inner.style.setProperty('--line-taper', taper + 'px');
+        var cx = imgRect.left + imgH * 0.48;
+        var cr = imgH * 0.35; // Hauptkreis-Radius
+        var pad = 6;
+        var gapL = (cx - cr - pad) - innerRect.left;
+        var gapR = (cx + cr + pad) - innerRect.left;
+        if (gapL < 0) gapL = 0;
+        if (gapR > W) gapR = W;
+        // Inset + Taper proportional (4%), min 10px
+        var inset = Math.max(10, Math.round(W * 0.04));
+        var taper = Math.max(10, Math.round(W * 0.04));
+        var minSeg = inset + taper + 8; // Mindestbreite fuer sichtbares Segment
+        var hasLeft = gapL > minSeg;
+        var hasRight = (W - gapR) > minSeg;
+        // Gradient-Stops bauen
+        var stops = [];
+        if (hasLeft) {
+            stops.push('transparent 0');
+            stops.push('transparent ' + inset + 'px');
+            stops.push('black ' + (inset + taper) + 'px');
+            stops.push('black ' + Math.max(inset + taper, gapL - taper) + 'px');
+            stops.push('transparent ' + gapL + 'px');
+        } else {
+            stops.push('transparent 0');
+            stops.push('transparent ' + gapL + 'px');
+        }
+        if (hasRight) {
+            stops.push('transparent ' + gapR + 'px');
+            stops.push('black ' + (gapR + taper) + 'px');
+            stops.push('black ' + Math.min(W - inset - taper, W - inset) + 'px');
+            stops.push('transparent ' + (W - inset) + 'px');
+            stops.push('transparent 100%');
+        } else {
+            stops.push('transparent ' + gapR + 'px');
+            stops.push('transparent 100%');
+        }
+        var mask = 'linear-gradient(to right, ' + stops.join(', ') + ')';
+        inner.style.setProperty('--line-mask', mask);
     }
 
     // Initial + bei Resize aktualisieren
