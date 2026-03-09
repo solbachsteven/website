@@ -65,14 +65,16 @@
 .ss-header-inner::after { bottom: 20px; }\
 .ss-header-glass {\
     position: absolute;\
-    top: 21px;\
-    bottom: 21px;\
+    top: 20px;\
+    bottom: 20px;\
     left: 0;\
     right: 0;\
-    background: rgba(188,128,52,0.04);\
-    backdrop-filter: blur(2px);\
-    -webkit-backdrop-filter: blur(2px);\
-    border: none;\
+    border-radius: 16px;\
+    background: rgba(45,39,38,0.15);\
+    backdrop-filter: blur(8px);\
+    -webkit-backdrop-filter: blur(8px);\
+    border: 1px solid rgba(188,128,52,0.08);\
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.02);\
     pointer-events: none;\
     z-index: 0;\
     -webkit-mask-image: var(--line-mask, none);\
@@ -101,6 +103,8 @@
     text-decoration: none;\
     flex-shrink: 0;\
     height: 130px;\
+    position: relative;\
+    z-index: 2;\
 }\
 .ss-header-logo img {\
     height: 100%;\
@@ -110,6 +114,8 @@
 \
 /* ======== NAV (Desktop) ======== */\
 .ss-header-nav {\
+    position: relative;\
+    z-index: 2;\
     display: flex;\
     align-items: center;\
     gap: 8px;\
@@ -167,6 +173,8 @@
 /* ======== HAMBURGER (Mobile) ======== */\
 .ss-header-hamburger {\
     display: none;\
+    position: relative;\
+    z-index: 2;\
     background: none;\
     border: none;\
     cursor: pointer;\
@@ -435,7 +443,7 @@
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (137 / logoImg.naturalWidth) * imgRect.width;
+        var cx = imgRect.left + (135 / logoImg.naturalWidth) * imgRect.width;
         var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
@@ -462,25 +470,29 @@
             stops.push('transparent 0');
             stops.push('transparent ' + gapL + 'px');
         }
-        // RECHTES Segment - gleiche Proportionen wie Gesamtbreite
+        // RECHTES Segment - adaptiv an verfuegbaren Platz
         if (rightSpace > 20) {
-            var rI = inset;
-            var rT = taper;
+            var rI = Math.min(inset, Math.round(rightSpace * 0.15));
+            var rT = Math.min(taper, Math.round(rightSpace * 0.3));
+            var rStart = gapR + rT;
+            var rEnd = W - rI - rT;
+            if (rEnd < rStart) rEnd = rStart;
             stops.push('transparent ' + gapR + 'px');
-            stops.push('black ' + (gapR + rT) + 'px');
-            stops.push('black ' + (W - rI - rT) + 'px');
+            stops.push('black ' + rStart + 'px');
+            stops.push('black ' + rEnd + 'px');
             stops.push('transparent ' + (W - rI) + 'px');
-            stops.push('transparent 100%');
+            stops.push('transparent ' + W + 'px');
         } else {
             stops.push('transparent ' + gapR + 'px');
             stops.push('transparent 100%');
         }
         var mask = 'linear-gradient(to right, ' + stops.join(', ') + ')';
         inner.style.setProperty('--line-mask', mask);
+
     }
 
-    // Initial + bei Resize aktualisieren
-    updateLogoGap();
+    // Initial + bei Resize aktualisieren (requestAnimationFrame fuer korrektes Layout)
+    requestAnimationFrame(function() { updateLogoGap(); });
     window.addEventListener('resize', updateLogoGap);
 
     // Nach Logo-Bild-Load nochmal aktualisieren (Bild kann spaeter laden)
