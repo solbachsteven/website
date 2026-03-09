@@ -58,8 +58,8 @@
     background: linear-gradient(to right, #BC8034, #D4A057, #BC8034);\
     pointer-events: none;\
     z-index: 1;\
-    -webkit-mask-image: var(--line-mask, none);\
-    mask-image: var(--line-mask, none);\
+    -webkit-mask-image: var(--line-mask, linear-gradient(black,black));\
+    mask-image: var(--line-mask, linear-gradient(black,black));\
 }\
 .ss-header-inner::before { top: 20px; }\
 .ss-header-inner::after { bottom: 20px; }\
@@ -77,8 +77,8 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.02);\
     pointer-events: none;\
     z-index: 0;\
-    -webkit-mask-image: var(--line-mask, none);\
-    mask-image: var(--line-mask, none);\
+    -webkit-mask-image: var(--line-mask, linear-gradient(black,black));\
+    mask-image: var(--line-mask, linear-gradient(black,black));\
 }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
@@ -437,13 +437,14 @@
         var inner = h.querySelector('.ss-header-inner');
         var logoImg = h.querySelector('.ss-header-logo img');
         if (!inner || !logoImg) return;
+        if (!logoImg.naturalWidth || !logoImg.complete) return;
         var innerRect = inner.getBoundingClientRect();
         var imgRect = logoImg.getBoundingClientRect();
         var imgH = imgRect.height;
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (135 / logoImg.naturalWidth) * imgRect.width;
+        var cx = imgRect.left + (137 / logoImg.naturalWidth) * imgRect.width;
         var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
@@ -491,9 +492,14 @@
 
     }
 
-    // Initial + bei Resize aktualisieren (requestAnimationFrame fuer korrektes Layout)
-    requestAnimationFrame(function() { updateLogoGap(); });
+    // Initial + bei Resize aktualisieren
+    // Mehrfach ausfuehren: Layout kann bei Erstladen noch nicht final sein
+    updateLogoGap();
+    requestAnimationFrame(updateLogoGap);
     window.addEventListener('resize', updateLogoGap);
+    window.addEventListener('load', updateLogoGap);
+    setTimeout(updateLogoGap, 100);
+    setTimeout(updateLogoGap, 500);
 
     // Nach Logo-Bild-Load nochmal aktualisieren (Bild kann spaeter laden)
     var logoImg = header ? header.querySelector('.ss-header-logo img') : null;
