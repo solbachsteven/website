@@ -63,6 +63,21 @@
 }\
 .ss-header-inner::before { top: 20px; }\
 .ss-header-inner::after { bottom: 20px; }\
+.ss-header-glass {\
+    position: absolute;\
+    top: 21px;\
+    bottom: 21px;\
+    left: 0;\
+    right: 0;\
+    background: rgba(188,128,52,0.04);\
+    backdrop-filter: blur(2px);\
+    -webkit-backdrop-filter: blur(2px);\
+    border: none;\
+    pointer-events: none;\
+    z-index: 0;\
+    -webkit-mask-image: var(--line-mask, none);\
+    mask-image: var(--line-mask, none);\
+}\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -357,6 +372,8 @@
         +     '<button class="ss-header-hamburger" onclick="window.__SS_HEADER.openMenu()" aria-label="Men\u00fc">'
         +       icons.menu
         +     '</button>'
+        // Glaseffekt-Streifen zwischen den goldenen Linien
+        +     '<div class="ss-header-glass"></div>'
         +   '</div>'
         + '</header>'
         // Mobile Overlay
@@ -418,7 +435,7 @@
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (140 / logoImg.naturalWidth) * imgRect.width;
+        var cx = imgRect.left + (137 / logoImg.naturalWidth) * imgRect.width;
         var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
@@ -445,10 +462,10 @@
             stops.push('transparent 0');
             stops.push('transparent ' + gapL + 'px');
         }
-        // RECHTES Segment
+        // RECHTES Segment - gleiche Proportionen wie Gesamtbreite
         if (rightSpace > 20) {
-            var rI = Math.min(inset, Math.round(rightSpace * 0.15));
-            var rT = Math.min(taper, Math.round(rightSpace * 0.3));
+            var rI = inset;
+            var rT = taper;
             stops.push('transparent ' + gapR + 'px');
             stops.push('black ' + (gapR + rT) + 'px');
             stops.push('black ' + (W - rI - rT) + 'px');
