@@ -56,14 +56,23 @@
     right: 0;\
     height: 2px;\
     background: #BC8034;\
+    pointer-events: none;\
     -webkit-mask-image: linear-gradient(to right,\
-        black 0, black var(--logo-gap-start, 0px),\
-        transparent var(--logo-gap-start, 0px), transparent var(--logo-gap-end, 0px),\
-        black var(--logo-gap-end, 0px));\
+        transparent 0, transparent var(--line-inset, 60px),\
+        black calc(var(--line-inset, 60px) + var(--line-taper, 50px)),\
+        black calc(var(--logo-gap-start, 50%) - var(--line-taper, 50px)),\
+        transparent var(--logo-gap-start, 50%), transparent var(--logo-gap-end, 50%),\
+        black calc(var(--logo-gap-end, 50%) + var(--line-taper, 50px)),\
+        black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
+        transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
     mask-image: linear-gradient(to right,\
-        black 0, black var(--logo-gap-start, 0px),\
-        transparent var(--logo-gap-start, 0px), transparent var(--logo-gap-end, 0px),\
-        black var(--logo-gap-end, 0px));\
+        transparent 0, transparent var(--line-inset, 60px),\
+        black calc(var(--line-inset, 60px) + var(--line-taper, 50px)),\
+        black calc(var(--logo-gap-start, 50%) - var(--line-taper, 50px)),\
+        transparent var(--logo-gap-start, 50%), transparent var(--logo-gap-end, 50%),\
+        black calc(var(--logo-gap-end, 50%) + var(--line-taper, 50px)),\
+        black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
+        transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
 }\
 .ss-header::before { top: 0; }\
 .ss-header::after { bottom: 0; }\
@@ -405,20 +414,24 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // Initial check
 
-    // ======== GOLD LINE GAP (Logo-Unterbrechung) ========
+    // ======== GOLD LINE GAP (nur rundes Logo unterbricht) ========
     function updateLogoGap() {
         var h = document.getElementById('ss-header');
         if (!h) return;
-        var logo = h.querySelector('.ss-header-logo');
-        if (!logo) return;
+        var logoImg = h.querySelector('.ss-header-logo img');
+        if (!logoImg) return;
         var headerRect = h.getBoundingClientRect();
-        var logoRect = logo.getBoundingClientRect();
-        var gapPad = 12; // px Abstand links/rechts vom Logo
-        var start = (logoRect.left - headerRect.left) - gapPad;
-        var end = (logoRect.right - headerRect.left) + gapPad;
+        var imgRect = logoImg.getBoundingClientRect();
+        // Nur der runde Teil: Kreis-Durchmesser ≈ Bildhoehe
+        var circleDiameter = imgRect.height;
+        var gapPad = 14; // px Abstand um den Kreis
+        var start = (imgRect.left - headerRect.left) - gapPad;
+        var end = (imgRect.left - headerRect.left) + circleDiameter + gapPad;
         if (start < 0) start = 0;
         h.style.setProperty('--logo-gap-start', start + 'px');
         h.style.setProperty('--logo-gap-end', end + 'px');
+        h.style.setProperty('--line-inset', '50px');
+        h.style.setProperty('--line-taper', '50px');
     }
 
     // Initial + bei Resize aktualisieren
