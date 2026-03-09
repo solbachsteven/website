@@ -76,7 +76,7 @@
     left: 0;\
     right: 0;\
     border-radius: 16px;\
-    background: rgba(45,39,38,0.75);\
+    background: rgba(45,39,38,0.85);\
     backdrop-filter: blur(12px);\
     -webkit-backdrop-filter: blur(12px);\
     border: 1px solid rgba(188,128,52,0.12);\
@@ -85,8 +85,6 @@
     z-index: 0;\
     opacity: 0;\
     transition: opacity 0.4s ease;\
-    -webkit-mask-image: var(--line-mask);\
-    mask-image: var(--line-mask);\
 }\
 .ss-header-inner.lines-ready .ss-header-glass {\
     opacity: 1;\
