@@ -54,8 +54,8 @@
     position: absolute;\
     left: 0;\
     right: 0;\
-    height: 2px;\
-    background: #BC8034;\
+    height: 1px;\
+    background: linear-gradient(to right, #BC8034, #D4A057, #BC8034);\
     pointer-events: none;\
     z-index: 1;\
     -webkit-mask-image: var(--line-mask, none);\
@@ -418,7 +418,7 @@
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (155 / logoImg.naturalWidth) * imgRect.width;
+        var cx = imgRect.left + (170 / logoImg.naturalWidth) * imgRect.width;
         var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
