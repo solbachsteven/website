@@ -48,11 +48,15 @@
     background: transparent;\
     transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;\
 }\
+.ss-header {\
+    border-top: 2px solid #BC8034;\
+    border-bottom: 2px solid #BC8034;\
+}\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
     -webkit-backdrop-filter: blur(16px);\
-    box-shadow: 0 1px 0 rgba(188,128,52,0.12), 0 4px 24px rgba(0,0,0,0.3);\
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);\
 }\
 .ss-header-inner {\
     max-width: 1200px;\
