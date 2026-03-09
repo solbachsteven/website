@@ -418,7 +418,7 @@
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (170 / logoImg.naturalWidth) * imgRect.width;
+        var cx = imgRect.left + (140 / logoImg.naturalWidth) * imgRect.width;
         var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
