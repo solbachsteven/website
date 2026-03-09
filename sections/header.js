@@ -427,26 +427,31 @@
         // Inset + Taper proportional (4%), min 10px
         var inset = Math.max(10, Math.round(W * 0.04));
         var taper = Math.max(10, Math.round(W * 0.04));
-        var minSeg = inset + taper + 8; // Mindestbreite fuer sichtbares Segment
-        var hasLeft = gapL > minSeg;
-        var hasRight = (W - gapR) > minSeg;
-        // Gradient-Stops bauen
+        var rightSpace = W - gapR;
+        // Gradient-Stops bauen - Inset/Taper adaptiv an verfuegbaren Platz
         var stops = [];
-        if (hasLeft) {
+        // LINKES Segment
+        if (gapL > 20) {
+            // Inset/Taper an verfuegbaren Platz anpassen
+            var lI = Math.min(inset, Math.round(gapL * 0.15));
+            var lT = Math.min(taper, Math.round(gapL * 0.3));
             stops.push('transparent 0');
-            stops.push('transparent ' + inset + 'px');
-            stops.push('black ' + (inset + taper) + 'px');
-            stops.push('black ' + Math.max(inset + taper, gapL - taper) + 'px');
+            stops.push('transparent ' + lI + 'px');
+            stops.push('black ' + (lI + lT) + 'px');
+            stops.push('black ' + Math.max(lI + lT, gapL - lT) + 'px');
             stops.push('transparent ' + gapL + 'px');
         } else {
             stops.push('transparent 0');
             stops.push('transparent ' + gapL + 'px');
         }
-        if (hasRight) {
+        // RECHTES Segment
+        if (rightSpace > 20) {
+            var rI = Math.min(inset, Math.round(rightSpace * 0.15));
+            var rT = Math.min(taper, Math.round(rightSpace * 0.3));
             stops.push('transparent ' + gapR + 'px');
-            stops.push('black ' + (gapR + taper) + 'px');
-            stops.push('black ' + Math.min(W - inset - taper, W - inset) + 'px');
-            stops.push('transparent ' + (W - inset) + 'px');
+            stops.push('black ' + (gapR + rT) + 'px');
+            stops.push('black ' + (W - rI - rT) + 'px');
+            stops.push('transparent ' + (W - rI) + 'px');
             stops.push('transparent 100%');
         } else {
             stops.push('transparent ' + gapR + 'px');
