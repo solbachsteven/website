@@ -951,10 +951,8 @@
         renderTab();
 
         try {
-            var isTestMirror = ws.mirrorSource && ws.mirrorSource.indexOf('test:') === 0;
-
-            // Erst speichern falls nötig (nicht bei Test-Mirrors - die brauchen keinen Journal-Eintrag)
-            if (!ws.entryId && !isTestMirror) {
+            // Erst speichern falls nötig
+            if (!ws.entryId) {
                 var saveData = await window.__AP.api('/ankerpraktik/entries', {
                     method: 'POST',
                     body: { lesson: ws.lesson, layer1_text: ws.text }
@@ -964,7 +962,7 @@
 
             var mirrorBody = {
                 text: ws.text,
-                lesson: isTestMirror ? '_test' : ws.lesson
+                lesson: ws.lesson
             };
             if (ws.entryId) mirrorBody.entry_id = ws.entryId;
             if (ws.mirrorSource) {
@@ -975,9 +973,7 @@
                 body: mirrorBody
             });
             ws.analysis = data.analysis;
-            if (!isTestMirror) {
-                ws.entryId = data.entry_id || ws.entryId;
-            }
+            ws.entryId = data.entry_id || ws.entryId;
             ws.mirrorSource = null;
             saveDraft();
         } catch(e) {
