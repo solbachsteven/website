@@ -48,8 +48,8 @@
     background: transparent;\
     transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;\
 }\
-.ss-header::before,\
-.ss-header::after {\
+.ss-header-inner::before,\
+.ss-header-inner::after {\
     content: "";\
     position: absolute;\
     left: 0;\
@@ -57,6 +57,7 @@
     height: 2px;\
     background: #BC8034;\
     pointer-events: none;\
+    z-index: 1;\
     -webkit-mask-image: linear-gradient(to right,\
         transparent 0, transparent var(--line-inset, 60px),\
         black calc(var(--line-inset, 60px) + var(--line-taper, 50px)),\
@@ -74,8 +75,8 @@
         black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
         transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
 }\
-.ss-header::before { top: 22px; }\
-.ss-header::after { bottom: 22px; }\
+.ss-header-inner::before { top: 0; }\
+.ss-header-inner::after { bottom: 0; }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -83,6 +84,7 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.3);\
 }\
 .ss-header-inner {\
+    position: relative;\
     max-width: 1200px;\
     margin: 0 auto;\
     padding: 0 60px;\
@@ -415,28 +417,35 @@
     onScroll(); // Initial check
 
     // ======== GOLD LINE GAP (nur rundes Logo unterbricht) ========
+    // Pseudo-Elemente liegen auf .ss-header-inner (max-width begrenzt).
     // Logo-Bild analysiert: Kreis-Zentrum bei ~48% der Bildhoehe von links,
     // innerer Hauptkreis (goldener Ring) hat Radius ~35% der Bildhoehe.
     function updateLogoGap() {
         var h = document.getElementById('ss-header');
         if (!h) return;
+        var inner = h.querySelector('.ss-header-inner');
         var logoImg = h.querySelector('.ss-header-logo img');
-        if (!logoImg) return;
-        var headerRect = h.getBoundingClientRect();
+        if (!inner || !logoImg) return;
+        var innerRect = inner.getBoundingClientRect();
         var imgRect = logoImg.getBoundingClientRect();
         var imgH = imgRect.height;
+        var containerW = innerRect.width;
         // Kreis-Zentrum: ~48% der Bildhoehe von der linken Bildkante
         var circleCenterX = imgRect.left + imgH * 0.48;
         // Hauptkreis-Radius (goldener Ring, ohne aeussere Deko-Punkte): ~35%
         var circleRadius = imgH * 0.35;
         var gapPad = 6;
-        var start = (circleCenterX - circleRadius - gapPad) - headerRect.left;
-        var end = (circleCenterX + circleRadius + gapPad) - headerRect.left;
+        // Relativ zum Inner-Container (= Pseudo-Element Referenz)
+        var start = (circleCenterX - circleRadius - gapPad) - innerRect.left;
+        var end = (circleCenterX + circleRadius + gapPad) - innerRect.left;
         if (start < 0) start = 0;
-        h.style.setProperty('--logo-gap-start', start + 'px');
-        h.style.setProperty('--logo-gap-end', end + 'px');
-        h.style.setProperty('--line-inset', '50px');
-        h.style.setProperty('--line-taper', '50px');
+        // Inset + Taper proportional zur Container-Breite (4% je)
+        var inset = Math.max(10, Math.round(containerW * 0.04));
+        var taper = Math.max(10, Math.round(containerW * 0.04));
+        inner.style.setProperty('--logo-gap-start', start + 'px');
+        inner.style.setProperty('--logo-gap-end', end + 'px');
+        inner.style.setProperty('--line-inset', inset + 'px');
+        inner.style.setProperty('--line-taper', taper + 'px');
     }
 
     // Initial + bei Resize aktualisieren
