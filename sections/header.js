@@ -46,7 +46,7 @@
     right: 0;\
     z-index: 1000;\
     background: transparent;\
-    transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;\
+    transition: background 0.4s ease, backdrop-filter 0.4s ease, transform 0.3s ease;\
 }\
 .ss-header-inner::before,\
 .ss-header-inner::after {\
@@ -58,8 +58,14 @@
     background: linear-gradient(to right, #BC8034, #D4A057, #BC8034);\
     pointer-events: none;\
     z-index: 1;\
-    -webkit-mask-image: var(--line-mask, linear-gradient(black,black));\
-    mask-image: var(--line-mask, linear-gradient(black,black));\
+    opacity: 0;\
+    transition: opacity 0.4s ease;\
+    -webkit-mask-image: var(--line-mask);\
+    mask-image: var(--line-mask);\
+}\
+.ss-header-inner.lines-ready::before,\
+.ss-header-inner.lines-ready::after {\
+    opacity: 1;\
 }\
 .ss-header-inner::before { top: 20px; }\
 .ss-header-inner::after { bottom: 20px; }\
@@ -70,21 +76,26 @@
     left: 0;\
     right: 0;\
     border-radius: 16px;\
-    background: rgba(45,39,38,0.15);\
-    backdrop-filter: blur(8px);\
-    -webkit-backdrop-filter: blur(8px);\
-    border: 1px solid rgba(188,128,52,0.08);\
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.02);\
+    background: rgba(45,39,38,0.55);\
+    border: 1px solid rgba(188,128,52,0.1);\
+    box-shadow: none;\
     pointer-events: none;\
     z-index: 0;\
-    -webkit-mask-image: var(--line-mask, linear-gradient(black,black));\
-    mask-image: var(--line-mask, linear-gradient(black,black));\
+    opacity: 0;\
+    transition: opacity 0.4s ease;\
+    -webkit-mask-image: var(--line-mask);\
+    mask-image: var(--line-mask);\
+}\
+.ss-header-inner.lines-ready .ss-header-glass {\
+    opacity: 1;\
 }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
     -webkit-backdrop-filter: blur(16px);\
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3);\
+}\
+.ss-header.header-hidden {\
+    transform: translateY(-100%);\
 }\
 .ss-header-inner {\
     position: relative;\
@@ -420,6 +431,12 @@
         var y = window.scrollY || window.pageYOffset;
         if (header) {
             header.classList.toggle('scrolled', y > 30);
+            // Runter scrollen = verstecken, hoch scrollen = zeigen
+            if (y > 100 && y > lastScroll) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
         }
         lastScroll = y;
     }
@@ -444,8 +461,8 @@
         var W = innerRect.width;
         // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=155
         // = 155/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
-        var cx = imgRect.left + (137 / logoImg.naturalWidth) * imgRect.width;
-        var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
+        var cx = imgRect.left + (143 / logoImg.naturalWidth) * imgRect.width;
+        var cr = imgH * 0.36; // Hauptkreis-Radius (enger am goldenen Ring)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
         var gapR = (cx + cr + pad) - innerRect.left;
@@ -492,24 +509,30 @@
 
     }
 
-    // Initial + bei Resize aktualisieren
-    // Mehrfach ausfuehren: Layout kann bei Erstladen noch nicht final sein
-    updateLogoGap();
-    requestAnimationFrame(updateLogoGap);
-    window.addEventListener('resize', updateLogoGap);
-    window.addEventListener('load', updateLogoGap);
-    setTimeout(updateLogoGap, 100);
-    setTimeout(updateLogoGap, 500);
-
-    // Nach Logo-Bild-Load nochmal aktualisieren (Bild kann spaeter laden)
+    // Einmalig korrekt berechnen wenn Bild geladen, dann einblenden
     var logoImg = header ? header.querySelector('.ss-header-logo img') : null;
+    function initLines() {
+        if (!logoImg || !logoImg.complete || !logoImg.naturalWidth) return;
+        updateLogoGap();
+        var inner = header.querySelector('.ss-header-inner');
+        if (inner) inner.classList.add('lines-ready');
+    }
     if (logoImg) {
-        if (logoImg.complete) {
-            updateLogoGap();
+        if (logoImg.complete && logoImg.naturalWidth) {
+            // Bild aus Cache - warten bis Layout steht
+            window.addEventListener('load', function() {
+                requestAnimationFrame(initLines);
+            });
+            // Fallback falls load schon gefeuert hat
+            requestAnimationFrame(initLines);
         } else {
-            logoImg.addEventListener('load', updateLogoGap);
+            logoImg.addEventListener('load', function() {
+                requestAnimationFrame(initLines);
+            });
         }
     }
+    // Bei Resize neu berechnen (kein Flashing - Linien sind bereits sichtbar)
+    window.addEventListener('resize', updateLogoGap);
 
     // ======== SMOOTH SCROLL ========
     target.addEventListener('click', function(e) {
