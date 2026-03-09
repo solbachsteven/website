@@ -74,8 +74,8 @@
         black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
         transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
 }\
-.ss-header::before { top: 0; }\
-.ss-header::after { bottom: 0; }\
+.ss-header::before { top: 14px; }\
+.ss-header::after { bottom: 14px; }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -86,7 +86,7 @@
     max-width: 1200px;\
     margin: 0 auto;\
     padding: 0 60px;\
-    height: 110px;\
+    height: 140px;\
     display: flex;\
     align-items: center;\
     justify-content: space-between;\
@@ -97,7 +97,7 @@
     display: block;\
     text-decoration: none;\
     flex-shrink: 0;\
-    height: 95px;\
+    height: 130px;\
 }\
 .ss-header-logo img {\
     height: 100%;\
@@ -273,20 +273,20 @@
 \
 /* ======== SPACER ======== */\
 .ss-header-spacer {\
-    height: 110px;\
+    height: 140px;\
 }\
 \
 /* ======== RESPONSIVE ======== */\
 @media (max-width: 900px) {\
     .ss-header-inner {\
         padding: 0 24px;\
-        height: 100px;\
+        height: 120px;\
     }\
     .ss-header-spacer {\
-        height: 100px;\
+        height: 120px;\
     }\
     .ss-header-logo {\
-        height: 80px;\
+        height: 100px;\
     }\
     .ss-header-nav {\
         display: none;\
@@ -302,13 +302,13 @@
 @media (max-width: 480px) {\
     .ss-header-inner {\
         padding: 0 16px;\
-        height: 80px;\
+        height: 100px;\
     }\
     .ss-header-spacer {\
-        height: 80px;\
+        height: 100px;\
     }\
     .ss-header-logo {\
-        height: 60px;\
+        height: 80px;\
     }\
 }\
 ';
