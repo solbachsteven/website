@@ -74,8 +74,8 @@
         black calc(100% - var(--line-inset, 60px) - var(--line-taper, 50px)),\
         transparent calc(100% - var(--line-inset, 60px)), transparent 100%);\
 }\
-.ss-header::before { top: 14px; }\
-.ss-header::after { bottom: 14px; }\
+.ss-header::before { top: 22px; }\
+.ss-header::after { bottom: 22px; }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -415,6 +415,8 @@
     onScroll(); // Initial check
 
     // ======== GOLD LINE GAP (nur rundes Logo unterbricht) ========
+    // Logo-Bild analysiert: Kreis-Zentrum bei ~48% der Bildhoehe von links,
+    // innerer Hauptkreis (goldener Ring) hat Radius ~35% der Bildhoehe.
     function updateLogoGap() {
         var h = document.getElementById('ss-header');
         if (!h) return;
@@ -422,11 +424,14 @@
         if (!logoImg) return;
         var headerRect = h.getBoundingClientRect();
         var imgRect = logoImg.getBoundingClientRect();
-        // Nur der runde Teil: Kreis-Durchmesser ≈ Bildhoehe
-        var circleDiameter = imgRect.height;
-        var gapPad = 14; // px Abstand um den Kreis
-        var start = (imgRect.left - headerRect.left) - gapPad;
-        var end = (imgRect.left - headerRect.left) + circleDiameter + gapPad;
+        var imgH = imgRect.height;
+        // Kreis-Zentrum: ~48% der Bildhoehe von der linken Bildkante
+        var circleCenterX = imgRect.left + imgH * 0.48;
+        // Hauptkreis-Radius (goldener Ring, ohne aeussere Deko-Punkte): ~35%
+        var circleRadius = imgH * 0.35;
+        var gapPad = 6;
+        var start = (circleCenterX - circleRadius - gapPad) - headerRect.left;
+        var end = (circleCenterX + circleRadius + gapPad) - headerRect.left;
         if (start < 0) start = 0;
         h.style.setProperty('--logo-gap-start', start + 'px');
         h.style.setProperty('--logo-gap-end', end + 'px');
