@@ -76,17 +76,28 @@
     left: 0;\
     right: 0;\
     border-radius: 16px;\
-    background: rgba(45,39,38,0.85);\
+    background: rgba(26,26,26,0.85);\
     backdrop-filter: blur(12px);\
     -webkit-backdrop-filter: blur(12px);\
     border: 1px solid rgba(188,128,52,0.12);\
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);\
     pointer-events: none;\
     z-index: 0;\
     opacity: 0;\
     transition: opacity 0.4s ease;\
 }\
 .ss-header-inner.lines-ready .ss-header-glass {\
+    opacity: 1;\
+}\
+.ss-header-logo-bg {\
+    position: absolute;\
+    border-radius: 50%;\
+    background: #1a1a1a;\
+    pointer-events: none;\
+    z-index: 0;\
+    opacity: 0;\
+    transition: opacity 0.4s ease;\
+}\
+.ss-header-inner.lines-ready .ss-header-logo-bg {\
     opacity: 1;\
 }\
 .ss-header.scrolled {\
@@ -389,7 +400,8 @@
         +     '<button class="ss-header-hamburger" onclick="window.__SS_HEADER.openMenu()" aria-label="Men\u00fc">'
         +       icons.menu
         +     '</button>'
-        // Glaseffekt-Streifen zwischen den goldenen Linien
+        // Glaseffekt-Leiste + Logo-Hintergrund
+        +     '<div class="ss-header-logo-bg"></div>'
         +     '<div class="ss-header-glass"></div>'
         +   '</div>'
         + '</header>'
@@ -505,6 +517,17 @@
         var mask = 'linear-gradient(to right, ' + stops.join(', ') + ')';
         inner.style.setProperty('--line-mask', mask);
 
+        // Logo-BG-Kreis positionieren
+        var logoBg = inner.querySelector('.ss-header-logo-bg');
+        if (logoBg) {
+            var d = cr * 2 + pad * 2;
+            var bgCx = cx - innerRect.left;
+            var bgCy = innerRect.height / 2;
+            logoBg.style.width = d + 'px';
+            logoBg.style.height = d + 'px';
+            logoBg.style.left = (bgCx - d / 2) + 'px';
+            logoBg.style.top = (bgCy - d / 2) + 'px';
+        }
     }
 
     // Einmalig korrekt berechnen wenn Bild geladen, dann einblenden
