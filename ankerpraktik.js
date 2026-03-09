@@ -8,9 +8,9 @@
     // === CONFIG ===
     // Cloudflare Worker: Auth, Data (D1) + KI (Anthropic API)
     var API_URL = 'https://win3-community.solbachsteven.workers.dev';
-    // Dev-Modus: KI-Calls lokal via claude -p CLI
-    var LOCAL_AI_URL = (typeof location !== 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1'))
-        ? 'http://localhost:3465' : null;
+    // Dev-Modus: KI-Calls lokal via same-origin (ap-local-server.js auf Port 3465)
+    var isLocal = typeof location !== 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+    var LOCAL_AI_URL = isLocal ? location.origin : null;
     var LOCAL_KI_PATHS = ['/ankerpraktik/mirror', '/ankerpraktik/coach', '/ankerpraktik/patterns', '/ankerpraktik/development-arc', '/ankerpraktik/test-synthesis'];
     // BASE_PATH dynamisch: Portal-Override, lokal oder GitHub Pages
     var BASE_PATH;
@@ -463,11 +463,17 @@
     }
 
     // === DEV INDICATOR ===
-    if (LOCAL_AI_URL) {
+    if (isLocal) {
         var devBadge = document.createElement('div');
         devBadge.className = 'ap-dev-badge';
         devBadge.id = 'ap-dev-badge';
-        devBadge.textContent = 'DEV';
+        var port = location.port || '80';
+        devBadge.textContent = 'DEV :' + port;
+        if (port !== '3465') {
+            devBadge.textContent = 'DEV :' + port + ' (kein KI)';
+            devBadge.style.color = '#e57373';
+            devBadge.style.borderColor = 'rgba(229, 115, 115, 0.3)';
+        }
         document.body.appendChild(devBadge);
     }
     function flashDevBadge(isLocal, path) {
