@@ -61,8 +61,8 @@
     -webkit-mask-image: var(--line-mask, none);\
     mask-image: var(--line-mask, none);\
 }\
-.ss-header-inner::before { top: 0; }\
-.ss-header-inner::after { bottom: 0; }\
+.ss-header-inner::before { top: 12px; }\
+.ss-header-inner::after { bottom: 12px; }\
 .ss-header.scrolled {\
     background: rgba(26,26,26,0.92);\
     backdrop-filter: blur(16px);\
@@ -416,9 +416,10 @@
         var imgRect = logoImg.getBoundingClientRect();
         var imgH = imgRect.height;
         var W = innerRect.width;
-        // Kreis-Zentrum: ~48% der Bildhoehe von der linken Bildkante
-        var cx = imgRect.left + imgH * 0.48;
-        var cr = imgH * 0.35; // Hauptkreis-Radius
+        // Kreis-Zentrum: Natuerliches Bild 600x250, Kreis-Mitte bei ~x=130
+        // = 130/600 * displayWidth von links. Radius: ~42% der Bildhoehe.
+        var cx = imgRect.left + (130 / logoImg.naturalWidth) * imgRect.width;
+        var cr = imgH * 0.42; // Hauptkreis-Radius (goldener Ring inkl. Strahlen)
         var pad = 6;
         var gapL = (cx - cr - pad) - innerRect.left;
         var gapR = (cx + cr + pad) - innerRect.left;
