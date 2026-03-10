@@ -23,6 +23,7 @@
                 +   quickCard('Freebie Kurs', 'Erkenne deine Lebensaufgabe', '#/freebie', true)
                 +   quickCard('Win\u00b3 Kurs', '13 Lektionen zur Transformation', '#/kurs', tier !== 'free')
                 +   quickCard('Ankerpraktik', 'Dein KI-gest\u00fctztes Journal', '#/ankerpraktik', tier === 'community' || tier === 'mentoring')
+                +   quickCard('Coaching', '1:1 Sessions mit Steven', '#/coaching', tier === 'mentoring')
                 + '</div>'
                 + '</div>';
         },

@@ -69,7 +69,8 @@
         lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>',
         logout: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
         menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
-        globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>'
+        globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
+        video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>'
     };
 
     // Website URL
@@ -81,6 +82,7 @@
         { id: 'freebie',   label: 'Freebie Kurs',  hash: '#/freebie',     icon: ICONS.book,       tiers: ['free','kurs','community','mentoring'] },
         { id: 'kurs',      label: 'Win\u00b3 Kurs',hash: '#/kurs',        icon: ICONS.graduation, tiers: ['kurs','community','mentoring'] },
         { id: 'tools',     label: 'Ankerpraktik',  hash: '#/ankerpraktik',icon: ICONS.pen,        tiers: ['community','mentoring'] },
+        { id: 'coaching',  label: 'Coaching',      hash: '#/coaching',    icon: ICONS.video,      tiers: ['mentoring'] },
         { id: 'profile',   label: 'Profil',        hash: '#/profile',     icon: ICONS.user,       tiers: ['free','kurs','community','mentoring'] }
     ];
 
@@ -293,6 +295,15 @@
                 });
                 break;
 
+            case 'coaching':
+                loadAdapter('p-coaching', function() {
+                    if (window.__P_COACHING_ADAPTER) {
+                        state.currentAdapter = window.__P_COACHING_ADAPTER;
+                        window.__P_COACHING_ADAPTER.mount(content, route.param);
+                    }
+                });
+                break;
+
             case 'profile':
                 loadAdapter('p-profile', function() {
                     if (window.__P_PROFILE) {
@@ -314,6 +325,8 @@
             upgradeText = 'Der Win\u00b3 Kurs ist f\u00fcr Kursteilnehmer und Mentoring-Kunden verf\u00fcgbar.';
         } else if (navItem.id === 'tools') {
             upgradeText = 'Die Ankerpraktik und Selbsttests sind Teil der Win\u00b3 Community.';
+        } else if (navItem.id === 'coaching') {
+            upgradeText = '1:1 Coaching ist Teil des Win\u00b3 Mentoring-Programms.';
         }
 
         container.innerHTML = '<div class="w3-lock-overlay">'
