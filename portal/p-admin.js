@@ -33,7 +33,7 @@
             // Init: aktuelle Woche (Montag)
             calendarState.weekStart = getMonday(new Date());
 
-            container.innerHTML = '<div class="adm-dash" style="max-width:960px;margin:0 auto;padding:32px 24px;">'
+            container.innerHTML = '<div class="adm-dash" style="max-width:960px;margin:0 auto;padding:32px 24px;font-family:Poppins,sans-serif;">'
                 + '<div style="margin-bottom:32px;">'
                 + '<h1 style="font-size:24px;font-weight:600;margin-bottom:4px;">Guten Morgen, ' + escapeHtml(name) + '</h1>'
                 + '<p style="font-size:14px;color:rgba(252,240,214,0.4);">' + formatDateLong(new Date()) + '</p>'
@@ -308,7 +308,7 @@
         var timeStr = formatTime(start) + (end ? ' - ' + formatTime(end) : '');
         var dateStr = start.getDate() + '. ' + MONTH_NAMES[start.getMonth()] + ' ' + start.getFullYear();
 
-        var html = '<div id="cal-session-popup" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;">'
+        var html = '<div id="cal-session-popup" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:Poppins,sans-serif;">'
             + '<div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);" onclick="document.getElementById(\'cal-session-popup\').remove()"></div>'
             + '<div style="position:relative;width:90%;max-width:420px;background:rgba(45,39,38,0.95);border:1px solid rgba(188,128,52,0.25);border-radius:16px;padding:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);">'
             + '<button onclick="document.getElementById(\'cal-session-popup\').remove()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(252,240,214,0.4);font-size:20px;cursor:pointer;padding:4px 8px;">&times;</button>'

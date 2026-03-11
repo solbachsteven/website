@@ -205,7 +205,7 @@
     // ======== ADAPTER LOADING ========
     var adaptersLoaded = {};
 
-    var ADAPTER_VERSION = '2026031101';
+    var ADAPTER_VERSION = '2026031102';
 
     function loadAdapter(name, callback) {
         if (adaptersLoaded[name]) {
