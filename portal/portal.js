@@ -54,6 +54,8 @@
     var state = {
         user: null,
         token: null,
+        isAdmin: false,
+        adminView: true, // true = Admin-Ansicht, false = User-Ansicht (Toggle)
         currentRoute: null,
         currentAdapter: null,
         sidebarOpen: false
@@ -70,7 +72,11 @@
         logout: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
         menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
         globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
-        video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>'
+        video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>',
+        dashboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+        users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+        clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>',
+        toggle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="22" height="14" rx="7" ry="7"/><circle cx="16" cy="12" r="3"/></svg>'
     };
 
     // Website URL
@@ -84,6 +90,14 @@
         { id: 'tools',     label: 'Ankerpraktik',  hash: '#/ankerpraktik',icon: ICONS.pen,        tiers: ['community','mentoring'] },
         { id: 'coaching',  label: 'Coaching',      hash: '#/coaching',    icon: ICONS.video,      tiers: ['mentoring'] },
         { id: 'profile',   label: 'Profil',        hash: '#/profile',     icon: ICONS.user,       tiers: ['free','kurs','community','mentoring'] }
+    ];
+
+    // Admin navigation items (only shown when isAdmin && adminView)
+    var ADMIN_NAV_ITEMS = [
+        { id: 'admin',           label: 'Dashboard',    hash: '#/admin',           icon: ICONS.dashboard },
+        { id: 'admin-coaching',  label: 'Coaching',     hash: '#/admin/coaching',  icon: ICONS.video },
+        { id: 'admin-bewerbungen', label: 'Bewerbungen', hash: '#/admin/bewerbungen', icon: ICONS.clipboard },
+        { id: 'admin-users',    label: 'User',         hash: '#/admin/users',     icon: ICONS.users }
     ];
 
     var TIER_LABELS = {
@@ -159,6 +173,22 @@
             if (!state.user) return false;
             var tier = state.user.tier || 'free';
             return requiredTiers.indexOf(tier) !== -1;
+        },
+
+        isAdminView: function() {
+            return state.isAdmin && state.adminView;
+        },
+
+        toggleView: function() {
+            state.adminView = !state.adminView;
+            // Re-render the whole app to switch nav
+            renderApp();
+            // Navigate to appropriate dashboard
+            if (state.adminView) {
+                window.location.hash = '#/admin';
+            } else {
+                window.location.hash = '#/';
+            }
         },
 
         closeSidebar: function() {
@@ -313,6 +343,42 @@
                 });
                 break;
 
+            // Admin routes
+            case 'admin':
+                if (!state.isAdmin) { content.innerHTML = '<div style="padding:40px;text-align:center;opacity:0.5;">Kein Zugriff</div>'; break; }
+                // Sub-routes: admin/coaching, admin/bewerbungen, admin/users
+                if (route.param === 'coaching') {
+                    loadAdapter('p-admin-coaching', function() {
+                        if (window.__P_ADMIN_COACHING) {
+                            state.currentAdapter = window.__P_ADMIN_COACHING;
+                            window.__P_ADMIN_COACHING.mount(content);
+                        }
+                    });
+                } else if (route.param === 'bewerbungen') {
+                    loadAdapter('p-admin-bewerbungen', function() {
+                        if (window.__P_ADMIN_BEWERBUNGEN) {
+                            state.currentAdapter = window.__P_ADMIN_BEWERBUNGEN;
+                            window.__P_ADMIN_BEWERBUNGEN.mount(content);
+                        }
+                    });
+                } else if (route.param === 'users') {
+                    loadAdapter('p-admin-users', function() {
+                        if (window.__P_ADMIN_USERS) {
+                            state.currentAdapter = window.__P_ADMIN_USERS;
+                            window.__P_ADMIN_USERS.mount(content);
+                        }
+                    });
+                } else {
+                    // Admin Dashboard (default)
+                    loadAdapter('p-admin', function() {
+                        if (window.__P_ADMIN) {
+                            state.currentAdapter = window.__P_ADMIN;
+                            window.__P_ADMIN.mount(content);
+                        }
+                    });
+                }
+                break;
+
             default:
                 content.innerHTML = '<div style="padding:40px;text-align:center;opacity:0.5;">Seite nicht gefunden</div>';
         }
@@ -337,11 +403,16 @@
     }
 
     function updateNavActive(section) {
-        // Map route sections to nav IDs where they differ
+        var route = getRoute();
         var mapped = section === 'ankerpraktik' ? 'tools' : section;
+        // For admin sub-routes: admin/coaching → admin-coaching
+        if (section === 'admin' && route.param) {
+            mapped = 'admin-' + route.param;
+        }
         var btns = document.querySelectorAll('.w3-nav-item');
         btns.forEach(function(btn) {
             var id = btn.getAttribute('data-nav');
+            if (!id) return;
             btn.classList.toggle('active', id === mapped || (mapped === '' && id === 'dashboard'));
         });
     }
@@ -368,24 +439,49 @@
 
         // Sidebar HTML
         var navHtml = '';
-        for (var i = 0; i < NAV_ITEMS.length; i++) {
-            var item = NAV_ITEMS[i];
-            var hasAccess = window.__W3.hasTier(item.tiers);
-            var isLocked = !hasAccess;
+        var showAdmin = state.isAdmin && state.adminView;
 
-            navHtml += '<button class="w3-nav-item' + (isLocked ? ' locked' : '') + '"'
-                + ' data-nav="' + item.id + '"'
-                + (isLocked ? '' : ' onclick="window.__W3.navigate(\'' + item.hash + '\')"')
-                + '>'
-                + '<span class="w3-nav-icon">' + item.icon + '</span>'
-                + '<span>' + item.label + '</span>'
-                + (isLocked ? '<span class="w3-nav-lock">' + ICONS.lock + '</span>' : '')
-                + '</button>';
-
-            // Separator after Ankerpraktik
-            if (item.id === 'tools') {
-                navHtml += '<div class="w3-nav-separator"></div>';
+        if (showAdmin) {
+            // Admin navigation
+            for (var i = 0; i < ADMIN_NAV_ITEMS.length; i++) {
+                var aItem = ADMIN_NAV_ITEMS[i];
+                navHtml += '<button class="w3-nav-item" data-nav="' + aItem.id + '"'
+                    + ' onclick="window.__W3.navigate(\'' + aItem.hash + '\')">'
+                    + '<span class="w3-nav-icon">' + aItem.icon + '</span>'
+                    + '<span>' + aItem.label + '</span>'
+                    + '</button>';
             }
+        } else {
+            // User navigation
+            for (var i = 0; i < NAV_ITEMS.length; i++) {
+                var item = NAV_ITEMS[i];
+                var hasAccess = window.__W3.hasTier(item.tiers);
+                var isLocked = !hasAccess;
+
+                navHtml += '<button class="w3-nav-item' + (isLocked ? ' locked' : '') + '"'
+                    + ' data-nav="' + item.id + '"'
+                    + (isLocked ? '' : ' onclick="window.__W3.navigate(\'' + item.hash + '\')"')
+                    + '>'
+                    + '<span class="w3-nav-icon">' + item.icon + '</span>'
+                    + '<span>' + item.label + '</span>'
+                    + (isLocked ? '<span class="w3-nav-lock">' + ICONS.lock + '</span>' : '')
+                    + '</button>';
+
+                // Separator after Ankerpraktik
+                if (item.id === 'tools') {
+                    navHtml += '<div class="w3-nav-separator"></div>';
+                }
+            }
+        }
+
+        // View toggle for admins
+        var viewToggleHtml = '';
+        if (state.isAdmin) {
+            var toggleLabel = showAdmin ? 'User-Ansicht' : 'Admin-Ansicht';
+            viewToggleHtml = '<button class="w3-nav-item w3-view-toggle" onclick="window.__W3.toggleView()">'
+                + '<span class="w3-nav-icon">' + ICONS.toggle + '</span>'
+                + '<span>' + toggleLabel + '</span>'
+                + '</button>';
         }
 
         portal.innerHTML = ''
@@ -409,6 +505,7 @@
             +     '<span style="font-family:PacificaCondensed,fantasy;font-size:26px;letter-spacing:1px;color:#F4F0EC;white-space:nowrap;">Win<span style="color:#BC8034;font-size:1.15em;margin-left:2px;">&#179;</span> Academy</span>'
             +   '</div>'
             +   '<nav class="w3-sidebar-nav">' + navHtml + '</nav>'
+            +   viewToggleHtml
             +   '<a href="' + WEBSITE_URL + '" class="w3-nav-item w3-website-link" style="margin:0 12px;opacity:0.5;font-size:13px;">'
             +     '<span class="w3-nav-icon">' + ICONS.globe + '</span>'
             +     '<span>Zur Website</span>'
@@ -466,6 +563,7 @@
             });
             state.token = data.session_token;
             state.user = data.user;
+            state.isAdmin = !!(data.user && data.user.is_admin);
             window.__W3.saveSession();
             // URL aufr\u00e4umen
             var url = new URL(window.location);
@@ -491,6 +589,7 @@
                 var data = await window.__W3.api('/auth/session', { method: 'POST' });
                 if (data && data.user) {
                     state.user = data.user;
+                    state.isAdmin = !!data.is_admin;
                     window.__W3.saveSession();
                 }
             } catch(e) {
