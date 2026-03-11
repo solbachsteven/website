@@ -50,7 +50,9 @@
                 calendarState.sessions = calData.sessions || [];
                 renderDashboard(container.querySelector('.adm-dash'), dashData, calData);
             } catch(e) {
-                container.querySelector('.adm-loading').textContent = 'Fehler: ' + (e.message || e);
+                var errEl = container.querySelector('.adm-loading') || container.querySelector('.adm-dash');
+                if (errEl) errEl.textContent = 'Fehler: ' + (e.message || e);
+                console.error('Dashboard error:', e);
             }
         },
 
@@ -81,6 +83,7 @@
 
         // New Bewerbungen
         var bewRecent = data.new_bewerbungen ? (data.new_bewerbungen.recent || []) : [];
+        var bewCount = data.new_bewerbungen ? data.new_bewerbungen.count : 0;
         var bewHtml = '<div style="margin-bottom:28px;">'
             + '<h2 style="font-size:16px;font-weight:600;margin-bottom:12px;">Neue Bewerbungen' + (bewCount > 0 ? ' (' + bewCount + ')' : '') + '</h2>';
 
