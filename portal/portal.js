@@ -205,13 +205,15 @@
     // ======== ADAPTER LOADING ========
     var adaptersLoaded = {};
 
+    var ADAPTER_VERSION = '2026031101';
+
     function loadAdapter(name, callback) {
         if (adaptersLoaded[name]) {
             if (callback) callback();
             return;
         }
         var script = document.createElement('script');
-        script.src = PORTAL_BASE + name + '.js';
+        script.src = PORTAL_BASE + name + '.js?v=' + ADAPTER_VERSION;
         script.onload = function() {
             adaptersLoaded[name] = true;
             if (callback) callback();
