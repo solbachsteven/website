@@ -341,7 +341,8 @@
         // Action buttons
         html += '<div style="display:flex;gap:8px;margin-top:8px;">';
         if (s.daily_room_url) {
-            html += '<a href="' + escapeHtml(s.daily_room_url) + '" target="_blank" style="flex:1;text-align:center;padding:10px;border-radius:8px;background:rgba(188,128,52,0.15);color:#BC8034;font-size:13px;font-weight:500;text-decoration:none;border:1px solid rgba(188,128,52,0.25);">Daily.co Room</a>';
+            var hostUrl = s.daily_token_coach ? s.daily_room_url + '?t=' + s.daily_token_coach : s.daily_room_url;
+            html += '<a href="' + escapeHtml(hostUrl) + '" target="_blank" style="flex:1;text-align:center;padding:10px;border-radius:8px;background:rgba(188,128,52,0.15);color:#BC8034;font-size:13px;font-weight:500;text-decoration:none;border:1px solid rgba(188,128,52,0.25);">Als Host beitreten</a>';
         }
         html += '<button onclick="window.__W3.navigate(\'#/admin/coaching\');document.getElementById(\'cal-session-popup\').remove();" style="flex:1;padding:10px;border-radius:8px;background:rgba(252,240,214,0.06);color:rgba(252,240,214,0.7);font-size:13px;border:1px solid rgba(252,240,214,0.1);cursor:pointer;">Alle Sessions</button>';
         html += '</div></div></div>';
