@@ -589,7 +589,7 @@
                 var data = await window.__W3.api('/auth/session', { method: 'POST' });
                 if (data && data.user) {
                     state.user = data.user;
-                    state.isAdmin = !!data.is_admin;
+                    state.isAdmin = !!(data.user && data.user.is_admin);
                     window.__W3.saveSession();
                 }
             } catch(e) {
