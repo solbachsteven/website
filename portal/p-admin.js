@@ -64,14 +64,16 @@
         if (loading) loading.remove();
 
         var userStats = data.user_stats || {};
-        var bewCount = data.new_bewerbungen ? data.new_bewerbungen.count : 0;
+        var sessionStats = data.session_stats || {};
+        var bewStats = data.bewerbungen_stats || {};
+        var pinStats = data.pinwall_stats || {};
 
-        // Stats row
-        var statsHtml = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;">'
-            + statCard('User', userStats.total || 0)
-            + statCard('Sessions', data.sessions_this_week || 0, 'diese Woche')
-            + statCard('Bewerbungen', bewCount, 'neu')
-            + statCard('Pinwand', (data.recent_pinwall || []).length, 'neue')
+        // Stats row - Gesamt mit Zeitraum-Deltas
+        var statsHtml = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:28px;">'
+            + statCard('User', userStats.total || 0, userStats)
+            + statCard('Sessions', sessionStats.total || 0, sessionStats)
+            + statCard('Bewerbungen', bewStats.total || 0, bewStats)
+            + statCard('Pinwand', pinStats.total || 0, pinStats)
             + '</div>';
 
         // Calendar section
@@ -269,7 +271,7 @@
     function renderSessionCard(s, compact) {
         var color = TYPE_COLORS[s.session_type] || '#BC8034';
         var time = formatTime(new Date(s.scheduled_start));
-        var displayName = s.first_name || s.nickname || (s.email ? s.email.split('@')[0] : 'Unbekannt');
+        var displayName = [s.first_name, s.last_name].filter(Boolean).join(' ') || s.nickname || (s.email ? s.email.split('@')[0] : 'Unbekannt');
         var typeLabel = TYPE_LABELS[s.session_type] || s.session_type || '?';
 
         if (compact) {
@@ -311,30 +313,30 @@
         var html = '<div id="cal-session-popup" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:Poppins,sans-serif;">'
             + '<div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);" onclick="document.getElementById(\'cal-session-popup\').remove()"></div>'
             + '<div style="position:relative;width:90%;max-width:420px;background:rgba(45,39,38,0.95);border:1px solid rgba(188,128,52,0.25);border-radius:16px;padding:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);">'
-            + '<button onclick="document.getElementById(\'cal-session-popup\').remove()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(252,240,214,0.4);font-size:20px;cursor:pointer;padding:4px 8px;">&times;</button>'
+            + '<button onclick="document.getElementById(\'cal-session-popup\').remove()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(252,240,214,0.7);font-size:20px;cursor:pointer;padding:4px 8px;">&times;</button>'
             + '<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">'
             + '<span style="width:12px;height:12px;border-radius:4px;background:' + color + ';flex-shrink:0;"></span>'
             + '<span style="font-size:11px;color:' + color + ';padding:2px 8px;border-radius:4px;background:' + hexToRgba(color, 0.12) + ';font-weight:500;">' + typeLabel + '</span>'
             + '</div>'
-            + '<div style="font-size:18px;font-weight:600;margin-bottom:4px;">' + escapeHtml(displayName) + '</div>'
-            + '<div style="font-size:13px;color:rgba(252,240,214,0.5);margin-bottom:16px;">' + escapeHtml(s.email || '') + '</div>'
+            + '<div style="font-size:18px;font-weight:600;color:#FCF0D6;margin-bottom:4px;">' + escapeHtml(displayName) + '</div>'
+            + '<div style="font-size:13px;color:rgba(252,240,214,0.7);margin-bottom:16px;">' + escapeHtml(s.email || '') + '</div>'
             + '<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13px;margin-bottom:16px;">'
-            + '<span style="color:rgba(252,240,214,0.4);">Datum</span><span>' + dateStr + '</span>'
-            + '<span style="color:rgba(252,240,214,0.4);">Uhrzeit</span><span>' + timeStr + '</span>'
-            + '<span style="color:rgba(252,240,214,0.4);">Status</span><span style="text-transform:capitalize;">' + escapeHtml(s.status || 'scheduled') + '</span>'
+            + '<span style="color:#BC8034;">Datum</span><span style="color:#FCF0D6;">' + dateStr + '</span>'
+            + '<span style="color:#BC8034;">Uhrzeit</span><span style="color:#FCF0D6;">' + timeStr + '</span>'
+            + '<span style="color:#BC8034;">Status</span><span style="color:#FCF0D6;text-transform:capitalize;">' + escapeHtml(s.status || 'scheduled') + '</span>'
             + '</div>';
 
         if (s.booking_notes) {
             html += '<div style="margin-bottom:16px;">'
-                + '<div style="font-size:11px;color:rgba(252,240,214,0.4);margin-bottom:4px;">Notizen</div>'
-                + '<div style="font-size:13px;color:rgba(252,240,214,0.7);line-height:1.5;">' + escapeHtml(truncate(s.booking_notes, 200)) + '</div>'
+                + '<div style="font-size:11px;color:#BC8034;margin-bottom:4px;">Notizen</div>'
+                + '<div style="font-size:13px;color:#FCF0D6;line-height:1.5;">' + escapeHtml(truncate(s.booking_notes, 200)) + '</div>'
                 + '</div>';
         }
 
         if (s.ai_summary) {
             html += '<div style="margin-bottom:16px;">'
-                + '<div style="font-size:11px;color:rgba(252,240,214,0.4);margin-bottom:4px;">KI-Zusammenfassung</div>'
-                + '<div style="font-size:13px;color:rgba(252,240,214,0.7);line-height:1.5;">' + escapeHtml(truncate(s.ai_summary, 200)) + '</div>'
+                + '<div style="font-size:11px;color:#BC8034;margin-bottom:4px;">KI-Zusammenfassung</div>'
+                + '<div style="font-size:13px;color:rgba(252,240,214,0.85);line-height:1.5;">' + escapeHtml(truncate(s.ai_summary, 200)) + '</div>'
                 + '</div>';
         }
 
@@ -412,12 +414,26 @@
         return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
     }
 
-    function statCard(label, value, sub) {
-        return '<div style="' + cardStyle() + 'padding:20px;text-align:center;">'
+    function statCard(label, value, periods) {
+        var html = '<div style="' + cardStyle() + 'padding:16px 12px;text-align:center;">'
             + '<div style="font-size:28px;font-weight:700;color:#BC8034;">' + (value || 0) + '</div>'
-            + '<div style="font-size:13px;color:rgba(252,240,214,0.5);margin-top:4px;">' + label + '</div>'
-            + (sub ? '<div style="font-size:11px;color:rgba(252,240,214,0.3);margin-top:2px;">' + sub + '</div>' : '')
-            + '</div>';
+            + '<div style="font-size:13px;color:#FCF0D6;margin-top:4px;">' + label + '</div>';
+
+        if (periods && typeof periods === 'object') {
+            html += '<div style="display:flex;justify-content:center;gap:6px;margin-top:8px;flex-wrap:wrap;">';
+            if (periods.this_year) html += deltaChip('J', periods.this_year);
+            if (periods.this_month) html += deltaChip('M', periods.this_month);
+            if (periods.this_week) html += deltaChip('W', periods.this_week);
+            html += '</div>';
+        }
+
+        html += '</div>';
+        return html;
+    }
+
+    function deltaChip(period, count) {
+        if (!count || count <= 0) return '';
+        return '<span style="font-size:10px;color:#27ae60;background:rgba(39,174,96,0.12);padding:2px 6px;border-radius:4px;font-weight:600;">+' + count + ' ' + period + '</span>';
     }
 
     function cardStyle() {
