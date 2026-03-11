@@ -54,8 +54,8 @@
             +   '<p style="font-size:12px;color:rgba(252,240,214,0.3);text-align:center;margin-top:16px;line-height:1.5;font-family:Poppins,sans-serif;">'
             +     'Wir senden dir einen Link per Email. Kein Passwort n\u00f6tig.'
             +   '</p>'
-            // Dev Login (nur lokal)
-            + (location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+            // Dev Login (lokal oder via URL-Param ?dev=1)
+            + (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || new URLSearchParams(location.search).get('dev') === '1'
                 ? '<div style="border-top:1px solid rgba(188,128,52,0.1);margin-top:20px;padding-top:16px;text-align:center;">'
                 +   '<button style="background:none;border:1px solid rgba(188,128,52,0.2);color:rgba(252,240,214,0.4);'
                 +     'padding:8px 20px;border-radius:20px;font-family:Poppins,sans-serif;font-size:12px;cursor:pointer;"'
