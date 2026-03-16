@@ -56,7 +56,7 @@
     left: 0;\
     right: 0;\
     height: 1px;\
-    background: linear-gradient(to right, #BC8034, #D4A057, #BC8034);\
+    background: linear-gradient(to right, #C9A84C, #DFC06A, #C9A84C);\
     pointer-events: none;\
     z-index: 1;\
     opacity: 0;\
@@ -80,7 +80,7 @@
     background: rgba(26,26,26,0.85);\
     backdrop-filter: blur(12px);\
     -webkit-backdrop-filter: blur(12px);\
-    border: 1px solid rgba(188,128,52,0.12);\
+    border: 1px solid rgba(201,168,76,0.12);\
     pointer-events: none;\
     z-index: 0;\
     opacity: 0;\
@@ -142,7 +142,7 @@
     gap: 8px;\
 }\
 .ss-header-link {\
-    font-family: "Poppins", sans-serif;\
+    font-family: "Outfit", sans-serif;\
     font-size: 14px;\
     font-weight: 400;\
     color: rgba(255,255,255,0.6);\
@@ -160,17 +160,17 @@
 .ss-header-divider {\
     width: 1px;\
     height: 24px;\
-    background: rgba(188,128,52,0.2);\
+    background: rgba(201,168,76,0.2);\
     margin: 0 8px;\
 }\
 .ss-header-cta {\
-    font-family: "Poppins", sans-serif;\
+    font-family: "Outfit", sans-serif;\
     font-size: 14px;\
     font-weight: 500;\
-    color: #2D2726;\
-    background: linear-gradient(135deg, #BC8034 0%, #D4A057 100%);\
+    color: #111110;\
+    background: #C9A84C;\
     border: none;\
-    border-radius: 20px;\
+    border-radius: 12px;\
     padding: 9px 22px;\
     text-decoration: none;\
     cursor: pointer;\
@@ -183,12 +183,12 @@
 }\
 .ss-header-cta:hover {\
     transform: translateY(-1px);\
-    box-shadow: 0 4px 20px rgba(188,128,52,0.35);\
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);\
 }\
 .ss-header-cta svg {\
     width: 15px;\
     height: 15px;\
-    stroke: #2D2726;\
+    stroke: #111110;\
 }\
 \
 /* ======== HAMBURGER (Mobile) ======== */\
@@ -228,7 +228,7 @@
     right: -280px;\
     width: 280px;\
     height: 100%;\
-    background: #2D2726;\
+    background: #1a1a1a;\
     z-index: 1001;\
     padding: 24px;\
     transition: right 0.3s ease;\
@@ -263,7 +263,7 @@
     gap: 4px;\
 }\
 .ss-mobile-nav a {\
-    font-family: "Poppins", sans-serif;\
+    font-family: "Outfit", sans-serif;\
     font-size: 16px;\
     font-weight: 400;\
     color: rgba(255,255,255,0.7);\
@@ -278,7 +278,7 @@
 .ss-mobile-nav a:hover,\
 .ss-mobile-nav a:active {\
     color: #FFFFFF;\
-    background: rgba(188,128,52,0.1);\
+    background: rgba(201,168,76,0.1);\
 }\
 .ss-mobile-nav a svg {\
     width: 20px;\
@@ -289,18 +289,18 @@
 .ss-mobile-nav .ss-mobile-cta {\
     margin-top: 20px;\
     font-weight: 500;\
-    color: #2D2726;\
-    background: linear-gradient(135deg, #BC8034 0%, #D4A057 100%);\
+    color: #111110;\
+    background: #C9A84C;\
     justify-content: center;\
-    border-radius: 20px;\
+    border-radius: 12px;\
 }\
 .ss-mobile-nav .ss-mobile-cta:hover {\
-    color: #2D2726;\
-    background: linear-gradient(135deg, #D4A057 0%, #BC8034 100%);\
+    color: #111110;\
+    background: #DFC06A;\
 }\
 .ss-mobile-nav .ss-mobile-cta svg {\
     opacity: 1;\
-    stroke: #2D2726;\
+    stroke: #111110;\
 }\
 \
 /* ======== SPACER ======== */\
