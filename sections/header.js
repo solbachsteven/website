@@ -13,7 +13,8 @@
 
     // ======== FONTS ========
     var fonts = [
-        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'
+        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'
     ];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
