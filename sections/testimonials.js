@@ -20,13 +20,13 @@
     style.setAttribute('data-section', 'testimonials');
     style.textContent = `
 :root {
-    --bg-primary: #2C2726;
-    --bg-secondary: #F4F0EC;
-    --bg-box: #2C2726;
+    --bg-surface: #1A1917;
     --accent-gold: #C9A84C;
-    --text-white: #FAF7F2;
-    --radius: 20px;
+    --text-primary: #FAF7F2;
+    --text-muted: rgba(250,247,242,0.55);
+    --radius: 16px;
     --font-main: 'Outfit', sans-serif;
+    --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -38,7 +38,7 @@
 .testimonial-section {
     font-family: var(--font-main);
     background: transparent;
-    color: var(--text-white);
+    color: var(--text-primary);
     padding: 60px 0px;
     width: 100%;
     max-width: 100%;
@@ -74,7 +74,7 @@
 .title-card.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.7s var(--ease-brand), transform 0.7s var(--ease-brand);
 }
 
 .section-label {
@@ -125,7 +125,7 @@
 
 /* Testimonial Cards */
 .testimonial-card {
-    background: var(--bg-box);
+    background: var(--bg-surface);
     border-radius: var(--radius);
     padding: 30px;
     display: flex;
@@ -141,38 +141,38 @@
 .testimonial-card.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    transition: opacity 0.7s var(--ease-brand), transform 0.7s var(--ease-brand), box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .testimonial-card.visible:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 /* Highlighted Card - visually larger */
 .testimonial-card.highlighted {
-    background: var(--bg-secondary);
-    color: var(--bg-primary);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-top: 3px solid var(--accent-gold);
     padding: 35px;
-    margin-left: -5px;
-    margin-right: -5px;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
 }
 
 .testimonial-card.highlighted .testimonial-role {
-    color: var(--bg-primary);
-    opacity: 0.7;
+    color: var(--text-primary);
+    opacity: 0.5;
 }
 
 .testimonial-card.highlighted .testimonial-quote {
-    color: var(--bg-primary);
-    opacity: 0.9;
+    color: var(--text-primary);
+    opacity: 0.85;
 }
 
 .testimonial-card.highlighted .star {
@@ -192,12 +192,12 @@
     height: 100px;
     border-radius: 12px;
     object-fit: cover;
-    background: var(--bg-primary);
+    background: var(--bg-surface);
     flex-shrink: 0;
 }
 
 .testimonial-card.highlighted .testimonial-avatar {
-    background: var(--bg-box);
+    background: rgba(201,168,76,0.08);
 }
 
 .testimonial-info {
@@ -210,12 +210,14 @@
 .testimonial-name {
     font-weight: 600;
     font-size: 16px;
+    color: var(--text-primary);
 }
 
 .testimonial-role {
     font-size: 14px;
     font-weight: 300;
     opacity: 0.6;
+    color: var(--text-primary);
 }
 
 /* Stars - under name/role */
@@ -245,7 +247,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 25px;
-    color: var(--text-white);
+    color: var(--text-primary);
     opacity: 0.6;
     font-size: 14px;
     width: 100%;
@@ -298,7 +300,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--bg-box);
+    background: var(--bg-surface);
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -397,7 +399,6 @@
 
     .testimonial-card.highlighted {
         flex: 0 0 310px;
-        margin: 0;
         padding: 30px;
     }
 
@@ -626,7 +627,7 @@
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                var delay = Array.from(grid.children).indexOf(entry.target) * 120;
+                var delay = Array.from(grid.children).indexOf(entry.target) * 100;
                 setTimeout(function() {
                     entry.target.classList.add('visible');
                 }, delay);

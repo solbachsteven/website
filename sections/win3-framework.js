@@ -70,7 +70,7 @@
 .w3s-fade {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .w3s-fade.visible {
     opacity: 1;
@@ -90,7 +90,6 @@
 
 /* ======== VENN-DIAGRAMM (linke Spalte) ======== */
 :root {
-    --bg-secondary: #F4F0EC;
     --accent-gold: #C9A84C;
     --accent-gold-light: #DFC06A;
     --accent-gold-dark: #6B5A1E;
@@ -177,7 +176,7 @@
 
 .win3-label-group {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .win3-label-group.visible {
     opacity: 1;
@@ -204,7 +203,7 @@
 
 .win3-center-symbol {
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .win3-center-symbol.visible {
     opacity: 1;
@@ -251,7 +250,7 @@
 .win3-step {
     position: relative;
     margin-bottom: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .win3-step:last-child {
@@ -273,13 +272,13 @@
     font-size: 18px;
     color: #C9A84C;
     z-index: 2;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .win3-step.active .win3-step-icon {
-    background: #F4F0EC;
-    border-color: #F4F0EC;
-    color: #2C2726;
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: #111110;
     transform: scale(1.05);
 }
 
@@ -312,7 +311,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     opacity: 0.4;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .win3-step.active .win3-step-number {
@@ -327,7 +326,7 @@
     color: #FAF7F2;
     line-height: 1.3;
     opacity: 0.4;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .win3-step.active .win3-step-title {
@@ -341,7 +340,7 @@
     line-height: 1.7;
     opacity: 0.3;
     color: #FAF7F2;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .win3-step.active .win3-step-description {
@@ -523,7 +522,7 @@
             '</g>' +
             '<g id="win3CenterSymbol" class="win3-center-symbol">' +
                 '<circle cx="300" cy="300" r="285" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/>' +
-                '<circle cx="300" cy="300" r="20" fill="#F5F0EB"/>' +
+                '<circle cx="300" cy="300" r="20" fill="#C9A84C"/>' +
             '</g>' +
         '</svg></div></div></div>';
 
@@ -557,7 +556,7 @@
                 '</div>' +
             '</div>' +
             '<div class="win3-step win3-step-4">' +
-                '<div class="win3-step-icon win3-step-icon-svg"><svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/><g transform="translate(40,40)" stroke="#C9A84C" stroke-width="1.5" fill="none"><circle cx="0" cy="-9" r="14"/><circle cx="7.3" cy="4.2" r="14"/><circle cx="-7.3" cy="4.2" r="14"/></g><circle cx="40" cy="40" r="2.8" fill="#F5F0EB"/></svg></div>' +
+                '<div class="win3-step-icon win3-step-icon-svg"><svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/><g transform="translate(40,40)" stroke="#C9A84C" stroke-width="1.5" fill="none"><circle cx="0" cy="-9" r="14"/><circle cx="7.3" cy="4.2" r="14"/><circle cx="-7.3" cy="4.2" r="14"/></g><circle cx="40" cy="40" r="2.8" fill="#C9A84C"/></svg></div>' +
                 '<div class="win3-step-content">' +
                     '<h3 class="win3-step-title">' + w3brand('Win\u00b3 Synthese') + '</h3>' +
                 '</div>' +

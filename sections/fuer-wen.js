@@ -20,23 +20,20 @@
     style.setAttribute('data-section', 'fuer-wen');
     style.textContent = `
 :root {
-    --fw-bg-primary: #2C2726;
-    --fw-bg-secondary: #F4F0EC;
-    --fw-bg-box: #2C2726;
+    --fw-bg-surface: #1A1917;
     --fw-accent-gold: #C9A84C;
-    --fw-green: #4CAF50;
-    --fw-red: #E74C3C;
-    --fw-text-white: #FAF7F2;
-    --fw-text-dark: #2C2726;
-    --fw-radius: 20px;
+    --fw-text: #FAF7F2;
+    --fw-text-muted: rgba(250,247,242,0.7);
+    --fw-radius: 16px;
     --fw-font: 'Outfit', sans-serif;
+    --fw-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ======== SECTION ======== */
 .fw-section {
     font-family: var(--fw-font);
     background: transparent;
-    color: var(--fw-text-white);
+    color: var(--fw-text);
     padding: 80px 0;
     width: 100%;
     position: relative;
@@ -61,7 +58,7 @@
 .fw-header.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.7s var(--fw-ease), transform 0.7s var(--fw-ease);
 }
 
 .fw-label {
@@ -75,8 +72,8 @@
 
 .fw-title {
     font-family: 'Fraunces', serif;
-    font-size: 36px;
-    font-weight: 400;
+    font-size: clamp(30px, 4.5vw, 52px);
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -91,6 +88,7 @@
 /* ======== BOX BASE ======== */
 .fw-box {
     border-radius: var(--fw-radius);
+    background: var(--fw-bg-surface);
     padding: 40px 35px;
     opacity: 0;
     transform: translateY(30px);
@@ -99,25 +97,24 @@
 .fw-box.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    transition: opacity 0.7s var(--fw-ease), transform 0.7s var(--fw-ease), box-shadow 0.3s ease;
 }
 
 .fw-box.visible:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* ======== FOR YOU BOX (Beige / Highlighted) ======== */
 .fw-box-yes {
-    background: var(--fw-bg-secondary);
-    color: var(--fw-text-dark);
-    padding: 45px 40px;
+    border: 1px solid rgba(201,168,76,0.15);
+    border-top: 3px solid var(--fw-accent-gold);
 }
 
 /* ======== NOT FOR YOU BOX (Grau / Standard) ======== */
 .fw-box-no {
-    background: var(--fw-bg-box);
-    color: var(--fw-text-white);
+    background: var(--fw-bg-surface);
+    color: var(--fw-text);
 }
 
 /* ======== BOX HEADING ======== */
@@ -133,11 +130,11 @@
 }
 
 .fw-box-yes .fw-box-heading {
-    color: var(--fw-text-dark);
+    color: var(--fw-text);
 }
 
 .fw-box-no .fw-box-heading {
-    color: var(--fw-text-white);
+    color: var(--fw-text);
 }
 
 /* ======== LIST ======== */
@@ -161,18 +158,14 @@
 }
 
 .fw-box-yes .fw-item:hover {
-    background: rgba(201, 168, 76, 0.08);
+    background: rgba(201, 168, 76, 0.06);
 }
 
 .fw-box-no .fw-item:hover {
-    background: rgba(250, 247, 242, 0.05);
+    background: rgba(250, 247, 242, 0.04);
 }
 
 .fw-item + .fw-item {
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.fw-box-no .fw-item + .fw-item {
     border-top: 1px solid rgba(250, 247, 242, 0.06);
 }
 
@@ -188,36 +181,28 @@
 }
 
 .fw-icon-yes {
-    color: var(--fw-green);
+    color: var(--fw-accent-gold);
 }
 
 .fw-icon-no {
-    color: var(--fw-red);
-    opacity: 0.7;
+    color: var(--fw-text-muted);
+    opacity: 0.4;
 }
 
 /* ======== ITEM TEXT ======== */
 .fw-box-yes .fw-item-text {
-    color: var(--fw-text-dark);
+    color: var(--fw-text);
 }
 
 .fw-box-no .fw-item-text {
-    color: var(--fw-text-white);
+    color: var(--fw-text);
     opacity: 0.85;
 }
 
 /* ======== TABLET ======== */
 @media (max-width: 1024px) {
-    .fw-title {
-        font-size: 30px;
-    }
-
     .fw-box {
         padding: 35px 30px;
-    }
-
-    .fw-box-yes {
-        padding: 38px 32px;
     }
 
     .fw-box-heading {
@@ -239,20 +224,12 @@
         margin-bottom: 30px;
     }
 
-    .fw-title {
-        font-size: 26px;
-    }
-
     .fw-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
     .fw-box {
-        padding: 20px 16px;
-    }
-
-    .fw-box-yes {
         padding: 20px 16px;
     }
 
@@ -393,7 +370,7 @@
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 var allElements = [header, yesBox, noBox];
-                var delay = allElements.indexOf(entry.target) * 120;
+                var delay = allElements.indexOf(entry.target) * 100;
                 setTimeout(function() {
                     entry.target.classList.add('visible');
                 }, delay);
