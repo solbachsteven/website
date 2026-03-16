@@ -5,7 +5,7 @@
 // ======== FONT LOADING ========
 (function() {
     var fonts = [
-        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'
     ];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
@@ -23,10 +23,10 @@
     --bg-primary: #2C2726;
     --bg-secondary: #F4F0EC;
     --bg-box: #2C2726;
-    --accent-gold: #BC8034;
+    --accent-gold: #C9A84C;
     --text-white: #FFFFFF;
     --radius: 20px;
-    --font-main: 'Poppins', sans-serif;
+    --font-main: 'Outfit', sans-serif;
 }
 
 * {
@@ -89,6 +89,7 @@
 }
 
 .section-title {
+    font-family: 'Fraunces', serif;
     font-size: 54px;
     line-height: 60px;
 }
@@ -315,15 +316,16 @@
 }
 
 .testi-bridge .bridge-caveat {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 28px;
-    color: #BC8034;
+    color: #C9A84C;
     margin: 0 0 8px;
     display: block;
 }
 
 .testi-bridge .bridge-body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
@@ -512,7 +514,7 @@
             },
             {
                 // Position 8 (8. gelesen) - Placeholder - mobileOrder: 8
-                image: "https://placehold.co/150x150/2D2726/BC8034?text=?",
+                image: "https://placehold.co/150x150/2D2726/C9A84C?text=?",
                 name: "Michael B.",
                 role: "Gr\u00fcnder & CEO",
                 quote: "Die Kombination aus spiritueller Tiefe und praktischer Umsetzung ist einzigartig. Genau das, was ich gesucht habe.",

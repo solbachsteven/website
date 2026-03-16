@@ -5,7 +5,7 @@
 
 // ======== FONTS ========
 (function() {
-    var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
+    var fonts = ['https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
             var link = document.createElement('link');
@@ -40,7 +40,7 @@
 }
 
 .w3-logo-sup {
-    color: #BC8034;
+    color: #C9A84C;
     font-size: 0.7em;
     margin-left: 1px;
     vertical-align: super;
@@ -72,7 +72,7 @@
 
 /* ======== SECTION ======== */
 .fcta-section {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #FFFFFF;
     padding: 100px 0;
     width: 100%;
@@ -86,8 +86,8 @@
 
     /* Orange-Gradient: oben warm/tief, unten Original-Orange */
     background:
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(188, 128, 52, 0.2) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 85% 80%, rgba(188, 128, 52, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(201, 168, 76, 0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 80%, rgba(201, 168, 76, 0.12) 0%, transparent 55%),
         linear-gradient(180deg, #B8512A 0%, #C45A28 30%, #D96935 70%, #D96935 100%);
 }
 
@@ -101,9 +101,9 @@
     height: 3px;
     background: linear-gradient(90deg,
         transparent 10%,
-        #BC8034 30%,
-        #D4A04A 50%,
-        #BC8034 70%,
+        #C9A84C 30%,
+        #DFC06A 50%,
+        #C9A84C 70%,
         transparent 90%
     );
 }
@@ -140,6 +140,7 @@
 
 /* ======== HEADLINE ======== */
 .fcta-headline {
+    font-family: 'Fraunces', serif;
     font-size: 54px;
     font-weight: 600;
     line-height: 1.15;
@@ -149,7 +150,8 @@
 
 /* ======== SUBTITLE ======== */
 .fcta-subtitle {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 26px;
     color: #F4F0EC;
     margin-bottom: 50px;
@@ -159,7 +161,7 @@
 .fcta-headline-divider {
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #BC8034, transparent);
+    background: linear-gradient(90deg, transparent, #C9A84C, transparent);
     margin: 0 auto 50px;
 }
 
@@ -189,11 +191,11 @@
 /* ---- Kurs-Karte: Cream/Beige (Highlighted, wie Design-System) ---- */
 .fcta-card[data-option="kurs"] {
     background: #F4F0EC;
-    border-top: 3px solid #BC8034;
+    border-top: 3px solid #C9A84C;
 }
 
 .fcta-card[data-option="kurs"] .fcta-framing {
-    color: #8B5E20;
+    color: #6B5A1E;
 }
 
 .fcta-card[data-option="kurs"] .fcta-title {
@@ -216,11 +218,11 @@
 /* ---- Mentoring-Karte: Dark (wie bg-box) ---- */
 .fcta-card[data-option="mentoring"] {
     background: #2C2726;
-    border-top: 3px solid rgba(188, 128, 52, 0.4);
+    border-top: 3px solid rgba(201, 168, 76, 0.4);
 }
 
 .fcta-card[data-option="mentoring"] .fcta-framing {
-    color: #BC8034;
+    color: #C9A84C;
 }
 
 .fcta-card[data-option="mentoring"] .fcta-title {
@@ -242,7 +244,8 @@
 
 /* ======== CARD CONTENT ======== */
 .fcta-framing {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 24px;
     margin-bottom: 10px;
     display: block;
@@ -284,7 +287,7 @@
     text-align: center;
     padding: 16px 24px;
     border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;

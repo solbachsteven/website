@@ -5,7 +5,7 @@
 
 // ======== FONTS ========
 (function() {
-    var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
+    var fonts = ['https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
             var link = document.createElement('link');
@@ -23,13 +23,13 @@
     --fw-bg-primary: #2C2726;
     --fw-bg-secondary: #F4F0EC;
     --fw-bg-box: #2C2726;
-    --fw-accent-gold: #BC8034;
+    --fw-accent-gold: #C9A84C;
     --fw-green: #4CAF50;
     --fw-red: #E74C3C;
     --fw-text-white: #FFFFFF;
     --fw-text-dark: #2C2726;
     --fw-radius: 20px;
-    --fw-font: 'Poppins', sans-serif;
+    --fw-font: 'Outfit', sans-serif;
 }
 
 /* ======== SECTION ======== */
@@ -74,6 +74,7 @@
 }
 
 .fw-title {
+    font-family: 'Fraunces', serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 1.3;
@@ -160,7 +161,7 @@
 }
 
 .fw-box-yes .fw-item:hover {
-    background: rgba(188, 128, 52, 0.08);
+    background: rgba(201, 168, 76, 0.08);
 }
 
 .fw-box-no .fw-item:hover {

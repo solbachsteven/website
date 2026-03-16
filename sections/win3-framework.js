@@ -6,7 +6,7 @@
 
 /* ======== FONT LOADING ======== */
 (function() {
-    var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
+    var fonts = ['https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
             var link = document.createElement('link');
@@ -37,18 +37,18 @@
 }
 
 .w3s-label {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    color: #BC8034;
+    color: #C9A84C;
     margin-bottom: 10px;
     line-height: 24px;
 }
 
 .w3s-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 54px;
     font-weight: 600;
     line-height: 60px;
@@ -57,10 +57,11 @@
 }
 
 .w3s-subtitle {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 26px;
     font-weight: 400;
-    color: #BC8034;
+    color: #C9A84C;
     margin: 12px 0 0;
     line-height: 1.4;
 }
@@ -90,9 +91,9 @@
 /* ======== VENN-DIAGRAMM (linke Spalte) ======== */
 :root {
     --bg-secondary: #F4F0EC;
-    --accent-gold: #BC8034;
-    --accent-gold-light: #D4A04A;
-    --accent-gold-dark: #8B5E20;
+    --accent-gold: #C9A84C;
+    --accent-gold-light: #DFC06A;
+    --accent-gold-dark: #6B5A1E;
     --text-dark: #2C2726;
 }
 
@@ -103,7 +104,7 @@
 }
 
 .win3-container {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     width: 100%;
 }
 
@@ -136,7 +137,7 @@
 .win3-progress-indicator {
     width: 100%;
     height: 3px;
-    background: rgba(188, 128, 52, 0.2);
+    background: rgba(201, 168, 76, 0.2);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -170,7 +171,7 @@
 
 .win3-circle {
     fill: none;
-    stroke: #BC8034;
+    stroke: #C9A84C;
     stroke-width: 1.5;
 }
 
@@ -184,18 +185,18 @@
 
 .win3-label-icon {
     font-size: 26px;
-    fill: #BC8034;
+    fill: #C9A84C;
 }
 
 .win3-label-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 17px;
     font-weight: 600;
     fill: #FFFFFF;
 }
 
 .win3-label-desc {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 11.5px;
     font-weight: 400;
     fill: rgba(255, 255, 255, 0.7);
@@ -209,9 +210,9 @@
     opacity: 1;
 }
 
-.gold-gradient-stop1 { stop-color: #D4A04A; }
-.gold-gradient-stop2 { stop-color: #BC8034; }
-.gold-gradient-stop3 { stop-color: #8B5E20; }
+.gold-gradient-stop1 { stop-color: #DFC06A; }
+.gold-gradient-stop2 { stop-color: #C9A84C; }
+.gold-gradient-stop3 { stop-color: #6B5A1E; }
 
 /* ======== TIMELINE (rechte Spalte) ======== */
 #win3-timeline-wrapper {
@@ -239,11 +240,11 @@
 }
 
 .win3-timeline-line-base {
-    background: rgba(188, 128, 52, 0.2);
+    background: rgba(201, 168, 76, 0.2);
 }
 
 .win3-timeline-line-progress {
-    background: #BC8034;
+    background: #C9A84C;
     transform-origin: top;
 }
 
@@ -264,13 +265,13 @@
     width: 42px;
     height: 42px;
     background: transparent;
-    border: 2px solid #BC8034;
+    border: 2px solid #C9A84C;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    color: #BC8034;
+    color: #C9A84C;
     z-index: 2;
     transition: all 0.4s ease;
 }
@@ -303,10 +304,10 @@
 }
 
 .win3-step-number {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    color: #BC8034;
+    color: #C9A84C;
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -319,7 +320,7 @@
 }
 
 .win3-step-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -334,7 +335,7 @@
 }
 
 .win3-step-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 1.7;
@@ -362,7 +363,7 @@
 }
 
 .w3-logo-sup {
-    color: #BC8034;
+    color: #C9A84C;
     font-size: 0.7em;
     margin-left: 1px;
     vertical-align: super;
@@ -494,12 +495,12 @@
                     '<stop offset="100%" class="gold-gradient-stop3"/>' +
                 '</linearGradient>' +
                 '<radialGradient id="goldRadial" cx="30%" cy="30%" r="70%">' +
-                    '<stop offset="0%" stop-color="#E8C068"/>' +
-                    '<stop offset="50%" stop-color="#BC8034"/>' +
-                    '<stop offset="100%" stop-color="#8B5E20"/>' +
+                    '<stop offset="0%" stop-color="#E8D48C"/>' +
+                    '<stop offset="50%" stop-color="#C9A84C"/>' +
+                    '<stop offset="100%" stop-color="#6B5A1E"/>' +
                 '</radialGradient>' +
                 '<filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">' +
-                    '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#8B5E20" flood-opacity="0.3"/>' +
+                    '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#6B5A1E" flood-opacity="0.3"/>' +
                 '</filter>' +
             '</defs>' +
             '<circle id="win3Circle1" class="win3-circle" cx="300" cy="-100" r="140"></circle>' +
@@ -521,7 +522,7 @@
                 '<text class="win3-label-desc" text-anchor="middle"><tspan id="win3Desc3a">Trage zu der Welt bei,</tspan><tspan id="win3Desc3b" dy="16">in der du leben m\u00f6chtest</tspan></text>' +
             '</g>' +
             '<g id="win3CenterSymbol" class="win3-center-symbol">' +
-                '<circle cx="300" cy="300" r="285" stroke="rgba(188,128,52,0.25)" stroke-width="1" fill="rgba(188,128,52,0.06)"/>' +
+                '<circle cx="300" cy="300" r="285" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/>' +
                 '<circle cx="300" cy="300" r="20" fill="#F5F0EB"/>' +
             '</g>' +
         '</svg></div></div></div>';
@@ -556,7 +557,7 @@
                 '</div>' +
             '</div>' +
             '<div class="win3-step win3-step-4">' +
-                '<div class="win3-step-icon win3-step-icon-svg"><svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="30" stroke="rgba(188,128,52,0.25)" stroke-width="1" fill="rgba(188,128,52,0.06)"/><g transform="translate(40,40)" stroke="#BC8034" stroke-width="1.5" fill="none"><circle cx="0" cy="-9" r="14"/><circle cx="7.3" cy="4.2" r="14"/><circle cx="-7.3" cy="4.2" r="14"/></g><circle cx="40" cy="40" r="2.8" fill="#F5F0EB"/></svg></div>' +
+                '<div class="win3-step-icon win3-step-icon-svg"><svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/><g transform="translate(40,40)" stroke="#C9A84C" stroke-width="1.5" fill="none"><circle cx="0" cy="-9" r="14"/><circle cx="7.3" cy="4.2" r="14"/><circle cx="-7.3" cy="4.2" r="14"/></g><circle cx="40" cy="40" r="2.8" fill="#F5F0EB"/></svg></div>' +
                 '<div class="win3-step-content">' +
                     '<h3 class="win3-step-title">' + w3brand('Win\u00b3 Synthese') + '</h3>' +
                 '</div>' +

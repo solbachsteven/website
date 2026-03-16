@@ -5,7 +5,7 @@
 // ======== FONT LOADING ========
 (function() {
     var fonts = [
-        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'
     ];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
@@ -40,7 +40,7 @@
 }
 
 .w3-logo-sup {
-    color: #BC8034;
+    color: #C9A84C;
     font-size: 0.7em;
     margin-left: 1px;
     vertical-align: super;
@@ -50,13 +50,13 @@
     --dw-bg-primary: #2C2726;
     --dw-bg-secondary: #F4F0EC;
     --dw-bg-box: #2C2726;
-    --dw-accent-gold: #BC8034;
-    --dw-accent-gold-dark: #8B5E20;
+    --dw-accent-gold: #C9A84C;
+    --dw-accent-gold-dark: #6B5A1E;
     --dw-cta-orange: #D96935;
     --dw-text-white: #FFFFFF;
     --dw-text-dark: #2C2726;
     --dw-radius: 20px;
-    --dw-font: 'Poppins', sans-serif;
+    --dw-font: 'Outfit', sans-serif;
 }
 
 /* ======== SECTION ======== */
@@ -101,6 +101,7 @@
 }
 
 .dw-title {
+    font-family: 'Fraunces', serif;
     font-size: 54px;
     line-height: 60px;
 }
@@ -109,7 +110,8 @@
 .dw-title .bold { font-weight: 600; }
 
 .dw-subtitle {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 26px;
     color: var(--dw-accent-gold);
     margin-top: 12px;
@@ -267,6 +269,7 @@
 }
 
 .dw-card-title {
+    font-family: 'Fraunces', serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.3;
@@ -355,7 +358,7 @@
     width: 100%;
     text-align: center;
     padding: 16px 24px;
-    border-radius: var(--dw-radius);
+    border-radius: 12px;
     font-family: var(--dw-font);
     font-size: 16px;
     font-weight: 500;
@@ -431,15 +434,16 @@
 }
 
 .dw-bridge .bridge-caveat {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 28px;
-    color: #BC8034;
+    color: #C9A84C;
     margin: 0 0 8px;
     display: block;
 }
 
 .dw-bridge .bridge-body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
@@ -735,20 +739,20 @@
         (data.subtitle ? '<div class="dw-subtitle">' + data.subtitle + '</div>' : '');
 
     // ======== LOGO SVG TEMPLATES (Stacked/Vertikal) ========
-    var darkIconSVG = '<svg viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(188,128,52,0.25)" stroke-width="1" fill="rgba(188,128,52,0.06)"/><g transform="translate(60,60)" stroke="#BC8034" stroke-width="1.5" fill="none"><circle cx="0" cy="-13" r="20"/><circle cx="10.4" cy="6" r="20"/><circle cx="-10.4" cy="6" r="20"/></g><circle cx="60" cy="60" r="4" fill="#F5F0EB"/></svg>';
-    var lightIconSVG = '<svg viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(188,128,52,0.25)" stroke-width="1.2" fill="rgba(188,128,52,0.05)"/><g transform="translate(60,60)" stroke="#2C2726" stroke-width="2.0" fill="none"><circle cx="0" cy="-13" r="20"/><circle cx="10.4" cy="6" r="20"/><circle cx="-10.4" cy="6" r="20"/></g><circle cx="60" cy="60" r="4" fill="#BC8034"/></svg>';
+    var darkIconSVG = '<svg viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/><g transform="translate(60,60)" stroke="#C9A84C" stroke-width="1.5" fill="none"><circle cx="0" cy="-13" r="20"/><circle cx="10.4" cy="6" r="20"/><circle cx="-10.4" cy="6" r="20"/></g><circle cx="60" cy="60" r="4" fill="#F5F0EB"/></svg>';
+    var lightIconSVG = '<svg viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(201,168,76,0.25)" stroke-width="1.2" fill="rgba(201,168,76,0.05)"/><g transform="translate(60,60)" stroke="#2C2726" stroke-width="2.0" fill="none"><circle cx="0" cy="-13" r="20"/><circle cx="10.4" cy="6" r="20"/><circle cx="-10.4" cy="6" r="20"/></g><circle cx="60" cy="60" r="4" fill="#C9A84C"/></svg>';
 
     function buildLogoLockup(variant, name, alignClass) {
         var isDark = variant === 'dark';
         var icon = isDark ? darkIconSVG : lightIconSVG;
         var textColor = isDark ? '#F4F0EC' : '#2C2726';
         var textStroke = isDark ? '' : '-webkit-text-stroke:0.3px #2C2726;';
-        var supStroke = isDark ? '' : '-webkit-text-stroke:0.3px #BC8034;';
+        var supStroke = isDark ? '' : '-webkit-text-stroke:0.3px #C9A84C;';
         var cls = 'dw-card-logo' + (alignClass ? ' ' + alignClass : '');
         return '<div class="' + cls + '">' +
             '<div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;">' +
                 icon +
-                '<span style="font-family:\'PacificaCondensed\',fantasy;font-size:26px;letter-spacing:2px;color:' + textColor + ';white-space:nowrap;' + textStroke + '">Win<span style="color:#BC8034;font-size:1.15em;margin-left:2px;' + supStroke + '">&#179;</span> ' + name + '</span>' +
+                '<span style="font-family:\'PacificaCondensed\',fantasy;font-size:26px;letter-spacing:2px;color:' + textColor + ';white-space:nowrap;' + textStroke + '">Win<span style="color:#C9A84C;font-size:1.15em;margin-left:2px;' + supStroke + '">&#179;</span> ' + name + '</span>' +
             '</div></div>';
     }
 
@@ -794,7 +798,7 @@
 
         var imageHTML = '';
         if (plan.textLabel) {
-            var circleSVG = '<svg class="dw-label-circle" viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(188,128,52,0.25)" stroke-width="1" fill="rgba(188,128,52,0.06)"/><circle cx="60" cy="60" r="2.8" fill="#F5F0EB"/></svg>';
+            var circleSVG = '<svg class="dw-label-circle" viewBox="0 0 120 120" width="150" height="150"><circle cx="60" cy="60" r="44" stroke="rgba(201,168,76,0.25)" stroke-width="1" fill="rgba(201,168,76,0.06)"/><circle cx="60" cy="60" r="2.8" fill="#F5F0EB"/></svg>';
             imageHTML = '<div class="dw-card-label">' + circleSVG + '<span class="dw-label-text">' + plan.textLabel + '</span></div>';
         } else if (plan.logo && plan.logoName) {
             var logoAlign = plan.logoAlign || '';

@@ -6,7 +6,7 @@
 
 /* === Font + CSS Injection === */
 (function() {
-    var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap'];
+    var fonts = ['https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap'];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
             var link = document.createElement('link');
@@ -25,7 +25,7 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     padding: 40px 0;
 }
 
@@ -40,7 +40,7 @@
 .scroll-v2-circle {
     width: 50px;
     height: 50px;
-    border: 1px solid rgba(188, 128, 52, 0.4);
+    border: 1px solid rgba(201, 168, 76, 0.4);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
     content: '';
     position: absolute;
     inset: -6px;
-    border: 1px solid rgba(188, 128, 52, 0.2);
+    border: 1px solid rgba(201, 168, 76, 0.2);
     border-radius: 50%;
     animation: v2Pulse 2s ease-out infinite;
 }
@@ -60,7 +60,7 @@
 .scroll-v2-arrow {
     width: 20px;
     height: 20px;
-    color: #BC8034;
+    color: #C9A84C;
     animation: v2Bounce 1.5s ease-in-out infinite;
 }
 

@@ -6,7 +6,7 @@
 
 /* ======== FONT LOADING ======== */
 (function() {
-    var fonts = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap'];
+    var fonts = ['https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap'];
     fonts.forEach(function(url) {
         if (!document.querySelector('link[href="' + url + '"]')) {
             var link = document.createElement('link');
@@ -39,7 +39,7 @@
 }
 
 .w3-logo-sup {
-    color: #BC8034;
+    color: #C9A84C;
     font-size: 0.7em;
     margin-left: 1px;
     vertical-align: super;
@@ -58,18 +58,18 @@
 }
 
 .story-header-label {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    color: #BC8034;
+    color: #C9A84C;
     margin-bottom: 10px;
     line-height: 24px;
 }
 
 .story-header-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 54px;
     font-weight: 600;
     line-height: 60px;
@@ -79,14 +79,15 @@
 
 .story-header-title em {
     font-style: normal;
-    color: #BC8034;
+    color: #C9A84C;
 }
 
 .story-header-subtitle {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 26px;
     font-weight: 400;
-    color: #BC8034;
+    color: #C9A84C;
     margin: 0;
 }
 
@@ -117,10 +118,10 @@
     width: 2px;
     background: linear-gradient(180deg,
         transparent 0%,
-        rgba(188, 128, 52, 0.3) 40px,
-        rgba(188, 128, 52, 0.5) 10%,
-        rgba(188, 128, 52, 0.5) 90%,
-        rgba(188, 128, 52, 0.3) calc(100% - 40px),
+        rgba(201, 168, 76, 0.3) 40px,
+        rgba(201, 168, 76, 0.5) 10%,
+        rgba(201, 168, 76, 0.5) 90%,
+        rgba(201, 168, 76, 0.3) calc(100% - 40px),
         transparent 100%
     );
     transform: translateX(-50%);
@@ -135,7 +136,7 @@
     top: 0;
     width: 6px;
     height: 60px;
-    background: linear-gradient(180deg, transparent, #BC8034, transparent);
+    background: linear-gradient(180deg, transparent, #C9A84C, transparent);
     transform: translateX(-50%);
     animation: storyFlowPulse 4s ease-in-out infinite;
     border-radius: 3px;
@@ -223,7 +224,7 @@
 .story-node-dot {
     width: 14px;
     height: 14px;
-    background: #BC8034;
+    background: #C9A84C;
     border-radius: 50%;
     position: relative;
     z-index: 2;
@@ -231,7 +232,7 @@
 }
 
 .story-item.visible .story-node-dot {
-    box-shadow: 0 0 25px rgba(188, 128, 52, 0.6);
+    box-shadow: 0 0 25px rgba(201, 168, 76, 0.6);
 }
 
 /* Ripple Effekt */
@@ -240,7 +241,7 @@
     position: absolute;
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(188, 128, 52, 0.3);
+    border: 1px solid rgba(201, 168, 76, 0.3);
     border-radius: 50%;
     animation: storyNodeRipple 2.5s ease-out infinite;
 }
@@ -260,17 +261,17 @@
 
 /* ======== TYPOGRAPHY ======== */
 .story-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 22px;
     font-weight: 600;
-    color: #BC8034;
+    color: #C9A84C;
     margin-top: 20px;
     margin-bottom: 30px;
     line-height: 1.3;
 }
 
 .story-text {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 18px;
     line-height: 1.75;
     font-weight: 300;
@@ -281,14 +282,15 @@
 
 .story-text em {
     font-style: normal;
-    color: #BC8034;
+    color: #C9A84C;
     font-weight: 400;
 }
 
 .story-subtext {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 26px;
-    color: #BC8034;
+    color: #C9A84C;
     margin-top: 12px;
     display: block;
 }
@@ -364,7 +366,7 @@
 
 .story-tri-ripple {
     fill: none;
-    stroke: rgba(188, 128, 52, 0.3);
+    stroke: rgba(201, 168, 76, 0.3);
     stroke-width: 1;
     animation: storyTriRipple 4s ease-out infinite;
 }
@@ -389,7 +391,7 @@
 .story-tri-dot-3 { animation-delay: 8s; }
 
 .story-item.center.story-synthese .story-subtext {
-    color: #BC8034;
+    color: #C9A84C;
     font-size: 28px;
     margin-top: 18px;
 }
@@ -418,15 +420,16 @@
 }
 
 .story-bridge .bridge-caveat {
-    font-family: 'Caveat', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic;
     font-size: 28px;
-    color: #BC8034;
+    color: #C9A84C;
     margin: 0 0 8px;
     display: block;
 }
 
 .story-bridge .bridge-body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
@@ -750,23 +753,23 @@ var STORY_BLOCKS = [
             if (block.triangle) {
                 contentHTML += '<svg class="story-tri-svg" viewBox="0 0 560 520" fill="none" xmlns="http://www.w3.org/2000/svg">' +
                     '<defs>' +
-                    '<linearGradient id="triE1" x1="280" y1="80" x2="90" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(188,128,52,0.45)"/><stop offset="50%" stop-color="rgba(188,128,52,0.12)"/><stop offset="100%" stop-color="rgba(188,128,52,0.45)"/></linearGradient>' +
-                    '<linearGradient id="triE2" x1="280" y1="80" x2="470" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(188,128,52,0.45)"/><stop offset="50%" stop-color="rgba(188,128,52,0.12)"/><stop offset="100%" stop-color="rgba(188,128,52,0.45)"/></linearGradient>' +
-                    '<linearGradient id="triE3" x1="90" y1="410" x2="470" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(188,128,52,0.45)"/><stop offset="50%" stop-color="rgba(188,128,52,0.12)"/><stop offset="100%" stop-color="rgba(188,128,52,0.45)"/></linearGradient>' +
-                    '<radialGradient id="triGlow"><stop offset="0%" stop-color="rgba(188,128,52,0.5)"/><stop offset="100%" stop-color="transparent"/></radialGradient>' +
+                    '<linearGradient id="triE1" x1="280" y1="80" x2="90" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(201,168,76,0.45)"/><stop offset="50%" stop-color="rgba(201,168,76,0.12)"/><stop offset="100%" stop-color="rgba(201,168,76,0.45)"/></linearGradient>' +
+                    '<linearGradient id="triE2" x1="280" y1="80" x2="470" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(201,168,76,0.45)"/><stop offset="50%" stop-color="rgba(201,168,76,0.12)"/><stop offset="100%" stop-color="rgba(201,168,76,0.45)"/></linearGradient>' +
+                    '<linearGradient id="triE3" x1="90" y1="410" x2="470" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="rgba(201,168,76,0.45)"/><stop offset="50%" stop-color="rgba(201,168,76,0.12)"/><stop offset="100%" stop-color="rgba(201,168,76,0.45)"/></linearGradient>' +
+                    '<radialGradient id="triGlow"><stop offset="0%" stop-color="rgba(201,168,76,0.5)"/><stop offset="100%" stop-color="transparent"/></radialGradient>' +
                     '</defs>' +
                     '<line x1="280" y1="80" x2="90" y2="410" stroke="url(#triE1)" stroke-width="2"/>' +
                     '<line x1="280" y1="80" x2="470" y2="410" stroke="url(#triE2)" stroke-width="2"/>' +
                     '<line x1="90" y1="410" x2="470" y2="410" stroke="url(#triE3)" stroke-width="2"/>' +
-                    '<circle r="4" fill="#BC8034" class="story-tri-dot"/>' +
-                    '<circle r="4" fill="#BC8034" class="story-tri-dot story-tri-dot-2"/>' +
-                    '<circle r="4" fill="#BC8034" class="story-tri-dot story-tri-dot-3"/>' +
-                    '<circle cx="280" cy="80" r="22" fill="url(#triGlow)"/><circle cx="280" cy="80" r="10" fill="#BC8034" opacity="0.85"/><circle cx="280" cy="80" class="story-tri-ripple"/>' +
-                    '<circle cx="90" cy="410" r="22" fill="url(#triGlow)"/><circle cx="90" cy="410" r="10" fill="#BC8034" opacity="0.85"/><circle cx="90" cy="410" class="story-tri-ripple story-tri-ripple-2"/>' +
-                    '<circle cx="470" cy="410" r="22" fill="url(#triGlow)"/><circle cx="470" cy="410" r="10" fill="#BC8034" opacity="0.85"/><circle cx="470" cy="410" class="story-tri-ripple story-tri-ripple-3"/>' +
-                    '<text x="280" y="42" text-anchor="middle" font-family="Poppins, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Das gro\u00dfe Ganze gewinnt</text>' +
-                    '<text x="90" y="462" text-anchor="middle" font-family="Poppins, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Du gewinnst</text>' +
-                    '<text x="470" y="462" text-anchor="middle" font-family="Poppins, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Andere gewinnen</text>' +
+                    '<circle r="4" fill="#C9A84C" class="story-tri-dot"/>' +
+                    '<circle r="4" fill="#C9A84C" class="story-tri-dot story-tri-dot-2"/>' +
+                    '<circle r="4" fill="#C9A84C" class="story-tri-dot story-tri-dot-3"/>' +
+                    '<circle cx="280" cy="80" r="22" fill="url(#triGlow)"/><circle cx="280" cy="80" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="280" cy="80" class="story-tri-ripple"/>' +
+                    '<circle cx="90" cy="410" r="22" fill="url(#triGlow)"/><circle cx="90" cy="410" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="90" cy="410" class="story-tri-ripple story-tri-ripple-2"/>' +
+                    '<circle cx="470" cy="410" r="22" fill="url(#triGlow)"/><circle cx="470" cy="410" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="470" cy="410" class="story-tri-ripple story-tri-ripple-3"/>' +
+                    '<text x="280" y="42" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Das gro\u00dfe Ganze gewinnt</text>' +
+                    '<text x="90" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Du gewinnst</text>' +
+                    '<text x="470" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Andere gewinnen</text>' +
                     '</svg>';
             } else if (hasText) {
                 contentHTML += '<p class="story-text">' + block.text + '</p>';
