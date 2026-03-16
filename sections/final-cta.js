@@ -187,7 +187,7 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* ---- Kurs-Karte: Cream/Beige (Highlighted, wie Design-System) ---- */
+/* ---- Kurs-Karte: Dark Surface + Gold Accent ---- */
 .fcta-card[data-option="kurs"] {
     background: #1A1917;
     border-top: 3px solid #C9A84C;
@@ -214,7 +214,7 @@
     background: rgba(250, 247, 242, 0.1);
 }
 
-/* ---- Mentoring-Karte: Dark (wie bg-box) ---- */
+/* ---- Mentoring-Karte: Dark Surface ---- */
 .fcta-card[data-option="mentoring"] {
     background: #1A1917;
     border-top: 3px solid rgba(201, 168, 76, 0.4);
@@ -238,7 +238,7 @@
 }
 
 .fcta-card[data-option="mentoring"] .fcta-divider {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(250, 247, 242, 0.1);
 }
 
 /* ======== CARD CONTENT ======== */
@@ -301,7 +301,7 @@
     transform: translateY(-2px);
 }
 
-/* Primary: Orange Button auf Cream-Karte */
+/* Primary: Gold Button */
 .fcta-cta-primary {
     background: linear-gradient(135deg, #C9A84C 0%, #B8963F 100%);
     color: #111110;
@@ -312,7 +312,7 @@
     box-shadow: 0 8px 32px rgba(201, 168, 76, 0.3);
 }
 
-/* Ghost: Weisse Border auf Dark-Karte */
+/* Ghost: Gold-Glow Border */
 .fcta-cta-ghost {
     background: transparent;
     color: #FAF7F2;
