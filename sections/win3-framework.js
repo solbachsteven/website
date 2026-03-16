@@ -52,7 +52,7 @@
     font-size: 54px;
     font-weight: 600;
     line-height: 60px;
-    color: #FFFFFF;
+    color: #FAF7F2;
     margin: 0 0 12px 0;
 }
 
@@ -192,14 +192,14 @@
     font-family: 'Fraunces', serif;
     font-size: 17px;
     font-weight: 600;
-    fill: #FFFFFF;
+    fill: #FAF7F2;
 }
 
 .win3-label-desc {
     font-family: 'Outfit', sans-serif;
     font-size: 11.5px;
     font-weight: 400;
-    fill: rgba(255, 255, 255, 0.7);
+    fill: rgba(250, 247, 242, 0.7);
 }
 
 .win3-center-symbol {
@@ -324,7 +324,7 @@
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #FFFFFF;
+    color: #FAF7F2;
     line-height: 1.3;
     opacity: 0.4;
     transition: opacity 0.3s ease;
@@ -340,7 +340,7 @@
     font-weight: 300;
     line-height: 1.7;
     opacity: 0.3;
-    color: #FFFFFF;
+    color: #FAF7F2;
     transition: opacity 0.3s ease;
 }
 

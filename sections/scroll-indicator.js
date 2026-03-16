@@ -32,7 +32,7 @@
 .scroll-v2-text {
     font-size: 14px;
     font-weight: 500;
-    color: #ffffff;
+    color: #FAF7F2;
     letter-spacing: 0.5px;
     opacity: 0.9;
 }

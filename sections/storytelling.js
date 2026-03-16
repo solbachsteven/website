@@ -73,7 +73,7 @@
     font-size: 54px;
     font-weight: 600;
     line-height: 60px;
-    color: #FFFFFF;
+    color: #FAF7F2;
     margin: 0 0 12px 0;
 }
 
@@ -275,7 +275,7 @@
     font-size: 18px;
     line-height: 1.75;
     font-weight: 300;
-    color: #FFFFFF;
+    color: #FAF7F2;
     opacity: 0.9;
     margin: 0;
 }
@@ -344,7 +344,7 @@
 /* Synthese - Titel */
 .story-item.center.story-synthese .story-title {
     font-size: 28px;
-    color: #FFFFFF;
+    color: #FAF7F2;
     margin-bottom: 30px;
 }
 
@@ -433,7 +433,7 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(250, 247, 242, 0.8);
     margin: 0;
 }
 
@@ -767,9 +767,9 @@ var STORY_BLOCKS = [
                     '<circle cx="280" cy="80" r="22" fill="url(#triGlow)"/><circle cx="280" cy="80" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="280" cy="80" class="story-tri-ripple"/>' +
                     '<circle cx="90" cy="410" r="22" fill="url(#triGlow)"/><circle cx="90" cy="410" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="90" cy="410" class="story-tri-ripple story-tri-ripple-2"/>' +
                     '<circle cx="470" cy="410" r="22" fill="url(#triGlow)"/><circle cx="470" cy="410" r="10" fill="#C9A84C" opacity="0.85"/><circle cx="470" cy="410" class="story-tri-ripple story-tri-ripple-3"/>' +
-                    '<text x="280" y="42" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Das gro\u00dfe Ganze gewinnt</text>' +
-                    '<text x="90" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Du gewinnst</text>' +
-                    '<text x="470" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">Andere gewinnen</text>' +
+                    '<text x="280" y="42" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FAF7F2">Das gro\u00dfe Ganze gewinnt</text>' +
+                    '<text x="90" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FAF7F2">Du gewinnst</text>' +
+                    '<text x="470" y="462" text-anchor="middle" font-family="Outfit, sans-serif" font-size="19" font-weight="600" fill="#FAF7F2">Andere gewinnen</text>' +
                     '</svg>';
             } else if (hasText) {
                 contentHTML += '<p class="story-text">' + block.text + '</p>';

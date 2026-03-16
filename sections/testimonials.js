@@ -24,7 +24,7 @@
     --bg-secondary: #F4F0EC;
     --bg-box: #2C2726;
     --accent-gold: #C9A84C;
-    --text-white: #FFFFFF;
+    --text-white: #FAF7F2;
     --radius: 20px;
     --font-main: 'Outfit', sans-serif;
 }
@@ -329,7 +329,7 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(250, 247, 242, 0.8);
     margin: 0;
 }
 

@@ -47,15 +47,14 @@
 }
 
 :root {
-    --dw-bg-primary: #2C2726;
-    --dw-bg-secondary: #F4F0EC;
-    --dw-bg-box: #2C2726;
+    --dw-bg-primary: #1A1917;
+    --dw-bg-secondary: #1A1917;
+    --dw-bg-box: #1A1917;
     --dw-accent-gold: #C9A84C;
     --dw-accent-gold-dark: #6B5A1E;
-    --dw-cta-orange: #D96935;
-    --dw-text-white: #FFFFFF;
+    --dw-text-white: #FAF7F2;
     --dw-text-dark: #2C2726;
-    --dw-radius: 20px;
+    --dw-radius: 16px;
     --dw-font: 'Outfit', sans-serif;
 }
 
@@ -146,30 +145,34 @@
 }
 
 .dw-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .dw-card.visible:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 /* ======== HIGHLIGHTED CARD ======== */
 .dw-card.dw-highlighted {
     background: var(--dw-bg-secondary);
-    color: var(--dw-text-dark);
+    color: var(--dw-text-white);
     padding: 40px 35px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
     border-top: 3px solid var(--dw-accent-gold);
 }
 
-.dw-card.dw-highlighted .dw-card-subtitle,
+.dw-card.dw-highlighted .dw-card-subtitle {
+    color: var(--dw-accent-gold);
+}
+
 .dw-card.dw-highlighted .dw-price-note,
 .dw-card.dw-highlighted .dw-feature-text {
-    color: var(--dw-text-dark);
+    color: var(--dw-text-white);
 }
 
 .dw-card.dw-highlighted .dw-feature-text.excluded {
-    color: var(--dw-text-dark);
+    color: var(--dw-text-white);
     opacity: 0.35;
 }
 
@@ -200,7 +203,7 @@
 .dw-badge.dw-badge-white {
     background: transparent;
     color: var(--dw-text-white);
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(250, 247, 242, 0.3);
 }
 
 .dw-badge.dw-badge-gold-text {
@@ -254,7 +257,7 @@
     font-family: 'PacificaCondensed', fantasy;
     font-size: 26px;
     letter-spacing: 2px;
-    color: #F4F0EC;
+    color: #FAF7F2;
     white-space: nowrap;
 }
 
@@ -295,12 +298,12 @@
 .dw-divider {
     width: 100%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(250, 247, 242, 0.08);
     margin-bottom: 25px;
 }
 
 .dw-card.dw-highlighted .dw-divider {
-    background: rgba(45, 39, 38, 0.12);
+    background: rgba(250, 247, 242, 0.1);
 }
 
 /* ======== FEATURES ======== */
@@ -339,7 +342,7 @@
 }
 
 .dw-card.dw-highlighted .dw-feature-icon.excluded {
-    color: var(--dw-text-dark);
+    color: var(--dw-text-white);
     opacity: 0.5;
 }
 
@@ -378,28 +381,28 @@
 }
 
 .dw-cta.dw-cta-primary {
-    background: var(--dw-cta-orange);
-    color: var(--dw-text-white);
+    background: linear-gradient(135deg, #C9A84C 0%, #B8963F 100%);
+    color: #111110;
     border: none;
 }
 
 .dw-cta.dw-cta-primary:hover {
-    box-shadow: 0 10px 30px rgba(217, 105, 53, 0.3);
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.3);
 }
 
 .dw-cta.dw-cta-ghost {
     background: transparent;
     color: var(--dw-text-white);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(250, 247, 242, 0.3);
 }
 
 .dw-cta.dw-cta-ghost:hover {
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(250, 247, 242, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .dw-cta.dw-cta-subtle {
-    background: #3C3736;
+    background: #2C2926;
     color: var(--dw-text-white);
     border: none;
 }
@@ -409,18 +412,18 @@
 }
 
 .dw-card.dw-highlighted .dw-cta.dw-cta-ghost {
-    color: var(--dw-text-dark);
-    border-color: rgba(45, 39, 38, 0.3);
+    color: var(--dw-text-white);
+    border-color: rgba(250, 247, 242, 0.2);
 }
 
 .dw-card.dw-highlighted .dw-cta.dw-cta-ghost:hover {
-    border-color: rgba(45, 39, 38, 0.6);
+    border-color: rgba(201, 168, 76, 0.5);
 }
 
 .dw-cta.dw-cta-soon {
-    background: rgba(44, 39, 38, 0.06);
-    color: rgba(44, 39, 38, 0.35);
-    border: 1px dashed rgba(44, 39, 38, 0.15);
+    background: rgba(250, 247, 242, 0.05);
+    color: rgba(250, 247, 242, 0.3);
+    border: 1px dashed rgba(250, 247, 242, 0.15);
     cursor: default;
     pointer-events: none;
 }
@@ -447,7 +450,7 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(250, 247, 242, 0.7);
     margin: 0;
 }
 
@@ -745,7 +748,7 @@
     function buildLogoLockup(variant, name, alignClass) {
         var isDark = variant === 'dark';
         var icon = isDark ? darkIconSVG : lightIconSVG;
-        var textColor = isDark ? '#F4F0EC' : '#2C2726';
+        var textColor = isDark ? '#FAF7F2' : '#2C2726';
         var textStroke = isDark ? '' : '-webkit-text-stroke:0.3px #2C2726;';
         var supStroke = isDark ? '' : '-webkit-text-stroke:0.3px #C9A84C;';
         var cls = 'dw-card-logo' + (alignClass ? ' ' + alignClass : '');

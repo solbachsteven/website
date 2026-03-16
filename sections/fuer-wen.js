@@ -26,7 +26,7 @@
     --fw-accent-gold: #C9A84C;
     --fw-green: #4CAF50;
     --fw-red: #E74C3C;
-    --fw-text-white: #FFFFFF;
+    --fw-text-white: #FAF7F2;
     --fw-text-dark: #2C2726;
     --fw-radius: 20px;
     --fw-font: 'Outfit', sans-serif;
@@ -165,7 +165,7 @@
 }
 
 .fw-box-no .fw-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(250, 247, 242, 0.05);
 }
 
 .fw-item + .fw-item {
@@ -173,7 +173,7 @@
 }
 
 .fw-box-no .fw-item + .fw-item {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(250, 247, 242, 0.06);
 }
 
 /* ======== ICONS ======== */

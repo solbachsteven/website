@@ -73,7 +73,7 @@
 /* ======== SECTION ======== */
 .fcta-section {
     font-family: 'Outfit', sans-serif;
-    color: #FFFFFF;
+    color: #FAF7F2;
     padding: 100px 0;
     width: 100%;
     position: relative;
@@ -84,11 +84,10 @@
     justify-content: center;
     border-radius: 40px 40px 0 0;
 
-    /* Orange-Gradient: oben warm/tief, unten Original-Orange */
     background:
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(201, 168, 76, 0.2) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 85% 80%, rgba(201, 168, 76, 0.12) 0%, transparent 55%),
-        linear-gradient(180deg, #B8512A 0%, #C45A28 30%, #D96935 70%, #D96935 100%);
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 80%, rgba(201,168,76,0.05) 0%, transparent 55%),
+        #111110;
 }
 
 /* Dekorative Gold-Linie oben */
@@ -134,7 +133,7 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #FFFFFF;
+    color: rgba(250,247,242,0.55);
     margin-bottom: 20px;
 }
 
@@ -144,7 +143,7 @@
     font-size: 54px;
     font-weight: 600;
     line-height: 1.15;
-    color: #FFFFFF;
+    color: #FAF7F2;
     margin-bottom: 16px;
 }
 
@@ -153,7 +152,7 @@
     font-family: 'Lora', serif;
     font-style: italic;
     font-size: 26px;
-    color: #F4F0EC;
+    color: rgba(250,247,242,0.55);
     margin-bottom: 50px;
 }
 
@@ -175,7 +174,7 @@
 
 /* ======== OPTION CARD (Base) ======== */
 .fcta-card {
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 44px 35px;
     text-align: center;
     position: relative;
@@ -184,40 +183,40 @@
 }
 
 .fcta-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* ---- Kurs-Karte: Cream/Beige (Highlighted, wie Design-System) ---- */
 .fcta-card[data-option="kurs"] {
-    background: #F4F0EC;
+    background: #1A1917;
     border-top: 3px solid #C9A84C;
 }
 
 .fcta-card[data-option="kurs"] .fcta-framing {
-    color: #6B5A1E;
+    color: #C9A84C;
 }
 
 .fcta-card[data-option="kurs"] .fcta-title {
-    color: #2C2726;
+    color: #FAF7F2;
 }
 
 .fcta-card[data-option="kurs"] .fcta-price {
-    color: #2C2726;
+    color: #FAF7F2;
 }
 
 .fcta-card[data-option="kurs"] .fcta-price-note {
-    color: #2C2726;
+    color: #FAF7F2;
     opacity: 0.6;
 }
 
 .fcta-card[data-option="kurs"] .fcta-divider {
-    background: rgba(45, 39, 38, 0.15);
+    background: rgba(250, 247, 242, 0.1);
 }
 
 /* ---- Mentoring-Karte: Dark (wie bg-box) ---- */
 .fcta-card[data-option="mentoring"] {
-    background: #2C2726;
+    background: #1A1917;
     border-top: 3px solid rgba(201, 168, 76, 0.4);
 }
 
@@ -226,15 +225,15 @@
 }
 
 .fcta-card[data-option="mentoring"] .fcta-title {
-    color: #FFFFFF;
+    color: #FAF7F2;
 }
 
 .fcta-card[data-option="mentoring"] .fcta-price {
-    color: #FFFFFF;
+    color: #FAF7F2;
 }
 
 .fcta-card[data-option="mentoring"] .fcta-price-note {
-    color: #FFFFFF;
+    color: #FAF7F2;
     opacity: 0.6;
 }
 
@@ -286,7 +285,7 @@
     width: 100%;
     text-align: center;
     padding: 16px 24px;
-    border-radius: 20px;
+    border-radius: 12px;
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -304,24 +303,24 @@
 
 /* Primary: Orange Button auf Cream-Karte */
 .fcta-cta-primary {
-    background: #D96935;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #C9A84C 0%, #B8963F 100%);
+    color: #111110;
     border: none;
 }
 
 .fcta-cta-primary:hover {
-    box-shadow: 0 10px 30px rgba(217, 105, 53, 0.4);
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.3);
 }
 
 /* Ghost: Weisse Border auf Dark-Karte */
 .fcta-cta-ghost {
     background: transparent;
-    color: #FFFFFF;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: #FAF7F2;
+    border: 2px solid rgba(250, 247, 242, 0.25);
 }
 
 .fcta-cta-ghost:hover {
-    border-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(201, 168, 76, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
